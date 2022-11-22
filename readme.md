@@ -1,8 +1,8 @@
 # TechMaster
 
-## El sitio brindara el servicio de compra y venta de productos tecnologicos y afines
+El sitio brindara el servicio de compra y venta de productos tecnologicos y afines
 
-## El sitio estara dirigido a un publico abierto con la posibildad de crear un usario para un carrito de compras.
+El sitio estara dirigido a un publico abierto con la posibildad de crear un usario para un carrito de compras.
 
 ## Integrantres
     Flor Amado - 17 - Lanus
@@ -23,6 +23,3 @@
     https://compragamer.com/ : Es interesante que resalten los productos .
 
     https://www.maximus.com.ar/ : agradable a la vista y se destaca que tenga modo escuro.
-
-
-
