@@ -6,6 +6,7 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
 
 ## Integrantres
     Florencia Amado - 17 Años - Lanús
+        Actualmente cursando 7mo en un Secundario Tecnico. Cuando no le dedico tiempo al curso, mis tiempos libres los paso con mi familia/amigos o mirando series.
     Gabriel Tarelli - 19 Años - Ensenada
     Carlos Guillen - 19 años - Buenos Aires
     Braian Almirón - 26 años - Lanús
