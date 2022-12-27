@@ -10,6 +10,7 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
     Carlos Guillen - 19 años - Buenos Aires
     Braian Almirón - 26 años - Lanús
     Rolando Lisarazo - 30 años - Córdoba
+        Joven estusiasta del diseño de videojuegos y experiencias ludicas. Con carrera en la construccion y el despliegue de tareas en equipo.
 
 
 ## Paginas de inspiracion
