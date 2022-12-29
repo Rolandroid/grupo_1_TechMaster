@@ -8,6 +8,7 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
     Florencia Amado - 17 Años - Lanús
         Actualmente cursando 7mo en un Secundario Tecnico. Cuando no le dedico tiempo al curso, mis tiempos libres los paso con mi familia/amigos o mirando series.
     Gabriel Tarelli - 19 Años - Ensenada
+        Técnico informático recibido en una Escuela Técnica y Barbero, Cuando salgo de esto me encanta el GYM.
     Carlos Guillen - 19 años - Buenos Aires
     Braian Almirón - 26 años - Lanús
     Rolando Lisarazo - 30 años - Córdoba
