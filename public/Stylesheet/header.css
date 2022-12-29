@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    display: flex;
+}
+.body_title {
+    display:flex;
+    flex-wrap: wrap;
+}
+#i {
+    text-shadow:
+      0 0 42px rgb(182, 31, 212),
+      0 0 82px rgb(182, 31, 212),
+      0 0 92px rgb(182, 31, 212),
+      0 0 102px rgb(182, 31, 212),
+      0 0 151px rgb(182, 31, 212);
+  }
+
+.body_title i{
+    font-size:xx-large;
+    color: green;
+}
+.body_navbar{
+    display:flex;
+    flex-direction: column;
+}
+.body_navbar input {
+    width: 80%;
+}
+.body_navbar button{
+    width: 10%;
+}
+.body_navbar div{
+    display:flex;
+}
+
+body form{
+    display: flex;
+    flex-direction: column;
+}
+body form button{
+    width: 25%;
+}
+.body_div--About{
+    display: flex;
+    flex-direction: column;
+}
