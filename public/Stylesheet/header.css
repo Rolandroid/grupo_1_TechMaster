@@ -6,28 +6,29 @@ body{
     display: flex;
 }
 .body_title {
+    width: 30vw;
+    height: 5vw;
     display:flex;
     flex-wrap: wrap;
+    
 }
-#i {
-    text-shadow:
-      0 0 42px rgb(182, 31, 212),
-      0 0 82px rgb(182, 31, 212),
-      0 0 92px rgb(182, 31, 212),
-      0 0 102px rgb(182, 31, 212),
-      0 0 151px rgb(182, 31, 212);
-  }
+#i {  }
 
 .body_title i{
-    font-size:xx-large;
-    color: green;
+    font-size:2.5rem;
+    color: black
+}
+.body_title h1{
+    font-size:2.5rem;
+    color: black
 }
 .body_navbar{
+    width: 400px;
+    height: 5vw;
     display:flex;
     flex-direction: column;
 }
 .body_navbar input {
-    width: 80%;
 }
 .body_navbar button{
     width: 10%;
@@ -36,14 +37,40 @@ body{
     display:flex;
 }
 
-body form{
+.body__form{
     display: flex;
     flex-direction: column;
 }
 body form button{
-    width: 25%;
+    width: 30%;
 }
 .body_div--About{
+    width: 30vp;
+    height: 5vw;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 375px) {
+    .body_title i{
+        width: 5vw;
+        font-size:3rem;
+        color: black;
+    }
+    .body_title h1{
+    display:none;
+    }
+    .body_div--About{
+    display:none;
+    }
+    .body_navbar div{
+        display:none;
+    }
+    
+    .body_navbar input {
+    width: 50vw;
+    }
+    .body__form{
+        width: 25vw;
+    }
 }
