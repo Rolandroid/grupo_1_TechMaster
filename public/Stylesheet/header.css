@@ -10,10 +10,6 @@ body{
     flex-wrap: wrap;
 }
 
-.body_title i{
-    font-size:xx-large;
-    color: green;
-}
 .body_navbar{
     display:flex;
     flex-direction: column;
