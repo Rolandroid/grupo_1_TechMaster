@@ -6,7 +6,7 @@ body{
     display: flex;
 }
 .body_title {
-    width: 30vw;
+    width: 20vw;
     height: 5vw;
     display:flex;
     flex-wrap: wrap;
