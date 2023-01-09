@@ -26,3 +26,9 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
     https://compragamer.com/ : Es interesante que resalten los productos. Su publico es abierto y esta interesado en la tecnología.
 
     https://www.maximus.com.ar/ : Agradable a la vista y se destaca que tenga modo escuro.
+
+## Plataforma que utilizamos para organizar los trabajo
+
+Trello : https://trello.com/b/oDR2DFPv/proyecto-integrador
+
+GitHub : https://github.com/Rolandroid/grupo_1_TechMaster.git
