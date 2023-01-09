@@ -11,6 +11,7 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
         Técnico informático recibido en una Escuela Técnica y Barbero, Cuando salgo de esto me encanta el GYM.
     Carlos Guillen - 19 años - Buenos Aires
     Braian Almirón - 26 años - Lanús
+    Actualmente cursando Desarrollador Web Full Stack de Fundación Formar (Digital House) y Argentina Programa.
     Rolando Lisarazo - 30 años - Córdoba
         Joven entusiasta de el diseño de videojuegos y juegos de mesa. con carrera en construccion y desempeño en tareas en equipo.
 
