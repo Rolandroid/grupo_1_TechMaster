@@ -10,7 +10,7 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
     Gabriel Tarelli - 19 Años - Ensenada
         Técnico informático recibido en una Escuela Técnica y Barbero, Cuando salgo de esto me encanta el GYM.
     Carlos Guillen - 19 años - CABA 
-    Un joven, con un breve conocimiento en informática, tengo terminado la secundaria en un colegio informático y me gusta mucho el mundo de la Ciberseguridad.
+        Un joven, con un breve conocimiento en informática, tengo terminado la secundaria en un colegio informático y me gusta mucho el mundo de la Ciberseguridad.
     Braian Almirón - 26 años - Lanús
     Rolando Lisarazo - 30 años - Córdoba
         Joven entusiasta de el diseño de videojuegos y juegos de mesa. con carrera en construccion y desempeño en tareas en equipo.
@@ -27,3 +27,9 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
     https://compragamer.com/ : Es interesante que resalten los productos. Su publico es abierto y esta interesado en la tecnología.
 
     https://www.maximus.com.ar/ : Agradable a la vista y se destaca que tenga modo escuro.
+
+## Plataforma que utilizamos para organizar los trabajo
+
+Trello : https://trello.com/b/oDR2DFPv/proyecto-integrador
+
+GitHub : https://github.com/Rolandroid/grupo_1_TechMaster.git
