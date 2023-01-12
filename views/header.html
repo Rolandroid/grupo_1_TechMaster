@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://kit.fontawesome.com/3fab2a7658.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/Stylesheet/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TechMaster</title>
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/35292d76ff.js"
+    crossorigin="anonymous"
+  ></script>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
 </head>
-<body >
-    <header>
-        <div>
-            <i class="fa-solid fa-bolt" id="i"></i>
-            <h1>TechMaster</h1>
+<body>
+    <header class="home--header">
+        <div class="header-top">
+          <div class="logo--master">
+            <a class="logo" href="/"><img src="/img/logo.svg" alt="Logo" /></a>
+            <a class="tecmater--logo" href=""><img src="/img/LOGO-TECHMASTER.svg" alt=""></a>
+          </div>
+          <form class="search" action="/search" method="GET">
+            <input type="search" name="busqueda" placeholder="Buscar productos" />
+            <hr />
+            <select class="Filter" name="Filtrar" id="">
+              <option value="">Filtrar</option>
+              <option value="0"><a href="#">Todos</a></option>
+              <option value="1"><a href="#">Monitor</a></option>
+              <option value="2"><a href="#">Teclado</a></option>
+              <option value="3"><a href="#">Mouses</a></option>
+              <option value="4"><a href="#">Auriculares</a></option>
+              <option value="5"><a href="#">Ofertas</a></option>
+            </select>
+            <hr />
+            <button class="lupa"><i class="fas fa-search"></i></button>
+  
+            <nav>
+              <div class="header__buerger--menu">
+                <i class="fas fa-bars"></i>
+              </div>
+            </nav>
+          </form>
+          <div class="home__header--local">
+            <ul class="header--redes">
+              <li><a href="#"><i class="fa-solid fa-location-dot"></i><span>Ubicación EEUU 123</span></a></li>
+              <li><a href="#"><i class="fa-solid fa-user"></i><span>Login / Registrar</span></a></li>
+              <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+  
+          </div>
         </div>
-        <nav >
-            <input type="text" placeholder="busca productos o marcas">
-        
-            <div>
-                <input type="checkbox" name="categorias" value="Monitores">Monitores
-                <input type="checkbox" name="categorias" value="Teclados">Teclados
-                <input type="checkbox" name="categorias" value="Mouses">Mouses
-                <input type="checkbox" name="categorias" value="Auriculares">Auriculares
-                <input type="checkbox" name="categorias" value="Ofertas">Ofertas
-            </div>
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <nav class="home__header__barra--nav">
+          <div class="home__header--barra">
+            <ul class="header--barra">
+              <li><a href="#">Monitor</a></li>
+              <li><a href="#">Mouse</a></li>
+              <li><a href="#">Teclado</a></li>
+              <li><a href="#">Auriculares</a></li>
+              <li><a href="#">Ofertas</a></li>
+              <hr />
+              <li><a href="#">Contactos</a></li>
+              <li><a href="#">Sobre nosotros</a></li>
+            </ul>
+          </div>
         </nav>
-        <div>
-            <!-- GPS DATA -->
-        </div>
-        <form>
-            <input type="text" placeholder="usuario o mail">
-            <input type="password" placeholder="contraseña">
-            <button type="submit" name="Login">Login</button>
-
-        </form>
-        <div>
-            <button type="button" ; name="Login">About Proyect</button>
-            <button type="submit" name="Login">About Us</button>
-        </div>
-    </header>
+      </header>
 </body>
-
 </html>
