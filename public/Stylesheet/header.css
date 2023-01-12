@@ -97,10 +97,6 @@ hr{
     justify-content: space-around;
 }
 
-.home__header--local span{
-    /* display: none; */
-}
-
 .home__header--local i{
     color: #FFF;
 }
