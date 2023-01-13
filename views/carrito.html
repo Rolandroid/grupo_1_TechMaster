@@ -12,14 +12,168 @@
 </head>
 
 <body>
-    <ul>
-        <li><a href="/header">header</a></li>
-        <li><a href="/">index</a></li>
-        <li><a href="/footer">footer</a></li>
-        <li><a href="/home">home</a></li>
-        <li><a href="/login">login</a></li>
-        <li><a href="/register">register</a></li>
-    </ul>
+    <header class="home--header">
+        <div class="header-top">
+          <div class="logo--master">
+            <a class="logo" href="/"><img src="/images/logo.svg" alt="Logo" /></a>
+            <a class="tecmater--logo" href=""><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
+          </div>
+          <form class="search" action="/search" method="GET">
+            <input type="search" name="busqueda" placeholder="Buscar productos" />
+            <hr />
+            <select class="Filter" name="Filtrar" id="">
+              <option value="">Filtrar</option>
+              <option value="0"><a href="#">Todos</a></option>
+              <option value="1"><a href="#">Monitor</a></option>
+              <option value="2"><a href="#">Teclado</a></option>
+              <option value="3"><a href="#">Mouses</a></option>
+              <option value="4"><a href="#">Auriculares</a></option>
+              <option value="5"><a href="#">Ofertas</a></option>
+            </select>
+            <hr />
+            <button class="lupa"><i class="fas fa-search"></i></button>
+  
+            <nav>
+              <div class="header__buerger--menu">
+                <i class="fas fa-bars"></i>
+              </div>
+            </nav>
+          </form>
+          <div class="home__header--local">
+            <ul class="header--redes">
+              <li><a href="#"><i class="fa-solid fa-location-dot"></i><span>Ubicación EEUU 123</span></a></li>
+              <li><a href="#"><i class="fa-solid fa-user"></i><span>Login / Registrar</span></a></li>
+              <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+  
+          </div>
+        </div>
+        <nav class="home__header__barra--nav">
+          <div class="home__header--barra">
+            <ul class="header--barra">
+              <li><a href="#">Monitor</a></li>
+              <li><a href="#">Mouse</a></li>
+              <li><a href="#">Teclado</a></li>
+              <li><a href="#">Auriculares</a></li>
+              <li><a href="#">Ofertas</a></li>
+              <hr />
+              <li><a href="#">Contactos</a></li>
+              <li><a href="#">Sobre nosotros</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+       <main class="main--carrito">
+        <h1 class="main_h1--titulo">Carrito De Compra</h1>
+        <article class="main_article--producto">
+
+            <img class="main_article_img--imagen" src="/Images/monitor1.png"></img>
+
+
+            <div class="main_article_div--etiqueta">
+                <h1 class="main_article_div_h1--nombre">Monitor LG 22'
+                </h1>
+                <h2 class="main_article_div_h2--precio">$4500
+                </h2>
+
+                <div class="main_article_div--botones">
+                    <button>Ver detalles
+                    </button>
+                    <button>quitar del carro
+                    </button>
+
+                    
+                </div>
+            </div>
+
+
+        </article>
+        <article class="main_article--producto">
+
+            <img class="main_article_img--imagen" src="/Images/monitor2.png"></img>
+
+
+            <div class="main_article_div--etiqueta">
+                <h1 class="main_article_div_h1--nombre">Monitor Hitachi 22'
+                </h1>
+                <h2 class="main_article_div_h2--precio">$6500
+                </h2>
+
+                <div class="main_article_div--botones">
+                    <button>Ver detalles
+                    </button>
+                    <button>quitar del carro
+                    </button>
+
+                   
+                </div>
+            </div>
+
+
+        </article>
+        <article class="main_article--total">
+
+            
+
+
+            <div class="main_article_div--factura">
+                <h1 class="main_article_div_h1--nombre">Total
+                </h1>
+                <h2 class="main_article_div_h2--precio">$11000
+                </h2>
+
+                <div class="main_article_div--comprar">
+                    <button> Comprar
+                    </button>
+
+                    
+                </div>
+            </div>
+
+
+        </article>
+    </main>
+
+
+
+      <footer>
+        <section class="footer--section">
+          <div class="footer--div">
+            <div class="footer--logo">
+              <img class="logo--footer" src="/images/logo.svg" alt="">
+            <div class="footer__barra--lista">
+              <h2>Seguinos</h2>
+              <h2>Contactos</h2>
+              <h2>Métodos de pago</h2>
+            </div>
+          <div class="footer__section--div">
+          <div class="footer--redes">
+            <ul class="lista--redsocial">
+            <li><a href=""><img src="/images/facebook 1.svg" alt="facebook"><span>@TechMaster</span></a></li>
+            <li><a href=""><img src="/images/instagram 1.svg" alt="instagram"><span>@TechMaster</span></a></li>
+            <li><a href=""><img src="/images/twitter 1.svg" alt="twitter"><span>@TechMaster</span></a></li>
+          </ul>
+          </div>
+        <div class="footer--contactos">
+          <ul class="lista--contactos">
+          <li><a href=""><img src="/images/whatsapp 1.svg" alt="whatsapp"><span>+12 123 1234567</span></a></li>
+          <li><a href=""><img src="/images/Ubicacion.svg" alt="Ubicacion"><span>Calle Falsa 123</span></a></li>
+          <li><a href=""><img src="/images/Correo.svg" alt="Correo"><span>TechMaster@gmail.com</span></a></li>
+        </ul>
+        </div>
+        <div class="footer--metodosDePago">
+          <img src="/images/Mastercard.png" alt="">
+          <img src="/images/Visa.png" alt="">
+          <img src="/images/RapiPago.png" alt="">
+          <img src="/images/PayPal.png" alt="">
+          <img src="/images/Naranja.png" alt="">
+          <img src="/images/MercadoPago.png" alt="">
+        </div>
+      </div>
+        </section>
+  
+      </footer>
 </body>
 
 </html>

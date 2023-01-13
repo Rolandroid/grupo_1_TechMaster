@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.main--carrito{
+    padding: 5px;
+    background-color: rgba(28, 28, 28, 1);
+}
+.main_h1--titulo{
+    color: white;
+    margin:0vw 2vw 2vw 2vw;
+    font-size: 25px;
+}
+.main_article--producto{
+    margin:2vw;
+    background: linear-gradient(#390b25, #523848);
+    width: 95%;
+    display: flex;
+}
+.main_article_img--imagen{
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+
+.main_article_div--etiqueta{
+    color:white;
+    font-size: 18px;
+    padding: 10px;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+}
+.main_article_div_h1--nombre{
+    font-size: 1rem;
+}
+.main_article_div_h2--precio{
+    font-size: 1rem;
+    align-self: flex-end;
+}
+
+.main_article_div--botones{
+    font-size: 0.6rem;
+    margin: auto 0;
+    display: flex;
+    gap: 2vw;
+}
+.main_article_div_input--cantidad{
+    width: 3vw;
+}
+.main_article_div_div--cantidad{
+    display: flex;
+    justify-content: center;
+}
+.main_article--total{
+    margin:2vw;
+    background: linear-gradient(#390b25, #523848);
+    width: 95%;
+    height: 100px;
+    display: flex;
+}
+.main_article_div--factura{
+    color:white;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_article_div--comprar{
+    align-self: flex-end;
+    margin: auto 0;
+}
