@@ -147,6 +147,7 @@ hr{
     
     hr{
         display: flex;
+        flex-wrap: nowrap;
     }
 
     .header__buerger--menu{
