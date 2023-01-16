@@ -34,6 +34,7 @@
     flex-direction: column;
 }
 .main_article_div_h1--nombre{
+    border-bottom: 1px white solid;
     font-size: 1rem;
 }
 .main_article_div_h2--precio{
