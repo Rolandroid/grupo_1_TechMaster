@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.main{
+    width: 100vw;
+}
+
+.login__main__div{
+    background-color: var(--colorGranate);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.login__main__div__titulo{
+    color: white;
+}
+
+
+
+.login__main__div--links{
+    width: 240px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.login__main__div--links a{
+    color: rgb(207, 207, 207);
+    
+}
+
+.login__main__form--logueo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.login__main__form--text{
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.login__main__form--boxes{
+    border-bottom: 1px solid rgb(100, 100, 100);
+}
+
+.login__main__form--boxes input{
+    border: 0;
+    width: 200px;
+}
+
+.login__main__form--buttons button{
+    border-radius: 25px;
+    background-color: #2866AB;
+    border: 0;
+    padding: 10px;
+}
+
+.login__main__form--buttons a{
+    color: white;
+}
+
+@media (min-width:768) {
+    .login__main__div{
+        background-image: url(/Images/LOGO-TECHMASTER.svg);
+    }
+}
