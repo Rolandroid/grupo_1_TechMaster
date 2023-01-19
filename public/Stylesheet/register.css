@@ -1,107 +1,175 @@
 .register__main{
-width: 100vw;
-
-
-}
-/* .register__main__section{
-
-} */
-.register__main__section__article{
-display: flex;
-flex-direction: column;
-width: 100vw;
-
-justify-content: space-between;
-text-align: center;
-align-items: center;
-
-}
-.register__form__header{
-    background-color: var(--colorGranate);
-    color: white;
-    /*  border-radius: 4px; */
-    /* padding:10px; */
+    width: 100vw;
+    
+    
+    }
+    /* .register__main__section{
+    
+    } */
+    .register__main__section__article{width: 100vw;text-align: center;}
+    .register__form__header{
+        background-color: var(--colorGranate);
+        color: white;
+        /*  border-radius: 4px; */
+        /* padding:10px; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .register__form__header h3{
+    
+    padding-top: 1rem;
+    }
+    
+    .register__form__header a{text-decoration: none;}
+    
+    .register__logo--master{
+        text-align: center;
+        align-items: center;
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        padding: 10px 0px 10px 0px;
+    }
+    .register__logo img{
+        display: flex;
+    }
+    
+    .register__tecmater--logo img{
+      display: none;
+    }
+    
+    .form__header--links{
+        
     display: flex;
-    justify-content: center;
+        
     flex-direction: column;
-}
-.register__form__header a{
-text-decoration: none;
-
-}
-
-.register__logo--master{
-    text-align: center;
+        
+    gap: 15px;
+        
     align-items: center;
+        
+    padding-bottom: 13px;
+    }
+    
+    .form__header--links a{
+    
     display: flex;
-    margin: 0;
-}
-.register__logo /*, .logo img */{
-    justify-content: space-between;
-    text-align: center;
-    align-items: center; 
-    width: 30vw;
-}
-/* .register__tecmaster--logo{
-
-} */
-.register__form__header--links{
-    font-weight: 100;
-    padding: 10%;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-.register__form__box input{
     
-width: 100vw;
+    border: solid 1px #FFF;
     
-border: none;
+    justify-content: center;
     
-border-bottom: 1px solid silver;
+    width: 80%;
     
-margin-top: 5px;
+    color: #fff;
     
-padding: 1%;
+    gap: 6px;
     
-margin: 5%;
+    padding: 5px 0px 3px 0px;
     
-width: 90%;
-}
-
-.register__form__checkboxs{
-    font-size: smaller;
-}
-
-.buttons{
+    font-family: 'Lato', sans-serif;
+    }
+    
+    .register__main--h1{
+        margin-top: 5%;
+    }
+    
+    /* .register__form__header--links{
+        font-weight: 100;
+        padding: 10%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    } */
+    .register__form__box input{
+        
+    width: 100vw;
+        
     border: none;
-    border-radius: 10px;
-}
-/* .register__form__box--buttons{
-
-} */
-.register__form__box--buttons a{
+        
+    border-bottom: 1px solid silver;
+        
+    padding: 1%;
+        
+    margin: 5%;
+        
+    width: 90%;
+    }
     
-    text-decoration: none; 
-}
-.buttons__primary{
-    background-color: var(--colorGranate);
-    width: 35%;
-    color: white;
-    border:solid 1px var(--colorGranate);
-}
-.buttons__primary:hover {
-	background-color: white;
-    color: var(--colorGranate);
-}
-.buttons__secondary{
-    background-color: white;
-    width: 35%;
-    margin-bottom: 10px;
-    border:solid 1px black ;
-    color: black;
+    .register__form__checkboxs{
+        display: flex;
+    }
+    
+    .register__form__oferta1{
+        display: flex;
+        font-size: 12px;
+        justify-content: center;
+        padding-bottom: 30px;
+        gap: 5px;
+        font-family: 'Lato', sans-serif;
+    }
+    
+    .register__form__oferta1 label{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .register__form__oferta{
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        gap: 5px;
+        font-family: 'Lato', sans-serif;
+    }
+    
+    .buttons{
+        border: none;
+        border-radius: 10px;
+        padding: 9px;
+    }
+    /* .register__form__box--buttons{
+    
+    } */
+    .register__form__box--buttons a{
+        
     text-decoration: none;
-}
-.buttons__secondary:hover {
-	background-color: var(--colorGranate);
-    color: white;
-}
+        
+    color: #000;
+        
+    font-weight: 700;
+    }
+    .buttons__primary{
+        background-color: var(--colorGranate);
+        width: 35%;
+        color: white;
+        border:solid 1px var(--colorGranate);
+    }
+    .buttons__primary:hover {
+        background-color: white;
+        color: var(--colorGranate);
+    }
+    .buttons__secondary{
+        background-color: white;
+        width: 35%;
+        margin-bottom: 10px;
+        border:solid 1px black ;
+        color: black;
+        text-decoration: none;
+    }
+    .buttons__secondary:hover {
+        background-color: var(--colorGranate);
+        color: white;
+    }
+
+    @media (min-width:720px)  { 
+    
+    }
+    
+    @media (min-width:1024px) { 
+    
+     }
+
+
+
+    
