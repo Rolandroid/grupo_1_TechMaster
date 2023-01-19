@@ -12,14 +12,51 @@
 </head>
 
 <body>
-    <ul>
-        <li><a href="/header">header</a></li>
-        <li><a href="/carrito">carrito</a></li>
-        <li><a href="/footer">footer</a></li>
-        <li><a href="/home">home</a></li>
-        <li><a href="/">index</a></li>
-        <li><a href="/register">register</a></li>
-    </ul>
+    
+    <main>
+        <form class="login__main__form"></form>
+            <div class="login__main__div">
+                <h2 class="login__main__div__titulo">Bienvenid@ a</h2>
+
+                <a class="login__main__div__logo" href="/"><img src="/images/logo.svg" alt="Logo" /></a>
+
+
+                <div class="login__main__div--links">
+                    <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                  Continuar con Facebook
+                    </a>
+                </div>
+
+                <div class="login__main__div--links">
+                    <a href="">
+                    <i class="fa-brands fa-google"></i>
+                  Continuar con Google
+                    </a>
+                </div>
+            </div>
+
+        
+
+            <section class="login__main__form--logueo">
+                <div class="login__main__form--boxes">
+                    <div class="login__main__form--text">Correo Electrónico</div>
+                    <input type="email" placeholder="Email" name="email" id="email">
+                </div>
+    
+                <div class="login__main__form--boxes">
+                    <div class="login__main__form--text">Contraseña</div>
+                    <input type="password" placeholder="Contraseña" name="password" id="password">
+                </div>
+    
+                <div class="login__main__form--buttons">
+                    <button class="button" type="submit"> <a href="/login.html">Ingresar</a> </button> 
+                </div>
+            </section>
+
+        </form>
+        
+    </main>
 </body>
 
 </html>
