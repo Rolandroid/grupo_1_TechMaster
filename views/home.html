@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TechMaster index</title>
+    <!-- glider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+
     <script
     src="https://kit.fontawesome.com/35292d76ff.js"
     crossorigin="anonymous"
@@ -71,7 +74,7 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main class="home__main">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -82,22 +85,22 @@
         <!-- Slide 1 - Set the background image for this slide in the line below -->
         <div class="carousel-item active" style="background-image: url('/Images/PC-1.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3 style="color:green">Cleaning Supplies</h3>
-            <p>This is a description for the 1 slide.</p>
+            <!-- <h3 style="color:green">Cleaning Supplies</h3>
+            <p>This is a description for the 1 slide.</p> -->
           </div>
         </div>
         <!-- Slide 2 - Set the background image for this slide in the line below -->
         <div class="carousel-item" style="background-image: url('/Images/PC-2.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3 style="color:green">All you need to keep your floors up</h3>
-            <p>This is a description for the 2 slide.</p>
+            <!-- <h3 style="color:green">All you need to keep your floors up</h3>
+            <p>This is a description for the 2 slide.</p> -->
           </div>
         </div>
         <!-- Slide 3 - Set the background image for this slide in the line below -->
         <div class="carousel-item" style="background-image: url('/Images/PC-3.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3 style="color:green">Rental Equipment</h3>
-            <p>This is a description for the 3 slide.</p>
+            <!-- <h3 style="color:green">Rental Equipment</h3>
+            <p>This is a description for the 3 slide.</p> -->
           </div>
         </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -123,7 +126,73 @@
         </div>
       </article>
     </section>
-
+    <section class="home__main__section--productos">
+      <div class="glider-contain">
+        <div class="glider">
+          <a href="">
+            <div class="card carousel-productos-item">
+              <img  src="/Images/auris1.png"  class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-dark"> </h5>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card carousel-productos-item">
+              <img  src="/Images/auris2.png"  class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-dark"> </h5>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card carousel-productos-item">
+              <img  src="/Images/mon1.png"  class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-dark"> </h5>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card carousel-productos-item">
+              <img  src="/Images/mon2.png"  class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-dark"> </h5>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card carousel-productos-item">
+              <img  src="/Images/tec1.png"  class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-dark"> </h5>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card carousel-productos-item">
+              <img  src="/Images/tec2.png"  class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-dark"> </h5>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card carousel-productos-item">
+              <img  src="/Images/mon1.png"  class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-dark"> </h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+      </div>
+    </section>
+    
   </main>
   <!-- ---------------------------------------------------- -->
   <footer>
@@ -164,5 +233,54 @@
 
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<!-- glider -->
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
+<script>
+
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    dots: '.dots',
+    
+    responsive: [
+    {
+        // screens greater than >= 320px
+        breakpoint: 320,
+        settings: {
+          // Set to `auto` and provide item width to adjust to viewport
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          itemWidth: 170,
+          duration: 0.25
+        }
+      },
+      {
+        // screens greater than >= 768px
+        breakpoint: 768,
+        settings: {
+          // Set to `auto` and provide item width to adjust to viewport
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          itemWidth: 150,
+          duration: 0.25
+        }
+      },{
+        // screens greater than >= 1024px
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          itemWidth: 150,
+          duration: 0.25
+        }
+      }
+    ]
+  });
+
+</script>
+
 </body>
 </html>
