@@ -21,14 +21,21 @@
     padding-bottom: 25px;
 }
 
+.login__main__div__logo--tablet{
+    display: none;
+}
+
 .login__main__div__titulo{
     color: white;
 }
 
-
+.login__main__div__logo--textinfo{
+    display: none;
+}
 
 .login__main__div--links{
     width: 240px;
+    padding: 10px;
     border: 1px solid rgb(255, 255, 255);
 }
 
@@ -72,8 +79,58 @@
     color: white;
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
+    .login__main__div__logo{
+        display: none;
+    }
+
+    .login__main__div__logo--tablet{
+        display: block;
+    }
+
+    .login__main__form--boxes input{
+        width: 400px;
+    }
+}
+
+@media (min-width:1024px) {
+
+    main{
+        display: flex;
+        height: 100vh;
+    }
+
     .login__main__div{
-        background-image: url(/Images/LOGO-TECHMASTER.svg);
+        width: 50%;
+        gap: 40px;
+        height: 100%;
+    }
+
+    .login__main__form--logueo{
+        width: 50%;
+        padding-top: 250px;
+    }
+
+    .login__main__div__logo{
+        display: none;
+    }
+
+    .login__main__div__logo--tablet{
+        display: block;
+    }
+
+    .login__main__div__logo--textinfo{
+        display: block;
+        width: 90%;
+        text-align: center;
+        
+    }
+
+    .login__main__div__logo--textinfo h3{
+        font-weight: 100;
+    }
+
+    .login__main__form--boxes input{
+        width: 400px;
     }
 }
