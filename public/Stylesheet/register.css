@@ -1,0 +1,100 @@
+.register__main{
+width: 100vw;
+
+
+}
+.register__main__section{
+
+}
+.register__main__section__article{
+display: flex;
+flex-direction: column;
+width: 100vw;
+
+justify-content: space-between;
+text-align: center;
+align-items: center;
+
+}
+.form__header, .form__header a{
+    background-color: var(--colorGranate);
+    color: white;
+    /*  border-radius: 4px; */
+    /* padding:10px; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form__header a{
+text-decoration: none;
+
+}
+
+.logo--master{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+.logo, .logo img{
+    justify-content: space-between;
+    text-align: center;
+    align-items: center; 
+    width: 30vw;
+}
+.tecmaster--logo{
+
+}
+.form__header--links{
+    font-weight: 100;
+    padding: 10%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.form__box input{
+    width: 100vw;
+    border: none;
+    border-bottom: 1px solid silver;
+    margin-top: 5px;
+    padding: 1%;
+    margin: 5%;
+    width: 90%;
+}
+
+.form__checkboxs{
+    font-size: smaller;
+}
+
+.buttons{
+    border: none;
+    border-radius: 10px;
+}
+.form__box--buttons{
+
+}
+.form__box--buttons a{
+    
+    text-decoration: none; 
+}
+.buttons__primary{
+    background-color: var(--colorGranate);
+    width: 35%;
+    color: white;
+    border:solid 1px var(--colorGranate);
+}
+.buttons__primary:hover {
+	background-color: white;
+    color: var(--colorGranate);
+}
+.buttons__secondary{
+    background-color: white;
+    width: 35%;
+    margin-bottom: 10px;
+    border:solid 1px black ;
+    color: black;
+    text-decoration: none;
+}
+.buttons__secondary:hover {
+	background-color: var(--colorGranate);
+    color: white;
+}
