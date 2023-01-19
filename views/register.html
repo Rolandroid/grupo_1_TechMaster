@@ -102,38 +102,44 @@
 
                     </div>
 
-                    <h1>Crea tu cuenta</h1>
+                    <h1 class="register__main--h1">Crea tu cuenta</h1>
                     <div class="register__form__box">
                         
-                        <input type="text" placeholder="Nombre" name="name" id="name">
+                        <input type="text" placeholder="Nombre" name="name" id="name" autocomplete="off">
                     </div>
                     <div class="register__form__box">
-                        <input type="text" placeholder="Apellido" name="surname" id="surname">
+                        <input type="text" placeholder="Apellido" name="surname" id="surname" autocomplete="off">
                     </div>
                     <div class="register__form__box">
-                        <input type="email" placeholder="Email" name="email" id="email">
+                        <input type="email" placeholder="Email" name="email" id="email" autocomplete="off">
                     </div>
                     <div class="register__form__box">
-                        <input type="password" placeholder="Contraseña" name="password" id="password">
+                        <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
                     </div>
                     <div class="register__form__box">
-                        <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2">
+                        <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2" autocomplete="off">
                     </div>
                     
                     <!-- <div class="form__footer">
                         <small>¿Estás registrado? <a href="/ingresar">Ingresá</a></small> 
                     </div> -->
-                    <div class="register__form__checkboxs">
+
+                    <div class="register__form__oferta">
+                      <input type="checkbox" placeholder="" name="checkbox">
+                      <label for=""> Recibir oferta de producto</label>
+                    </div>
+                    
+                    <div class="register__form__oferta1">
                       <input type="checkbox" placeholder="" name="checkbox">
                       <label for="">Estoy de acuerdo con <a href="">los términos y la política</a> </label>
-                    <input type="checkbox" placeholder="" name="checkbox">
-                    <label for=""> Recibir oferta de producto</label>
                     </div>
+
+
                     
                     <div class="register__form__box--buttons">
                       <button class="buttons buttons__primary" type="submit">Registrarme</button>
                       <button class="buttons buttons__secondary" type="submit"> <a href="/login.html">Ingresar</a> </button>
-                        
+                      <!-- <button class="buttons buttons__primary" type="submit">Ingresar</button> -->
                     </div>
                 </form>
             </article>
