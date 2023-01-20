@@ -68,11 +68,18 @@
     width: 200px;
 }
 
-.login__main__form--buttons button{
+.button{
     border-radius: 25px;
-    background-color: #2866AB;
+    background-color: #32051F;
     border: 0;
     padding: 10px;
+    transition: 0.5sec;
+    border: 1px solid #32051F;
+}
+
+.button:hover{
+    background-color: #8a8a8a;
+    border: 1px solid rgb(43, 43, 43);
 }
 
 .login__main__form--buttons a{
@@ -128,6 +135,7 @@
 
     .login__main__div__logo--textinfo h3{
         font-weight: 100;
+        text-align: center;
     }
 
     .login__main__form--boxes input{
