@@ -5,7 +5,7 @@
     
     } */
 .register__main__section__article{
-    width: 100vw;
+    
     text-align: center;
 }
 .register__form__header{
@@ -18,9 +18,10 @@
         align-items: center;
         padding-top: 25px;
         padding-bottom: 25px;
+        flex-wrap: wrap;
     }
     
-.register__form__header h3{
+.register__form__header h2{
     color: white;
     }
     
@@ -40,10 +41,16 @@
         display: flex;
 }
     
-.register__tecmater--logo {
+.register__techmater{
       display: none;
 }
-    
+.register__descripcion{
+    display:none;
+    text-align: center;
+    width: 90%;
+    padding: 2% 0;
+    font-weight: 100;
+}
 .form__header--links{
         
     display: flex;     
@@ -51,18 +58,19 @@
     gap: 15px;     
     align-items: center;    
     padding-bottom: 13px;
+    font-weight: 100;
     }
     
 .form__header--links a{
-    
-    display: flex;
-    border: solid 1px #FFF;
-    justify-content: center;
-    width: 80%;
-    color: #fff;
-    gap: 6px;
-    padding: 5px 0px 3px 0px;
-    font-family: 'Lato', sans-serif;
+ 
+display: flex; 
+border: solid 1px #FFF;  
+justify-content: center;
+width: 100%;
+color: #fff;
+gap: 6px;
+padding: 2px 27px;
+font-family: 'Lato', sans-serif;
     }
     
     .register__main--h1{
@@ -107,8 +115,10 @@
     
     .buttons{
         border: none;
-        border-radius: 10px;
-        padding: 9px;
+        border-radius: 17px;
+        padding: 7px;
+        gap: 10px;
+        margin: 0 3px;
     }
     /* .register__form__box--buttons{
     
@@ -153,14 +163,15 @@
         .register__form__header{
             align-items: center;
         }
+        
         .form__header--links{
             width: 60%;
         }
         .register__form__header h3{           
             font-size: 1.7rem;
         }
-        .register__tecmater--logo img{
-            display: flex;
+        .register__techmater {
+            display: block;
           }
           .register__main--h1{
             font-size: 1.6rem;
@@ -181,20 +192,53 @@
     }
     
     @media (min-width:1024px) { 
-        .register__main{
+        .register__main__section__article{
+            display: flex;
+            width: 50vw;
+        }
+        .register__form__header{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           height: 100vh;
+        }
+        .form__register{
             display: flex;
             height: 100vh;
-
+            width: 100vw;
+        }
+        .register__main__form{
+            display: flex;
+            flex-direction: column;
+            width: 40vw;
+        }
+        .register__main__form2{
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+            justify-content: center;
         }
 
         .register__main__section__article-logo{
             width: 50%;
             gap: 40px;
             height: 100%;
+            
         }
-        .register__tecmater--logo{
+        .register__techmater{
             display: block;
         }
+        .register__descripcion{
+            display:block;
+
+            
+        }
+        .form__header--links{
+            margin-top: 50px;
+        }
+
+        
+
 
      }
 
