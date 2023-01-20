@@ -135,9 +135,8 @@ font-family: 'Lato', sans-serif;
         border:solid 1px var(--colorGranate);
     }
     .buttons__primary:hover {
-        background-color: white;
-        color: var(--colorGranate);
-        color: #000;
+        background-color: rgb(107, 34, 77) ;
+        
     }
     .buttons__secondary{
         background-color: white;
@@ -151,7 +150,7 @@ font-family: 'Lato', sans-serif;
         color: black;
     }
     .buttons__secondary:hover {
-        background-color: rgb(165, 165, 165);
+        background-color: rgb(190, 188, 188);
         color: white;
     }
     .buttons__secondary:hover a{
