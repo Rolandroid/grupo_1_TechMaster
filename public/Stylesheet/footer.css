@@ -118,6 +118,7 @@ gap: 5px;
         display: flex;
         list-style: none;
         gap: 2rem;
+        margin: 0px;
     }
     .footer--redes{
     display: flex;
@@ -248,6 +249,7 @@ gap: 5px;
         display: flex;
         list-style: none;
         gap: 13px;
+        align-items: center;
     }
 
     .header--redes a{
