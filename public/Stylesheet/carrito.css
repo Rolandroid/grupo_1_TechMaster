@@ -9,32 +9,39 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
-}
+    min-height: 100vh;
+} 
 
-.main--carrito{
+.mainCarrito{
     padding: 5px;
     background-color: rgba(28, 28, 28, 1);
     height: 100%;
 }
-.main_h1--titulo{
+.mainCarrito h1{
     color: white;
     margin:0vw 2vw 2vw 2vw;
     font-size: 25px;
 }
-.main_article--producto{
+
+.mainCarrito section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articleCarrito{
     margin:2vw;
     background: linear-gradient(#390b25, #523848);
     width: 95%;
     display: flex;
 }
-.main_article_img--imagen{
+.articleCarrito img{
     width: 35%;
     height: 81%;
     padding: 10px;
 }
 
-.main_article_div--etiqueta{
+.articleCarrito div{
     color:white;
     font-size: 18px;
     padding: 10px;
@@ -42,23 +49,89 @@
     display: flex;
     flex-direction: column;
 }
-.main_article_div_h1--nombre{
+.articleCarrito div h1{
     border-bottom: 1px white solid;
     font-size: 1rem;
 }
-.main_article_div_h2--precio{
+.articleCarrito div h2{
     font-size: 1rem;
     align-self: flex-end;
 }
 
-.main_article_div--botones{
+.articleCarrito div div{
+    font-size: 0.6rem;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.articleCarrito div div button{
+    max-width: 150px;
+    width:40%;
+    border: none;
+    border-radius: 10px;
+    padding: 9px;
+    background-color: white;
+    color: var(--colorGranate);
+}
+
+.articleCarrito div div  input{
+    width: 30px;
+    border-style: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 0px 9px 9px;
+    background-color: white;
+    color: var(--colorGranate);
+}
+
+
+
+
+
+
+.totalCarrito{
+    margin:2vw;
+    background: linear-gradient(#390b25, #523848);
+    width: 95%;
+    display: flex;
+}
+.totalCarrito img{
+    width: 35%;
+    height: 81%;
+    padding: 10px;
+}
+
+.totalCarrito div{
+    color:white;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.totalCarrito div h1{
+    border-bottom: 1px white solid;
+    font-size: 1rem;
+}
+.totalCarrito div h2{
+    font-size: 1rem;
+    align-self: flex-end;
+}
+
+.totalCarrito div div{
     font-size: 0.6rem;
     margin: auto 0;
     display: flex;
     gap: 2vw;
 }
 
-.main_article_div--botones button{
+.totalCarrito div div button{
+    width: 150px;
     background-color: rgb(255 255 255);
     border-style: none;
     padding: 5px;
@@ -66,76 +139,9 @@
     color: #000;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
+    align-self: end;
 }
 
-.main_article_div_input--cantidad{
-    width: 3vw;
-}
-.main_article_div_div--cantidad{
-    display: flex;
-    justify-content: center;
-}
-.main_article--total{
-    margin:2vw;
-    background: linear-gradient(#390b25, #523848);
-    width: 95%;
-    /* height: 100px; */
-    display: flex;
-    max-width: 500px;
-}
-.main_article_div--factura{
-    color:white;
-    font-size: 18px;
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 120px;
-}
 
-.main_article_div--comprar{
-    display: flex;
-    align-self: flex-end;
-    margin: auto 0;
-    padding-top: 10px;
-}
 
-.main__section--carrito{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.main_article_div_h3--Oferta{
-    display: flex;
-    font-size: 17px;
-}
-
-.main_article_div--comprar button{
-    display: flex;
-    color: #FFF;
-    background-color: rgb(0, 93, 242);
-    border: 0px;
-    border-radius: 5px;
-    padding: 10px;
-    width: 115px;
-    justify-content: center;
-}
-
-@media (min-width:768px)  { 
-    
-    .main_article_img--imagen{
-        width: 35%;
-        height: 100%;
-        padding: 10px;
-    }
-
-    .main_article--producto{
-        height: 160px;
-    }
-
-    .main_article_div--botones button{
-        padding: 10px;
-    }
- }
