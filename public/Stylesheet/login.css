@@ -107,7 +107,7 @@
 
 @media (min-width:1024px) {
 
-    main{
+    .login__main{
         display: flex;
         height: 100vh;
     }
@@ -119,8 +119,8 @@
     }
 
     .login__main__form--logueo{
-        width: 60%;
-        padding-top: 250px;
+        margin: auto;
+        width: 60vw;
     }
 
     .login__main__div__logo{
