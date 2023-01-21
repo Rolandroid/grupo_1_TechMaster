@@ -5,7 +5,7 @@
     list-style: none;
 }
 
-.main{
+.login__main{
     width: 100vw;
 }
 
@@ -52,6 +52,14 @@
     margin-top: 100px;
 }
 
+.buttons{
+    border: none;
+    border-radius: 17px;
+    padding: 7px;
+    gap: 10px;
+    margin: 0 3px;
+}
+
 .login__main__form--text{
     margin-bottom: 10px;
     text-align: center;
@@ -68,18 +76,15 @@
     width: 200px;
 }
 
-.button{
-    border-radius: 25px;
-    background-color: #32051F;
-    border: 0;
-    padding: 10px;
-    transition: 0.5sec;
-    border: 1px solid #32051F;
+.login__button{
+    background-color: var(--colorGranate);
+    color: white;
+    width: 169.8px;
+    border:solid 1px var(--colorGranate);
 }
-
-.button:hover{
-    background-color: #8a8a8a;
-    border: 1px solid rgb(43, 43, 43);
+.login__button:hover {
+    background-color: rgb(107, 34, 77) ;
+    
 }
 
 .login__main__form--buttons a{
@@ -108,13 +113,13 @@
     }
 
     .login__main__div{
-        width: 50%;
+        width: 40%;
         gap: 40px;
         height: 100%;
     }
 
     .login__main__form--logueo{
-        width: 50%;
+        width: 60%;
         padding-top: 250px;
     }
 

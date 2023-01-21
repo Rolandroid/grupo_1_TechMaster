@@ -13,7 +13,7 @@
 
 <body>
     
-    <main>
+    <main class="login__main">
         <form class="login__main__form"></form>
             <div class="login__main__div">
                 <h2 class="login__main__div__titulo">Bienvenid@ a</h2>
@@ -42,21 +42,24 @@
                 </div>
             </div>
 
-        
+            
 
             <section class="login__main__form--logueo">
+
+                <div class="login__main__form--text">
+                    <h2>Ingresar</h2>
+                </div>
+
                 <div class="login__main__form--boxes">
-                    <div class="login__main__form--text">Correo Electrónico</div>
-                    <input type="email" placeholder="Email" name="email" id="email">
+                    <input type="email" placeholder="Email" name="email" id="email" autocomplete="off">
                 </div>
     
                 <div class="login__main__form--boxes">
-                    <div class="login__main__form--text">Contraseña</div>
-                    <input type="password" placeholder="Contraseña" name="password" id="password">
+                    <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
                 </div>
     
                 <div class="login__main__form--buttons">
-                    <button class="button" type="submit"> <a href="/login.html">Ingresar</a> </button> 
+                    <button class="buttons login__button" type="submit"> <a href="/login.html">Ingresar</a> </button> 
                 </div>
             </section>
 
