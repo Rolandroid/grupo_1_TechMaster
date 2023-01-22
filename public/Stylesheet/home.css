@@ -1,8 +1,19 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
+} */
+.home__main{
+    background-color: var(--escalaDeGrises);
+    padding: 0px 5px 0px 5px;
+}
+
+.boby__view__home{
+    display: flex;
+    background-color: rgba(28, 28, 28, 1);
+    flex-direction: column;
+    width: 100%;
 }
 
 .carousel-item {
@@ -13,7 +24,52 @@
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
+    background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Download-3D-HD-Nature-Images-620x349.jpg);
     }
+
+    .carousel-inner{
+        background: linear-gradient(-243deg,#43e91a, #40cab3, #4823ec);
+    }
+
+    .carousel-item h3{
+        display: flex;
+        font-size: 33px;
+        color: #ffffff;
+        justify-content: flex-end;
+    }
+
+    .carousel-item h2{
+
+display: flex;
+
+justify-content: flex-end;
+
+font-size: 40px;
+
+}
+
+    .carousel-item h1{
+        
+display: flex;
+        
+justify-content: flex-end;
+        
+font-size: 54px;
+    }
+
+    .carousel-item button{
+    display: flex;
+    margin-left: 85%;
+    border: none;
+    background-color: #ef3a7c;
+    padding: 11px;
+    }
+    
+    .carousel-item button a{
+        
+color: #fff;
+    }
+    
     
     .card-columns .card {
     display: inline-block;
@@ -27,20 +83,886 @@
     border-top-right-radius: calc(0.25rem - 1px);
     }
 
-    .main--article--info{
+    .main__div--info{
         display: flex;
         flex-direction: column;
+        padding-bottom: 15px;
+        padding-top: 10px;
     }
 
-    .main--info{
+    .main__ul--info{
+        display: flex;
+        background-color: var(--colorVioleta);
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .main__ul--info img{
+        display: flex;
+        gap: 30px;
+        margin: 0px;
+        width: 72%;
+    }
+
+    .main__info--icon span{
+        display: none;
+    }
+
+    .main__info--icon li{
         display: flex;
     }
 
-    .main__info--icon{
-        display: flex;
+    .main__info--icon img{
+        width: 70%;
     }
 
     .main__info--icon span{
         display: flex;
-        font-size: 11px;
+        font-size: 5px;
     }
+    .main__image--card{
+        display: none;
+    }
+    .main__image--card2{
+        display: none;
+    }
+
+/* carousel 2 */
+/* .glider-next {
+    display: none;
+} */
+
+/* .card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    margin: 30px;;
+}
+ */
+
+
+ .conteudo{
+    display: flex;
+ }
+ .carrousel{
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.2rem;
+    overflow: auto;
+    scrollbar-width: none;
+    padding-bottom: 33px;
+
+    grid-auto-flow: column;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+ .carrousel img{
+    height: 20vh;
+    background: no-repeat center center scroll;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    }
+
+ .carrousel::-webkit-scrollbar{
+    display: none;
+ }
+
+ .card {
+    scroll-snap-align: start;
+    border-radius: 30px;
+    min-height: 200px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card:nth-child(1) {
+    background: linear-gradient(-229deg, #fbd52d, #ef3a7c);
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(-229deg, #FF70AF, #5fa8f5);
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+}
+
+.card:nth-child(4) {
+    background: linear-gradient(-229deg, #88F7F9, #048FFF);
+}
+
+.card:nth-child(5) {
+    background: linear-gradient(-229deg, #0093E9, #80D0C7);
+}
+
+.card:nth-child(6) {
+    background: linear-gradient(-229deg, #cf91ff, #5782F5);
+}
+
+.card:nth-child(7) {
+    background: linear-gradient(-229deg, #642B73, #C6426E);
+}
+
+.card h3{
+    position: absolute;
+    display: flex;
+    top: -1px;
+    right: -1px;
+    background-color: #000000fd;
+    color: #FFF;
+    font-family: 'lato',sans-serif;
+    font-size: 21px;
+    border-radius: 0px 3px 0px 4px;
+    margin: 0px;
+    padding: 6px;
+}
+
+.card h4{
+    color: #FFF;
+    font-size: 20px;
+}
+
+.card button{
+    border: solid 3px #cfff00;
+    background-color: #0000003b;
+    padding: 3px 20px 3px 20px;
+    font-family: 'lato',sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+}
+button a{
+    color: #fff300;
+}
+
+
+@media (min-width: 768px)  { 
+    .main--section-s{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .carousel{
+        width: 51%;
+    }
+    .carousel-item {
+        height: 30vh;
+        min-height: 400px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        }
+
+        .carousel-item h3 {
+            position: absolute;
+            display: flex;
+            font-size: 32px;
+            color: #ffffff;
+            top: -10rem;
+        }
+        .carousel-item button {
+            display: flex;
+            margin-left: 66%;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 11px;
+        }
+        .main--info{
+            font-size: 20px;
+        }
+
+        .main__ul--info img {
+            display: flex;
+            margin: 0px;
+        }
+        .main__div--info span{
+            display: flex;
+            font-size: 16px;
+            font-family: 'lato', sans-serif;
+        }
+
+
+        .image--lado{
+            position: relative;
+            height: 22vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            min-width: 14.7rem;
+            min-height: 12.2rem;
+        }
+
+        .image--lado2{
+            height: 22vh;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 21.7rem;
+            min-height: 12.2rem;
+        }
+
+        .image--lado img{
+            width: 50%;
+        }
+        .image--lado2 img{
+            width: 65%;
+        }
+        .image--abajo img{
+            width: 33%;
+        }
+
+        .main__image--card{
+            display: flex;
+            gap: 12px;
+            width: 48%;
+            flex-direction: column;
+        }
+        .main__image--card2{
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .main__image--card3{
+            display: none;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
+        .image--lado h2{
+            position: absolute;
+            display: flex;
+            font-size: 21px;
+            text-transform: uppercase;
+            font-weight: 700;
+            left: 10px;
+            color: #FFF;
+        }
+        .image--lado span{
+            position: absolute;
+            display: flex;
+            font-size: 21px;
+            top: 31px;
+            left: 21px;
+            color: #FFF;
+        }
+        .button1{
+            position: absolute;
+            display: flex;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 5px;
+            top: 9.5rem;
+            right: 13rem;
+        }
+
+        .button2{
+            position: absolute;
+            display: flex;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 5px;
+            top: 9.5rem;
+            right: 13rem;
+        }
+        
+        .button3{
+            display: none;
+        }
+        
+
+}
+/* @media (min-width: 1024px) {
+
+
+
+    .main--section-s{
+        display: flex;
+        gap: 14px;
+        width: auto;
+    }
+    .carousel{
+        width: 56%;
+    }
+    .carousel-item {
+        height: 30vh;
+        min-height: 400px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        }
+        .carousel-item h3 {
+            overscroll-behavior-y: contain;
+            position: initial;
+            display: flex;
+            font-size: 32px;
+            color: #ffffff;
+        }
+        
+        .image--lado {
+            height: 29vh;
+            width: 46%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .image--lado img{
+            width: 51%;
+        }
+        .image--lado2 img{
+            
+        }
+        .image--abajo img{
+            width: 33%;
+        }
+
+        .main__image--card{
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+        .main__image--card2{
+            display: none;
+            gap: 12px;
+            width: 28%;
+            flex-direction: column;
+        }
+
+        .main__image--card3{
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
+        .image--abajo{
+            height: 15vh;
+            display: flex;
+            min-width: 134px;
+            min-height: 176px;
+            flex-wrap: wrap;
+            width: 36%;
+            gap: 113px;
+        }
+        
+        .image--abajo{
+            display: flex;
+            min-width: 226px;
+            min-height: 137px;
+            gap: 7px;
+        }
+        .carrousel{
+            display: flex;
+            height: 46vh;
+            width: 100%;
+        }
+    .carrousel img{
+        display: flex;
+        height: 25vh;
+        min-height: 200px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        width: 65%;
+        }
+
+        .main__image--carruesel{
+            display: flex;
+        }
+    
+
+} */
+
+@media (min-width: 1024px){
+
+    .home__main{
+        height: 90vh;
+    }
+
+    .main--section-s{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .carousel{
+        width: 51%;
+    }
+    .carousel-item {
+        height: 30vh;
+        min-height: 400px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        }
+
+        .carousel-item h3 {
+            position: initial;
+            display: flex;
+            font-size: 32px;
+            color: #ffffff;
+        }
+        .carousel-item button {
+            display: flex;
+            margin-left: 66%;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 11px;
+        }
+        .main--info{
+            font-size: 20px;
+        }
+
+        .main__ul--info img {
+            display: flex;
+            margin: 0px;
+        }
+        .main__div--info span{
+            display: flex;
+            font-size: 16px;
+            font-family: 'lato', sans-serif;
+        }
+
+
+        .image--lado{
+            position: relative;
+            height: 22vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+        }
+
+        .image--lado2{
+            height: 22vh;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+        }
+        .image--lado3{
+            height: 22vh;
+            width: 98%;
+            display: flex;
+            justify-content: center;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+            align-items: flex-end;
+        }
+
+        .image--lado img{
+            width: 50%;
+        }
+        .image--lado2 img{
+            width: 39%;
+        }
+        .image--lado3 img{
+            width: 59%;
+        }
+
+        .main__image--card{
+            display: flex;
+            gap: 12px;
+            /* width: 47%; */
+        }
+        .main__image--card2{
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+
+        .main__image--card3{
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+        .direction{
+            display: flex;
+            gap: 3px;
+        }
+
+        .image--lado h2{
+            position: absolute;
+            display: flex;
+            font-size: 21px;
+            text-transform: uppercase;
+            font-weight: 700;
+            left: 9px;
+            top: 0;
+            color: #FFF;
+        }
+        .image--lado span{
+            position: absolute;
+            display: flex;
+            font-size: 21px;
+            top: 31px;
+            left: 9px;
+            color: #ffff;
+        }
+
+        .image--lado3 h2{
+            position: absolute;
+            display: flex;
+            font-size: 21px;
+            text-transform: uppercase;
+            font-weight: 700;
+            left: 9px;
+            top: 0;
+            color: #FFF;
+        }
+
+        .image--lado3 span{
+            position: absolute;
+            display: flex;
+            font-size: 21px;
+            top: 31px;
+            left: 9px;
+            color: #ffff;
+        }
+
+        .button1{
+            position: absolute;
+            display: flex;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 5px;
+            top: 9.5rem;
+            right: 21rem;
+        }
+
+       .button2{
+        position: absolute;
+        display: flex;
+        border: none;
+        background-color: #ef3a7cbd;
+        padding: 5px;
+        top: 9.5rem;
+        right: 5rem;
+        }
+        .button3{
+            position: absolute;
+            display: flex;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 5px;
+            top: 9.5rem;
+            right: 6rem;
+        }
+}
+
+@media (min-width: 1440px){
+
+    .home__main{
+        height: 90vh;
+    }
+    .main--section-s{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .carousel{
+        width: 51%;
+    }
+    .carousel-item {
+        height: 30vh;
+        min-height: 400px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        }
+
+        .carousel-item h3 {
+            position: initial;
+            display: flex;
+            font-size: 32px;
+            color: #ffffff;
+        }
+        .carousel-item button {
+            display: flex;
+            margin-left: 66%;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 11px;
+        }
+        .main--info{
+            font-size: 20px;
+        }
+
+        .main__ul--info img {
+            display: flex;
+            margin: 0px;
+        }
+        .main__div--info span{
+            display: flex;
+            font-size: 16px;
+            font-family: 'lato', sans-serif;
+        }
+
+
+        .image--lado{
+            position: relative;
+            height: 15vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+        }
+
+        .image--lado2{
+            height: 22vh;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+        }
+        .image--lado3{
+            height: 15vh;
+            width: 98%;
+            display: flex;
+            justify-content: center;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+        }
+
+        .image--lado img{
+            width: 27%;
+        }
+        .image--lado2 img{
+            width: 65%;
+        }
+        .image--lado3 img{
+            width: 47%;
+        }
+
+        .main__image--card{
+            display: flex;
+            gap: 12px;
+            /* width: 47%; */
+        }
+        .main__image--card2{
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+
+        .main__image--card3{
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+        .direction{
+            display: flex;
+            gap: 3px;
+        }
+        .button1{
+            position: absolute;
+            display: flex;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 5px;
+            top: 9.5rem;
+            right: 32rem;
+        }
+
+       .button2{
+        position: absolute;
+        display: flex;
+        border: none;
+        background-color: #ef3a7cbd;
+        padding: 5px;
+        top: 9.5rem;
+        right: 13rem;
+        }
+        .button3{
+            position: absolute;
+            display: flex;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 5px;
+            top: 9.5rem;
+            right: 8rem;
+        }
+}
+
+@media (min-width: 1920px){
+    .main--section-s{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .carousel{
+        width: 51%;
+    }
+    .carousel-item {
+        height: 30vh;
+        min-height: 400px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        }
+
+        .carousel-item h3 {
+            position: initial;
+            display: flex;
+            font-size: 32px;
+            color: #ffffff;
+        }
+        .carousel-item button {
+            display: flex;
+            margin-left: 66%;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 11px;
+        }
+        .main--info{
+            font-size: 20px;
+        }
+
+        .main__ul--info img {
+            display: flex;
+            margin: 0px;
+        }
+        .main__div--info span{
+            display: flex;
+            font-size: 16px;
+            font-family: 'lato', sans-serif;
+        }
+
+
+        .image--lado{
+            position: relative;
+            height: 15vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+        }
+
+        .image--lado2{
+            height: 22vh;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+        }
+        .image--lado3{
+            height: 15vh;
+            width: 98%;
+            display: flex;
+            justify-content: center;
+            min-width: 14.3rem;
+            min-height: 12.2rem;
+        }
+
+        .image--lado img{
+            width: 27%;
+        }
+        .image--lado2 img{
+            width: 65%;
+        }
+        .image--lado3 img{
+            width: 47%;
+        }
+
+        .main__image--card{
+            display: flex;
+            gap: 12px;
+            /* width: 47%; */
+        }
+        .main__image--card2{
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+
+        .main__image--card3{
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+        .direction{
+            display: flex;
+            gap: 3px;
+        }
+
+        .button1{
+            position: absolute;
+            display: flex;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 5px;
+            top: 9.5rem;
+            right: 47rem;
+        }
+
+       .button2{
+        position: absolute;
+        display: flex;
+        border: none;
+        background-color: #ef3a7cbd;
+        padding: 5px;
+        top: 9.5rem;
+        right: 26rem;
+        }
+        .button3{
+            position: absolute;
+            display: flex;
+            border: none;
+            background-color: #ef3a7cbd;
+            padding: 5px;
+            top: 9.5rem;
+            right: 10rem;
+        }
+}
