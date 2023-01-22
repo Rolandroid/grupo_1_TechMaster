@@ -1,5 +1,6 @@
 @import "./general.css";
 @import "./variables.css";
+@import "./detalle.css";
 @import "./header.css";
 @import "./footer.css";
 @import "./home.css";
@@ -7,7 +8,7 @@
 @import "./login.css";
 @import "./register.css";
 @import "./resultados.css";
-@import "./detalle.css";
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
