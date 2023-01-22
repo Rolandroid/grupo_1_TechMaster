@@ -8,15 +8,20 @@
   <link rel="stylesheet" href="/Stylesheet/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TechMaster index</title>
+  <title>TechMaster Carrito</title>
 </head>
 
 <body class="boby__view__carrito">
+  
+  
+  
+  
+  
   <header class="home--header">
     <div class="header-top">
       <div class="logo--master">
-        <a class="logo" href="/"><img src="/images/logo.svg" alt="Logo" /></a>
-        <a class="tecmater--logo" href=""><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
+        <a class="logo" href="/home"><img src="/images/logo.svg" alt="Logo" /></a>
+        <a class="tecmater--logo" href="/home"><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
       </div>
       <form class="search" action="/search" method="GET">
         <input type="search" name="busqueda" placeholder="Buscar productos" />
@@ -31,8 +36,7 @@
           <option value="5"><a href="#">Ofertas</a></option>
         </select>
         <hr />
-        <button class="lupa"><i class="fas fa-search"></i></button>
-
+         <button class="lupa"><i class="fas fa-search"></i></button>
         <nav>
           <div class="header__buerger--menu">
             <i class="fas fa-bars"></i>
@@ -42,8 +46,9 @@
       <div class="home__header--local">
         <ul class="header--redes">
           <li><a href="#"><i class="fa-solid fa-location-dot"></i><span>Ubicación EEUU 123</span></a></li>
-          <li><a href="#"><i class="fa-solid fa-user"></i><span>Login / Registrar</span></a></li>
-          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><i class="fa-solid fa-user"></i></li>
+          <span> <a href="./login">Ingresar</a><a href="./register">Registrarse</a></span>
+          <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
 
       </div>
@@ -51,18 +56,20 @@
     <nav class="home__header__barra--nav">
       <div class="home__header--barra">
         <ul class="header--barra">
-          <li><a href="#">Monitor</a></li>
-          <li><a href="#">Mouse</a></li>
-          <li><a href="#">Teclado</a></li>
-          <li><a href="#">Auriculares</a></li>
-          <li><a href="#">Ofertas</a></li>
+          <li><a href="/resultados">Monitor</a></li>
+          <li><a href="/resultados">Mouse</a></li>
+          <li><a href="/resultados">Teclado</a></li>
+          <li><a href="/resultados">Auriculares</a></li>
+          <li><a href="/resultados">Ofertas</a></li>
           <hr />
-          <li><a href="#">Contactos</a></li>
+          <li><a href="#contactos">Contactos</a></li>
           <li><a href="#">Sobre nosotros</a></li>
         </ul>
       </div>
     </nav>
   </header>
+
+
 
   <main class="mainCarrito">
     <h1>Carrito De Compra</h1>
@@ -151,7 +158,7 @@
   </main>
 
   <footer>
-    <section class="footer--section">
+    <section class="footer--section" id="contactos">
       <div class="footer--div">
         <div class="footer--logo">
           <img class="logo--footer" src="/images/logo.svg" alt="">

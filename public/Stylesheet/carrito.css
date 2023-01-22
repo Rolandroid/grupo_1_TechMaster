@@ -30,14 +30,14 @@
 }
 
 .articleCarrito{
-    margin:2vw;
+    margin:2vw 2vw 0 2vw ;
     background: linear-gradient(#390b25, #523848);
     width: 95%;
     display: flex;
 }
 .articleCarrito img{
-    width: 35%;
-    height: 81%;
+    width: 150px;
+    height: 150px;
     padding: 10px;
 }
 
