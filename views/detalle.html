@@ -20,57 +20,58 @@
     <link rel="stylesheet" href="/stylesheet/styles.css" />
 </head>
 <body>
-    <header class="home--header">
-        <div class="header-top">
-          <div class="logo--master">
-            <a class="logo" href="/"><img src="/images/logo.svg" alt="Logo" /></a>
-            <a class="tecmater--logo" href=""><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
-          </div>
-          <form class="search" action="/search" method="GET">
-            <input type="search" name="busqueda" placeholder="Buscar productos" />
-            <hr />
-            <select class="Filter" name="Filtrar" id="">
-              <option value="">Filtrar</option>
-              <option value="0"><a href="#">Todos</a></option>
-              <option value="1"><a href="#">Monitor</a></option>
-              <option value="2"><a href="#">Teclado</a></option>
-              <option value="3"><a href="#">Mouses</a></option>
-              <option value="4"><a href="#">Auriculares</a></option>
-              <option value="5"><a href="#">Ofertas</a></option>
-            </select>
-            <hr />
-            <button class="lupa"><i class="fas fa-search"></i></button>
-  
-            <nav>
-              <div class="header__buerger--menu">
-                <i class="fas fa-bars"></i>
-              </div>
-            </nav>
-          </form>
-          <div class="home__header--local">
-            <ul class="header--redes">
-              <li><a href="#"><i class="fa-solid fa-location-dot"></i><span>Ubicación EEUU 123</span></a></li>
-              <li><a href="#"><i class="fa-solid fa-user"></i><span>Login / Registrar</span></a></li>
-              <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-  
-          </div>
-        </div>
-        <nav class="home__header__barra--nav">
-          <div class="home__header--barra">
-            <ul class="header--barra">
-              <li><a href="#">Monitor</a></li>
-              <li><a href="#">Mouse</a></li>
-              <li><a href="#">Teclado</a></li>
-              <li><a href="#">Auriculares</a></li>
-              <li><a href="#">Ofertas</a></li>
-              <hr />
-              <li><a href="#">Contactos</a></li>
-              <li><a href="#">Sobre nosotros</a></li>
-            </ul>
+  <header class="home--header">
+    <div class="header-top">
+      <div class="logo--master">
+        <a class="logo" href="/"><img src="/images/logo.svg" alt="Logo" /></a>
+        <a class="tecmater--logo" href=""><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
+      </div>
+      <form class="search" action="/search" method="GET">
+        <input type="search" name="busqueda" placeholder="Buscar productos" />
+        <hr />
+        <select class="Filter" name="Filtrar" id="">
+          <option value="">Filtrar</option>
+          <option value="0"><a href="#">Todos</a></option>
+          <option value="1"><a href="#">Monitor</a></option>
+          <option value="2"><a href="#">Teclado</a></option>
+          <option value="3"><a href="#">Mouses</a></option>
+          <option value="4"><a href="#">Auriculares</a></option>
+          <option value="5"><a href="#">Ofertas</a></option>
+        </select>
+        <hr />
+        <button class="lupa"><i class="fas fa-search"></i></button>
+
+        <nav>
+          <div class="header__buerger--menu">
+            <i class="fas fa-bars"></i>
           </div>
         </nav>
-      </header>
+      </form>
+      <div class="home__header--local">
+        <ul class="header--redes">
+          <li><a href="#"><i class="fa-solid fa-location-dot"></i><span>Ubicación EEUU 123</span></a></li>
+          <li><i class="fa-solid fa-user"></i></li>
+          <span> <a href="">Ingresar</a><a href="./register">Registrarse</a></span>
+          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+
+      </div>
+    </div>
+    <nav class="home__header__barra--nav">
+      <div class="home__header--barra">
+        <ul class="header--barra">
+          <li><a href="#">Monitor</a></li>
+          <li><a href="#">Mouse</a></li>
+          <li><a href="#">Teclado</a></li>
+          <li><a href="#">Auriculares</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <hr />
+          <li><a href="#">Contactos</a></li>
+          <li><a href="#">Sobre nosotros</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
       <main class="detalle__main">
 
@@ -246,7 +247,7 @@
         </div>
       </div>
         </section>
-  
+    
       </footer>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
