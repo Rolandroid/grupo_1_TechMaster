@@ -12,6 +12,7 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
     Carlos Guillen - 19 años - CABA 
         Un joven, con un breve conocimiento en informática, tengo terminado la secundaria en un colegio informático y me gusta mucho el mundo de la Ciberseguridad.
     Braian Almirón - 26 años - Lanús
+    Actualmente cursando Desarrollador Web Full Stack de Fundación Formar (Digital House) y Argentina Programa.
     Rolando Lisarazo - 30 años - Córdoba
         Joven entusiasta de el diseño de videojuegos y juegos de mesa. con carrera en construccion y desempeño en tareas en equipo.
 
