@@ -1,0 +1,120 @@
+.detalle__section{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.detalle__section h3{
+    
+}
+
+
+
+.carousel-item img{
+    width: 60%;
+    margin: auto;
+    
+display: flex;}
+
+.detalle__info{
+    padding: 20px 10px;
+}
+
+.detalle__info p{
+    color: #00a650;
+    padding-top: 10px;
+    
+}
+
+.detalle__info span{
+    display: block;
+}
+
+.detalle__price {
+    font-weight: 400;
+    font-size: 23px;
+    
+}
+
+.box__button-comprar{
+    text-align: center;
+    padding-bottom: 10px;
+    
+}
+
+.box__button-comprar button{
+    border: none;
+    background-color: var(--colorGranate);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    width: 95%;
+}
+
+.box__button-agregar{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.box__button-agregar button{
+    border: none;
+    background-color: #E6E1E1;
+    color: var(--colorGranate);
+    padding: 10px;
+    border-radius: 6px;
+    width: 95%;
+}
+
+.detalle__section-description hr{
+    display: block;
+}
+
+.detalle__section-description span{
+    padding: 35px 10px 5px 10px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.detalle__section-description ul{
+    padding-bottom: 30px;
+}
+
+.detalle__section-description li{
+list-style-type: disc;
+padding: 5px 0;
+}
+
+
+
+.detalle__title-relacionados h4{
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.detalle__main-productos{
+    padding: 10px;
+}
+
+.detalle__main-productos .detalle-items{
+margin: 0 5px;
+}
+
+
+
+.card img {
+    
+    width: 80%;
+    margin: auto;
+}
+
+.btn-primary{
+    background-color: var(--colorGranate);
+    border: none;
+}
+
+
+
