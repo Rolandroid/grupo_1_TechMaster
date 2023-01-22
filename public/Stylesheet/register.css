@@ -52,25 +52,16 @@
     font-weight: 100;
 }
 .form__header--links{
-        
-    display: flex;     
-    flex-direction: column;      
-    gap: 15px;     
-    align-items: center;    
-    padding-bottom: 13px;
-    font-weight: 100;
+    border: 1px solid white;
+    width: 80%;
+    padding: 5px 8px;
     }
-    
 .form__header--links a{
- 
-display: flex; 
-border: solid 1px #FFF;  
-justify-content: center;
-width: 100%;
-color: #fff;
-gap: 6px;
-padding: 2px 27px;
-font-family: 'Lato', sans-serif;
+        color: white;
+    }
+
+.form__header--links:hover a{
+        color: rgb(170, 170, 170);
     }
     
     .register__main--h1{
