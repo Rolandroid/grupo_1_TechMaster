@@ -1,12 +1,11 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-} */
+
 .home__main{
-    background-color: var(--escalaDeGrises);
+    background-color: var(--colorGrisOscuro);
     padding: 0px 5px 0px 5px;
+}
+
+.main--section-s{
+    margin-top: 10px;
 }
 
 .boby__view__home{
@@ -127,28 +126,6 @@ color: #fff;
         display: none;
     }
 
-/* carousel 2 */
-/* .glider-next {
-    display: none;
-} */
-
-/* .card {
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 0.25rem;
-    margin: 30px;;
-}
- */
 
 
  .conteudo{
@@ -262,6 +239,7 @@ button a{
         display: flex;
         align-items: center;
         gap: 15px;
+        margin-top: 10px;
     }
     .carousel{
         width: 51%;
@@ -399,111 +377,6 @@ button a{
         
 
 }
-/* @media (min-width: 1024px) {
-
-
-
-    .main--section-s{
-        display: flex;
-        gap: 14px;
-        width: auto;
-    }
-    .carousel{
-        width: 56%;
-    }
-    .carousel-item {
-        height: 30vh;
-        min-height: 400px;
-        background: no-repeat center center scroll;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
-        }
-        .carousel-item h3 {
-            overscroll-behavior-y: contain;
-            position: initial;
-            display: flex;
-            font-size: 32px;
-            color: #ffffff;
-        }
-        
-        .image--lado {
-            height: 29vh;
-            width: 46%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .image--lado img{
-            width: 51%;
-        }
-        .image--lado2 img{
-            
-        }
-        .image--abajo img{
-            width: 33%;
-        }
-
-        .main__image--card{
-            display: flex;
-            gap: 12px;
-            flex-direction: column;
-        }
-        .main__image--card2{
-            display: none;
-            gap: 12px;
-            width: 28%;
-            flex-direction: column;
-        }
-
-        .main__image--card3{
-            display: flex;
-            align-items: flex-end;
-            gap: 20px;
-        }
-
-        .image--abajo{
-            height: 15vh;
-            display: flex;
-            min-width: 134px;
-            min-height: 176px;
-            flex-wrap: wrap;
-            width: 36%;
-            gap: 113px;
-        }
-        
-        .image--abajo{
-            display: flex;
-            min-width: 226px;
-            min-height: 137px;
-            gap: 7px;
-        }
-        .carrousel{
-            display: flex;
-            height: 46vh;
-            width: 100%;
-        }
-    .carrousel img{
-        display: flex;
-        height: 25vh;
-        min-height: 200px;
-        background: no-repeat center center scroll;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
-        width: 65%;
-        }
-
-        .main__image--carruesel{
-            display: flex;
-        }
-    
-
-} */
 
 @media (min-width: 1024px){
 
