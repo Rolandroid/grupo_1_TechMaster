@@ -34,14 +34,20 @@
 }
 
 .login__main__div--links{
-    width: 240px;
+  /*   width: 240px;
     padding: 10px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255); */
+    border: 1px solid white;
+    width: 260px;
+    padding: 5px 8px;text-align: center;
 }
 
 .login__main__div--links a{
-    color: rgb(207, 207, 207);
-    
+    color: white;
+}
+
+.login__main__div--links:hover a{
+    color: rgb(170, 170, 170);
 }
 
 .login__main__form--logueo{
