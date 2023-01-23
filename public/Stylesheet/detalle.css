@@ -23,6 +23,16 @@
     
 }
 
+.card {
+    scroll-snap-align: start;
+    border-radius: 30px;
+    min-height: 200px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .carousel-inner{
     background: none;
     background-color: rgb(82, 206, 45);
