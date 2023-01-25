@@ -562,9 +562,9 @@ button a{
 
 @media (min-width: 1440px){
 
-    .home__main{
+   /*  .home__main{
         height: 90vh;
-    }
+    } */
     .main--section-s{
         display: flex;
         align-items: center;
