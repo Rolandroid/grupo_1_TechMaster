@@ -31,12 +31,12 @@
         <hr />
         <select class="Filter" name="Filtrar" id="">
           <option value="">Filtrar</option>
-          <option value="0"><a href="#">Todos</a></option>
-          <option value="1"><a href="#">Monitor</a></option>
-          <option value="2"><a href="#">Teclado</a></option>
-          <option value="3"><a href="#">Mouses</a></option>
-          <option value="4"><a href="#">Auriculares</a></option>
-          <option value="5"><a href="#">Ofertas</a></option>
+          <option value="0"><a href="/resultados">Todos</a></option>
+          <option value="1"><a href="/resultados">Monitor</a></option>
+          <option value="2"><a href="/resultados">Teclado</a></option>
+          <option value="3"><a href="/resultados">Mouses</a></option>
+          <option value="4"><a href="/resultados">Auriculares</a></option>
+          <option value="5"><a href="/resultados">Ofertas</a></option>
         </select>
         <hr />
         <button class="lupa"><i class="fas fa-search"></i></button>
@@ -60,14 +60,14 @@
     <nav class="home__header__barra--nav">
       <div class="home__header--barra">
         <ul class="header--barra">
-          <li><a href="#">Monitor</a></li>
-          <li><a href="#">Mouse</a></li>
-          <li><a href="#">Teclado</a></li>
-          <li><a href="#">Auriculares</a></li>
-          <li><a href="#">Ofertas</a></li>
+          <li><a href="/resultados">Monitor</a></li>
+          <li><a href="/resultados">Mouse</a></li>
+          <li><a href="/resultados">Teclado</a></li>
+          <li><a href="/resultados">Auriculares</a></li>
+          <li><a href="/resultados">Ofertas</a></li>
           <hr />
-          <li><a href="#">Contactos</a></li>
-          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="/resultados">Contactos</a></li>
+          <li><a href="#footer">Sobre nosotros</a></li>
         </ul>
       </div>
     </nav>
@@ -119,10 +119,10 @@
           </div>
         </div>
             <div class="box__button-comprar">
-               <a href="/carrito"> <button type="submit">Comprar ahora</button></a>
+               <a href="/carrito"> <button type="submit">Comprar ahora</button> </a>
             </div>
             <div class="box__button-agregar">
-                <button type="submit">Agregar al carrito</button>
+              <a href="/carrito"> <button type="submit">Agregar al carrito</button> </a>
             </div>
          
       
@@ -197,7 +197,7 @@
           <div class="card-body">
             <h5 class="card-title">$7.000</h5>
             <p class="card-text">Teclado Genius k-1620 de Alta Performance</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="/carrito" class="btn btn-primary">Comprar</a>
           </div>
         </div>
 
@@ -209,7 +209,7 @@
     </section>
       </main>
 
-      <footer>
+      <footer id="footer_detalle">
         <section class="footer--section">
           <div class="footer--div">
             <div class="footer--logo">

@@ -69,12 +69,15 @@
 
 .articleCarrito div div button{
     max-width: 150px;
-    width:40%;
+    width: 101%;
     border: none;
     border-radius: 10px;
     padding: 9px;
-    background-color: white;
-    color: var(--colorGranate);
+    background-color: #706e6e;
+    color: hsl(0deg 0% 0%);
+}
+.articleCarrito div div button:hover{
+    background-color: #4d4d4d;
 }
 
 .articleCarrito div div  input{
@@ -85,8 +88,8 @@
     border: none;
     border-radius: 10px;
     padding: 9px 0px 9px 9px;
-    background-color: white;
-    color: var(--colorGranate);
+    background-color: #706e6e;
+    /* color: var(--colorGranate); */
 }
 
 
