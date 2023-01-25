@@ -10,16 +10,13 @@ app.listen(port, () => console.log("Port " + port + " running"))
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, ".", "views", "index.html"))
+    res.sendFile(path.resolve(__dirname, ".", "views", "home.html"))
 });
 app.get('/header', (req, res) => {
     res.sendFile(path.resolve(__dirname, ".", "views", "header.html"))
 });
 app.get('/footer', (req, res) => {
     res.sendFile(path.resolve(__dirname, ".", "views", "footer.html"))
-});
-app.get('/home', (req, res) => {
-    res.sendFile(path.resolve(__dirname, ".", "views", "home.html"))
 });
 app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, ".", "views", "login.html"))
