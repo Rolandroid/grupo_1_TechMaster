@@ -3,11 +3,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TechMaster Detalle</title>
     <script
     src="https://kit.fontawesome.com/35292d76ff.js"
     crossorigin="anonymous"
@@ -17,61 +17,10 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   
-    <link rel="stylesheet" href="/stylesheet/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
 </head>
 <body>
-  <header class="home--header">
-    <div class="header-top">
-      <div class="logo--master">
-        <a class="logo" href="/"><img src="/images/logo.svg" alt="Logo" /></a>
-        <a class="tecmater--logo" href=""><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
-      </div>
-      <form class="search" action="/search" method="GET">
-        <input type="search" name="busqueda" placeholder="Buscar productos" />
-        <hr />
-        <select class="Filter" name="Filtrar" id="">
-          <option value="">Filtrar</option>
-          <option value="0"><a href="/resultados">Todos</a></option>
-          <option value="1"><a href="/resultados">Monitor</a></option>
-          <option value="2"><a href="/resultados">Teclado</a></option>
-          <option value="3"><a href="/resultados">Mouses</a></option>
-          <option value="4"><a href="/resultados">Auriculares</a></option>
-          <option value="5"><a href="/resultados">Ofertas</a></option>
-        </select>
-        <hr />
-        <button class="lupa"><i class="fas fa-search"></i></button>
-
-        <nav>
-          <div class="header__buerger--menu">
-            <i class="fas fa-bars"></i>
-          </div>
-        </nav>
-      </form>
-      <div class="home__header--local">
-        <ul class="header--redes">
-          <li><a href="#"><i class="fa-solid fa-location-dot"></i><span>Ubicación EEUU 123</span></a></li>
-          <li><i class="fa-solid fa-user"></i></li>
-          <span> <a href="">Ingresar</a><a href="./register">Registrarse</a></span>
-          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
-
-      </div>
-    </div>
-    <nav class="home__header__barra--nav">
-      <div class="home__header--barra">
-        <ul class="header--barra">
-          <li><a href="/resultados">Monitor</a></li>
-          <li><a href="/resultados">Mouse</a></li>
-          <li><a href="/resultados">Teclado</a></li>
-          <li><a href="/resultados">Auriculares</a></li>
-          <li><a href="/resultados">Ofertas</a></li>
-          <hr />
-          <li><a href="/resultados">Contactos</a></li>
-          <li><a href="#footer">Sobre nosotros</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <%- include('../partials/header') %> 
 
       <main class="detalle__main">
 
@@ -209,43 +158,7 @@
     </section>
       </main>
 
-      <footer id="footer_detalle">
-        <section class="footer--section">
-          <div class="footer--div">
-            <div class="footer--logo">
-              <img class="logo--footer" src="/images/logo.svg" alt="">
-            <div class="footer__barra--lista">
-              <h2>Seguinos</h2>
-              <h2>Contactos</h2>
-              <h2>Métodos de pago</h2>
-            </div>
-          <div class="footer__section--div">
-          <div class="footer--redes">
-            <ul class="lista--redsocial">
-            <li><a href=""><img src="/images/facebook 1.svg" alt="facebook"><span>@TechMaster</span></a></li>
-            <li><a href=""><img src="/images/instagram 1.svg" alt="instagram"><span>@TechMaster</span></a></li>
-            <li><a href=""><img src="/images/twitter 1.svg" alt="twitter"><span>@TechMaster</span></a></li>
-          </ul>
-          </div>
-        <div class="footer--contactos">
-          <ul class="lista--contactos">
-          <li><a href=""><img src="/images/whatsapp 1.svg" alt="whatsapp"><span>+12 123 1234567</span></a></li>
-          <li><a href=""><img src="/images/Ubicacion.svg" alt="Ubicacion"><span>Calle Falsa 123</span></a></li>
-          <li><a href=""><img src="/images/Correo.svg" alt="Correo"><span>TechMaster@gmail.com</span></a></li>
-        </ul>
-        </div>
-        <div class="footer--metodosDePago">
-          <img src="/images/Mastercard.png" alt="">
-          <img src="/images/Visa.png" alt="">
-          <img src="/images/RapiPago.png" alt="">
-          <img src="/images/PayPal.png" alt="">
-          <img src="/images/Naranja.png" alt="">
-          <img src="/images/MercadoPago.png" alt="">
-        </div>
-      </div>
-        </section>
-    
-      </footer>
+      <%- include('../partials/footer')  %> 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
