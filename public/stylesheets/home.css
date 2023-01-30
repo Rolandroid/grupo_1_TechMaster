@@ -229,7 +229,7 @@ color: #fff;
     font-weight: 600;
     border-radius: 5px;
 }
-button a{
+.button--carrusel a{
     color: #fff300;
 }
 
@@ -558,6 +558,19 @@ button a{
             top: 9.5rem;
             right: 6rem;
         }
+
+        .button1 a{
+            color: #fff300;
+        }
+
+        .button2 a{
+            color: #fff300;
+        }
+
+        .button3 a{
+            color: #fff300;
+        }
+
 }
 
 @media (min-width: 1440px){
