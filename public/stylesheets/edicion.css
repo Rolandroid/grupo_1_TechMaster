@@ -1,0 +1,64 @@
+.boby__view__edicion{}
+.mainEdicion{
+    background-color: rgba(28, 28, 28, 1);
+    padding: 10px;
+    /* text-align: inherit; */
+}
+.titulo{
+    color: white;
+}
+.mainEdicion h1{/* color: #282626; */}
+.mainEdicion form{
+    max-width: 440px;
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+    color: #282626;
+    font-size: 1.5rem;
+    font-weight:700;
+}
+.mainEdicion form h1{
+    font-size: smaller;
+    margin-top: 18px;
+}
+.mainEdicion form input{
+    color:black;
+    border:none;
+    border-radius: 10px;
+    background-color: #c5c4c4;
+    font-size: smaller;
+    font-weight:700;
+    border-bottom: 1px black solid;
+}
+.texto{
+    width: 265px;
+}
+
+.numero{
+    width: 131px;
+    text-align: end;
+}
+.selector{
+    color: #202122;
+    border:none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight:700;
+}
+.foto{width: 281px;}
+
+.boton{
+    background-color: lightgrey;
+    border-radius: 5px;
+    margin: 15px 15px 0px 15px;
+    padding: 10px;
+    color: #282626;
+    font-size: 1.5rem;
+    font-weight:700;
+}
+.opcion{
+    font-size: smaller;
+}
+.boton:hover{
+    background-color: rgb(167, 167, 167);
+}

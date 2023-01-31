@@ -1,0 +1,19 @@
+
+description
+
+Formulario al que accede el usuario administrador para cargar nuevos productos y
+editar los existentes.
+Un buen punto de partida para los campos de estos formularios puede ser el siguiente:
+● Nombre del producto (name)
+● Descripción (description)
+● Imagen (image)
+● Categoría (category)
+● -
+● Precio (price)
+Historias de usuario
+★ Como administrador quiero poder crear nuevos productos para agregarlos a los
+listados del sitio.
+★ Como administrador quiero poder modificar los productos existentes para corregir
+información o actualizar precios.
+Entregable: páginas de creación y edición de productos en formato .ejs junto con todos
+los recursos necesarios, estilos de CSS e imágenes.
