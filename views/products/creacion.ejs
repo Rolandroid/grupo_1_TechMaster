@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/3fab2a7658.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/Stylesheets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TechMaster Creacion de producto</title>
+</head>
+
+
+<body class="boby__view__creacion">
+
+
+  <%- include('../partials/header') %>
+
+    <main class="mainCreacion">
+      <h1 class="titulo">Crear Producto</h1>
+      <form>
+        <h1>Coloque un nombre al producto:</h1>
+        <input type="form_text" class="texto" >
+        <h1>Elija la categoria del producto:</h1>
+        <select class="selector" name="Filtrar" id="">
+            <option class="opcion" value="1"><a href="#">Elija </a></option>
+            <option class="opcion" value="2"><a href="#">Monitor </a></option>
+            <option class="opcion" value="3"><a href="#">Teclado </a></option>
+            <option class="opcion" value="4"><a href="#">Mouse </a></option>
+            <option class="opcion" value="5"><a href="#">Auriculares</a></option>
+          </select>
+        <h1>Indique el precio base del producto:</h1> 
+        $<input type=" number" class="numero" ><br>
+        <h1>Puede colocar un descunto al precio:</h1>
+        <input type="number" class="numero" >% Off<br>
+        <h1>Agregue tres aspectos del producto:<h1>
+        *<input type="text" class="texto" size="150"><br>
+        *<input type="text" class="texto" size="150"><br>
+        *<input type="text" class="texto" size="150"><br>
+        <h1>Elija tres fotos del producto:</h1>
+        imagen 1:<input class="foto" type="file"><br>
+        imagen 2:<input class="foto" type="file"><br>
+        imagen 3:<input class="foto" type="file"><br>
+          
+          
+          <button class="boton" type="reset">Cancelar proceso</button>
+          <button class="boton" type="submit">Crear Producto</button>
+      </form>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

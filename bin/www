@@ -89,4 +89,4 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-console.log('Server running http://localhost:'+ port);
+console.log('TechMaster running: http://localhost:'+ port);
