@@ -187,7 +187,13 @@ hr{
     
 
     .home__header--barra{
+        display: flex;
         background-color: var(--colorGranate);
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0px;
+        
     }
 
     .home__header__barra--nav{
@@ -201,6 +207,10 @@ hr{
         display: flex;
         padding: 12px;
         gap: 15px;
+    }
+
+    .header--barra hr{
+        display: none;
     }
 
     .header--barra li{
@@ -263,10 +273,11 @@ hr{
 
     .home__header--barra{
         padding: 0px;
-        width: 85%;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         font-size: 20px;
+        
     }
 
 }
