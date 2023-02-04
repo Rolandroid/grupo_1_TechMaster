@@ -17,37 +17,44 @@
 
   <%- include('../partials/header') %>
 
-    <main class="mainCreacion">
-      <h1 class="titulo">Crear Producto</h1>
+    <main class="estaCreacion">
+      
       <form>
-        <h1>Coloque un nombre al producto:</h1>
-        <input type="form_text" class="texto" >
-        <h1>Elija la categoria del producto:</h1>
-        <select class="selector" name="Filtrar" id="">
-          <option class="opcion" value="1"><a href="#">Elija </a></option>
-          <option class="opcion" value="2"><a href="#">Monitor </a></option>
-          <option class="opcion" value="3"><a href="#">Teclado </a></option>
-          <option class="opcion" value="4"><a href="#">Mouse </a></option>
-          <option class="opcion" value="5"><a href="#">Auriculares</a></option>
+        <h1 class="esteTitulo">Crear Producto</h1>        
+
+        <p class="estaCategoria">Elija la categoria del producto:</p>
+        <select class="inputCategoria" class="selector" name="Filtrar" id="">
+          <option class="estaOpcion" value="1"><a href="#">Elija </a></option>
+          <option class="estaOpcion" value="2"><a href="#">Monitor </a></option>
+          <option class="estaOpcion" value="3"><a href="#">Teclado </a></option>
+          <option class="estaOpcion" value="4"><a href="#">Mouse </a></option>
+          <option class="estaOpcion" value="5"><a href="#">Auriculares</a></option>
         </select>
-        <h1>Indique el stock disponible:</h1> 
-        <input type=" number" class="numero" ><br>Unidades
-        <h1>Indique el precio base del producto:</h1> 
-        $<input type=" number" class="numero" ><br>
-        <h1>Puede colocar un descunto al precio:</h1>
-        <input type="number" class="numero" >% Off<br>
-        <h1>Agregue tres aspectos del producto:<h1>
-        *<input type="text" class="texto" size="150"><br>
-        *<input type="text" class="texto" size="150"><br>
-        *<input type="text" class="texto" size="150"><br>
-        <h1>Elija tres fotos del producto:</h1>
-        imagen 1:<input class="foto" type="file"><br>
-        imagen 2:<input class="foto" type="file"><br>
-        imagen 3:<input class="foto" type="file"><br>
+        
+        <p class="esteNombre">Coloque un nombre al producto:</p>
+        <input  class="inputNombre" type="form_text" class="texto" >
+
+        <p class="esteStock">Indique el stock disponible:</p>
+        <div class="inputStock" ><input type=" number" class="numero" >Unidades</div>
+
+        <p class="estePrecio">Indique el precio base del producto:</p> 
+        <div class="inputPrecio">$<input type=" number" class="numero" ></div>
+
+        <p class="esteDescuento">Puede colocar un descunto al precio:</p>
+        <div class="inputDescuento"><input type="number" class="numero" >% Off</div>
+
+
+        <p class="estaDescripcion">Agregue una descripcion del producto:<p>
+        <textarea class="inputDescripcion" cols="30" rows="10"></textarea>
+
+        <p class="estasFotos">Elija tres fotos del producto:</p>
+        <div class="inputFoto">imagen 1:<input type="file"></div>
+        <div class="inputFoto">imagen 2:<input type="file"></div>
+        <div class="inputFoto">imagen 3:<input type="file"></div>
+         
           
-          
-          <button class="boton" type="reset">Cancelar proceso</button>
-          <button class="boton" type="submit">Crear Producto</button>
+          <button class="esteBoton" type="reset">Cancelar proceso</button>
+          <button class="esteBoton" type="submit">Crear Producto</button>
       </form>
     </main>
 

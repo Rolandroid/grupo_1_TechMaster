@@ -1,68 +1,38 @@
-.boby__view__creacion{}
-.mainCreacion{
-    display: flex;
-    background-color: rgba(28, 28, 28, 1);
+.estaCreacion{display: flex;justify-content: center;background: gray;}
+.estaCreacion form{
+    width: 500px;
+    background-color: darkgrey;
     padding: 10px;
-    /* text-align: inherit; */
+    border-radius: 15px;
+    display: flex;
+    margin: 10px;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
 }
-.titulo{
-    color: white;
+.esteTitulo{}
+.estaCategoria{}
+.inputCategoria{}
+.estaOpcion{}
+.esteNombre{}
+.inputNombre{}
+.esteStock{}
+.inputStock{}
+.inputStock input{
+    width: 60px;
 }
-.mainCreacion h1{/* color: #282626; */}
-.mainCreacion form{
-    max-width: 440px;
-    background-color: lightgrey;
-    border-radius: 5px;
-    padding: 10px;
-    color: #282626;
-    font-size: 1.5rem;
-    font-weight:700;
+.estePrecio{}
+.inputPrecio{}
+.inputPrecio input{
+    width: 60px;
 }
-.mainCreacion form h1{
-    font-size: smaller;
-    margin-top: 18px;
+.esteDescuento{}
+.inputDescuento{
 }
-.mainCreacion form input{
-    color:black;
-    border:none;
-    border-radius: 10px;
-    background-color: #ececec;
-    font-size: smaller;
-    font-weight:700;
-    border-bottom: 1px black solid;
+.inputDescuento input{
+    width: 60px;
 }
-.texto{
-    width: 265px;
-}
-
-.numero{
-    width: 131px;
-    text-align: end;
-}
-.selector{
-    color: #202122;
-    border:none;
-    background-color: transparent;
-    font-size: 1.5rem;
-    font-weight:700;
-}
-.foto{width: 281px;}
-
-.boton{
-    background-color: lightgrey;
-    border-radius: 5px;
-    margin: 15px 15px 0px 15px;
-    padding: 10px;
-    color: #282626;
-    font-size: 1.5rem;
-    font-weight:700;
-}
-.opcion{
-    font-size: smaller;
-}
-.boton:hover{
-    background-color: rgb(167, 167, 167);
-}
+.estaDescripcion{}
+.estasFotos{}
+.inputFoto{}
+.inputFoto input{}
+.esteBoton{}
