@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const {detalle,resultados,creacion,edicion} = require('../controllers/productController')
+const {detalle,todos,creacion,edicion} = require('../controllers/productController')
 
 router
 .get('/detalle',detalle)
-.get('/resultados',resultados)
+.get('/todos',todos)
 .get('/creacion',creacion)
 .get('/edicion',edicion)
 
