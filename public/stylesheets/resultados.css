@@ -1,6 +1,7 @@
 .boby__view__resultados{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
 } 
 
@@ -11,7 +12,7 @@
 }
 .mainResultados h1{
     color: white;
-    margin:0vw 2vw 0vw 2vw;
+    /* margin:0vw 2vw 0vw 2vw; */
     font-size: 25px;
 }
 
@@ -22,39 +23,43 @@
 }
 
 .articleResultados{
-    margin:2vw 2vw 0 2vw;
-    background: lightgray;
+    margin: 0vw 2vw 2vw 2vw;
+    background: #cfcfcf;
     width: 95%;
     display: flex;
     max-width: 570px;
-    border-style: outset;
-    border-radius: 10px;
-    flex-direction: row;
+    border-radius: 5px;
 }
 .articleResultados img{
     width: 140px;
     margin: 10px;
-    border-style: inset;
     border-radius: 5px;
+    max-height: 140px;
 }
 
 .articleResultados div{
     color: var(--escalaDeGrises);
     font-size: 18px;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 .articleResultados div h3{
     border-bottom: 1px var(--escalaDeGrises) solid;
     color: var(--escalaDeGrises);
 }
-.articleResultados div h2{
+.articleResultados div div{}
+.articleResultados div div h2{
     
     align-self: flex-end;
 }
-.articleResultados div h4{}
+.articleResultados div div h4{}
+
+.precioYOferta{
+    justify-content: space-between
+}
 
 
 .articleResultados div div{
@@ -67,81 +72,33 @@
 }
 
 .articleResultados div div button{
+    background-color: white;
     max-width: 150px;
     width: 101%;
     padding: 9px;
-    background-color: var(--colorGranate);
-    color: darkgray;
+    color: var(--colorGrisOscuro);
     font-size: 15px;
     font-weight: 500;
-    border: none;
-    border-radius: 15px;
-    border-style: outset;
+    border-radius: 5px;
+    border: 1PX solid  transparent;
 }
-.articleResultados div div button:hover{}
+.articleResultados div div a button:hover{
+    background-color: var(green);}
 
 .articleResultados div div  input{
     width: 50px;
     border-style: none;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    border-style: inset;
-    border-radius: 10px;
+    /* border-style: solid; */
+    border-radius: 5px;
     padding: 6px 0px 6px 6px;
-    background-color: darkgray;
+    /* background-color: lightgray; */
     text-align: center;
     font-size: 20px;
 }
 
 
-.totalResultados{
-    margin:2vw;
-    background: var(--escalaDeGrises);
-    width: 95%;
-    display: flex;
-    max-width: 570px;
-    border-radius: 10px;
-}
-.totalResultados img{
-    width: 35%;
-    height: 81%;
-    padding: 10px;
-}
-
-.totalResultados div{
-    color:white;
-    font-size: 18px;
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.totalResultados div h1{
-    border-bottom: 1px white solid;
-    font-size: 1rem;
-}
-.totalResultados div h2{
-    align-self: flex-end;
-}
-
-.totalResultados div div{
-    font-size: 0.6rem;
-    margin: auto 0;
-    display: flex;
-    gap: 2vw;
-}
-
-.totalResultados div div button{
-    width: 150px;
-    background-color: rgb(255 255 255);
-    border-style: none;
-    padding: 5px;
-    border-radius: 5px;
-    color: #000;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    align-self: end;
-}
 
 @media (max-width:767px) {
     .articleResultados{

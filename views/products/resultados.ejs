@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- HEAD -->
+  <!-- HEAD -->
 <%- include('../partials/head') %>
 <body class="boby__view__resultados">
   
@@ -12,15 +11,17 @@
 
 
   <main class="mainResultados">
-    <h1>Resultados de busqueda</h1>
+    <h1>Todos los Productos</h1>
     <section>
 
       <article class="articleResultados">
         <img src="/Images/monitor2.png"></img>
         <div>
-          <h3>Monitor Hitachi 22'</h3>
-          <h2>$1000</h2>
-          <h4>15% OFF</h4>
+            <h3>Monitor Hitachi 22'</h3>
+          <div class="precioYOferta">
+            <h4>15% OFF</h4>
+            <h2>$1000</h2>
+          </div>
           <div>
             <a href="/products/detalle"><button>Detalles</button></a>
             <a href="/products/detalle"><button>Adquirir</button></a>
@@ -28,14 +29,23 @@
         </div>
       </article>
 
-
-      
-    </section>
-  </main>
+      <article class="articleResultados">
+        <img src="/Images/mouse1.png"></img>
+        <div>
+          <h3>Mouse Pampa usb</h3>
+          <div class="precioYOferta">
+            <h4>20% OFF</h4>
+            <h2>$3000</h2>
+          </div>
+          <div>
+            <a href="/products/detalle"><button>Detalles</button></a>
+            <a href="/products/carrito"><button>Adquirir</button></a>
+          </div>
+        </div>
+      </article>
+    
 
   <%- include('../partials/footer')  %> 
-
-  <%- include('../partials/scripts')  %>
 </body>
 
 </html>
