@@ -121,42 +121,42 @@
   },
   {
     "id": 13,
-    "name": "Esme",
-    "image": "Fickling",
-    "decription": "Lithium therapy",
-    "color": "Green",
+    "name": "Teclado Arena",
+    "image": ["tecladoarena1.png", "tecladoarena2.png", "tecladoarena3.png"],
+    "description": "Teclado negro con entrada USB y luces RGB, de de forma ergonomica para la adaptacion del usuario",
+    "color": "Negro",
     "category": "Teclado",
     "discount": null,
-    "price": 14538
+    "price": 12000
   },
   {
     "id": 14,
-    "name": "Reuben",
-    "image": "Shrive",
-    "decription": "Other bone incision NOS",
-    "color": "Green",
+    "name": "teclado Redragon",
+    "image": ["tecladoRedragon1.png", "tecladoRedragon2.png", "tecladoRedragon3.png"], 
+    "description": "Este dispositivo tiene teclas antighosting. Esta cualidad es indispensable si requerís de un uso intensivo del periférico. Gracias a esto podrás evitar fallas al tocar varias teclas al mismo tiempo.",
+    "color": "Blanco",
     "category": "Teclado",
-    "discount": 92,
-    "price": 30941
+    "discount": null,
+    "price": 14000
   },
   {
     "id": 15,
-    "name": "Chiquita",
-    "image": "Lowne",
-    "decription": "Open ureteral biopsy",
-    "color": "Puce",
+    "name": "Teclado Gadnic",
+    "image": ["tecladoGadnic1.png", "tecladoGadnic2.png", "tecladoGadnic3.png"],
+    "description": "Diseñado para ayudarte a usarlo fácilmente, posee un diseño ergonómico, es muy liviano y portátil podrás llevar tu teclado con vos y usarlo donde quieras",
+    "color": "Gris",
     "category": "Teclado",
-    "discount": 8,
-    "price": 37468
+    "discount": 10,
+    "price": 8000
   },
   {
     "id": 16,
-    "name": "Aeriel",
-    "image": "Nattriss",
-    "decription": "Ins/repl single pul gen",
+    "name": "Teclado Tkot",
+    "image": ["tecladoTkot1.png", "tecladoTkot2.png", "tecladoTkot3.png"],
+    "description": "12 accesos directos y amplia compatibilidad: Diseño con 12 teclas de acceso directo para control instantáneo. Compatible con Mac OS, iPad OS, sistema iOS, Android, Windows XP / 7 / 8 /10",
     "color": "Khaki",
     "category": "Teclado",
-    "discount": 1,
-    "price": 74504
+    "discount": 5,
+    "price": 800
   }
 ]
