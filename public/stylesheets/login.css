@@ -49,6 +49,10 @@
     color: rgb(170, 170, 170);
 }
 
+.login__main__form{
+    
+}
+
 .login__main__form--logueo{
     display: flex;
     flex-direction: column;
@@ -57,10 +61,18 @@
     margin-top: 100px;
 }
 
-.buttons{
+.login__button{
     border: none;
     border-radius: 17px;
-    padding: 7px;
+    padding: 8px;
+    gap: 10px;
+    margin: 0 3px;
+}
+
+.login__button2{
+    border: none;
+    border-radius: 17px;
+    padding: 5px;
     gap: 10px;
     margin: 0 3px;
 }
@@ -73,30 +85,69 @@
 }
 
 .login__main__form--boxes{
-    border-bottom: 1px solid rgb(100, 100, 100);
+    border: none;
+    padding: 1%;
 }
 
 .login__main__form--boxes input{
-    border: 0;
-    width: 200px;
+    border: none;
+    border-bottom: 1px solid silver;
+    margin: 2%;
+    width: 90%;
+    padding: 1%;
 }
 
-.login__button{
-    background-color: var(--colorGranate);
-    color: white;
-    width: 169.8px;
-    
-}
+
 .login__button:hover {
     background-color: rgb(107, 34, 77) ;
     
+}
+
+.login__main__form--buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
 }
 
 .login__main__form--buttons a{
     color: white;
 }
 
+.login__button2{
+    background-color: white;
+    color: black;
+    width: 25%;
+    border: solid 1px black;
+}
+
+.login__button{
+    background-color: var(--colorGranate);
+    color: white;
+    width: 25%;
+    
+}
+
+.login__button2 a{
+    color: black;
+}
+.login__button2:hover {
+    background-color: rgb(190, 188, 188);
+    color: white;
+}
+.login__button2:hover a{
+    color: white;
+}
+
+.login__main__form--forget{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 @media (min-width:768px) {
+
     .login__main__div__logo{
         display: none;
     }
@@ -108,12 +159,26 @@
     .login__main__form--boxes input{
         width: 400px;
     }
+
+    .login__main__div--links{
+        width: 60%;
+    }
+
+    .login__main__form--boxes{
+    border: none;
+    padding: 1%;
+}
+
+.login__main__form--forget{
+    margin-bottom: 10px;
+}
 }
 
 @media (min-width:1024px) {
 
     .login__main{
         display: flex;
+        flex-direction: row;
         height: 100vh;
     }
 
@@ -150,5 +215,9 @@
 
     .login__main__form--boxes input{
         width: 400px;
+    }
+
+    .login__main__form--forget{
+        flex-direction: column;
     }
 }
