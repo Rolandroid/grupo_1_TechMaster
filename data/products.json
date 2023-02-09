@@ -41,43 +41,43 @@
   },
   {
     "id": 5,
-    "name": "Minor",
-    "image": "Sneesby",
-    "decription": "Intest stoma revis NOS",
-    "color": "Khaki",
+    "name": "MONITOR GAMER 24' GIGABYTE",
+    "image": ["monitorgigabyte1.png","monitorgigabyte2.png","monitorgigabyte3.png"],
+    "description": "Disfrutá de todas las cualidades que el monitor Gigabyte G24F 2 tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementá cualquier espacio ya sea en tu casa u oficina.",
+    "color": "Negro",
     "category": "Monitor",
     "discount": 62,
-    "price": 59213
+    "price": 132000
   },
   {
     "id": 6,
-    "name": "Fidelity",
-    "image": "Wey",
-    "decription": "Other humerus incision",
-    "color": "Green",
+    "name": "MONITOR GAMER 24' SAMSUNG",
+    "image": ["monitorsamsung1.png","monitorsamsung2.png","monitorsamsung3.png"],
+    "description": "Una experiencia visual de calidad.Este monitor de 23,5' te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Su tiempo de respuesta de 4 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
+    "color": "Negro",
     "category": "Monitor",
     "discount": 28,
-    "price": 68525
+    "price": 85525
   },
   {
     "id": 7,
-    "name": "Noelani",
-    "image": "O'Sesnane",
-    "decription": "Loc exc bone lesion NOS",
-    "color": "Turquoise",
+    "name": "MONITOR GAMER 27' PHILIPS",
+    "image": ["monitorphilips1.png","monitorphilips2.png","monitorphilips3.png"],
+    "description": "Este monitor de 27' te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad",
+    "color": "Negro",
     "category": "Monitor",
-    "discount": 96,
-    "price": 20970
+    "discount": 6,
+    "price": 120970
   },
   {
     "id": 8,
-    "name": "Netty",
-    "image": "Monk",
-    "decription": "Penile operation NEC",
-    "color": "Orange",
+    "name": "MONITOR GAMER 24' VIEWSONIC",
+    "image": ["monitorviewsonic1.png","monitorviewsonic2.png","monitorviewsonic3.png"],
+    "description": "Una de sus virtudes es que posee pantalla antirreflejo, de esta manera no verás reflejado lo que está detrás de vos y vas a evitar forzar tu vista para enfocar el contenido.",
+    "color": "Negro",
     "category": "Monitor",
     "discount": 5,
-    "price": 12026
+    "price": 95500
   },
   {
     "id": 9,
