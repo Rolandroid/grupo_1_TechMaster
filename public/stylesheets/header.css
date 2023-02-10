@@ -91,16 +91,16 @@ hr{
     font-size: 25px;
 }
 
-.home__header--local{
-    display: flex;
-    font-size: 26px;
-    gap: 90px;
-    justify-content: space-around;
+/* .home__header--local {
+    background-color: red;
 }
+.home__header--local div{}
+.home__header--local div i{}
+.home__header--local div i div{}
+.home__header--local div i div a{}
+ */
 
-.home__header--local i{
-    color: #FFF;
-}
+
 .home__header__barra--nav .header--barra{
     display: none;
 }
@@ -155,12 +155,12 @@ hr{
         display: none;
     }
 
-    .home__header--local{
-        display: flex;
-        justify-content: center;
-        gap: 22px;
-        align-items: center;
-    }
+    ./* home__header--local {}
+    .home__header--local div{}
+    .home__header--local div i{}
+    .home__header--local div i div{}
+    .home__header--local div i div a{}
+ */
 
     .search input{
         margin: 0px;
@@ -214,11 +214,69 @@ hr{
         text-decoration: none;
     }
 }
+@media(min-width: 319px),(max-width: 1023px) {
+
+
+    .home__header--local {
+        background-color: #303030;
+        display: flex;
+    }
+    .home__header--local div{}
+    .home__header--local div i{
+        display: flex;
+        font-size: 2rem;
+        color: white;
+        position: relative;
+    }
+    .home__header--local div i div{
+    display: none;
+    background-color: #303030;
+    position: absolute;
+    border: 1px white solid;
+    padding: 2px;
+    width: 99px;
+    flex-direction: column;
+    top: 28px;
+    left: -20px;
+    padding: 2px;
+    z-index: 3;
+    }
+    .home__header--local div i:hover div{
+        display: flex;
+    }
+    .home__header--local div i div a{
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
 
 @media(min-width: 1024px){
-    .home__header--local{
-    position: relative;
+    .home__header--local {
+        background-color: #303030;
+        display: flex;
     }
+    .home__header--local div{}
+    .home__header--local div i{
+        display: flex;
+        font-size: 2rem;
+        color: white;
+    }
+    .home__header--local div i div{
+        display: flex;
+        position: relative;
+        width: 90px;
+        flex-direction: column;
+        left: 0;
+        top: 0;
+        border: none;
+    }
+    .home__header--local div i div a{
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
 
     .logo{
         width: 60%;
@@ -251,11 +309,7 @@ hr{
         margin: 0px;
         width: 79%;
     }
-    .home__header--local span{
-        /* display: flex; */
-        font-size: 13px;
-    }
-
+    
     .home__header__barra--nav{
         display: flex;
         justify-content: flex-end;
@@ -270,3 +324,8 @@ hr{
     }
 
 }
+
+
+
+
+
