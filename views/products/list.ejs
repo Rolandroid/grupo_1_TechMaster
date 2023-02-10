@@ -13,36 +13,25 @@
   <main class="mainResultados">
     <h1>Todos los Productos</h1>
     <section>
-
-      <article class="articleResultados">
-        <img src="/Images/monitor2.png"></img>
+      <% products.forEach(({id,name,image,description,discount,price,color,category}) => { %>
+       <article class="articleResultados">
+        <img src="/Images/products/<%= image[0] %>"></img>
         <div>
-            <h3>Monitor Hitachi 22'</h3>
+            <h3><%= name %></h3>
           <div class="precioYOferta">
-            <h4>15% OFF</h4>
-            <h2>$1000</h2>
+            <h4><%= discount %>% OFF</h4>
+            <h2>$<%= price %></h2>
           </div>
           <div>
-            <a href="/products/detalle"><button>Detalles</button></a>
+            <a href="/products/detalle/<%= id %>"><button>Detalles</button></a>
             <a href="/carrito"><button>Adquirir</button></a>
           </div>
         </div>
       </article>
+      <% }) %>
+      
 
-      <article class="articleResultados">
-        <img src="/Images/mouse1.png"></img>
-        <div>
-          <h3>Mouse Pampa usb</h3>
-          <div class="precioYOferta">
-            <h4>20% OFF</h4>
-            <h2>$3000</h2>
-          </div>
-          <div>
-            <a href="/products/detalle"><button>Detalles</button></a>
-            <a href="/products/carrito"><button>Adquirir</button></a>
-          </div>
-        </div>
-      </article>
+      
     
 
   <%- include('../partials/footer')  %> 
