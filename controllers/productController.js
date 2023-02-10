@@ -2,8 +2,8 @@ module.exports = {
     detalle : (req , res) => {
         return res.render('products/detalle')
     },
-    todos : (req , res) => {
-        return res.render('products/todos')
+    list : (req , res) => {
+        return res.render('products/list')
     },
     creacion : (req , res) => {
         return res.render('products/creacion')

@@ -7,7 +7,6 @@ router
 .get('/',home)
 .get('/detalle',detalle)
 .get('/carrito',carrito)
-.get('/resultados',resultados)
 
 
 module.exports = router;
