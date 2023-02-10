@@ -155,7 +155,7 @@ hr{
         display: none;
     }
 
-    ./* home__header--local {}
+    /* home__header--local {}
     .home__header--local div{}
     .home__header--local div i{}
     .home__header--local div i div{}
@@ -225,6 +225,7 @@ hr{
     .home__header--local div i{
         display: flex;
         font-size: 2rem;
+        padding: 5px;
         color: white;
         position: relative;
     }
@@ -236,7 +237,7 @@ hr{
     padding: 2px;
     width: 99px;
     flex-direction: column;
-    top: 28px;
+    top: 38px;
     left: -20px;
     padding: 2px;
     z-index: 3;
