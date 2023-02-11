@@ -8,19 +8,19 @@
       <main class="detalle__main">
 
         <section class="detalle__section">
-        <h3 class="detalle__title">MOUSE LOGITECH G502 WIRELESS GAMING LIGHTSPEED</h3>
+        <h3 class="detalle__title"><%= name %></h3>
 
         
-        
+ 
 
         
         <div id="carouselExample" class="carousel slide detalle__carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url(/Images/MouseLightspeedG502-1.png);">
+            <div class="carousel-item active" style="background-image: url(/images/products/<%= image[0]%>);">
             </div>
-            <div class="carousel-item" style="background-image: url(/Images/MouseLightspeedG502-2.png);">
+            <div class="carousel-item" style="background-image: url(/images/products/<%= image[1]%>);">
             </div>
-            <div class="carousel-item" style="background-image: url(/Images/MouseLightspeedG502-3-.png);">
+            <div class="carousel-item" style="background-image: url(/images/products/<%= image[2]%>);">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -32,19 +32,13 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      
-        
-          
-
-
-      
-        
+                   
 
         <div class="detalle__info">
             <div>
-            <span class="detalle__price">$ 15.000</span>
+            <span class="detalle__price">$<%= price %></span>
             </div>
-            <span class="detalle__cuotas">en 6x $3.000</span>
+            <span class="detalle__cuotas"><%= discount %></span>
         
         <div>
             <p><i class="fa-sharp fa-solid fa-truck-fast"></i> Llega gratis hoy</p>
@@ -65,15 +59,14 @@
             <div class="box__button-agregar">
               <a href="/carrito"> <button type="submit">Agregar al carrito</button> </a>
             </div>
-         
-      
+
   
       </section>
 
       <section class="detalle__section-description">
         <hr>
         <span>descripción</span>
-        <p>El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.</p>
+        <p><%= description %></p>
         <hr>
       </section>
 
