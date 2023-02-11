@@ -1,162 +1,253 @@
 [
-  {
-    "id": 1,
-    "name": "HyperX Cloud II rojo",
-    "image": ["auriculareshyperxcloud2.png","hyperxcloud1.png","hyperxcloud33.png"],
-    "description": "Hyperx Auriculares Gaming Cloud Alpha cuenta con la garantía oficial de la marca Hyperx. Comprando en nuestra tienda online de informática y electrónica podrás disponer en tan solos unos días de Hyperx Auriculares Gaming Cloud Alpha. Sus dimensiones en su caja original son de 15x20x30 cm. y su peso es de 0.80 kg.. En estos momentos el producto se encuentra en stock.",
-    "color": "rojo",
-    "category": "Auricular",
-    "discount": null,
-    "price": 1361
-  },
-  {
-    "id": 2,
-    "name": "Auriculares gamer HyperX Cloud II gun metal",
-    "image": ["hyperxcloud32.png","hyperxcloud33.png","hyperxcloud34.png"],
-    "description": "El diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas. Al mismo tiempo, su sonido envolvente del más alto nivel se convierte en el protagonista de la escena.",
-    "color": "negro",
-    "category": "Auricular",
-    "discount": 20,
-    "price": 44301
-  },
-  {
-    "id": 3,
-    "name": "Auriculares gamer inalámbricos Logitech G Series G733",
-    "image": ["auricularesLila.png","auricularesLila2.png","auricularesLila3.png"],
-    "description": " Auriculares lila con luz rgb LED.¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Logitech G733 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.",
-    "color": "lila",
-    "category": "Auricular",
-    "discount": 10,
-    "price": 28442
-  },
-  {
-    "id": 4,
-    "name": "Auriculares Redragon H260 Hylas RGB Pink",
-    "image": ["redragonRosa.png","redragonRosa2.png","redragonRosa3.png"],
-    "description": "Los Redragon H260 Hylas RGB son auriculares estéreo ofrecen una óptima calidad sonora y conexión analógica de 3,5 mm. Sus diafragmas de neodimio de 50 mm brindan una claridad única en el sonido y muchísima nitidez, que se realzan gracias al impecable aislamiento que ofrecen las copas circumaurales.",
-    "color": "rosa",
-    "category": "Auricular",
-    "discount": null,
-    "price": 75792
-  },
-  {
-    "id": 5,
-    "name": "MONITOR GAMER 24' GIGABYTE",
-    "image": ["monitorgigabyte1.png","monitorgigabyte2.png","monitorgigabyte3.png"],
-    "description": "Disfrutá de todas las cualidades que el monitor Gigabyte G24F 2 tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementá cualquier espacio ya sea en tu casa u oficina.",
-    "color": "Negro",
-    "category": "Monitor",
-    "discount": 62,
-    "price": 132000
-  },
-  {
-    "id": 6,
-    "name": "MONITOR GAMER 24' SAMSUNG",
-    "image": ["monitorsamsung1.png","monitorsamsung2.png","monitorsamsung3.png"],
-    "description": "Una experiencia visual de calidad.Este monitor de 23,5' te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Su tiempo de respuesta de 4 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
-    "color": "Negro",
-    "category": "Monitor",
-    "discount": 28,
-    "price": 85525
-  },
-  {
-    "id": 7,
-    "name": "MONITOR GAMER 27' PHILIPS",
-    "image": ["monitorphilips1.png","monitorphilips2.png","monitorphilips3.png"],
-    "description": "Este monitor de 27' te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad",
-    "color": "Negro",
-    "category": "Monitor",
-    "discount": 6,
-    "price": 120970
-  },
-  {
-    "id": 8,
-    "name": "MONITOR GAMER 24' VIEWSONIC",
-    "image": ["monitorviewsonic1.png","monitorviewsonic2.png","monitorviewsonic3.png"],
-    "description": "Una de sus virtudes es que posee pantalla antirreflejo, de esta manera no verás reflejado lo que está detrás de vos y vas a evitar forzar tu vista para enfocar el contenido.",
-    "color": "Negro",
-    "category": "Monitor",
-    "discount": 5,
-    "price": 95500
-  },
-  {
-    "id": 9,
-    "name": "Mouse logitech",
-    "image": ["mouse-logitech-1.jpg", "mouse-logitech-2.jpg", "mouse-logitech-3.jpg"],
-    "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
-    "color": "Negro",
-    "category": "Mouse",
-    "discount": null,
-    "price": 19610
-  },
-  {
-    "id": 10,
-    "name": "Mouse HXSJ J900",
-    "image": ["mause-HXSJ-1.png", "mause-HXSJ-2.png", "mause-HXSJ-3.png"],
-    "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
-    "color": "Negro",
-    "category": "Mouse",
-    "discount": 3,
-    "price": 24724
-  },
-  {
-    "id": 11,
-    "name": "Mouse Xtrike Me GM-216",
-    "image": ["mause-Xtrike-1.png", "mause-Xtrike-2.png", "mause-Xtrike-3.png"],
-    "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
-    "color": "Negro",
-    "category": "Mouse",
-    "discount": 5,
-    "price": 70929
-  },
-  {
-    "id": 12,
-    "name": "Mouse Razer Hyperspeed",
-    "image": ["Razer-Hyperspeed-1.png", "Razer-Hyperspeed-2.png", "Razer-Hyperspeed-3.png"],
-    "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
-    "color": "Negro",
-    "category": "Mouse",
-    "discount": null,
-    "price": 85855
-  },
-  {
-    "id": 13,
-    "name": "Teclado Arena",
-    "image": ["tecladoarena1.png", "tecladoarena2.png", "tecladoarena3.png"],
-    "description": "Teclado negro con entrada USB y luces RGB, de de forma ergonomica para la adaptacion del usuario",
-    "color": "Negro",
-    "category": "Teclado",
-    "discount": null,
-    "price": 12000
-  },
-  {
-    "id": 14,
-    "name": "teclado Redragon",
-    "image": ["tecladoRedragon1.png", "tecladoRedragon2.png", "tecladoRedragon3.png"], 
-    "description": "Este dispositivo tiene teclas antighosting. Esta cualidad es indispensable si requerís de un uso intensivo del periférico. Gracias a esto podrás evitar fallas al tocar varias teclas al mismo tiempo.",
-    "color": "Blanco",
-    "category": "Teclado",
-    "discount": null,
-    "price": 14000
-  },
-  {
-    "id": 15,
-    "name": "Teclado Gadnic",
-    "image": ["tecladoGadnic1.png", "tecladoGadnic2.png", "tecladoGadnic3.png"],
-    "description": "Diseñado para ayudarte a usarlo fácilmente, posee un diseño ergonómico, es muy liviano y portátil podrás llevar tu teclado con vos y usarlo donde quieras",
-    "color": "Gris",
-    "category": "Teclado",
-    "discount": 10,
-    "price": 8000
-  },
-  {
-    "id": 16,
-    "name": "Teclado Tkot",
-    "image": ["tecladoTkot1.png", "tecladoTkot2.png", "tecladoTkot3.png"],
-    "description": "12 accesos directos y amplia compatibilidad: Diseño con 12 teclas de acceso directo para control instantáneo. Compatible con Mac OS, iPad OS, sistema iOS, Android, Windows XP / 7 / 8 /10",
-    "color": "Negro",
-    "category": "Teclado",
-    "discount": 5,
-    "price": 800
-  }
+   {
+      "id": 1,
+      "name": "HyperX Cloud II rojo",
+      "image": [
+         "auriculareshyperxcloud2.png",
+         "hyperxcloud1.png",
+         "hyperxcloud33.png"
+      ],
+      "description": "Hyperx Auriculares Gaming Cloud Alpha cuenta con la garantía oficial de la marca Hyperx. Comprando en nuestra tienda online de informática y electrónica podrás disponer en tan solos unos días de Hyperx Auriculares Gaming Cloud Alpha. Sus dimensiones en su caja original son de 15x20x30 cm. y su peso es de 0.80 kg.. En estos momentos el producto se encuentra en stock.",
+      "color": "rojo",
+      "category": "Auricular",
+      "discount": null,
+      "price": 1361
+   },
+   {
+      "id": 2,
+      "name": "Auriculares gamer HyperX Cloud II gun metal",
+      "image": [
+         "hyperxcloud32.png",
+         "hyperxcloud33.png",
+         "hyperxcloud34.png"
+      ],
+      "description": "El diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas. Al mismo tiempo, su sonido envolvente del más alto nivel se convierte en el protagonista de la escena.",
+      "color": "negro",
+      "category": "Auricular",
+      "discount": 20,
+      "price": 44301
+   },
+   {
+      "id": 3,
+      "name": "Auriculares gamer inalámbricos Logitech G Series G733",
+      "image": [
+         "auricularesLila.png",
+         "auricularesLila2.png",
+         "auricularesLila3.png"
+      ],
+      "description": " Auriculares lila con luz rgb LED.¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Logitech G733 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.",
+      "color": "lila",
+      "category": "Auricular",
+      "discount": 10,
+      "price": 28442
+   },
+   {
+      "id": 4,
+      "name": "Auriculares Redragon H260 Hylas RGB Pink",
+      "image": [
+         "redragonRosa.png",
+         "redragonRosa2.png",
+         "redragonRosa3.png"
+      ],
+      "description": "Los Redragon H260 Hylas RGB son auriculares estéreo ofrecen una óptima calidad sonora y conexión analógica de 3,5 mm. Sus diafragmas de neodimio de 50 mm brindan una claridad única en el sonido y muchísima nitidez, que se realzan gracias al impecable aislamiento que ofrecen las copas circumaurales.",
+      "color": "rosa",
+      "category": "Auricular",
+      "discount": null,
+      "price": 75792
+   },
+   {
+      "id": 5,
+      "name": "MONITOR GAMER 24' GIGABYTE",
+      "image": [
+         "monitorgigabyte1.png",
+         "monitorgigabyte2.png",
+         "monitorgigabyte3.png"
+      ],
+      "description": "Disfrutá de todas las cualidades que el monitor Gigabyte G24F 2 tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementá cualquier espacio ya sea en tu casa u oficina.",
+      "color": "Negro",
+      "category": "Monitor",
+      "discount": 62,
+      "price": 132000
+   },
+   {
+      "id": 6,
+      "name": "MONITOR GAMER 24' SAMSUNG",
+      "image": [
+         "monitorsamsung1.png",
+         "monitorsamsung2.png",
+         "monitorsamsung3.png"
+      ],
+      "description": "Una experiencia visual de calidad.Este monitor de 23,5' te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Su tiempo de respuesta de 4 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
+      "color": "Negro",
+      "category": "Monitor",
+      "discount": 28,
+      "price": 85525
+   },
+   {
+      "id": 7,
+      "name": "MONITOR GAMER 27' PHILIPS",
+      "image": [
+         "monitorphilips1.png",
+         "monitorphilips2.png",
+         "monitorphilips3.png"
+      ],
+      "description": "Este monitor de 27' te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad",
+      "color": "Negro",
+      "category": "Monitor",
+      "discount": 6,
+      "price": 120970
+   },
+   {
+      "id": 8,
+      "name": "MONITOR GAMER 24' VIEWSONIC",
+      "image": [
+         "monitorviewsonic1.png",
+         "monitorviewsonic2.png",
+         "monitorviewsonic3.png"
+      ],
+      "description": "Una de sus virtudes es que posee pantalla antirreflejo, de esta manera no verás reflejado lo que está detrás de vos y vas a evitar forzar tu vista para enfocar el contenido.",
+      "color": "Negro",
+      "category": "Monitor",
+      "discount": 5,
+      "price": 95500
+   },
+   {
+      "id": 9,
+      "name": "Mouse logitech",
+      "image": [
+         "mouse-logitech-1.jpg",
+         "mouse-logitech-2.jpg",
+         "mouse-logitech-3.jpg"
+      ],
+      "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
+      "color": "Negro",
+      "category": "Mouse",
+      "discount": null,
+      "price": 19610
+   },
+   {
+      "id": 10,
+      "name": "Mouse HXSJ J900",
+      "image": [
+         "mause-HXSJ-1.png",
+         "mause-HXSJ-2.png",
+         "mause-HXSJ-3.png"
+      ],
+      "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
+      "color": "Negro",
+      "category": "Mouse",
+      "discount": 3,
+      "price": 24724
+   },
+   {
+      "id": 11,
+      "name": "Mouse Xtrike Me GM-216",
+      "image": [
+         "mause-Xtrike-1.png",
+         "mause-Xtrike-2.png",
+         "mause-Xtrike-3.png"
+      ],
+      "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
+      "color": "Negro",
+      "category": "Mouse",
+      "discount": 5,
+      "price": 70929
+   },
+   {
+      "id": 12,
+      "name": "Mouse Razer Hyperspeed",
+      "image": [
+         "Razer-Hyperspeed-1.png",
+         "Razer-Hyperspeed-2.png",
+         "Razer-Hyperspeed-3.png"
+      ],
+      "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
+      "color": "Negro",
+      "category": "Mouse",
+      "discount": null,
+      "price": 85855
+   },
+   {
+      "id": 13,
+      "name": "Teclado Arena",
+      "image": [
+         "tecladoarena1.png",
+         "tecladoarena2.png",
+         "tecladoarena3.png"
+      ],
+      "description": "Teclado negro con entrada USB y luces RGB, de de forma ergonomica para la adaptacion del usuario",
+      "color": "Negro",
+      "category": "Teclado",
+      "discount": null,
+      "price": 12000
+   },
+   {
+      "id": 14,
+      "name": "teclado Redragon",
+      "image": [
+         "tecladoRedragon1.png",
+         "tecladoRedragon2.png",
+         "tecladoRedragon3.png"
+      ],
+      "description": "Este dispositivo tiene teclas antighosting. Esta cualidad es indispensable si requerís de un uso intensivo del periférico. Gracias a esto podrás evitar fallas al tocar varias teclas al mismo tiempo.",
+      "color": "Blanco",
+      "category": "Teclado",
+      "discount": null,
+      "price": 14000
+   },
+   {
+      "id": 15,
+      "name": "Teclado Gadnic",
+      "image": [
+         "tecladoGadnic1.png",
+         "tecladoGadnic2.png",
+         "tecladoGadnic3.png"
+      ],
+      "description": "Diseñado para ayudarte a usarlo fácilmente, posee un diseño ergonómico, es muy liviano y portátil podrás llevar tu teclado con vos y usarlo donde quieras",
+      "color": "Gris",
+      "category": "Teclado",
+      "discount": 10,
+      "price": 8000
+   },
+   {
+      "id": 16,
+      "name": "Teclado Tkot",
+      "image": [
+         "tecladoTkot1.png",
+         "tecladoTkot2.png",
+         "tecladoTkot3.png"
+      ],
+      "description": "12 accesos directos y amplia compatibilidad: Diseño con 12 teclas de acceso directo para control instantáneo. Compatible con Mac OS, iPad OS, sistema iOS, Android, Windows XP / 7 / 8 /10",
+      "color": "Negro",
+      "category": "Teclado",
+      "discount": 5,
+      "price": 800
+   },
+   {
+      "id": 17,
+      "name": "Monitor",
+      "price": 20000,
+      "description": "El mejor",
+      "image": null,
+      "discount": 3,
+      "category": "Monitor"
+   },
+   {
+      "id": 18,
+      "name": "Monitor",
+      "price": 23232,
+      "description": "sahdas",
+      "image": null,
+      "discount": 2,
+      "category": "1"
+   },
+   {
+      "id": 19,
+      "name": "hola",
+      "price": 233232,
+      "description": "21213d",
+      "image": null,
+      "discount": 2,
+      "category": "1"
+   }
 ]

@@ -24,8 +24,34 @@ module.exports = {
         })
 
     },
-    creacion : (req , res) => {
+
+    creacion: (req, res) => {
         return res.render('products/creacion')
+    },
+
+    create : (req , res) => {
+        
+        const {name, image, description, discount, price, category} = req.body;
+
+        const newProduct = {
+            id: products[products.length - 1].id + 1,
+            name: name.trim(),
+            price: +price,
+            description: description.trim(),
+            image: null,
+            discount: +discount,
+            category: category.trim()
+        };
+
+        products.push(newProduct);
+
+        fs.writeFileSync('./data/products.json',JSON.stringify(products, null, 3), 'utf-8')
+
+        return res.redirect('/products/list')
+
+
+
+
     },
     edicion : (req , res) => {
         return res.render('products/edicion')
