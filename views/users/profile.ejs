@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/3fab2a7658.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/Stylesheets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TechMaster Perfil de usuario</title>
+</head>
+<body class="body-profile">
+  
+  <%- include('../partials/header') %> 
+
+
+  <main class="main-profile">
+    <p class="main__p-regresar">
+      <a href="/"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+    </p>
+
+    <h1>Perfil de usuario</h1>
+
+    <section class="main__section-profile">
+      <div class="container">
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></i></label>
+            </div>
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(img-prueba-1.png);">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="main__section-info">
+
+      <article class="main__section__article-datos">
+        <span><a href="">Mis Datos</a> </span>
+      </article>
+      <article class="main__section__article-compras">
+        <span><a href="">Mis compras</a> </span>
+      </article>
+      <article class="main__section__article-tarjetas">
+        <span><a href="">Mis tarjetas</a> </span>
+      </article>
+      <article class="main__section__article-ayuda">
+        <span><a href="">Centro de ayuda</a> </span>
+      </article>
+      <article class="main__section__article-cerrarSesion">
+        <button>Cerrar sesion</button>
+      </article>
+      
+    </section>
+  </main>
+
+  <%- include('../partials/footer')  %> 
+
+</body>
+<script src="/public/javaScript/profile.js"></script>
+
+</html>

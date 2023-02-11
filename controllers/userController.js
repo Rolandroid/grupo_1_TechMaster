@@ -8,4 +8,7 @@ module.exports = {
     recovery : (req , res) => {
         return res.render('users/recovery')
     },
+    profile : (req , res) => {
+        return res.render('users/profile')
+    }
 }
