@@ -198,16 +198,15 @@
    {
       "id": 15,
       "name": "Teclado Gadnic",
+      "price": 35000,
+      "description": "Diseñado para ayudarte a usarlo fácilmente, posee un diseño ergonómico, es muy liviano y portátil podrás llevar tu teclado con vos y usarlo donde quieras",
       "image": [
          "tecladoGadnic1.png",
          "tecladoGadnic2.png",
          "tecladoGadnic3.png"
       ],
-      "description": "Diseñado para ayudarte a usarlo fácilmente, posee un diseño ergonómico, es muy liviano y portátil podrás llevar tu teclado con vos y usarlo donde quieras",
-      "color": "Gris",
-      "category": "Teclado",
-      "discount": 10,
-      "price": 8000
+      "discount": 50,
+      "category": "1"
    },
    {
       "id": 16,
@@ -249,5 +248,14 @@
       "image": null,
       "discount": 2,
       "category": "1"
+   },
+   {
+      "id": 20,
+      "name": "sfsdfsdf",
+      "price": 23434,
+      "description": "fvxvsx",
+      "image": null,
+      "discount": 33,
+      "category": "Teclado"
    }
 ]

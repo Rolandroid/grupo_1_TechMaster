@@ -12,27 +12,25 @@
 
     <main class="mainEdicion">
       <h1 class="titulo">Editar Producto</h1>
-      <form>
+      <form action="/products/update/<%= id %>?_method=PUT" method="post">
         <h1>Coloque un nuevo nombre al producto:</h1>
-        <input type="form_text" class="texto" >
+        <input type="form_text" class="texto" name="name" value="<%= name %>" >
         <h1>Elija una nueva categoria de producto:</h1>
-        <select class="selector" name="Filtrar" id="">
+        <select class="selector" name="category" id="">
           <option class="opcion" value="1"><a href="#">Elija </a></option>
-          <option class="opcion" value="2"><a href="#">Monitor </a></option>
-          <option class="opcion" value="3"><a href="#">Teclado </a></option>
-          <option class="opcion" value="4"><a href="#">Mouse </a></option>
-          <option class="opcion" value="5"><a href="#">Auriculares</a></option>
+          <option class="opcion" value="Monitor"><a href="#">Monitor </a></option>
+          <option class="opcion" value="Teclado"><a href="#">Teclado </a></option>
+          <option class="opcion" value="Mouse"><a href="#">Mouse </a></option>
+          <option class="opcion" value="Auriculares"><a href="#">Auriculares</a></option>
         </select>
-        <h1>Modifique el stock disponible:</h1> 
-        <input type=" number" class="numero" ><br>Unidades
+        <!-- <h1>Modifique el stock disponible:</h1> 
+        <input type=" number" class="numero" ><br>Unidades -->
         <h1>Indique el precio del producto:</h1> 
-        $<input type=" number" class="numero" ><br>
+        $<input type=" number" class="numero" name="price" value="<%= price %>"><br>
         <h1>Puede colocar un descunto al precio:</h1>
-        <input type="number" class="numero" >% Off<br>
-        <h1>Edite los tres aspectos del producto:<h1>
-        *<input type="text" class="texto" size="150"><br>
-        *<input type="text" class="texto" size="150"><br>
-        *<input type="text" class="texto" size="150"><br>
+        <input type="number" class="numero" name="discount" value="<%= discount %>">% Off<br>
+        <h1>Descripción:<h1>
+          <textarea cols="30" rows="10" name="description"><%= description %></textarea>
         <h1>Fotos elegidas para el producto:</h1>
         imagen 1:<input class="foto" type="file"><br>
         imagen 2:<input class="foto" type="file"><br>
