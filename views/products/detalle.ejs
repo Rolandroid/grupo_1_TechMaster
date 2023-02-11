@@ -48,9 +48,9 @@
           <div class="box__button-editar">
             <a href="/products/edicion/<%= id %>"> <button type="submit">Editar</button> </a>
          </div>
-         <div class="box__button-eliminar">
-           <a href="/carrito"> <button type="submit">Eliminar</button> </a>
-         </div>
+         <form class="box__button-eliminar" action="/products/remove/<%= id %>?_method=DELETE" method="post">
+           <a href="/products/remove/<%= id %>"> <button type="submit">Eliminar</button> </a>
+         </form>
         </div>
         
             <div class="box__button-comprar">

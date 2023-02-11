@@ -20,6 +20,7 @@ module.exports = {
 
     },
     list : (req , res) => {
+        const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
         return res.render('products/list',{
             products,
         })
@@ -88,5 +89,13 @@ module.exports = {
         fs.writeFileSync('./data/products.json',JSON.stringify(productModified, null, 3), 'utf-8')
         return res.redirect(`/products/detalle/${id}`)
 
+    },
+
+    remove : (req,res) => {
+        const id = req.params.id;
+        const productModified = products.filter(product => product.id !== +id)
+        
+        fs.writeFileSync('./data/products.json',JSON.stringify(productModified, null, 3), 'utf-8')
+        return res.redirect(`/products/list`)
     }
 };

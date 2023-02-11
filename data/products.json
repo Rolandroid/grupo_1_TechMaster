@@ -230,32 +230,5 @@
       "image": null,
       "discount": 3,
       "category": "Monitor"
-   },
-   {
-      "id": 18,
-      "name": "Monitor",
-      "price": 23232,
-      "description": "sahdas",
-      "image": null,
-      "discount": 2,
-      "category": "1"
-   },
-   {
-      "id": 19,
-      "name": "hola",
-      "price": 233232,
-      "description": "21213d",
-      "image": null,
-      "discount": 2,
-      "category": "1"
-   },
-   {
-      "id": 20,
-      "name": "sfsdfsdf",
-      "price": 23434,
-      "description": "fvxvsx",
-      "image": null,
-      "discount": 33,
-      "category": "Teclado"
    }
 ]
