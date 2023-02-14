@@ -11,30 +11,30 @@
   <%- include('../partials/header') %>
 
     <main class="mainEdicion">
-      <h1 class="titulo">Editar Producto</h1>
-      <form action="/products/update/<%= id %>?_method=PUT" method="post">
+      <h1 class="edicion_Titulo">Editar Producto</h1>
+      <form class="edicion_formulario" action="/products/update/<%= id %>?_method=PUT" method="post>">
         <h1>Coloque un nuevo nombre al producto:</h1>
-        <input type="form_text" class="texto" name="name" value="<%= name %>" >
-        <h1>Elija una nueva categoria de producto:</h1>
-        <select class="selector" name="category" id="">
-          <option class="opcion" value="1"><a href="#">Elija </a></option>
-          <option class="opcion" value="Monitor"><a href="#">Monitor </a></option>
-          <option class="opcion" value="Teclado"><a href="#">Teclado </a></option>
-          <option class="opcion" value="Mouse"><a href="#">Mouse </a></option>
-          <option class="opcion" value="Auriculares"><a href="#">Auriculares</a></option>
+        <input class="edicion_entradaNombre" type="form_text" class="texto" name="name" value="<%= name %>" >
+        <h1 class="edicion_tituloCategorias" >Elija una nueva categoria de producto:</h1>
+        <select class="edicion_menuSelector" name="category" id="">
+          <option class="edicion_opcionSelector" value="1"><a href="#">Elija </a></option>
+          <option class="edicion_opcionSelector" value="Monitor"><a href="#">Monitor </a></option>
+          <option class="edicion_opcionSelector" value="Teclado"><a href="#">Teclado </a></option>
+          <option class="edicion_opcionSelector" value="Mouse"><a href="#">Mouse </a></option>
+          <option class="edicion_opcionSelector" value="Auriculares"><a href="#">Auriculares</a></option>
         </select>
         <!-- <h1>Modifique el stock disponible:</h1> 
         <input type=" number" class="numero" ><br>Unidades -->
-        <h1>Indique el precio del producto:</h1> 
-        $<input type=" number" class="numero" name="price" value="<%= price %>"><br>
-        <h1>Puede colocar un descunto al precio:</h1>
-        <input type="number" class="numero" name="discount" value="<%= discount %>">% Off<br>
-        <h1>Descripción:<h1>
-          <textarea cols="30" rows="10" name="description"><%= description %></textarea>
-        <h1>Fotos elegidas para el producto:</h1>
-        imagen 1:<input class="foto" type="file"><br>
-        imagen 2:<input class="foto" type="file"><br>
-        imagen 3:<input class="foto" type="file"><br>
+        <h1 class="edicion_tituloPrecio"> Indique el precio del producto:</h1> 
+       $<input type=" number" class="edicion_entradaPrecio" name="price" value="<%= price %>"><br>
+        <h1 class="edicion_tituloDescuento" >Puede colocar un descunto al precio:</h1>
+        <input type="number" class="edicion_entradaDescuento" name="discount" value="<%= discount %>">% Off<br>
+        <h1 class="edicion_tituloDescripcion" >Descripción:<h1>
+          <textarea class="edicion_entradaDescripcion"name="description"><%= description %></textarea>
+        <h1 class="edicion_tituloFotos">Fotos elegidas para el producto:</h1>
+        imagen 1:<input class="edicion_entradaFoto" type="file"><br>
+        imagen 2:<input class="edicion_entradaFoto" type="file"><br>
+        imagen 3:<input class="edicion_entradaFoto" type="file"><br>
           
           
           <button class="boton" type="reset">Cancelar proceso</button>

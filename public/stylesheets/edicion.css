@@ -2,19 +2,24 @@
 .mainEdicion{
     background-color: rgba(28, 28, 28, 1);
     padding: 10px;
-    /* text-align: inherit; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 .titulo{
     color: white;
 }
 .mainEdicion h1{/* color: #282626; */}
 .mainEdicion form{
-    max-width: 440px;
+    /* max-width: 443px; */
     background-color: lightgrey;
     border-radius: 5px;
     padding: 10px;
     color: #282626;
     font-size: 1.5rem;
+    max-width: 490px;
+    min-width: 300px;
     font-weight:700;
 }
 .mainEdicion form h1{
@@ -22,13 +27,6 @@
     margin-top: 18px;
 }
 .mainEdicion form input{
-    color:black;
-    border:none;
-    border-radius: 10px;
-    background-color: #c5c4c4;
-    font-size: smaller;
-    font-weight:700;
-    border-bottom: 1px black solid;
 }
 .texto{
     width: 265px;
@@ -51,10 +49,10 @@
     background-color: lightgrey;
     border-radius: 5px;
     margin: 15px 15px 0px 15px;
-    padding: 10px;
+    padding: 5px;
     color: #282626;
-    font-size: 1.5rem;
     font-weight:700;
+    width: 162px;
 }
 .opcion{
     font-size: smaller;
@@ -62,3 +60,32 @@
 .boton:hover{
     background-color: rgb(167, 167, 167);
 }
+
+.mainEdicion{}
+.edicion_Titulo{color: white;}
+.edicion_formulario{}
+.edicion_entradaNombre{}
+.edicion_tituloCategorias{}
+.edicion_menuSelector{}
+.edicion_opcionSelector{}
+.edicion_tituloPrecio{}
+.edicion_entradaPrecio{
+    width: 140px;
+}
+.edicion_tituloDescuento{}
+.edicion_entradaDescuento{
+    text-align: end;
+    width: 140px;
+}
+.edicion_tituloDescripcion{}
+.edicion_entradaDescripcion{
+    width: 280px;
+}
+.edicion_tituloFoto{}
+.edicion_entradaFoto{
+    width: 280px;
+}
+.edicion_boton{}
+
+
+

@@ -30,11 +30,10 @@
     max-width: 570px;
     border-radius: 5px;
 }
-.articleResultados img{
+.articleResultados span{}
+.articleResultados span img{
     width: 140px;
-    margin: 10px;
-    border-radius: 5px;
-    max-height: 140px;
+    margin: auto;
 }
 
 .articleResultados div{

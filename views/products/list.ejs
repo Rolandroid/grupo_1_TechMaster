@@ -15,7 +15,9 @@
     <section>
       <% products.forEach(({id,name,image,description,discount,price,color,category}) => { %>
        <article class="articleResultados">
-        <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>"></img>
+        <span>
+          <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>"></img>
+        </span>
         <div>
             <h3><%= name %></h3>
           <div class="precioYOferta">
