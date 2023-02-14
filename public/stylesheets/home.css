@@ -8,6 +8,10 @@
     margin-top: 10px;
 }
 
+.glider-track{
+    gap: 10px;
+}
+
 .boby__view__home{
     display: flex;
     background-color: rgba(28, 28, 28, 1);
