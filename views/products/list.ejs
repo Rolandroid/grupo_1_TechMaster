@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+<%- include('../partials/head') %>
+<body class="boby__view__resultados">
+  
+  
+
+  
+  <%- include('../partials/header') %> 
+
+
+  <main class="mainResultados">
+    <h1>Todos los Productos</h1>
+    <section>
+      <% products.forEach(({id,name,image,description,discount,price,color,category}) => { %>
+       <article class="articleResultados">
+        <span>
+          <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>"></img>
+        </span>
+        <div>
+            <h3><%= name %></h3>
+          <div class="precioYOferta">
+            <h4><%= discount %>% OFF</h4>
+            <h2>$<%= price %></h2>
+          </div>
+          <div>
+            <a href="/products/detalle/<%= id %>"><button>Detalles</button></a>
+            <a href="/carrito"><button>Adquirir</button></a>
+          </div>
+        </div>
+      </article>
+      <% }) %>
+      
+
+      
+    
+
+  <%- include('../partials/footer')  %> 
+</body>
+
+</html>

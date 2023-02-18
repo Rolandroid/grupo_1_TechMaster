@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "first_name": "Bunnie",
+        "last_name": "Brosch",
+        "email": "bbrosch0@parallels.com",
+        "password": "7XjWVLORRS",
+        "location": "87902 Kings Drive",
+        "avatar": ""
+    },
+    {
+        "id": 2,
+        "first_name": "Diana",
+        "last_name": "Gasking",
+        "email": "dgasking1@bloglines.com",
+        "password": "IZvfZdB",
+        "location": "047 Autumn Leaf Trail",
+        "avatar": ""
+    },
+    {
+        "id": 3,
+        "first_name": "Lauren",
+        "last_name": "Arni",
+        "email": "larni2@odnoklassniki.ru",
+        "password": "oOZupeyxXDnh",
+        "location": "2 Lyons Court",
+        "avatar": ""
+    },
+    {
+        "id": 4,
+        "first_name": "Arther",
+        "last_name": "Shalcras",
+        "email": "ashalcras3@google.de",
+        "password": "Po1VMkUo",
+        "location": "841 South Terrace",
+        "avatar": ""
+    },
+    {
+        "id": 5,
+        "first_name": "Blondy",
+        "last_name": "Pithie",
+        "email": "bpithie4@quantcast.com",
+        "password": "xrovakfB6F",
+        "location": "0 Charing Cross Terrace",
+        "avatar": ""
+    }
+]

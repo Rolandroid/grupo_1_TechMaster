@@ -1,0 +1,38 @@
+.estaCreacion{display: flex;justify-content: center;background: gray;}
+.estaCreacion form{
+    width: 500px;
+    background-color: darkgrey;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.esteTitulo{}
+.estaCategoria{}
+.inputCategoria{}
+.estaOpcion{}
+.esteNombre{}
+.inputNombre{}
+.esteStock{}
+.inputStock{}
+.inputStock input{
+    width: 60px;
+}
+.estePrecio{}
+.inputPrecio{}
+.inputPrecio input{
+    width: 60px;
+}
+.esteDescuento{}
+.inputDescuento{
+}
+.inputDescuento input{
+    width: 60px;
+}
+.estaDescripcion{}
+.estasFotos{}
+.inputFoto{}
+.inputFoto input{}
+.esteBoton{}

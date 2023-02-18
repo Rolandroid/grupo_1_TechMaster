@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<%- include('../partials/head') %>
+<body>
+ 
+    <main class="register__main">
+        <section class="register__main__section">
+            <article class="register__main__section__article">
+              
+              
+                <form class="form__register" action="">
+                  <div class="register__main__form">
+                    <div class="register__form__header">
+                      
+                        <h2>Bienvenid@ a</h2>
+
+                        <div class="register__logo--master">
+                          <a class="register__logo" href="/"><img src="/images/logo.svg" alt="Logo" /></a>
+                          <a class="register__techmater" href=""><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
+                        </div>
+                        
+                        <div class="register__descripcion">
+                          <p>TechMaster te brindará el mejor servicio de compra y venta de productos tecnologicos y afines.</p>
+                        </div>
+
+                        <div class="form__header--links">
+                        <a href="">
+                          <i class="fa-brands fa-facebook"></i>
+                          Continuar con Facebook
+                        </a>
+                        </div>
+                      <div class="form__header--links">
+                        <a href="">
+                          <i class="fa-brands fa-google"></i>
+                          Continuar con Google
+                        </a>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                  <div class="register__main__form2">
+                    <h1 class="register__main--h1">Crea tu cuenta</h1>
+
+                    <div class="register__form__box">
+                        
+                        <input type="text" placeholder="Nombre" name="name" id="name" autocomplete="off">
+                    </div>
+                    <div class="register__form__box">
+                        <input type="text" placeholder="Apellido" name="surname" id="surname" autocomplete="off">
+                    </div>
+                    <div class="register__form__box">
+                        <input type="email" placeholder="Email" name="email" id="email" autocomplete="off">
+                    </div>
+                    <div class="register__form__box">
+                        <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
+                    </div>
+                    <div class="register__form__box">
+                        <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2" autocomplete="off">
+                    </div>
+
+                    <div class="register__form__oferta">
+                      <input type="checkbox" placeholder="" name="checkbox">
+                      <label for=""> Recibir oferta de producto</label>
+                    </div>
+                    
+                    <div class="register__form__oferta1">
+                      <input type="checkbox" placeholder="" name="checkbox">
+                      <label for="">Estoy de acuerdo con los términos y la política  </label>
+                    </div>
+
+
+                    
+                    <div class="register__form__box--buttons">
+                      <button class="buttons buttons__primary" type="submit">Registrarme</button>
+                      <button class="buttons buttons__secondary" type="submit"> <a href="/users/login">Ingresar</a> </button>
+                 
+                    </div>
+                  </div>
+                </form>
+            </article>
+        </section>
+      </main>
+
+      <%- include('../partials/scripts')  %>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+*{
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.login__main{
+    width: 100vw;
+}
+
+.login__main__div{
+    background-color: var(--colorGranate);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.login__main__div__logo--tablet{
+    display: none;
+}
+
+.login__main__div__titulo{
+    color: white;
+}
+
+.login__main__div__logo--textinfo{
+    display: none;
+}
+
+.login__main__div--links{
+  /*   width: 240px;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255); */
+    border: 1px solid white;
+    width: 260px;
+    padding: 5px 8px;text-align: center;
+}
+
+.login__main__div--links a{
+    color: white;
+}
+
+.login__main__div--links:hover a{
+    color: rgb(170, 170, 170);
+}
+
+.login__main__form{
+    
+}
+
+.login__main__form--logueo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.login__button{
+    border: none;
+    border-radius: 17px;
+    padding: 8px;
+    gap: 10px;
+    margin: 0 3px;
+}
+
+.login__button2{
+    border: none;
+    border-radius: 17px;
+    padding: 5px;
+    gap: 10px;
+    margin: 0 3px;
+}
+
+.login__main__form--text{
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.login__main__form--boxes{
+    border: none;
+    padding: 1%;
+}
+
+.login__main__form--boxes input{
+    border: none;
+    border-bottom: 1px solid silver;
+    margin: 2%;
+    width: 90%;
+    padding: 1%;
+}
+
+
+.login__button:hover {
+    background-color: rgb(107, 34, 77) ;
+    
+}
+
+.login__main__form--buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+}
+
+.login__main__form--buttons a{
+    color: white;
+}
+
+.login__button2{
+    background-color: white;
+    color: black;
+    width: 25%;
+    border: solid 1px black;
+}
+
+.login__button{
+    background-color: var(--colorGranate);
+    color: white;
+    width: 25%;
+    
+}
+
+.login__button2 a{
+    color: black;
+}
+.login__button2:hover {
+    background-color: rgb(190, 188, 188);
+    color: white;
+}
+.login__button2:hover a{
+    color: white;
+}
+
+.login__main__form--forget{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+@media (min-width:768px) {
+
+    .login__main__div__logo{
+        display: none;
+    }
+
+    .login__main__div__logo--tablet{
+        display: block;
+    }
+
+    .login__main__form--boxes input{
+        width: 400px;
+    }
+
+    .login__main__div--links{
+        width: 60%;
+    }
+
+    .login__main__form--boxes{
+    border: none;
+    padding: 1%;
+}
+
+.login__main__form--forget{
+    margin-bottom: 10px;
+}
+}
+
+@media (min-width:1024px) {
+
+    .login__main{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .login__main__div{
+        width: 40%;
+        gap: 40px;
+        height: 100%;
+    }
+
+    .login__main__form--logueo{
+        margin: auto;
+        width: 60vw;
+    }
+
+    .login__main__div__logo{
+        display: none;
+    }
+
+    .login__main__div__logo--tablet{
+        display: block;
+    }
+
+    .login__main__div__logo--textinfo{
+        display: block;
+        width: 90%;
+        text-align: center;
+        
+    }
+
+    .login__main__div__logo--textinfo h3{
+        font-weight: 100;
+        text-align: center;
+    }
+
+    .login__main__form--boxes input{
+        width: 400px;
+    }
+
+    .login__main__form--forget{
+        flex-direction: column;
+    }
+}
