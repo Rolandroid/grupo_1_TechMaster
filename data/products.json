@@ -220,23 +220,5 @@
       "category": "Teclado",
       "discount": 5,
       "price": 800
-   },
-   {
-      "id": 17,
-      "name": "Monitor",
-      "price": 20000,
-      "description": "El mejor",
-      "image": null,
-      "discount": 3,
-      "category": "Monitor"
-   },
-   {
-      "id": 18,
-      "name": "Samsung",
-      "price": 70000,
-      "description": "Samsung",
-      "image": null,
-      "discount": 2,
-      "category": "Monitor"
    }
 ]
