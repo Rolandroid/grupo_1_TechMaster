@@ -40,7 +40,7 @@ module.exports = {
             name: name.trim(),
             price: +price,
             description: description.trim(),
-            image: null,
+            image:  req.files.length ?  req.files.map(file => file.filename) : null,
             discount: +discount,
             category: category.trim()
         };
@@ -49,6 +49,7 @@ module.exports = {
 
         fs.writeFileSync('./data/products.json',JSON.stringify(products, null, 3), 'utf-8')
 
+       // return res.send(req.file)
         return res.redirect('/products/list')
 
 
@@ -67,12 +68,21 @@ module.exports = {
         const {name, image, description, discount, price, category} = req.body;
         const id = +req.params.id
         const product = products.find(product => product.id === +id)
+        const objetoNull = null;
         const productUpdate = {
             id,
             name: name.trim(),
             price: +price,
             description: description.trim(),
-            image: product.image,
+            image:  req.files.length ?  req.files.map(file => file.filename) : null,
+           /*  image: req.files.map(file => {
+                for (let index = 0; index > 2; index++) {
+                   if (req.files.length > 3) {
+
+                    req.files.push( objetoNull )
+                }  
+                }
+            }), */
             discount: +discount,
             category: category.trim()
         };

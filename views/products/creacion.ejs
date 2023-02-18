@@ -12,7 +12,7 @@
 
     <main class="estaCreacion">
       
-      <form method="POST">
+      <form method="POST" enctype="multipart/form-data">
         <h1 class="esteTitulo">Crear Producto</h1>        
 
         <p class="estaCategoria">Elija la categoria del producto:</p>
@@ -41,11 +41,8 @@
         <textarea class="inputDescripcion" cols="30" rows="10" name="description"></textarea>
 
         <p class="estasFotos">Elija tres fotos del producto:</p>
-        <div class="inputFoto">imagen 1:<input type="file"></div>
-        <div class="inputFoto">imagen 2:<input type="file"></div>
-        <div class="inputFoto">imagen 3:<input type="file"></div>
-         
-          
+        <div class="inputFoto">imagenes:<input type="file" name="images" multiple></div>
+
           <button class="esteBoton" type="reset">Cancelar proceso</button>
           <button class="esteBoton" type="submit">Crear Producto</button>
       </form>
