@@ -5,25 +5,33 @@
         <a class="tecmater--logo" href="/"><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
       </div>
       <form class="search" action="/search" method="GET">
-        <input type="search" name="busqueda" placeholder="Buscar productos" />
+        <input type="text" name="keywords" placeholder="Buscar productos" />
         <hr />
-        <select class="Filter" name="Filtrar" id="">
+        <select class="Filter" name="category" id="">
           <option value="">Filtrar</option>
-          <option value="todos">Todos</option>
+<!--           <option value="todos">Todos</option> -->
           <option value="Auricular">Auricular</option>
           <option value="Monitor">Monitor</option>
           <option value="Mouse">Mouse</option>
           <option value="Teclado">Teclado</option>
-          <option value="Ofertas">Ofertas</option>
+<!--           <option value="Ofertas">Ofertas</option> -->
+
         </select>
         <hr />
-         <button class="lupa"><i class="fas fa-search"></i></button>
-        <nav>
+         <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
+<!--         <nav>
+          <div class="header__buerger--menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav> -->
+      </form>
+<!--       <nav>
           <div class="header__buerger--menu">
             <i class="fas fa-bars"></i>
           </div>
         </nav>
-      </form>
+ -->
+
       <div class="home__header--local">
       
         <div> <i class="fa-solid fa-location-dot">  <div> <a href="/users/register">Ubicacion </a> <a href="/users/register">Cordoba     </a> </div> </i> </div>
