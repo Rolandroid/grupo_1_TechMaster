@@ -102,11 +102,13 @@
     .articleResultados{
         flex-direction: column;
     }
-    .articleResultados img{
-        width: 140px;
-        align-self: center;
-    }
-    
+    .articleResultados span {
+        width: 100%;
+        text-align: center;
+    }    
+    .articleResultados span img{
+    width: 140px;
+    margin: auto;
 }
 
-
+}
