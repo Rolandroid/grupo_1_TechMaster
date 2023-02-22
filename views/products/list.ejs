@@ -21,8 +21,8 @@
         <div>
             <h3><%= name %></h3>
           <div class="precioYOferta">
-            <h4><%= discount %>% OFF</h4>
-            <h2>$<%= price %></h2>
+            <h4><%= discount ? discount+' % OFF' : ""%></h4>
+            <h2>$<%=(price - (price* discount) / 100)%></h2>
           </div>
           <div>
             <a href="/products/detalle/<%= id %>"><button>Detalles</button></a>
