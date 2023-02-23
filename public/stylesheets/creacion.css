@@ -9,30 +9,17 @@
     flex-direction: column;
     flex-wrap: wrap;
 }
+.estaCreacion form div{
+    border:1px solid red;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
 .esteTitulo{}
-.estaCategoria{}
+
 .inputCategoria{}
-.estaOpcion{}
-.esteNombre{}
-.inputNombre{}
-.esteStock{}
-.inputStock{}
-.inputStock input{
-    width: 60px;
-}
-.estePrecio{}
-.inputPrecio{}
-.inputPrecio input{
-    width: 60px;
-}
-.esteDescuento{}
-.inputDescuento{
-}
-.inputDescuento input{
-    width: 60px;
-}
-.estaDescripcion{}
-.estasFotos{}
-.inputFoto{}
-.inputFoto input{}
-.esteBoton{}
+
+.inputColor{}
+
+
