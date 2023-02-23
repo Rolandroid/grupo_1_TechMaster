@@ -31,6 +31,13 @@ module.exports = {
         }else{
             res.redirect('/')
         }
+    },
+    navBar : (req, res) => {
+       let products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
+       let {category} = req.params
+       products = products.filter(product => product.category === category)
+       console.log(products)
+       return res.render('products/list',{products})
     }
    
 }
