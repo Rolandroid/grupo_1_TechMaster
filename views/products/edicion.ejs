@@ -21,27 +21,27 @@
         </div>
 <div class="div_a">
         <div class="div_2">
-          <label for="category"> Category </label>
+          <label for="category"> Categoría </label>
           <select class="inputCategoria" class="selector" name="category" id="">
             <option class="estaOpcion" > </option>
-            <option class="estaOpcion" value="Monitor">Monitor </option>
-            <option class="estaOpcion" value="Teclado">Teclado </option>
-            <option class="estaOpcion" value="Mouse">Mouse </option>
-            <option class="estaOpcion" value="Auriculares">Auriculares</option>
+            <option class="estaOpcion" <%= category === "Monitor" && 'selected' %> value="Monitor">Monitor </option>
+            <option class="estaOpcion" <%= category === "Teclado" && 'selected' %> value="Teclado">Teclado </option>
+            <option class="estaOpcion" <%= category === "Mouse" && 'selected' %> value="Mouse">Mouse </option>
+            <option class="estaOpcion" <%= category === "Auriculares" && 'selected' %> value="Auriculares">Auriculares</option>
           </select>
         </div>
           <div class="div_3">
             <label for="color"> Color </label>
           <select class="inputColor" class="selector" name="color" id="">
             <option class="estaOpcion" > </option>
-            <option class="estaOpcion" value="Blanco">Blanco</option>
-            <option class="estaOpcion" value="Negro">Negro</option>
-            <option class="estaOpcion" value="Rojo">Rojo</option>
-            <option class="estaOpcion" value="Amarillo">Amarillo </option>
-            <option class="estaOpcion" value="Azul">Azul </option>
-            <option class="estaOpcion" value="Vioeleta">Vioeleta</option>
-            <option class="estaOpcion" value="Naranja">Naranja</option>
-            <option class="estaOpcion" value="Violeta">Violeta</option>
+            <option class="estaOpcion" <%= color === "Blanco" && 'selected' %>   value="Blanco">Blanco</option>
+            <option class="estaOpcion" <%= color === "Negro" && 'selected' %>   value="Negro">Negro</option>
+            <option class="estaOpcion" <%= color === "Rojo" && 'selected' %>   value="Rojo">Rojo</option>
+            <option class="estaOpcion" <%= color === "Amarillo" && 'selected' %>   value="Amarillo">Amarillo </option>
+            <option class="estaOpcion" <%= color === "Azul" && 'selected' %>   value="Azul">Azul </option>
+            <option class="estaOpcion" <%= color === "Vioeleta" && 'selected' %>   value="Vioeleta">Vioeleta</option>
+            <option class="estaOpcion" <%= color === "Naranja" && 'selected' %>   value="Naranja">Naranja</option>
+            <option class="estaOpcion" <%= color === "Violeta" && 'selected' %>   value="Violeta">Violeta</option>
           </select>
       </div>
     </div>
@@ -58,11 +58,11 @@
       </div>
     </div>
       <div class="div_6">
-        <label for="description"> Descripcion </label>
+        <label for="description"> Descripción </label>
         <textarea class="inputDescripcion" name="description" rows="5" value="<%= description %>"></textarea>
       </div>
       <div class="div_7" >
-        <label for="images"> Foto </label>
+        <label for="images"> Agrega 3 imágens </label>
         <input class="inputimagen" type="file" name="images" multiple>
       </div>
       <div class="div_c">
@@ -70,7 +70,7 @@
           <button class="esteBoton1" type="reset">Cancelar</button>
         </div>  
           <div class="div_9">  
-          <button class="esteBoton2" type="submit">Crear</button>
+          <button class="esteBoton2" type="submit">Modificar</button>
       </div>
     </div>    
       </form>
