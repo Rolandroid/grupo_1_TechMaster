@@ -169,16 +169,11 @@
    {
       "id": 13,
       "name": "Teclado Arena",
-      "image": [
-         "tecladoarena1.png",
-         "tecladoarena2.png",
-         "tecladoarena3.png"
-      ],
-      "description": "Teclado negro con entrada USB y luces RGB, de de forma ergonomica para la adaptacion del usuario",
-      "color": "Negro",
-      "category": "Teclado",
-      "discount": null,
-      "price": 12000
+      "price": 12000,
+      "description": "",
+      "image": null,
+      "discount": 0,
+      "category": "Mouse"
    },
    {
       "id": 14,
