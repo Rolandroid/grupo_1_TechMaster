@@ -1,25 +1,88 @@
-.estaCreacion{display: flex;justify-content: center;background: gray;}
+.estaCreacion{display: flex;justify-content: center;background: white;}
 .estaCreacion form{
-    width: 500px;
-    background-color: darkgrey;
+    max-width: 500px;
+    min-width: 300px;
+    background-color: white;
     padding: 10px;
     border-radius: 15px;
-    display: flex;
-    margin: 10px;
-    flex-direction: column;
-    flex-wrap: wrap;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    margin: 30px;
 }
-.estaCreacion form div{
+/* .estaCreacion form div{
     border:1px solid red;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-}
+    flex-direction: column;
+} */
+
+
+
+
+.div_1{display: flex ;margin: 2%;flex-direction: column;}
+
+.div_a{display: flex;}
+.div_2{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
+.div_3{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
+
+.div_b{display: flex;}
+.div_4{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
+.div_5{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
+
+.div_6{display: flex ;margin: 2%;flex-direction: column;}
+.div_7{display: flex ;margin: 2%;flex-direction: column;}
+
+.div_c{display: flex;}
+.div_8{display: flex;margin: 2%;flex-direction: row;width: 50%;justify-content: center;}
+.div_9{display: flex;margin: 2%;flex-direction: row;width: 50%;justify-content: center;}
+
 
 .esteTitulo{}
 
-.inputCategoria{}
+.inputNombre{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+}
 
-.inputColor{}
+.inputCategoria{
+    height: 24px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+}
+
+.inputColor{
+    height: 24px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+}
+
+.inputPrecio{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.inputDescuento{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.inputDescripcion{}
+
+.inputimagen{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+}
+
+.esteBoton1{width: 80%;color: white;border: none;border-radius: 3px;background-color: var(--escalaDeGrises);}
+
+.esteBoton2{width: 80%;}
 
 
