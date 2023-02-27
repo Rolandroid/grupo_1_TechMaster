@@ -5,7 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-footer{
+.footer{
     background-color: var(--escalaDeGrises);
 }
 
@@ -21,7 +21,7 @@ footer{
     display: none;
 }
 
-span{
+.span{
     display: none;
 }
 
@@ -151,7 +151,7 @@ gap: 5px;
         padding-bottom: 13px;
     }
 
-    span{
+    .span{
         display: flex;
     }
 

@@ -23,6 +23,11 @@
     
 }
 
+.carousel-item{
+    display: flex;
+    justify-content: center;
+}
+
 .card {
     scroll-snap-align: start;
     border-radius: 30px;
@@ -47,14 +52,14 @@
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
+    display: flex;
+    align-items: center;
 }
 
 
 .carousel-item img{
-    width: 62px;
-    /* margin: auto; */
-    display: flex;
-    justify-content: center;
+    width: auto;
+    height: 60%;
     }
 
 .detalle__info{
@@ -189,3 +194,13 @@
     display: flex;
     width: 100%;
 }
+
+@media (min-width:768px) {
+    .carousel-item img {
+        width: auto;
+        height: 100%;
+    }
+ }
+
+
+

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- HEAD -->
-<%- include('../partials/head') %>
+<%- include('../partials/head',{title : 'Creacion de productos'}) %>
 
 
 <body class="boby__view__creacion">
@@ -12,40 +12,37 @@
 
     <main class="estaCreacion">
       
-      <form>
+      <form method="POST" enctype="multipart/form-data">
         <h1 class="esteTitulo">Crear Producto</h1>        
 
         <p class="estaCategoria">Elija la categoria del producto:</p>
-        <select class="inputCategoria" class="selector" name="Filtrar" id="">
+        <select class="inputCategoria" class="selector" name="category" id="">
           <option class="estaOpcion" value="1"><a href="#">Elija </a></option>
-          <option class="estaOpcion" value="2"><a href="#">Monitor </a></option>
-          <option class="estaOpcion" value="3"><a href="#">Teclado </a></option>
-          <option class="estaOpcion" value="4"><a href="#">Mouse </a></option>
-          <option class="estaOpcion" value="5"><a href="#">Auriculares</a></option>
+          <option class="estaOpcion" value="Monitor"><a href="#">Monitor </a></option>
+          <option class="estaOpcion" value="Teclado"><a href="#">Teclado </a></option>
+          <option class="estaOpcion" value="Mouse"><a href="#">Mouse </a></option>
+          <option class="estaOpcion" value="Auriculares"><a href="#">Auriculares</a></option>
         </select>
         
         <p class="esteNombre">Coloque un nombre al producto:</p>
-        <input  class="inputNombre" type="form_text" class="texto" >
+        <input  class="inputNombre" type="form_text" class="texto" name="name">
 
-        <p class="esteStock">Indique el stock disponible:</p>
-        <div class="inputStock" ><input type=" number" class="numero" >Unidades</div>
+<!--         <p class="esteStock">Indique el stock disponible:</p>
+        <div class="inputStock" ><input type=" number" class="numero" >Unidades</div> -->
 
         <p class="estePrecio">Indique el precio base del producto:</p> 
-        <div class="inputPrecio">$<input type=" number" class="numero" ></div>
+        <div class="inputPrecio">$<input type=" number" class="numero" name="price" ></div>
 
         <p class="esteDescuento">Puede colocar un descunto al precio:</p>
-        <div class="inputDescuento"><input type="number" class="numero" >% Off</div>
+        <div class="inputDescuento"><input type="number" class="numero" name="discount" >% Off</div>
 
 
         <p class="estaDescripcion">Agregue una descripcion del producto:<p>
-        <textarea class="inputDescripcion" cols="30" rows="10"></textarea>
+        <textarea class="inputDescripcion" cols="30" rows="10" name="description"></textarea>
 
         <p class="estasFotos">Elija tres fotos del producto:</p>
-        <div class="inputFoto">imagen 1:<input type="file"></div>
-        <div class="inputFoto">imagen 2:<input type="file"></div>
-        <div class="inputFoto">imagen 3:<input type="file"></div>
-         
-          
+        <div class="inputFoto">imagenes:<input type="file" name="images" multiple></div>
+
           <button class="esteBoton" type="reset">Cancelar proceso</button>
           <button class="esteBoton" type="submit">Crear Producto</button>
       </form>
