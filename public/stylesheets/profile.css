@@ -13,10 +13,12 @@ height: 80%;
     color: white;    
 }
 .main__section-profile{
-
+    display: flex;
+    flex-direction: column;
 }
-.main__section-info{
-
+.main__section-info{    
+    display: flex;
+    flex-direction: column;
 }
 .main__section-info article{
 background-color: var(--colorGranate);
