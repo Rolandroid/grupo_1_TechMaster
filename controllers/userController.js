@@ -5,7 +5,7 @@ module.exports = {
     register : (req , res) => {
         return res.render('users/register')
     },
-    recovery : (req , res) => {
-        return res.render('users/recovery')
+    newPassword : (req , res) => {
+        return res.render('users/newPassword')
     },
 }
