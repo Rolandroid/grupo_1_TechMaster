@@ -10,6 +10,7 @@
          "hyperxcloud33.png"
       ],
       "discount": 0,
+      "color": "Negro",
       "category": "Auricular"
    },
    {
@@ -176,6 +177,7 @@
          "tecladoarena2.png",
          "tecladoarena3.png"],
       "discount": 0,
+      "color": "Negro",
       "category": "Teclado"
    },
    {
@@ -203,6 +205,7 @@
          "tecladoGadnic3.png"
       ],
       "discount": 50,
+      "color": "Negro",
       "category": "Teclado"
    },
    {
@@ -228,6 +231,7 @@
          "1677210516610_products_.png"
       ],
       "discount": 0,
+      "color": "Negro",
       "category": "Monitor"
    }
 ]

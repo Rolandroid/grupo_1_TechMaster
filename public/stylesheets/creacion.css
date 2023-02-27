@@ -1,6 +1,8 @@
 .estaCreacion{display: flex;justify-content: center;background: white;}
 .estaCreacion form{
-    max-width: 500px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 85%;
     min-width: 300px;
     background-color: white;
     padding: 10px;
@@ -37,7 +39,10 @@
 .div_9{display: flex;margin: 2%;flex-direction: row;width: 50%;justify-content: center;}
 
 
-.esteTitulo{}
+.esteTitulo{
+    text-align: center;
+    font-size: 2rem;
+}
 
 .inputNombre{
     background-color: lightgray;
@@ -46,14 +51,14 @@
 }
 
 .inputCategoria{
-    height: 24px;
+    height: 34px;
     background-color: lightgray;
     border: none;
     border-radius: 3px;
 }
 
 .inputColor{
-    height: 24px;
+    height: 33px;
     background-color: lightgray;
     border: none;
     border-radius: 3px;
