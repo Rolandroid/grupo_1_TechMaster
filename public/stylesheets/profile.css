@@ -4,14 +4,14 @@
     /* border: solid red dashed; */
     
 }
-.main__p-regresar a{
-    text-decoration: none;
-    color: white;
-}
 .main-profile{
     height: 80%;
     display: flex;
     flex-direction: column;
+}
+.main__p-regresar a{
+    text-decoration: none;
+    color: white;
 }
 .main-profile h1{
     font-size: 20px;
@@ -23,57 +23,12 @@
     display: flex;
     flex-direction: column;
 }
-.main__section-info{    
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.main__section-info article{
-    background-color: var(--colorGranate);
-    height: 10%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    margin: 5px;
-    padding: 5%;
-    
-}
-
-.main__section-info a{
-    color: white;
-    text-decoration: none;
-    }
-.main__section__article{
-    background-color: var(--colorGranate);
-    height: 10%;
-    color: white;
-}
-.main__section__article--sesion-button {
-    text-decoration: none;
-    border: none;
-    background-color: var(--colorGranate);
-    color: white;
-    font-size: 16px;border-top: 10%;}
-.main__section__article--sesion {
-    border-top: 50px;
-    }
- .container {
+.container {
     max-width: 960px;
     margin: 30px auto;
     padding: 20px;
 }
-/*  h1 {
-    
-}
 
-h1 small {
-    display: block;
-    font-size: 15px;
-    padding-top: 8px;
-    color: gray;
-} 
- */
 .avatar-upload {
     position: relative;
     max-width: 205px;
@@ -131,22 +86,55 @@ h1 small {
     background-repeat: no-repeat;
     background-position: center;
 }
+.main__section-info{    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main__section-info a{
+    color: white;
+    text-decoration: none;
+    }
+.main__section__article{
+    background-color: var(--colorGranate);
+    height: 10%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 5px 10px;
+}
+.main__section__article--sesion {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 16px 11px;
+    }
+.main__section__article--sesion-button {
+    border: none;
+    background-color: var(--colorGranate);
+    color: white;
+    font-size: 16px;
+    display: flex;
+    padding: 15px;
+    }
+
+ 
 
 @media (min-width: 768px) {
     .main__section-info{
-        
+       display:flex; 
+       flex-direction: row;
     }
 
     .main__section-info article{
-        background-color: var(--colorGranate);
-        height: 10%;
-        display: flex;
-        margin: 5px;
-        padding: 5%;
-        flex-direction: row;
-        width: 40%;
-        flex-wrap: nowrap;
+       display:flex; 
+       flex-direction: row;
     }
+    
     
     
 }
