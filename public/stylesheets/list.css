@@ -1,0 +1,126 @@
+.boby__view__resultados{
+    display: flex;
+    /* justify-content: space-between; */
+    min-height: 100vh;
+    flex-direction: column;
+} 
+
+.mainResultados{
+    background-color: rgba(28, 28, 28, 1);
+    height: 100%;
+}
+.mainResultados h1{
+    color: white;
+    margin: 10px  0px 10px 20px;
+    font-size: 25px;
+}
+
+.mainResultados section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articleResultados{
+    margin: 0vw 2vw 2vw 2vw;
+    width: 95%;
+    display: flex;
+    max-width: 570px;
+    border-radius: 5px;
+    align-items: center;
+    background: linear-gradient(-229deg, #fbd52d, #ef3a7c);
+}
+.articleResultados span{}
+.articleResultados span img{
+    width: 140px;
+    margin: auto;
+}
+
+.articleResultados div{
+    color: #ffffff;
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.articleResultados div h3{
+    border-bottom: 1px solid;
+    /* color: var(--escalaDeGrises); */
+}
+.articleResultados div div{}
+.articleResultados div div h2{
+    
+    align-self: flex-end;
+}
+.articleResultados div div h4{}
+
+.precioYOferta{
+    justify-content: space-between
+}
+
+
+.articleResultados div div{
+    font-size: 0.6rem;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.articleResultados div div button{
+    border: solid 3px #cfff00;
+    background-color: #0000003b;
+    padding: 3px 20px 3px 20px;
+    font-family: 'lato',sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 5px;
+    /* 
+
+
+    background-color: white;
+    max-width: 150px;
+    width: 101%;
+    padding: 9px;
+    color: var(--colorGrisOscuro);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1PX solid  transparent; */
+    color: #cfff00;
+}
+.articleResultados div div a button:hover{
+    background-color: var(green);}
+
+.articleResultados div div  input{
+    width: 50px;
+    border-style: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    /* border-style: solid; */
+    border-radius: 5px;
+    padding: 6px 0px 6px 6px;
+    /* background-color: lightgray; */
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+@media (max-width:767px) {
+    .articleResultados{
+        flex-direction: column;
+    }
+    .articleResultados span {
+        width: 100%;
+        text-align: center;
+    }    
+    .articleResultados span img{
+    width: 140px;
+    margin: auto;
+}
+
+}
