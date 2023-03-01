@@ -221,7 +221,7 @@ hr{
         font-weight: 500;
     }
 
-    .header--barra a{
+    .header--barra li a{
         color: #FFF;
         text-decoration: none;
     }
@@ -233,7 +233,7 @@ hr{
         background-color: #303030;
         display: flex;
     }    
-    .home__header--local div{}
+
     .home__header--local div i{
         display: flex;
         font-size: 2rem;
