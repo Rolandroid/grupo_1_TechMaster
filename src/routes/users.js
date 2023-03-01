@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const {login,register, newPassword} = require('../controllers/userController')
+const {login,register, newPassword, processRegister} = require('../controllers/userController');
+const registerUserValidation = require('../validations/registerUserValidation');
 
 router
-.get('/login',login)
 .get('/register',register)
+.post('/register',registerUserValidation,processRegister)
+.get('/login',login)
 .get('/newPassword',newPassword)
 
 
