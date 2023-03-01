@@ -22,17 +22,18 @@
 .main__section-profile{
     display: flex;
     flex-direction: column;
+    /* background-color: var(--colorGranate); */
 }
 .container {
     max-width: 960px;
-    margin: 30px auto;
-    padding: 20px;
+    margin: 0px auto;
+    /* padding: 1px; */
 }
 
 .avatar-upload {
     position: relative;
-    max-width: 205px;
-    margin: 50px auto;
+    max-width: 192px;
+    margin: 30px auto;
 }
 .avatar-upload .avatar-edit {
     position: absolute;
@@ -70,8 +71,8 @@
 }
 
 .avatar-upload .avatar-preview {
-    width: 192px;
-    height: 192px;
+    width: 170px;
+    height: 170px;
     position: relative;
     border-radius: 100%;
     border: 6px solid #f8f8f8;
@@ -96,7 +97,7 @@
     color: white;
     text-decoration: none;
     }
-.main__section__article{
+.main__section-info article{
     background-color: var(--colorGranate);
     height: 10%;
     color: white;
@@ -104,14 +105,16 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: flex-start;
-    padding: 10px;
-    margin: 5px 10px;
+    padding: 14px;
+    margin: 1px 23px;
 }
+
 .main__section__article--sesion {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 16px 11px;
+    
+    display: flex;  
+    justify-content: flex-start;  
+    flex-direction: column;  
+    margin: 16px 11px;
     }
 .main__section__article--sesion-button {
     border: none;
@@ -125,16 +128,38 @@
  
 
 @media (min-width: 768px) {
+    .main__section-profile{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--colorGranate);
+        margin: 10px;
+    }
     .main__section-info{
-       display:flex; 
+       display:flex;
        flex-direction: row;
+       flex-wrap: wrap;
     }
 
     .main__section-info article{
-       display:flex; 
+       display:flex;
        flex-direction: row;
+       padding: 25px 131px;
+       /* flex-wrap: wrap; */
+       /* justify-content: flex-start; */
+       /* text-align: start; */
     }
     
+    .main__section__article--datos{
+       margin: 10px 120px;
+       padding: 25px 122px;
+    }
     
-    
+    .main__section__article--sesion{
+        margin: 10px 120px;
+       padding: 25px 122px;
+    }
+    .main__section__article--sesion-button {
+        
+        padding: 15px;
+        }
 }
