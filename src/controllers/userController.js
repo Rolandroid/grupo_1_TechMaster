@@ -5,6 +5,7 @@ const {hashSync} = require('bcryptjs')
 
 
 
+
 module.exports = {
     register : (req , res) => {
         return res.render('users/register')
@@ -23,7 +24,8 @@ module.exports = {
                 surname : surname.trim(),
                 email : email.trim(),
                 password : hashSync(password,12),
-                avatar: ""
+                avatar: "",
+                rol:"user"
             }
             
             users.push(newUser);
@@ -41,7 +43,32 @@ module.exports = {
     login : (req , res) => {
         return res.render('users/login')
     },
+    processLogin: (req , res) => {
+        const errors = validationResult(req);
 
+        if(errors.isEmpty()){
+
+            const {id, name, rol} = readJSON('users.json').find(user => user.email === req.body.email);
+            console.log
+            req.session.userLogin = {
+                id,
+                name,
+                rol
+            };
+
+           if(req.body.remember){
+                res.cookie('userTechMaster',req.session.userLogin,{maxAge: 1000*60} )
+           }
+
+            return res.redirect('/')
+        }else{
+            return res.render('users/login',{
+                errors : errors.mapped()
+            })
+        }
+    },
+
+    
     newPassword : (req , res) => {
         return res.render('users/newPassword')
     },

@@ -46,5 +46,5 @@ module.exports = [
         }).withMessage('Las contraseñas no coinciden'),
 
     check('policy')
-        .notEmpty().withMessage('Debes aceptar el termino y condiciones')
+        .exists().withMessage('Debes aceptar el termino y condiciones')
     ]

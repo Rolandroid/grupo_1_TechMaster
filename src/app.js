@@ -4,11 +4,13 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const session = require("express-session");
+
 
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
-
+const cookieCheck = require("./middlewares/cookieCheck");
 
 const app = express();
 
@@ -16,12 +18,22 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..', 'public')));
 app.use(methodOverride('_method'));
+app.use(
+  session({
+    secret: "TechMaster",
+    resave :false,
+    saveUninitialized : true
+  })
+);
+app.use(cookieCheck);
+
 
 app.use('/', homeRouter);
 app.use('/users', usersRouter);

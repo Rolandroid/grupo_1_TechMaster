@@ -7,7 +7,7 @@
 <body>
     
     <main class="login__main">
-        <form class="login__main__form"></form>
+        
             <div class="login__main__div">
                 <h2 class="login__main__div__titulo">Bienvenid@ a</h2>
 
@@ -36,7 +36,7 @@
             </div>
 
             
-
+            <form class="login__main__form" method="POST">
             <section class="login__main__form--logueo">
 
                 <div class="login__main__form--text">
@@ -46,13 +46,19 @@
                 <div class="login__main__form--boxes">
                     <input type="email" placeholder="Email" name="email" id="email" autocomplete="off">
                 </div>
+                <small class="register__errors"><%= (locals.errors && errors.email) && errors.email.msg %></small>
     
                 <div class="login__main__form--boxes">
                     <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
                 </div>
+                <small class="register__errors"><%= (locals.errors && errors.password) && errors.password.msg %></small>
+                <div class="register__form__oferta1">
+                    <input type="checkbox" placeholder="" name="" value="">
+                      <span class="register__span" >Recordame</span>
+                </div>
     
                 <div class="login__main__form--buttons">
-                    <button class="login__button" type="submit"> <a href="/login.html">Ingresar</a> </button>
+                    <button class="login__button" type="submit">Ingresar</button>
                     <button class="login__button2" type="submit"> <a href="/users/register">Crea tu cuenta</a> </button>
                 </div>
 

@@ -83,7 +83,7 @@
     }
     
     .register__form__oferta1{
-        display: flex;
+        display: block;
         font-size: 12px;
         justify-content: center;
         gap: 5px;
