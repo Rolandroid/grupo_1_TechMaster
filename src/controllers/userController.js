@@ -49,7 +49,7 @@ module.exports = {
         if(errors.isEmpty()){
 
             const {id, name, rol} = readJSON('users.json').find(user => user.email === req.body.email);
-            console.log
+            
             req.session.userLogin = {
                 id,
                 name,
@@ -58,8 +58,9 @@ module.exports = {
 
            if(req.body.remember){
                 res.cookie('userTechMaster',req.session.userLogin,{maxAge: 1000*60} )
+                console.log(req.session.userLogin)
            }
-
+           console.log(req.session.userLogin)
             return res.redirect('/')
         }else{
             return res.render('users/login',{

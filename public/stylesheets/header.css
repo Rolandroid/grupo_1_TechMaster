@@ -18,7 +18,7 @@
 }
 
 .home__header--local{
-    gap: 90px;
+    gap: 50px;
 }
 
 .logo--master{
@@ -252,7 +252,9 @@ hr{
     top: 38px;
     left: -20px;
     padding: 2px;
+    margin-top: 10px;
     z-index: 3;
+    border-radius: 5px;
     }
     .home__header--local div i:hover div{
         display: flex;
@@ -290,6 +292,7 @@ hr{
         flex-direction: column;
         left: 0;
         top: 0;
+        margin: 0;
         border: none;
     }
     .home__header--local div i div a{
