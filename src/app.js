@@ -11,6 +11,7 @@ const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const cookieCheck = require("./middlewares/cookieCheck");
+const localsUserCheck = require('./middlewares/localsUserCheck')
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use( session({
   })
 );
 app.use(cookieCheck);
+app.use(localsUserCheck)
 
 
 app.use('/', homeRouter);
