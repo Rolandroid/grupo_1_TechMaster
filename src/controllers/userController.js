@@ -58,9 +58,6 @@ module.exports = {
         
         if(req.body.remember){
             res.cookie('userTechMaster', req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24 * 7}) // 7 days
-          } else {
-            req.session.cookie.expires = false;
-            res.cookie('userTechMaster', '', {expires: new Date(0)});
           }
           
 
