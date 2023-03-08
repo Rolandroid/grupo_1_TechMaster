@@ -57,7 +57,7 @@ module.exports = {
         }
         
         if(req.body.remember){
-            res.cookie('userTechMaster', req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24 * 7}) // 7 days
+            res.cookie('userTechMaster', req.session.userLogin,{maxAge: 1000 * 60 * 60 * 12}) // 12 horas
           }
           
 
