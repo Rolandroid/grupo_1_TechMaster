@@ -3,5 +3,5 @@ module.exports = (req,res,next) => {
         next()
     }
 
-    return res.redirect('/users/login')
+   /*  return res.redirect('/users/login') */
 }
