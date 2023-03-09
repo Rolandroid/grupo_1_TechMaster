@@ -43,34 +43,47 @@ module.exports = {
     login : (req , res) => {
         return res.render('users/login')
     },
+
     processLogin: (req , res) => {
-        const errors = validationResult(req);
+       const errors = validationResult(req);
 
-        if(errors.isEmpty()){
+       if(errors.isEmpty()){
+        const {id , name , rol} = readJSON('users.json').find(user => user.email === req.body.email);
 
-            const {id, name, rol} = readJSON('users.json').find(user => user.email === req.body.email);
-            
-            req.session.userLogin = {
-                id,
-                name,
-                rol
-            };
-
-           if(req.body.remember){
-                res.cookie('userTechMaster',req.session.userLogin,{maxAge: 1000*60} )
-                console.log(req.session.userLogin)
-           }
-           console.log(req.session.userLogin)
-            return res.redirect('/')
-        }else{
-            return res.render('users/login',{
-                errors : errors.mapped()
-            })
+        req.session.userLogin = {
+            id,
+            name,
+            rol
         }
+        
+        if(req.body.remember){
+            res.cookie('userTechMaster', req.session.userLogin,{maxAge: 1000 * 60 * 60 * 12}) // 12 horas
+          }
+          
+
+        return res.redirect('/')
+
+       }else{
+        return res.render('users/login',{
+            errors: errors.mapped()
+        })
+       }
     },
 
-    
+    profile : (req,res) => {
+        return res.render('users/profile',{
+            title : "perfil de sesión"
+        })
+    },
+
     newPassword : (req , res) => {
         return res.render('users/newPassword')
     },
+    
+    logout : (req,res) =>{
+        req.session.destroy();
+        res.clearCookie('userTechMaster');
+        return res.redirect('/')
+    }
+    
 }
