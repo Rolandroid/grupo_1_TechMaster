@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {home,detalle,carrito,resultados,search,navBar} = require('../controllers/homeController')
+const {home,detalle,carrito,search,navBar} = require('../controllers/homeController')
 
 router
 .get('/',home)
