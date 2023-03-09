@@ -25,6 +25,7 @@
           </div>
         </nav> -->
       </form>
+      
 <!--       <nav>
           <div class="header__buerger--menu">
             <i class="fas fa-bars"></i>
@@ -137,4 +138,28 @@
         </ul>
       </div>
     </nav>
+    <script>
+const links = document.querySelectorAll(".header--barra a");
+const urlActual = window.location.href;
+
+links.forEach(link => {
+  if (link.href === urlActual) {
+    link.classList.add("activo");
+  }
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll(".header--barra a");
+  const urlActual = window.location.href;
+
+  links.forEach(link => {
+    if (link.href === urlActual) {
+      link.classList.add("activo");
+    }
+  });
+});
+
+
+
+    </script>
+
   </header>
