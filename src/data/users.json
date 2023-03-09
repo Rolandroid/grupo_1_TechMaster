@@ -16,5 +16,14 @@
       "password": "$2a$12$uw0oUlgXPTsWG1JHo9gZPeqRcJ/qL8B8RvvVUN.4NtnWEOULGWGhK",
       "avatar": "",
       "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "Florencia",
+      "surname": "Amado",
+      "email": "florencia@gmail.com",
+      "password": "$2a$12$/GuQLnYmTcq8FwuukA.GmOndQ/FcPNjYphLLpiQyY36sTCjfkQOCK",
+      "avatar": "",
+      "rol": "user"
    }
 ]
