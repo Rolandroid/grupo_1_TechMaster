@@ -378,7 +378,10 @@ color: #fff;
         .button3{
             display: none;
         }
-        
+
+        .button1 a,.button2 a{
+            color: #fff300;
+        }
 
 }
 
