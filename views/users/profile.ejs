@@ -23,7 +23,7 @@
     <h1>Perfil de usuario</h1>
 
     <section class="main__section-profile">
-      <div class="container">
+      
         <div class="avatar-upload">
             <div class="avatar-edit">
                 <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -33,39 +33,40 @@
                 <div id="imagePreview" style="background-image: url(img-prueba-1.png);">
                 </div>
             </div>
-        </div>
+        
     </div>
     </section>
 
     <section class="main__section-info">
 
       <article class="main__section__article--datos">
-        <div><a href=""><i class="fa-solid fa-user"></i> Mis Datos</a> </div>
-        <p>Gestioná tus datos personales.</p>
-        <div> <i class="fa-solid fa-chevron-right"></i></div>
+        <div class="main__section__article-icon"><a href=""><i class="fa-solid fa-user"></i> Mis Datos</a> </div>
+        <p class="main__section-info-p">Gestioná tus datos personales.</p>
+        <div class="main__section__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
 
       </article>
       <article class="main__section__article--compras">
-        <div><a href=""><i class="fa-solid fa-cart-shopping"></i> Mis compras </a> </div>
-        <p>Seguí el estado de tus compras y consultá tus facturas.</p>
-        <div> <i class="fa-solid fa-chevron-right"></i></div>
+        <div class="main__section__article-icon"><a href=""><i class="fa-solid fa-cart-shopping"></i> Mis compras </a> </div>
+        <p class="main__section-info-p">Seguí el estado de tus compras y consultá tus facturas.</p>
+        <div class="main__section__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
       </article>
       <article class="main__section__article--tarjetas">
-        <div><a href=""><i class="fa-solid fa-credit-card"></i> Mis tarjetas </a> </div>
-        <p>Gestioná tus tarjetas.</p>
-        <div> <i class="fa-solid fa-chevron-right"></i></div>
+        <div class="main__section__article-icon"><a href=""><i class="fa-solid fa-credit-card"></i> Mis tarjetas </a> </div>
+        <p class="main__section-info-p">Gestioná tus tarjetas.</p>
+        <div class="main__section__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
       </article>
       <article class="main__section__article--ayuda">
-        <div><a href=""><i class="fa-solid fa-circle-info"></i> Centro de ayuda </a> </div>
-        <p>Realizá consultas y reclamos.</p>
-        <div> <i class="fa-solid fa-chevron-right"></i></div>
-      </article>
-      <article class="main__section__article--sesion">
-        
-        <a class="main__section__article--sesion-button"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesion </a>
+        <div class="main__section__article-icon"><a href=""><i class="fa-solid fa-circle-info"></i> Centro de ayuda </a> </div>
+        <p class="main__section-info-p">Realizá consultas y reclamos.</p>
+        <div class="main__section__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
       </article>
       
+      
     </section>
+    <article id="main__section__article--sesion">
+        
+        <a  id="main__section__article--sesion"><p>Cerrar sesion </p><i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
+      </article>
   </main>
 
   <%- include('../partials/footer')  %> 

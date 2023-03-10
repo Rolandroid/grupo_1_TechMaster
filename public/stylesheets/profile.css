@@ -26,8 +26,9 @@
 }
 .container {
     max-width: 960px;
-    margin: 0px auto;
-    /* padding: 1px; */
+    /* margin: 0px auto; */
+    padding: 1px;
+    text-align: left;
 }
 
 .avatar-upload {
@@ -92,6 +93,9 @@
     flex-direction: column;
     
 }
+.main__section-info-p {
+    display: none;
+}
 
 .main__section-info a{
     color: white;
@@ -110,12 +114,16 @@
     justify-content: space-between;
 }
 
-.main__section__article--sesion {
-    
-    display: flex;  
-    justify-content: flex-start;  
-    flex-direction: column;  
-    margin: 16px 11px;
+#main__section__article--sesion {
+    display: flex;
+    margin: 7px 24px;
+    align-items: center;
+    background-color: var(--colorGranate);
+    color: white;
+    /* padding: 16px 17px; */
+    width: 85%;
+    /* display: flex; */
+    justify-content: space-between;
     }
 .main__section__article--sesion-button {
     border: none;
@@ -131,37 +139,132 @@
 @media (min-width: 768px) {
     .main__section-profile{
         display: flex;
-        flex-direction: column;
         background-color: var(--colorGranate);
-        margin: 10px;
+        margin: 31px 79px;
+        /* width: 90%; */
+    }
+    .container {
+        display: flex;
+        padding: 1px;
+    }
+    
+    .avatar-upload {
+        display: flex;
+        justify-content: flex-start;
+        margin: 27px;
     }
     .main__section-info{
        display:flex;
        flex-direction: row;
        flex-wrap: wrap;
+       justify-content: center;
+    }
+    .main__section-info-p {
+        display: block;
+    }
+    .main__section-info article{
+       display:flex;
+       flex-direction: column;
+       padding: 0 11px;
+       /* flex-wrap: wrap; */
+       /* text-align: start; */
+       width: 38%;
+       height: 86px;
+       /* align-items: flex-start; */
+       justify-content: center;
+       margin: 14px 10px;
+    }
+    .main__section-info p {
+        /* margin: 3px 0; */
+        color: rgba(255, 255, 255, 0.596);
+     }
+     .main__section__article-icon{
+        display: flex;
+        width: 100%;
+     }
+    .main__section__article--datos{
+       margin: 10px 120px;
+       padding: 25px 122px;
+       display: flex;
+    }
+    
+    #main__section__article--sesion{
+        margin: 8px 135px;
+        /* padding: 0px 44px; */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .main__section__article--sesion-button { 
+    padding: 15px;
+        }
+    .main__section__article__div--flecha{
+        display: none;
+     }
+     .main__section-info a{
+        width: 100%;       
+        display: flex;      
+        gap: 10px;
+
+     }
+
+}
+
+@media (min-width: 1024px) {
+    .main__section-profile{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--colorGranate);
+        margin: 31px 79px;
+    }
+    .container {
+        display: flex;
+        padding: 1px;
+    }
+    
+    .avatar-upload {
+        display: flex;
+        justify-content: flex-start;
+        margin: 27px;
+    }
+    .main__section-info{
+       display:flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
     }
 
     .main__section-info article{
        display:flex;
-       flex-direction: row;
+       flex-direction: column;
        padding: 0 30px;
        /* flex-wrap: wrap; */
        /* text-align: start; */
        width: 40%;
        height: 86px;
-       align-items: center;
+       align-items: flex-start;
+       justify-content: center;
+       margin: 16px 22px;
     }
+    .main__section-info p {
+        /* margin: 3px 0; */
+        color: rgba(255, 255, 255, 0.596);
+     }
     
     .main__section__article--datos{
        margin: 10px 120px;
        padding: 25px 122px;
+       display: flex;
     }
     
-    .main__section__article--sesion{
-        margin: 10px 120px;
-       padding: 25px 122px;
-    }
     .main__section__article--sesion-button {
-        padding: 15px;
+        
+padding: 15px;
         }
+    .main__section__article__div--flecha{
+
+        display: none;
+     }
+
 }
