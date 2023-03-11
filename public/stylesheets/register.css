@@ -83,10 +83,9 @@
     }
     
     .register__form__oferta1{
-        display: flex;
+        display: block;
         font-size: 12px;
         justify-content: center;
-        padding-bottom: 30px;
         gap: 5px;
         font-family: 'Lato', sans-serif;
     }
@@ -148,6 +147,16 @@
         color: white;
     }
 
+    .register__errors{
+        color: red;
+        padding-bottom: 14px;
+    }
+
+    .register__span{
+        color: black;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
     @media (min-width:720px)  { 
 
         .register__form__header{

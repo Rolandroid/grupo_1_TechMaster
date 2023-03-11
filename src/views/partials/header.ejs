@@ -1,0 +1,140 @@
+<header class="home--header">
+    <div class="header-top">
+      <div class="logo--master">
+        <a class="logo" href="/"><img src="/images/logo.svg" alt="Logo" /></a>
+        <a class="tecmater--logo" href="/"><img src="/images/LOGO-TECHMASTER.svg" alt=""></a>
+      </div>
+      <form class="search" action="/search" method="GET">
+        <input type="text" name="keywords" placeholder="Buscar productos" />
+        <hr />
+        <select class="Filter" name="category" id="">
+          <option value="">Filtrar</option>
+<!--           <option value="todos">Todos</option> -->
+          <option value="Auricular">Auricular</option>
+          <option value="Monitor">Monitor</option>
+          <option value="Mouse">Mouse</option>
+          <option value="Teclado">Teclado</option>
+<!--           <option value="Ofertas">Ofertas</option> -->
+
+        </select>
+        <hr />
+         <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
+<!--         <nav>
+          <div class="header__buerger--menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav> -->
+      </form>
+<!--       <nav>
+          <div class="header__buerger--menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+ -->
+
+      <div class="home__header--local">
+      
+        <!-- <div> <i class="fa-solid fa-location-dot">  <div> <a href="/users/register">Ubicacion </a> <a href="/users/register">Cordoba     </a> </div> </i> </div> -->
+<!--         <div> <i class="fa-solid fa-user">          <div> <a href="/users/login">Ingresar     </a> <a href="/users/register">Registrarse </a> </div> </i> </div>
+        <div> <i class="fa-solid fa-cart-shopping"> <div> <a href="/carrito">comprar          </a> <a href="/products/creacion">vender    </a> </div> </i> </div> -->
+
+
+        <div class="dropdown" id="dropdown">
+          <button id="button" onclick="toggleDropdown()">
+            <span class="material-symbols-outlined">
+              person
+            </span>
+            <% if (locals.userLogin) { %>
+              Hola <%= locals.userLogin.name %>
+            <% }else{%>
+              Registrarse/Ingresar
+            <% }%>
+            <span id="chevron" class="chevron material-symbols-outlined">
+              expand_more
+            </span>
+          </button>
+          <div id="menu" class="menu">
+            <% if (locals.userLogin) { %>
+              <button onclick="window.location.href='/users/profile';" class="btn">
+                <span class="material-symbols-outlined"> lock </span>
+                Cuenta
+              </button>
+              <button onclick="window.location.href='#';" class="btn">
+                <span class="material-symbols-outlined">
+                  location_on
+                </span>
+                Cordoba
+              </button>
+              <button onclick="window.location.href='/carrito';" class="btn">
+                <span class="material-symbols-outlined">
+                  shopping_cart
+                </span>
+                Carrito
+              </button>
+              <button onclick="window.location.href='/users/logout';" class="btn">
+                <span class="material-symbols-outlined">logout</span>
+                Cerrar Sesión
+              </button>
+            <% } else { %>
+              <button onclick="window.location.href='/users/register';" class="btn">
+                <span class="material-symbols-outlined">person_add</span>
+                Registrarse
+              </button>            
+              <button onclick="window.location.href='/users/login';" class="btn">
+                <span class="material-symbols-outlined">login</span>
+                Ingresar 
+              </button>
+            <% } %>
+          </div>
+        </div>
+        
+        
+        
+        
+
+
+        <script>
+          const button = document.getElementById("button");
+          const buttonRect = button.getBoundingClientRect();
+          const chevron = document.getElementById("chevron");
+          const chevronRect = chevron.getBoundingClientRect();
+          const menuRight = buttonRect.right - chevronRect.right;
+          const menutop = chevronRect.top - buttonRect.top;
+
+          const menu = document.getElementById("menu");
+          menu.style.top = `${menutop}px`;
+          menu.style.right = `${menuRight}px`;
+
+          const toggleDropdown = () => {
+            const dropdown = document.getElementById("dropdown");
+            if(dropdown.classList.contains("open")) {
+              menu.style.top = `${menutop}px`;
+              menu.style.right = `${menuRight}px`;
+            }else{
+              menu.style.top = `${button.clientHeight + 10}px`;
+              menu.style.right = 0;
+            }
+
+            dropdown.classList.toggle("open")
+          };
+        </script>
+      
+      </div>
+    </div>
+    <nav class="home__header__barra--nav">
+      <div class="home__header--barra">
+        <ul class="header--barra">
+          
+          <li><a href="/products/list">Todos</a></li>
+          <li><a href="/products/list/Monitor">Monitores</a></li>
+          <li><a href="/products/list/Mouse">Mouses</a></li>
+          <li><a href="/products/list/Teclado">Teclados</a></li>
+          <li><a href="/products/list/Auricular">Auriculares</a></li>
+          <li><a href="/products/list/discount">Ofertas</a></li>
+          <hr />
+          <li><a href="#footer">Contactos</a></li>
+          <li><a href="#footer">Sobre nosotros</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>

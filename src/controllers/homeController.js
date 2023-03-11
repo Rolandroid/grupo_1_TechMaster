@@ -20,8 +20,10 @@ module.exports = {
         const {keywords, category} = req.query;
         if(keywords.trim() !== ''){
             let resultSearch = products.filter(product => 
-                (product.name.toLowerCase().includes(keywords.toLowerCase().trim()) ||  
-                product.description.toLowerCase().includes(keywords.toLowerCase().trim())) && 
+                (product.name.toLowerCase().includes(keywords.toLowerCase().trim()) ||
+                product.category.toLowerCase().includes(keywords.toLowerCase().trim()) ||  
+                product.description.toLowerCase().includes(keywords.toLowerCase().trim()))
+                 && 
                 (category === '' || product.category === category)
             );
             res.render('results',{
@@ -31,6 +33,12 @@ module.exports = {
         }else{
             res.redirect('/')
         }
+    },
+    navBar : (req, res) => {
+       let products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
+       let {category} = req.params
+       products = products.filter(product => product.category === category)
+       return res.render('products/list',{products})
     }
    
 }

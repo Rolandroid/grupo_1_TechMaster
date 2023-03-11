@@ -6,12 +6,12 @@
 } 
 
 .mainResultados{
-    background-color: dimgray;
+    background-color: rgba(28, 28, 28, 1);
     height: 100%;
 }
 .mainResultados h1{
     color: white;
-    /* margin:0vw 2vw 0vw 2vw; */
+    margin: 10px  0px 10px 20px;
     font-size: 25px;
 }
 
@@ -23,11 +23,12 @@
 
 .articleResultados{
     margin: 0vw 2vw 2vw 2vw;
-    background: #cfcfcf;
     width: 95%;
     display: flex;
     max-width: 570px;
     border-radius: 5px;
+    align-items: center;
+    background: linear-gradient(-229deg, #fbd52d, #ef3a7c);
 }
 .articleResultados span{}
 .articleResultados span img{
@@ -36,7 +37,7 @@
 }
 
 .articleResultados div{
-    color: var(--escalaDeGrises);
+    color: #ffffff;
     font-size: 18px;
     padding: 5px;
     width: 100%;
@@ -45,8 +46,8 @@
 }
 
 .articleResultados div h3{
-    border-bottom: 1px var(--escalaDeGrises) solid;
-    color: var(--escalaDeGrises);
+    border-bottom: 1px solid;
+    /* color: var(--escalaDeGrises); */
 }
 .articleResultados div div{}
 .articleResultados div div h2{
@@ -70,6 +71,16 @@
 }
 
 .articleResultados div div button{
+    border: solid 3px #cfff00;
+    background-color: #0000003b;
+    padding: 3px 20px 3px 20px;
+    font-family: 'lato',sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 5px;
+    /* 
+
+
     background-color: white;
     max-width: 150px;
     width: 101%;
@@ -78,7 +89,8 @@
     font-size: 15px;
     font-weight: 500;
     border-radius: 5px;
-    border: 1PX solid  transparent;
+    border: 1PX solid  transparent; */
+    color: #cfff00;
 }
 .articleResultados div div a button:hover{
     background-color: var(green);}

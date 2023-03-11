@@ -51,14 +51,17 @@
 
 .login__main__form{
     
+display: flex;
+    
+justify-content: center;
 }
 
 .login__main__form--logueo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
-    margin-top: 100px;
+    gap: 16px;
+    justify-content: center;
 }
 
 .login__button{
@@ -82,6 +85,9 @@
     text-align: center;
     color: black;
     font-weight: bold;
+}
+.login__main__form--text h2{
+    margin: 10px;
 }
 
 .login__main__form--boxes{
@@ -117,15 +123,16 @@
 .login__button2{
     background-color: white;
     color: black;
-    width: 25%;
+    width: 145px;
     border: solid 1px black;
+    height: 45px;
 }
 
 .login__button{
     background-color: var(--colorGranate);
     color: white;
-    width: 25%;
-    
+    width: 145px;
+    height: 45px;
 }
 
 .login__button2 a{
@@ -172,8 +179,21 @@
 .login__main__form--forget{
     margin-bottom: 10px;
 }
+.login__button2{
+    background-color: white;
+    color: black;
+    width: 35%;
+    border: solid 1px black;
+    height: 90%;
 }
 
+.login__button{
+    background-color: var(--colorGranate);
+    color: white;
+    width: 35%;
+    height: 91%;
+}
+}
 @media (min-width:1024px) {
 
     .login__main{
@@ -189,7 +209,7 @@
     }
 
     .login__main__form--logueo{
-        margin: auto;
+        /* margin: auto; */
         width: 60vw;
     }
 

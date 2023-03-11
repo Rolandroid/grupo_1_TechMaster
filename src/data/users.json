@@ -1,0 +1,38 @@
+[
+   {
+      "id": 1,
+      "name": "carlos",
+      "surname": "guillen",
+      "email": "carlos@gmail.com",
+      "password": "$2a$12$suJA8XQ9T.tErq3a7iE3MeqBqtYFz/l9aRmI7lk6Lz8lHQmp7gBuu",
+      "avatar": "",
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "name": "Rolando",
+      "surname": "Lisarazo",
+      "email": "r.lisarazo@gmail.com",
+      "password": "$2a$12$uw0oUlgXPTsWG1JHo9gZPeqRcJ/qL8B8RvvVUN.4NtnWEOULGWGhK",
+      "avatar": "",
+      "rol": "admin"
+   },
+   {
+      "id": 3,
+      "name": "Florencia",
+      "surname": "Amado",
+      "email": "florencia@gmail.com",
+      "password": "$2a$12$/GuQLnYmTcq8FwuukA.GmOndQ/FcPNjYphLLpiQyY36sTCjfkQOCK",
+      "avatar": "",
+      "rol": "admin"
+   },
+   {
+      "id": 4,
+      "name": "user",
+      "surname": "user",
+      "email": "user@gmail.com",
+      "password": "$2a$12$AYjgnwQ19bzUV3dMGCPYf.LldEW6F3dSYOyUjZxSo8Mu7dX7vcupS",
+      "avatar": "",
+      "rol": "user"
+   }
+]

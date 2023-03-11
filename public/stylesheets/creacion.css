@@ -1,38 +1,93 @@
-.estaCreacion{display: flex;justify-content: center;background: gray;}
+.estaCreacion{display: flex;justify-content: center;background: white;}
 .estaCreacion form{
-    width: 500px;
-    background-color: darkgrey;
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 85%;
+    min-width: 300px;
+    background-color: white;
     padding: 10px;
     border-radius: 15px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    margin: 30px;
+}
+/* .estaCreacion form div{
+    border:1px solid red;
     display: flex;
-    margin: 10px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     flex-direction: column;
-    flex-wrap: wrap;
+} */
+
+
+
+
+.div_1{display: flex ;margin: 2%;flex-direction: column;}
+
+.div_a{display: flex;}
+.div_2{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
+.div_3{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
+
+.div_b{display: flex;}
+.div_4{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
+.div_5{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
+
+.div_6{display: flex ;margin: 2%;flex-direction: column;}
+.div_7{display: flex ;margin: 2%;flex-direction: column;}
+
+.div_c{display: flex;}
+.div_8{display: flex;margin: 2%;flex-direction: row;width: 50%;justify-content: center;}
+.div_9{display: flex;margin: 2%;flex-direction: row;width: 50%;justify-content: center;}
+
+
+.esteTitulo{
+    text-align: center;
+    font-size: 2rem;
 }
-.esteTitulo{}
-.estaCategoria{}
-.inputCategoria{}
-.estaOpcion{}
-.esteNombre{}
-.inputNombre{}
-.esteStock{}
-.inputStock{}
-.inputStock input{
-    width: 60px;
+
+.inputNombre{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
 }
-.estePrecio{}
-.inputPrecio{}
-.inputPrecio input{
-    width: 60px;
+
+.inputCategoria{
+    height: 34px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
 }
-.esteDescuento{}
+
+.inputColor{
+    height: 33px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+}
+
+.inputPrecio{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+}
+
 .inputDescuento{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
 }
-.inputDescuento input{
-    width: 60px;
+
+.inputDescripcion{}
+
+.inputimagen{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
 }
-.estaDescripcion{}
-.estasFotos{}
-.inputFoto{}
-.inputFoto input{}
-.esteBoton{}
+
+.esteBoton1{width: 80%;color: white;border: none;border-radius: 3px;background-color: var(--escalaDeGrises);}
+
+.esteBoton2{width: 80%;}
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<%- include('../partials/head',{title : 'Creacion de productos'}) %>
+
+
+<body class="boby__view__creacion">
+
+
+  <%- include('../partials/header') %>
+
+    <main class="estaCreacion">
+     
+      <form method="POST" enctype="multipart/form-data">
+        
+          <h1 class="esteTitulo">CREA TU PRODUCTO</h1>
+        <div class="div_1">
+          <label for="name"> Nombre </label>
+          <input  class="inputNombre" type="form_text" class="texto" name="name">
+        </div>
+<div class="div_a">
+        <div class="div_2">
+          <label for="category"> Categoría </label>
+          <select class="inputCategoria" class="selector" name="category" id="">
+            <option class="estaOpcion" > </option>
+            <option class="estaOpcion" value="Monitor">Monitor </option>
+            <option class="estaOpcion" value="Teclado">Teclado </option>
+            <option class="estaOpcion" value="Mouse">Mouse </option>
+            <option class="estaOpcion" value="Auriculares">Auriculares</option>
+          </select>
+        </div>
+          <div class="div_3">
+            <label for="color"> Color </label>
+          <select class="inputColor" class="selector" name="color" id="">
+            <option class="estaOpcion" > </option>
+            <option class="estaOpcion" value="Blanco">Blanco</option>
+            <option class="estaOpcion" value="Negro">Negro</option>
+            <option class="estaOpcion" value="Rojo">Rojo</option>
+            <option class="estaOpcion" value="Amarillo">Amarillo </option>
+            <option class="estaOpcion" value="Azul">Azul </option>
+            <option class="estaOpcion" value="Vioeleta">Vioeleta</option>
+            <option class="estaOpcion" value="Naranja">Naranja</option>
+            <option class="estaOpcion" value="Violeta">Violeta</option>
+          </select>
+      </div>
+    </div>
+    <div class="div_b">
+<!--         <p class="esteStock">Indique el stock disponible:</p>
+        <div class="inputStock" ><input type=" number" class="numero" >Unidades</div> -->
+      <div class="div_4">
+        <label for="price"> Precio </label>
+        <input type="number" class="inputPrecio" name="price" >
+       </div> 
+       <div class="div_5">
+        <label for="discount"> Descuento </label>
+        <input type="number" class="inputDescuento" name="discount" >
+      </div>
+    </div>
+      <div class="div_6">
+        <label for="description"> Descripción </label>
+        <textarea class="inputDescripcion" name="description" rows="5"></textarea>
+      </div>
+      <div class="div_7" >
+        <label for="images"> Agrega 3 imágenes </label>
+        <input class="inputimagen" type="file" name="images" multiple>
+      </div>
+      <div class="div_c">
+      <div class="div_8">
+          <button class="esteBoton1" type="reset">Cancelar</button>
+        </div>  
+          <div class="div_9">  
+          <button class="esteBoton2" type="submit">Crear</button>
+      </div>
+    </div>    
+      </form>
+    </main>
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts')  %>
+</body>
+
+</html>
