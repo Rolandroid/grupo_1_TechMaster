@@ -10,7 +10,7 @@
 
   <title>TechMaster Perfil de usuario</title>
 </head>
-<body class="body-profile">
+<body class="body-profile" id="profile-page">
   
   <%- include('../partials/header') %> 
 
@@ -26,7 +26,7 @@
       
         <div class="avatar-upload">
             <div class="avatar-edit">
-                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="image"/>
                 <label for="imageUpload"></i></label>
             </div>
             <div class="avatar-preview">

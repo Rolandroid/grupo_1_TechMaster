@@ -1,3 +1,6 @@
+body#profile-page .home__header--barra{
+display: none;
+}
 .body-profile {
     background: rgb(43, 42, 42);
     font-family: "Open Sans", sans-serif;
@@ -59,6 +62,7 @@
     font-weight: normal;
     transition: all 0.2s ease-in-out;
 }
+
 .avatar-upload .avatar-edit input + label:after {
     content: "\f040";
     font-family: "FontAwesome";
@@ -116,6 +120,11 @@
     padding: 14px;
     margin: 1px 23px;
     justify-content: space-between;
+}
+.main__section-info article:hover {
+    background-color: rgb(107, 34, 77) ;
+    
+    
 }
 #main__section__article--sesion{
 height: 0;
