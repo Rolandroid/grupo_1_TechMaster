@@ -425,3 +425,7 @@ hr{
 .header--barra a.activo {
     border-bottom: 3px solid white;
 }
+
+#menu_icon{
+    font-weight: 900;
+}
