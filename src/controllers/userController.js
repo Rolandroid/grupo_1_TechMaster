@@ -72,8 +72,21 @@ module.exports = {
 
     profile : (req,res) => {
         return res.render('users/profile',{
-            title : "perfil de sesión"
+            title : "perfil de sesión",
         })
+    },
+    upload : (req , res) => {
+        
+        const uploadAvatar = {
+            image:  req.files.length ?  req.files.map(file => file.filename) : null
+        };
+
+        products.push(uploadAvatar);
+
+        fs.writeFileSync('./data/users.json',JSON.stringify(users, null, 3), 'utf-8')
+
+       // return res.send(req.file)
+        return res.redirect('/users/profile')
     },
 
     newPassword : (req , res) => {
