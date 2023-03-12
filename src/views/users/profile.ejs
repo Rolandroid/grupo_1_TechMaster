@@ -24,13 +24,16 @@
 
     <section class="main__section-profile">
       
-        <div class="avatar-upload">
+      <div class="avatar-upload">
+          <form  method="POST" enctype="multipart/form-data">
             <div class="avatar-edit">
-                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="image"/>
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="avatar"/>
                 <label for="imageUpload"></i></label>
-            </div>
+                <button type="submit"> Ok </button>
+              </form>
+          </div>
             <div class="avatar-preview">
-              <img id="imagePreview" class="d-block " src="/images/users/<%= image ? image[0] : 'default-image.png' %>" >
+              <img id="imagePreview" class="d-block " src="/images/users/<%= user.avatar ? user.avatar : 'default-user.png' %>" >
                <!--  <div id="imagePreview" style="background-image: url(img-prueba-1.png);"> -->
                 </div>
             </div>

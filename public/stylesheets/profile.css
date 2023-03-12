@@ -41,9 +41,9 @@ display: none;
 }
 .avatar-upload .avatar-edit {
     position: absolute;
-    right: 76px;
+    right: 59px;
     z-index: 1;
-    top: 10px;
+    top: 7px;
 }
 
 .avatar-upload .avatar-edit input {
@@ -61,6 +61,7 @@ display: none;
     cursor: pointer;
     font-weight: normal;
     transition: all 0.2s ease-in-out;
+    position: relative;
 }
 
 .avatar-upload .avatar-edit input + label:after {
@@ -68,7 +69,7 @@ display: none;
     font-family: "FontAwesome";
     color: #757575;
     position: absolute;
-    top: 7px;
+    top: 5px;
     left: 0;
     right: 0;
     text-align: center;
@@ -91,6 +92,12 @@ display: none;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.avatar-preview img{
+    
+width: 100%;
+    
+border-radius: 50%;
 }
 .main__section-profile--name{
         

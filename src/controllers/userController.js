@@ -2,7 +2,8 @@
 const {validationResult} = require('express-validator')
 const {readJSON, writeJSON} = require('../data')
 const {hashSync} = require('bcryptjs') 
-
+const fs = require('fs');
+const path = require('path');
 
 
 
@@ -71,22 +72,30 @@ module.exports = {
     },
 
     profile : (req,res) => {
+       const id = req.session.userLogin.id
+       console.log(id);
+       let user = readJSON('users.json').find(user => user.id === id);
+       console.log(user);
         return res.render('users/profile',{
             title : "perfil de sesión",
+            user
+
         })
     },
-    upload : (req , res) => {
+    processProfile : (req,res) => {
+       
+        const fs = require('fs');
+        const path = require('path');
+
+        const id = req.session.userLogin.id
+        let user = readJSON('users.json').find(user => user.id === id);
+        user.avatar = req.file ?  req.file: null
+        let users = readJSON('users.json')
+        users.push(user);
+
+        writeJSON('users.json', users);
+        return res.redirect('/users/profile') 
         
-        const uploadAvatar = {
-            image:  req.files.length ?  req.files.map(file => file.filename) : null
-        };
-
-        products.push(uploadAvatar);
-
-        fs.writeFileSync('./data/users.json',JSON.stringify(users, null, 3), 'utf-8')
-
-       // return res.send(req.file)
-        return res.redirect('/users/profile')
     },
 
     newPassword : (req , res) => {
