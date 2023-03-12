@@ -422,4 +422,10 @@ hr{
     rotate: -180deg;
 }
 
+.header--barra a.activo {
+    border-bottom: 3px solid white;
+}
 
+#menu_icon{
+    font-weight: 900;
+}
