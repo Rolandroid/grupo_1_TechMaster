@@ -11,6 +11,7 @@
 - Confirmar la ausencia o presencia de las reuniones grupales.
 ### ⏩Empezar a hacer: 
 - Re-estudiar el backlog (repasar los contenidos a ver en el sprint)
+- Organizar las dudas para arreglar una reunion con el profe
 ### ➖Hacer menos: 
 - Campo vacio.
 ### ❌Dejar de hacer:
