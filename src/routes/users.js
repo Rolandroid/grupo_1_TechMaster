@@ -16,7 +16,7 @@ router
 .get('/newPassword',newPassword)
 .get('/logout',checkUserLogin,logout)
 .get('/profile',checkUserLogin, profile)
-.post('/profile',uploadProductImagesUser.single("avatar"), processProfile)
+.put('/profile',uploadProductImagesUser.single("avatar"), processProfile)
 
 
 

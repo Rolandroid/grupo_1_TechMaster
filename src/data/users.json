@@ -34,23 +34,5 @@
       "password": "$2a$12$AYjgnwQ19bzUV3dMGCPYf.LldEW6F3dSYOyUjZxSo8Mu7dX7vcupS",
       "avatar": "",
       "rol": "user"
-   },
-   {
-      "id": 3,
-      "name": "Florencia",
-      "surname": "Amado",
-      "email": "florencia@gmail.com",
-      "password": "$2a$12$/GuQLnYmTcq8FwuukA.GmOndQ/FcPNjYphLLpiQyY36sTCjfkQOCK",
-      "avatar": {
-         "fieldname": "avatar",
-         "originalname": "redragonRosa-PhotoRoom.png-PhotoRoom.png",
-         "encoding": "7bit",
-         "mimetype": "image/png",
-         "destination": "public/images/users",
-         "filename": "1678594240651_products_.png",
-         "path": "public\\images\\users\\1678594240651_products_.png",
-         "size": 130183
-      },
-      "rol": "admin"
    }
 ]

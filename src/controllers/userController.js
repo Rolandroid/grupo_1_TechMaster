@@ -84,15 +84,11 @@ module.exports = {
     },
     processProfile : (req,res) => {
        
-        const fs = require('fs');
-        const path = require('path');
-
         const id = req.session.userLogin.id
         let user = readJSON('users.json').find(user => user.id === id);
-        user.avatar = req.file ?  req.file: null
+        user.avatar = req.file ?  req.file.filename : null
         let users = readJSON('users.json')
         users.push(user);
-
         writeJSON('users.json', users);
         return res.redirect('/users/profile') 
         
