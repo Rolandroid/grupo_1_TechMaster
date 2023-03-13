@@ -94,10 +94,8 @@ display: none;
     background-position: center;
 }
 .avatar-preview img{
-    
-width: 100%;
-    
-border-radius: 50%;
+    width: 100%;
+    border-radius: 50%;
 }
 .main__section-profile--name{
         

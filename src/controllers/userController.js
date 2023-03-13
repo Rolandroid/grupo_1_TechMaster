@@ -85,12 +85,17 @@ module.exports = {
     processProfile : (req,res) => {
        
         const id = req.session.userLogin.id
-        let user = readJSON('users.json').find(user => user.id === id);
-        user.avatar = req.file ?  req.file.filename : null
-        let users = readJSON('users.json')
-        users.push(user);
+        const users =  readJSON('users.json').map(user => {
+            if(user.id === id){
+                return {
+                    ...user,
+                    avatar: req.file ? req.file.filename : "default.png"
+                }
+            }
+            return user;
+        }) 
         writeJSON('users.json', users);
-        return res.redirect('/users/profile') 
+        return res.redirect('/users/profile')
         
     },
 
