@@ -122,67 +122,20 @@
         </div>
       </article> -->
     </section>
-
     <div class="conteudo">
       <div class="glider carrousel">
-        <article class="card">
-          <img src="/Images/PC-1.png" alt="">
-          <h3>22 Producto</h3>
-          <h4>Desktops AMD 5600g</h4>
+    <% products.forEach(({id,name,image}) => { %>
+        <article class="card card-carrousel">
+          <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>" alt="">
+          
+          <h4> <%= name %> </h4>
           <button class="button--carrusel">
-          <a href="/products/resultados">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="/products/detalle/<%= id %>">Ver más <i class="fa-solid fa-arrow-right"></i></a>
         </button>
         </article>
-        <article class="card">
-          <img src="/Images/PC-2.png" alt="">
-          <h3>22 Producto</h3>
-          <h4>Desktops AMD 5600g</h4>
-          <button class="button--carrusel">
-            <a href="/products/resultados">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-          </button>
-        </article>
-        <article class="card">
-          <img src="/Images/PC-1.png" alt="">
-          <h3>22 Producto</h3>
-          <h4>Desktops AMD 5600g</h4>
-          <button class="button--carrusel">
-            <a href="/products/resultados">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-          </button>
-        </article>
-        <article class="card">
-          <img src="/Images/PC-1.png" alt="">
-          <h3>22 Producto</h3>
-          <h4>Desktops AMD 5600g</h4>
-          <button class="button--carrusel">
-            <a href="/products/resultados">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-          </button>
-        </article>
-        <article class="card">
-          <img src="/Images/PC-1.png" alt="">
-          <h3>22 Producto</h3>
-          <h4>Desktops AMD 5600g</h4>
-          <button class="button--carrusel">
-            <a href="/products/resultados">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-          </button>
-        </article>
-        <article class="card">
-          <img src="/Images/PC-1.png" alt="">
-          <h3>22 Producto</h3>
-          <h4>Desktops AMD 5600g</h4>
-          <button class="button--carrusel">
-            <a href="/products/resultados">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-          </button>
-        </article>
-        <article class="card">
-          <img src="/Images/PC-1.png" alt="">
-          <h3>22 Producto</h3>
-          <h4>Desktops AMD 5600g</h4>
-          <button class="button--carrusel">
-            <a href="/products/resultados">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-          </button>
-        </article>
-      </div>
-    </div>
+    <% }) %>
+  </div>
+  </div>
   </main>
   <!-- ---------------------------------------------------- -->
   <%- include('./partials/footer')  %> 
@@ -223,6 +176,19 @@ responsive: [
 }
 ]
 });
+
+const cardsCarrousel =Array.from(document.querySelectorAll(".card-carrousel"))
+console.log(cardsCarrousel)
+const backgrounds = ["linear-gradient(-229deg, #fbd52d, #ef3a7c);",
+"linear-gradient(-229deg, #FF70AF, #5fa8f5);",
+"linear-gradient(-229deg, #0cebeb, #29ffc6);",
+"linear-gradient(-229deg, #88F7F9, #048FFF);",
+ "linear-gradient(-229deg, #0093E9, #80D0C7);",
+"linear-gradient(-229deg, #cf91ff, #5782F5);",
+"linear-gradient(-229deg, #642B73, #C6426E);"]
+cardsCarrousel.forEach(card => {
+  card.style.backgroundColor = backgrounds[Math.floor(Math.random() * 7)]
+})
   </script>
 
 </body>

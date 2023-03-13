@@ -4,7 +4,9 @@ const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/produc
 
 module.exports = {
     home : (req , res) => {
-        return res.render('home')
+        return res.render('home',{
+            products
+        })
     },
     carrito : (req , res) => {
         return res.render('carrito')
