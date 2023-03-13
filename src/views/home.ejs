@@ -54,7 +54,7 @@
     </div>
     </div>
     <div class="main__image--card">
-    <div class="image--lado card">
+    <div class="image--lado card card-carrousel">
       <img src="/Images/PC-1.png" alt="">
       <h2>Gaming computer</h2>
       <span>1TB SSD <br>
@@ -66,7 +66,7 @@
       </div>
       <div class="direction">
       <div class="main__image--card2">
-      <div class="image--lado card">
+      <div class="image--lado card card-carrousel">
         <img src="/Images/PC-1.png" alt="">
         <h2>Gaming computer</h2>
         <span>1TB SSD <br>
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="main__image--card3">
-        <div class="image--lado3 card">
+        <div class="image--lado3 card card-carrousel">
           <img src="/Images/PC-1.png" alt="">
           <h2>Gaming computer</h2>
           <span>1TB SSD <br>
@@ -124,18 +124,18 @@
     </section>
     <div class="conteudo">
       <div class="glider carrousel">
-    <% products.forEach(({id,name,image}) => { %>
-        <article class="card card-carrousel">
-          <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>" alt="">
-          
-          <h4> <%= name %> </h4>
-          <button class="button--carrusel">
-          <a href="/products/detalle/<%= id %>">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-        </button>
-        </article>
-    <% }) %>
-  </div>
-  </div>
+        <% products.slice(0, 10).forEach(({id,name,image}) => { %>
+          <article class="card card-carrousel">
+            <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>" alt="">
+            
+            <h4> <%= name %> </h4>
+            <button class="button--carrusel">
+              <a href="/products/detalle/<%= id %>">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+            </button>
+          </article>
+        <% }) %>
+      </div>
+    </div>
   </main>
   <!-- ---------------------------------------------------- -->
   <%- include('./partials/footer')  %> 
@@ -179,15 +179,17 @@ responsive: [
 
 const cardsCarrousel =Array.from(document.querySelectorAll(".card-carrousel"))
 console.log(cardsCarrousel)
-const backgrounds = ["linear-gradient(-229deg, #fbd52d, #ef3a7c);",
-"linear-gradient(-229deg, #FF70AF, #5fa8f5);",
-"linear-gradient(-229deg, #0cebeb, #29ffc6);",
-"linear-gradient(-229deg, #88F7F9, #048FFF);",
- "linear-gradient(-229deg, #0093E9, #80D0C7);",
-"linear-gradient(-229deg, #cf91ff, #5782F5);",
-"linear-gradient(-229deg, #642B73, #C6426E);"]
+const backgrounds = [
+  "linear-gradient(-229deg, #fbd52d, #ef3a7c)",
+  "linear-gradient(-229deg, #FF70AF, #5fa8f5)",
+  "linear-gradient(-229deg, #0cebeb, #29ffc6)",
+  "linear-gradient(-229deg, #88F7F9, #048FFF)",
+  "linear-gradient(-229deg, #0093E9, #80D0C7)",
+  "linear-gradient(-229deg, #cf91ff, #5782F5)",
+  "linear-gradient(-229deg, #642B73, #C6426E)"
+];
 cardsCarrousel.forEach(card => {
-  card.style.backgroundColor = backgrounds[Math.floor(Math.random() * 7)]
+  card.style.background = backgrounds[Math.floor(Math.random() * 7)]
 })
   </script>
 
