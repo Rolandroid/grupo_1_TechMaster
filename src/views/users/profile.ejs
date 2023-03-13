@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/3fab2a7658.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/Stylesheets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TechMaster Perfil de usuario</title>
 </head>
-<body>
-    <h1>HOLA X PERSONA</h1>
+<body class="body-profile" id="profile-page">
+  
+  <%- include('../partials/header') %> 
+
+
+  <main class="main-profile">
+    <p class="main__p-regresar">
+      <a href="/"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+    </p>
+
+    <h1>Perfil de usuario</h1>
+
+    <section class="main__section-profile">
+      
+      <div class="avatar-upload">
+          <form  action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="avatar-edit">
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="avatar"/>
+                <label for="imageUpload"></i></label>
+                <button class="profile--buttom" type="submit">Actualizar Perfil </button>
+              </form>
+          </div>
+            <div class="avatar-preview">
+              <img id="imagePreview" class="d-block " src="/images/users/<%= user.avatar ? user.avatar : 'default-user.png' %>" >
+               <!--  <div id="imagePreview" style="background-image: url(img-prueba-1.png);"> -->
+                </div>
+            </div>
+        </div>
+        <div class="main__section-profile--name">
+          <h2>Hola <%= locals.userLogin.name %></h2>
+        </div>
+    </section>
+
+    <section class="main__section-info">
+
+      <article class="main__section__article--datos">
+        <div class="main__section__article-icon"><a href=""><i class="fa-solid fa-user"></i> Mis Datos</a> </div>
+        <p class="main__section-info-p">Gestioná tus datos personales.</p>
+        <div class="main__section__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
+
+      </article>
+      <article class="main__section__article--compras">
+        <div class="main__section__article-icon"><a href=""><i class="fa-solid fa-cart-shopping"></i> Mis compras </a> </div>
+        <p class="main__section-info-p">Seguí el estado de tus compras y consultá tus facturas.</p>
+        <div class="main__section__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
+      </article>
+      <article class="main__section__article--tarjetas">
+        <div class="main__section__article-icon"><a href=""><i class="fa-solid fa-credit-card"></i> Mis tarjetas </a> </div>
+        <p class="main__section-info-p">Gestioná tus tarjetas.</p>
+        <div class="main__section__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
+      </article>
+      <article class="main__section__article--ayuda">
+        <div class="main__section__article-icon"><a href=""><i class="fa-solid fa-circle-info"></i> Centro de ayuda </a> </div>
+        <p class="main__section-info-p">Realizá consultas y reclamos.</p>
+        <div class="main__section__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
+      </article>
+      
+      <article id="main__section__article--sesion" >
+        
+        <button  id="main__section__article--sesion-a"><span>Cerrar sesion </span><i class="fa-solid fa-arrow-right-from-bracket"></i> </button>
+      </article>
+    </section>
+    
+  </main>
+
+  <%- include('../partials/footer')  %> 
+
 </body>
+<script src="/public/javaScript/profile.js"></script>
+
 </html>
