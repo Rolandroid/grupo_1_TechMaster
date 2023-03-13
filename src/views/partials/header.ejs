@@ -24,7 +24,9 @@
             <i class="fas fa-bars"></i>
           </div>
         </nav> -->
+
       </form>
+      
 <!--       <nav>
           <div class="header__buerger--menu">
             <i class="fas fa-bars"></i>
@@ -41,47 +43,42 @@
 
         <div class="dropdown" id="dropdown">
           <button id="button" onclick="toggleDropdown()">
-            <span class="material-symbols-outlined">
-              person
-            </span>
+            <span class="fa-solid fa-user"></span>
             <% if (locals.userLogin) { %>
               Hola <%= locals.userLogin.name %>
             <% }else{%>
               Registrarse/Ingresar
             <% }%>
-            <span id="chevron" class="chevron material-symbols-outlined">
-              expand_more
+            <span id="chevron" class="chevron fa-solid fa-chevron-down">
             </span>
           </button>
           <div id="menu" class="menu">
             <% if (locals.userLogin) { %>
               <button onclick="window.location.href='/users/profile';" class="btn">
-                <span class="material-symbols-outlined"> lock </span>
+                <span class="fa-solid fa-lock" id="menu_icon"></span>
                 Cuenta
               </button>
               <button onclick="window.location.href='#';" class="btn">
-                <span class="material-symbols-outlined">
-                  location_on
+                <span id="menu_icon" class="fa-solid fa-location-dot">
                 </span>
                 Cordoba
               </button>
               <button onclick="window.location.href='/carrito';" class="btn">
-                <span class="material-symbols-outlined">
-                  shopping_cart
+                <span id="menu_icon" class="fa-solid fa-cart-shopping">
                 </span>
                 Carrito
               </button>
               <button onclick="window.location.href='/users/logout';" class="btn">
-                <span class="material-symbols-outlined">logout</span>
+                <span id="menu_icon" class="fa-solid fa-right-to-bracket"></span>
                 Cerrar Sesión
               </button>
             <% } else { %>
               <button onclick="window.location.href='/users/register';" class="btn">
-                <span class="material-symbols-outlined">person_add</span>
+                <span id="menu_icon" class="fa-solid fa-user-plus"></span>
                 Registrarse
               </button>            
               <button onclick="window.location.href='/users/login';" class="btn">
-                <span class="material-symbols-outlined">login</span>
+                <span id="menu_icon" class="fa-solid fa-right-to-bracket"></span>
                 Ingresar 
               </button>
             <% } %>
@@ -137,4 +134,29 @@
         </ul>
       </div>
     </nav>
+    <script>
+const links = document.querySelectorAll(".header--barra a");
+const urlActual = window.location.href;
+
+links.forEach(link => {
+  if (link.href === urlActual) {
+    link.classList.add("activo");
+  }
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll(".header--barra a");
+  const urlActual = window.location.href;
+
+  links.forEach(link => {
+    if (link.href === urlActual) {
+      link.classList.add("activo");
+    }
+  });
+});
+
+/* ================================== */
+
+
+    </script>
+
   </header>
