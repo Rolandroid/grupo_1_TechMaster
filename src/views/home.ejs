@@ -62,7 +62,7 @@
       AMD-5600G
     </span> 
       
-      <button class="button1"><a href="/carrito">COMPRAR</a></button>
+      <button class="button1" onclick="window.location.href='/carrito';">COMPRAR</button>
       </div>
       <div class="direction">
       <div class="main__image--card2">
@@ -74,7 +74,7 @@
         AMD-5600G
       </span> 
         
-        <button class="button2"><a href="/carrito">COMPRAR</a></button>
+        <button class="button2" onclick="window.location.href='/carrito';">COMPRAR</button>
         </div>
       </div>
       <div class="main__image--card3">
@@ -86,7 +86,7 @@
           AMD-5600G
         </span> 
           
-          <button class="button3"><a href="/carrito">COMPRAR</a></button>
+          <button class="button3" onclick="window.location.href='/carrito';">COMPRAR</button>
           </div>
         </div>
       </div>
@@ -129,8 +129,8 @@
             <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>" alt="">
             
             <h4> <%= name %> </h4>
-            <button class="button--carrusel">
-              <a href="/products/detalle/<%= id %>">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="button--carrusel"  onclick="window.location.href='/products/detalle/<%= id %>';">
+              <!-- <a href="/products/detalle/<%= id %>"> -->Ver más <i class="fa-solid fa-arrow-right"></i><!-- </a> -->
             </button>
           </article>
         <% }) %>

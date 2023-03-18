@@ -68,8 +68,8 @@ font-size: 54px;
     }
     
     .carousel-item button a{
-        
-color: #fff;
+        color: #fff;
+        text-decoration: none;
     }
     
     
@@ -228,9 +228,10 @@ color: #fff;
     border: solid 3px #cfff00;
     background-color: #0000003b;
     padding: 3px 20px 3px 20px;
-    font-family: 'lato',sans-serif;
+    /* font-family: 'lato',sans-serif; */
     font-weight: 600;
     border-radius: 5px;
+    color: #cfff00;
 }
 .button--carrusel a{
     color: #fff300;
@@ -566,17 +567,18 @@ color: #fff;
             right: 6rem;
         }
 
-        .button1 a{
+/*         .button1 a{
             color: #fff300;
         }
+
 
         .button2 a{
             color: #fff300;
         }
 
-        .button3 a{
+        .button3 {
             color: #fff300;
-        }
+        } */
 
 }
 

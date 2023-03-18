@@ -47,7 +47,7 @@
             <% if (locals.userLogin) { %>
               Hola <%= locals.userLogin.name %>
             <% }else{%>
-              Registrarse/Ingresar
+              Ingresar/Registrarse
             <% }%>
             <span id="chevron" class="chevron fa-solid fa-chevron-down">
             </span>
@@ -58,6 +58,13 @@
                 <span class="fa-solid fa-lock" id="menu_icon"></span>
                 Cuenta
               </button>
+              <% if (locals.userLogin.rol === 'admin') { %>
+                <button onclick="window.location.href='#';" class="btn">
+                  <span id="menu_icon" class="fa-solid fa-gauge">
+                  </span>
+                  Dashboard
+                </button>
+              <% } %>              
               <button onclick="window.location.href='#';" class="btn">
                 <span id="menu_icon" class="fa-solid fa-location-dot">
                 </span>

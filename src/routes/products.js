@@ -11,7 +11,7 @@ router
 .get('/creacion',checkUserAdmin,creacion)
 .post('/creacion',uploadProductImages.array("images"),create)
 .get('/edicion/:id',checkUserAdmin,edicion)
-.put('/update/:id',uploadProductImages.array("images"),update)
+.put('/edicion/:id',uploadProductImages.array("images"),update)
 .delete('/remove/:id',remove)
 
 

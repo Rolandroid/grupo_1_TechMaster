@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
-
+const {writeJSON,readJSON} = require('../data/index')
 
 
 
@@ -33,7 +33,7 @@ module.exports = {
 
     create : (req , res) => {
         
-        const {name, image, description, discount, price, category} = req.body;
+        const {name, image, description, discount, price, category,color} = req.body;
 
         const newProduct = {
             id: products[products.length - 1].id + 1,
@@ -42,12 +42,13 @@ module.exports = {
             description: description.trim(),
             image:  req.files.length ?  req.files.map(file => file.filename) : null,
             discount: +discount,
-            category: category.trim()
+            category: category.trim(),
+            color : color
         };
 
         products.push(newProduct);
 
-        fs.writeFileSync('./data/products.json',JSON.stringify(products, null, 3), 'utf-8')
+        writeJSON('products.json',products)
 
        // return res.send(req.file)
         return res.redirect('/products/list')
@@ -65,26 +66,20 @@ module.exports = {
     },
 
     update : (req,res) => {
-        const {name, image, description, discount, price, category} = req.body;
-        const id = +req.params.id
-        const product = products.find(product => product.id === +id)
+        const { name, image, description, discount, price, category, color } = req.body;
+        const id = +req.params.id;
+        const product = products.find(product => product.id === +id);
         const objetoNull = null;
+        
         const productUpdate = {
             id,
             name: name.trim(),
             price: +price,
             description: description.trim(),
-            image:  req.files.length ?  req.files.map(file => file.filename) : null,
-           /*  image: req.files.map(file => {
-                for (let index = 0; index > 2; index++) {
-                   if (req.files.length > 3) {
-
-                    req.files.push( objetoNull )
-                }  
-                }
-            }), */
+            image: req.files.length ? req.files.map(file => file.filename) : (product.image || null),
             discount: +discount,
-            category: category.trim()
+            category: category.trim(),
+            color: color // Utilizamos el valor seleccionado del elemento select
         };
 
         const productModified = products.map(product => {
@@ -95,8 +90,9 @@ module.exports = {
             return product;
 
         })
-
-        fs.writeFileSync('./data/products.json',JSON.stringify(productModified, null, 3), 'utf-8')
+          
+        /* fs.writeFileSync('../data/products.json',JSON.stringify(productModified, null, 3), 'utf-8') */
+        writeJSON('products.json',productModified)
         return res.redirect(`/products/detalle/${id}`)
 
     },
@@ -105,7 +101,7 @@ module.exports = {
         const id = req.params.id;
         const productModified = products.filter(product => product.id !== +id)
         
-        fs.writeFileSync('./data/products.json',JSON.stringify(productModified, null, 3), 'utf-8')
+        writeJSON('products.json',productModified)
         return res.redirect(`/products/list`)
     }
 };
