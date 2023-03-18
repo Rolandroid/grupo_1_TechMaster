@@ -7,7 +7,7 @@
 
 .mainResultados{
     background-color: rgba(28, 28, 28, 1);
-    height: 100%;
+    min-height: 100vh;
 }
 .mainResultados h1{
     color: white;
@@ -17,15 +17,18 @@
 
 .mainResultados section{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .articleResultados{
     margin: 0vw 2vw 2vw 2vw;
-    width: 95%;
     display: flex;
     max-width: 570px;
+    width: 450px;
     border-radius: 5px;
     align-items: center;
     background: linear-gradient(-229deg, #fbd52d, #ef3a7c);

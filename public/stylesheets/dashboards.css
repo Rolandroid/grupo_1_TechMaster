@@ -1,0 +1,53 @@
+.Dashboard_Body {
+    background-color: darkmagenta;
+}
+
+.esteDashboard {
+    display: flex;
+}
+
+.dashboard_div_sector1 {
+    display: flex;
+    height: 30px;
+}
+
+.dashboard_div_small {
+    background-color: antiquewhite;
+    display: inline-block;
+    border: 1px solid black;
+    width: 32px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.dashboard_div_big {
+    background-color: antiquewhite;
+    display: inline-block;
+    border: 1px solid black;
+    min-width: 100px;
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+} 
+.dashboard_dinamic_div:hover {
+    border: 2px solid;
+    overflow: visible;
+    width: 250px;
+    height: fit-content;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+}
+
+
+
+/* .dashboard_div_sector2{}
+.dashboard_div_sector3{} */
+.dashboard_img_foto {
+    width: 100%;
+}
+
+.dashboard_p_text {
+    margin-bottom: 4px;
+}

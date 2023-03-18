@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const {readJSON, writeJSON} = require('../data')
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
 
 module.exports = {
@@ -28,6 +29,7 @@ module.exports = {
                  && 
                 (category === '' || product.category === category)
             );
+            
             res.render('results',{
                 resultSearch,
                 keywords: req.query.keywords,
@@ -37,10 +39,20 @@ module.exports = {
         }
     },
     navBar : (req, res) => {
-       let products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
-       let {category} = req.params
-       products = products.filter(product => product.category === category)
-       return res.render('products/list',{products})
+        let resultSearch = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
+        let {category} = req.params        
+        if(category==="discount"){
+         resultSearch = resultSearch.filter(product => product.discount > 1)
+         category = "Oferta"
+        return res.render('results',{resultSearch, keywords: category})
+     }else{resultSearch = resultSearch.filter(product => product.category === category)
+         return res.render('results',{resultSearch, keywords: category})}
+        },
+
+
+
+    dashboard : (req, res) => {
+        let products = readJSON('products.json')
+        return res.render('dashboard',{products})
     }
-   
 }

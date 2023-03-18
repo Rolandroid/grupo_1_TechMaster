@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<%- include('./partials/head',{title : 'Dashboard' }) %>
+
+  <body class="Dashboard_Body">
+    <%- include('./partials/header') %>
+      <main>
+        <!-- <div class="esteDashboard"> -->
+        <div class="dashboard_div_sector1">
+          <div class="dashboard_div_small">
+            <p>Id</p>
+          </div>
+          <div class="dashboard_div_small">
+            <p>Pic</p>
+          </div>
+          <!-- </div> -->
+          <!-- <div class="dashboard_div_sector2"> -->
+          <div class="dashboard_div_big dashboard_dinamic_div" >
+            <p>Name</p>
+          </div>
+          <div class="dashboard_div_big">
+            <p>Price</p>
+          </div>
+          <div class="dashboard_div_big">
+            <p>Discount</p>
+          </div>
+          <div class="dashboard_div_big">
+            <p>Category</p>
+          </div>
+          <div class="dashboard_div_big dashboard_dinamic_div" >
+            <p>Description</p>
+          </div>
+          <div class="dashboard_div_big">
+            <p>Color</p>
+          </div>
+          <!-- </div> -->
+          <!-- <div class="dashboard_div_sector3"> -->
+          <div class="dashboard_div_small">
+            <p>as</p>
+          </div>
+          <div class="dashboard_div_small">
+            <p>as</p>
+          </div>
+          <div class="dashboard_div_small">
+            <p>as</p>
+          </div>
+          <!-- </div> -->
+          <!-- </div> -->
+        </div>
+        <% products.forEach(({id,name,image,description,discount,price,color,category})=> { %>
+          <!-- <div class="esteDashboard"> -->
+          <div class="dashboard_div_sector1">
+            <div class="dashboard_div_small">
+              <p>
+                <%= id %>
+              </p>
+            </div>
+            <div class="dashboard_div_small"> <img class="dashboard_img_foto"
+                src="/Images/products/<%= image ? image[0] : 'default-image.png' %>"></img></div>
+            <!-- </div> -->
+            <!-- <div class="dashboard_div_sector2"> -->
+            <div class="dashboard_div_big dashboard_dinamic_div">
+              <p class="dashboard_p_text">
+                <%= name %>
+              </p>
+            </div>
+            <div class="dashboard_div_big">
+              <p class="dashboard_p_text">
+                <%="$"+(price - (price* discount) / 100)%>
+              </p>
+            </div>
+            <div class="dashboard_div_big">
+              <p class="dashboard_p_text">
+                <%= discount ? discount+' % OFF' : "" %>
+              </p>
+            </div>
+            <div class="dashboard_div_big">
+              <p class="dashboard_p_text">
+                <%= category %>
+              </p>
+            </div>
+            <div class="dashboard_div_big dashboard_dinamic_div">
+              <p class="dashboard_p_text">
+                <%= description %>
+              </p>
+            </div>
+            <div class="dashboard_div_big">
+              <p class="dashboard_p_text">
+                <%= color %>
+              </p>
+            </div>
+            <!-- </div> -->
+            <!-- <div class="dashboard_div_sector3"> -->
+            <div class="dashboard_div_small"><a href="/products/detalle/<%= id %>">Dits</a></div>
+            <div class="dashboard_div_small"><a href="/products/edicion/<%= id %>">EDI</a></div>
+            <div class="dashboard_div_small"><a href="/products/remove/<%= id %>">DEL</a></div>
+            <!-- </div> -->
+          </div>
+          <% }) %>
+      </main>
+      <%- include('./partials/footer') %>
+  </body>
+
+</html>

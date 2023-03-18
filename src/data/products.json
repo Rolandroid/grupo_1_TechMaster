@@ -15,7 +15,7 @@
    },
    {
       "id": 2,
-      "name": "Auriculares gamer HyperX Cloud II gun metal",
+      "name": " HyperX Cloud II gun metal",
       "image": [
          "hyperxcloud32.png",
          "hyperxcloud33.png",
@@ -29,7 +29,7 @@
    },
    {
       "id": 3,
-      "name": "Auriculares gamer inalámbricos Logitech G Series G733",
+      "name": "Logitech G Series G733 inalámbricos",
       "image": [
          "auricularesLila.png",
          "auricularesLila2.png",
@@ -43,7 +43,7 @@
    },
    {
       "id": 4,
-      "name": "Auriculares Redragon H260 Hylas RGB Pink",
+      "name": "Redragon H260 Hylas RGB Pink",
       "image": [
          "redragonRosa.png",
          "redragonRosa2.png",
@@ -57,7 +57,7 @@
    },
    {
       "id": 5,
-      "name": "MONITOR GAMER 24' GIGABYTE",
+      "name": "Gigabyte Tauro",
       "image": [
          "monitorgigabyte1.png",
          "monitorgigabyte2.png",
@@ -71,7 +71,7 @@
    },
    {
       "id": 6,
-      "name": "MONITOR GAMER 24' SAMSUNG",
+      "name": "Samsung GAMER 24'",
       "image": [
          "monitorsamsung1.png",
          "monitorsamsung2.png",
@@ -85,7 +85,7 @@
    },
    {
       "id": 7,
-      "name": "MONITOR GAMER 27' PHILIPS",
+      "name": "Philips DFR6 27'",
       "image": [
          "monitorphilips1.png",
          "monitorphilips2.png",
@@ -99,7 +99,7 @@
    },
    {
       "id": 8,
-      "name": "MONITOR GAMER 24' VIEWSONIC",
+      "name": "VIEWSONIC  GAMER 24'",
       "image": [
          "monitorviewsonic1.png",
          "monitorviewsonic2.png",
@@ -113,7 +113,7 @@
    },
    {
       "id": 9,
-      "name": "Mouse logitech",
+      "name": "logitech Screamer",
       "image": [
          "mouse-logitech-1.png",
          "mouse-logitech-2.png",
@@ -127,7 +127,7 @@
    },
    {
       "id": 10,
-      "name": "Mouse HXSJ J900",
+      "name": "HXSJ J900",
       "image": [
          "mause-HXSJ-1.png",
          "mause-HXSJ-2.png",
@@ -141,7 +141,7 @@
    },
    {
       "id": 11,
-      "name": "Mouse Xtrike Me GM-216",
+      "name": "Xtrike Me GM-216",
       "image": [
          "mause-Xtrike-1.png",
          "mause-Xtrike-2.png",
@@ -155,7 +155,7 @@
    },
    {
       "id": 12,
-      "name": "Mouse Razer Hyperspeed",
+      "name": "Razer Hyperspeed",
       "image": [
          "Razer-Hyperspeed-1.png",
          "Razer-Hyperspeed-2.png",
