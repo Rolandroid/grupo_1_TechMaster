@@ -11,7 +11,10 @@
 
 
   <main class="mainResultados">
-    <h1>Resultados de la búsqueda: <%= keywords %></h1>
+    <% if (resultSearch.length === 0) { %>
+      <h1>Lo sentimos, no hubo resultados para: <%= keywords %>
+    <% }else{ %>
+    <h1>Resultados de la búsqueda: <%= keywords  %></h1>
     <section>
       <% resultSearch.forEach(({id,name,image,description,discount,price,color,category}) => { %>
        <article class="articleResultados">
@@ -31,8 +34,8 @@
         </div>
       </article>
       <% }) %>
-      
-
+      <% } %>
+</main>
       
     
 

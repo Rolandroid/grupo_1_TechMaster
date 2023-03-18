@@ -5,9 +5,7 @@ const {readJSON} = require('../data');
 module.exports = [
     check('name')
         .notEmpty().withMessage('El nombre es obligatorio').bail()
-        .isLength({
-            min: 2
-        }).withMessage('Mínimo dos letras').bail()
+        .isLength({min: 2}).withMessage('Mínimo dos letras').bail()
         .isAlpha('es-ES',{
             ignore : " "
         }).withMessage('Solo caracteres alfabéticos'),
