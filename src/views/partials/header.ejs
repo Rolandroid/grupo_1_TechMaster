@@ -59,7 +59,7 @@
                 Cuenta
               </button>
               <% if (locals.userLogin.rol === 'admin') { %>
-                <button onclick="window.location.href='#';" class="btn">
+                <button onclick="window.location.href='dashboard';" class="btn">
                   <span id="menu_icon" class="fa-solid fa-gauge">
                   </span>
                   Dashboard
@@ -78,6 +78,10 @@
               <button onclick="window.location.href='/users/logout';" class="btn">
                 <span id="menu_icon" class="fa-solid fa-right-to-bracket"></span>
                 Cerrar Sesión
+              </button>
+              <button onclick="window.location.href='/products/creacion';" class="btn">
+                <span id="menu_icon" class="fa-solid fa-right-to-bracket"></span>
+                Crear Producto
               </button>
             <% } else { %>
               <button onclick="window.location.href='/users/register';" class="btn">
