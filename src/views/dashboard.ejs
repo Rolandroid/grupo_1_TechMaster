@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- HEAD -->
 <%- include('./partials/head',{title : 'Dashboard' }) %>
 
-  <body class="Dashboard_Body">
+  <body>
     <%- include('./partials/header') %>
-      <main>
-        <!-- <div class="esteDashboard"> -->
-        <div class="dashboard_div_sector1">
+      <main class="dashboard_main">
+        <a href="'/creacion'">
+          <div class="dashboard_div_big" >
+            <p>Add item</p>
+          </div>
+        </a>
+        <div class="dashboard_div_sector1 dashboard_div_secundary">
           <div class="dashboard_div_small">
             <p>Id</p>
           </div>
           <div class="dashboard_div_small">
             <p>Pic</p>
           </div>
-          <!-- </div> -->
-          <!-- <div class="dashboard_div_sector2"> -->
-          <div class="dashboard_div_big dashboard_dinamic_div" >
+          <div class="dashboard_div_big" >
             <p>Name</p>
           </div>
-          <div class="dashboard_div_big">
+          <div class="dashboard_div_big dashboard_div_secundary">
             <p>Price</p>
           </div>
-          <div class="dashboard_div_big">
+          <div class="dashboard_div_big dashboard_div_secundary">
             <p>Discount</p>
           </div>
-          <div class="dashboard_div_big">
+          <div class="dashboard_div_big dashboard_div_secundary">
             <p>Category</p>
           </div>
-          <div class="dashboard_div_big dashboard_dinamic_div" >
+          <div class="dashboard_div_big dashboard_div_secundary" >
             <p>Description</p>
           </div>
-          <div class="dashboard_div_big">
+          <div class="dashboard_div_big dashboard_div_secundary">
             <p>Color</p>
           </div>
-          <!-- </div> -->
-          <!-- <div class="dashboard_div_sector3"> -->
           <div class="dashboard_div_small">
-            <p>as</p>
+            <p>detalles</p>
           </div>
           <div class="dashboard_div_small">
-            <p>as</p>
+            <p>editar</p>
           </div>
           <div class="dashboard_div_small">
-            <p>as</p>
+            <p>eliminar</p>
           </div>
-          <!-- </div> -->
-          <!-- </div> -->
         </div>
         <% products.forEach(({id,name,image,description,discount,price,color,category})=> { %>
-          <!-- <div class="esteDashboard"> -->
           <div class="dashboard_div_sector1">
             <div class="dashboard_div_small">
               <p>
@@ -58,44 +54,43 @@
             </div>
             <div class="dashboard_div_small"> <img class="dashboard_img_foto"
                 src="/Images/products/<%= image ? image[0] : 'default-image.png' %>"></img></div>
-            <!-- </div> -->
-            <!-- <div class="dashboard_div_sector2"> -->
-            <div class="dashboard_div_big dashboard_dinamic_div">
+            <div class="dashboard_div_big">
               <p class="dashboard_p_text">
                 <%= name %>
               </p>
             </div>
-            <div class="dashboard_div_big">
+            <div class="dashboard_div_big dashboard_div_secundary">
               <p class="dashboard_p_text">
                 <%="$"+(price - (price* discount) / 100)%>
               </p>
             </div>
-            <div class="dashboard_div_big">
+            <div class="dashboard_div_big dashboard_div_secundary">
               <p class="dashboard_p_text">
                 <%= discount ? discount+' % OFF' : "" %>
               </p>
             </div>
-            <div class="dashboard_div_big">
+            <div class="dashboard_div_big dashboard_div_secundary">
               <p class="dashboard_p_text">
                 <%= category %>
               </p>
             </div>
-            <div class="dashboard_div_big dashboard_dinamic_div">
+            <div class="dashboard_div_big dashboard_div_secundary">
               <p class="dashboard_p_text">
                 <%= description %>
               </p>
             </div>
-            <div class="dashboard_div_big">
+            <div class="dashboard_div_big dashboard_div_secundary">
               <p class="dashboard_p_text">
                 <%= color %>
               </p>
             </div>
-            <!-- </div> -->
-            <!-- <div class="dashboard_div_sector3"> -->
-            <div class="dashboard_div_small"><a href="/products/detalle/<%= id %>">Dits</a></div>
-            <div class="dashboard_div_small"><a href="/products/edicion/<%= id %>">EDI</a></div>
-            <div class="dashboard_div_small"><a href="/products/remove/<%= id %>">DEL</a></div>
-            <!-- </div> -->
+            <div class="dashboard_div_small"><a href="/products/detalle/<%= id %>"><i class="fa-solid fa-circle-info"></i></a></div>
+            <div class="dashboard_div_small"><a href="/products/edicion/<%= id %>"><i class="fa-solid fa-pencil"></i></a></div>
+            <form  action="/products/remove/<%= id %>?_method=DELETE" method="post">
+                <button class="dashboard_div_small" type="submit"><i class="fa-solid fa-trash-can"></i></button>
+              </form>
+              <a href="/products/remove/<%= id %>"></a>
+            
           </div>
           <% }) %>
       </main>

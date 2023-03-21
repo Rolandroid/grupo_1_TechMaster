@@ -222,17 +222,5 @@
       "category": "Teclado",
       "discount": 5,
       "price": 800
-   },
-   {
-      "id": 18,
-      "name": "Don Cangrejo",
-      "price": 1000,
-      "description": "-que lo motivo?",
-      "image": [
-         "1679107075383_products_.jpg"
-      ],
-      "discount": 0,
-      "category": "Monitor",
-      "color": "Amarillo"
    }
 ]

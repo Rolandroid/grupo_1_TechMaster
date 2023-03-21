@@ -30,10 +30,15 @@
     max-width: 570px;
     width: 450px;
     border-radius: 5px;
-    align-items: center;
+    align-items: flex-start;
+    min-height: 190px;
     background: linear-gradient(-229deg, #fbd52d, #ef3a7c);
+    align-content: center;
+    justify-content: center;
 }
-.articleResultados span{}
+.articleResultados span{
+    display: contents;
+}
 .articleResultados span img{
     width: 140px;
     margin: auto;
@@ -46,6 +51,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-content: stretch;
+    height: 187px;
 }
 
 .articleResultados div h3{
