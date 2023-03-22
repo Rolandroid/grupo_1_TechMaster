@@ -194,6 +194,12 @@
     display: flex;
     width: 100%;
 }
+.card-text {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
 @media (min-width:768px) {
     .carousel-item img {

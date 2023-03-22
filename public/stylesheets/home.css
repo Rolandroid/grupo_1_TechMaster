@@ -68,8 +68,10 @@ font-size: 54px;
     }
     
     .carousel-item button a{
-        color: #fff;
-        text-decoration: none;
+        
+color: #fff;
+        
+text-decoration: none;
     }
     
     
@@ -219,7 +221,7 @@ font-size: 54px;
     padding: 6px;
 }
 
-.card h4{
+.card p{
     color: #FFF;
     font-size: 20px;
 }
@@ -232,12 +234,18 @@ font-size: 54px;
     font-weight: 600;
     border-radius: 5px;
     color: #cfff00;
+    margin-bottom: 10px;
 }
 .button--carrusel a{
     color: #fff300;
     padding: 10p;
 }
-
+.card-carrousel p {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
 @media (min-width: 768px)  { 
     .main--section-s{
