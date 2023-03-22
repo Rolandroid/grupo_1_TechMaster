@@ -13,7 +13,7 @@ module.exports = {
         const {id} = req.params
         const product = products.find(product => product.id === +id)
         console.log(product)
-        return res.render('products/detalle', {...product})
+        return res.render('products/detalle', {...product,products})
 
         
                 

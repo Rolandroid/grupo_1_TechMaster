@@ -19,13 +19,13 @@
          
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block " src="/Images/products/<%= image ? image[0] : 'default-image.png' %>" alt="First slide">
+              <img class="d-block " src="/images/products/<%= image ? image[0] : 'default-image.png' %>" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block " src="/Images/products/<%= image ? image[1] : 'default-image.png' %>" alt="Second slide">
+              <img class="d-block " src="/images/products/<%= image ? image[1] : 'default-image.png' %>" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/Images/products/<%= image ? image[2] : 'default-image.png' %>" alt="Third slide">
+              <img class="d-block" src="/images/products/<%= image ? image[2] : 'default-image.png' %>" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
@@ -83,26 +83,27 @@
   <h4>productos relacionados</h4>
 </div>
     <div class="glider-contain">
-        <div class="glider">
-          <% products.slice(0, 7).forEach(product => { %>
-            <div id="detalle-items" class="card card-carrousel" > 
-              <a href="/products/detalle/<%= id %>" title="<%= product.name %>">
-              <img src="/Images/products/<%= product.image[0] %>" class="card-img-top" alt="...">
-            </a>
-              <div class="card-body">
-                <h5 class="card-title">$ <%= product.price %></h5>
-                <p class="card-text" title="<%= product.name %>"><%= product.name %></p>
-                <a href="/products/detalle/<%= id %>" class="btn btn-primary prueba">Comprar</a>
-              </div>
+      <div class="glider">
+        <% products.slice(0, 10).forEach(product => { %>
+          <div id="detalle-items" class="card card-carrousel" > 
+            <a href="/products/detalle/<%= id %>" title="<%= product.name %>">
+            <img src="/Images/products/<%= product.image[0] %>" class="card-img-top" alt="...">
+          </a>
+            <div class="card-body">
+              <h5 class="card-title">$ <%= product.price %></h5>
+              <p class="card-text" title="<%= product.name %>"><%= product.name %></p>
+              <a href="/products/detalle/<%= id %>" class="btn btn-primary prueba">Comprar</a>
             </div>
-          <% }) %>
-  
-        </div>
-        <button aria-label="Previous" class="glider-prev">«</button>
-   
-    <div role="tablist" class="dots"></div>
-  </div>
-  
+          </div>
+        <% }) %>
+
+      </div>
+      <button aria-label="Previous" class="glider-prev">«</button>
+ 
+  <div role="tablist" class="dots"></div>
+</div>
+
+
     </section>
       </main>
 
@@ -143,6 +144,21 @@
     }
   ]
 });
+
+const cardsCarrousel =Array.from(document.querySelectorAll(".card-carrousel"))
+console.log(cardsCarrousel)
+const backgrounds = [
+  "linear-gradient(-229deg, #fbd52d, #ef3a7c)",
+  "linear-gradient(-229deg, #FF70AF, #5fa8f5)",
+  "linear-gradient(-229deg, #0cebeb, #29ffc6)",
+  "linear-gradient(-229deg, #88F7F9, #048FFF)",
+  "linear-gradient(-229deg, #0093E9, #80D0C7)",
+  "linear-gradient(-229deg, #cf91ff, #5782F5)",
+  "linear-gradient(-229deg, #642B73, #C6426E)"
+];
+cardsCarrousel.forEach(card => {
+  card.style.background = backgrounds[Math.floor(Math.random() * 7)]
+})
       </script>
 
     </body>
