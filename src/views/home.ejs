@@ -126,11 +126,12 @@
       <div class="glider carrousel">
         <% products.slice(0, 10).forEach(({id,name,image}) => { %>
           <article class="card card-carrousel">
+            <a href="/products/detalle/<%= id %>" title="<%= name %>">
             <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>" alt="">
-            
-            <h4> <%= name %> </h4>
-            <button class="button--carrusel"  onclick="window.location.href='/products/detalle/<%= id %>';">
-              <!-- <a href="/products/detalle/<%= id %>"> -->Ver más <i class="fa-solid fa-arrow-right"></i><!-- </a> -->
+          </a>
+            <p title="<%= name %>"><%= name %> </p>
+            <button class="button--carrusel">
+              <a href="/products/detalle/<%= id %>">Ver más <i class="fa-solid fa-arrow-right"></i></a>
             </button>
           </article>
         <% }) %>

@@ -83,64 +83,26 @@
   <h4>productos relacionados</h4>
 </div>
     <div class="glider-contain">
-      <div class="glider">
-        
-
-        <div id="detalle-items" class="card" >
-          <img src="/Images/teclado1.png" class="card-img-top" alt="...">
-          <hr>
-          <div class="card-body">
-            <h5 class="card-title">$7.000</h5>
-            <p class="card-text">Teclado Genius k-1620 de Alta Performance</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
+        <div class="glider">
+          <% products.slice(0, 7).forEach(product => { %>
+            <div id="detalle-items" class="card card-carrousel" > 
+              <a href="/products/detalle/<%= id %>" title="<%= product.name %>">
+              <img src="/Images/products/<%= product.image[0] %>" class="card-img-top" alt="...">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">$ <%= product.price %></h5>
+                <p class="card-text" title="<%= product.name %>"><%= product.name %></p>
+                <a href="/products/detalle/<%= id %>" class="btn btn-primary prueba">Comprar</a>
+              </div>
+            </div>
+          <% }) %>
+  
         </div>
-
-        <div  id="detalle-items" class="card" >
-          <img src="/Images/teclado1.png" class="card-img-top" alt="...">
-          <hr>
-          <div class="card-body">
-            <h5 class="card-title">$7.000</h5>
-            <p class="card-text">Teclado Genius k-1620 de Alta Performance</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-
-        <div  id="detalle-items" class="card" >
-          <img src="/Images/teclado1.png" class="card-img-top" alt="...">
-          <hr>
-          <div class="card-body">
-            <h5 class="card-title">$7.000</h5>
-            <p class="card-text">Teclado Genius k-1620 de Alta Performance</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-
-        <div id="detalle-items" class="card" >
-          <img src="/Images/teclado1.png" class="card-img-top" alt="...">
-          <hr>
-          <div class="card-body">
-            <h5 class="card-title">$7.000</h5>
-            <p class="card-text">Teclado Genius k-1620 de Alta Performance</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-
-        <div id="detalle-items" class="card" >
-          <img src="/Images/teclado1.png" class="card-img-top" alt="...">
-          <hr>
-          <div class="card-body">
-            <h5 class="card-title">$7.000</h5>
-            <p class="card-text">Teclado Genius k-1620 de Alta Performance</p>
-            <a href="/carrito" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-
-      </div>
-      <button aria-label="Previous" class="glider-prev">«</button>
-  <!-- <button aria-label="Next" class="glider-next">»</button> -->
-  <div role="tablist" class="dots"></div>
-</div>
+        <button aria-label="Previous" class="glider-prev">«</button>
+   
+    <div role="tablist" class="dots"></div>
+  </div>
+  
     </section>
       </main>
 
