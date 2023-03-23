@@ -7,6 +7,10 @@
 
 .footer{
     background-color: var(--escalaDeGrises);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer--div{
@@ -119,6 +123,14 @@ gap: 5px;
         list-style: none;
         gap: 2rem;
         margin: 0px;
+    }
+
+    .footer{
+        background-color: var(--escalaDeGrises);
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .footer--redes{
     display: flex;

@@ -34,6 +34,8 @@
 .logo img{
     display: flex;
     width: 100%;
+    padding-top: 10px;
+    padding-right: 5px;
 }
 
 .tecmater--logo{
@@ -141,7 +143,7 @@ hr{
         width: 93%;
     }
     
-    .logo img{width: 99%;}
+    .logo img{padding-top: 20px;width: 90%;}
     
 
     .search {
@@ -303,13 +305,14 @@ hr{
 
 
     .logo{
-        width: 60%;
+        width: 40%;
     }
 
     .logo--master{
         display: flex;
-        width: 18%;
+        width: 29%;
         margin: 0px;
+        align-items: center;
     }
     
     .tecmater--logo {
@@ -318,6 +321,7 @@ hr{
     }
     .tecmater--logo img{
     width: 100%;
+    height: 69%;
     }
 
     input:disabled{
