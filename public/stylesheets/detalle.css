@@ -212,6 +212,10 @@
     margin-left: 25px;
 }
 
+.button-buy{
+    margin-bottom: 10px;
+}
+
 @media (min-width:768px) {
     .carousel-item img {
         width: auto;
