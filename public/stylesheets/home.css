@@ -247,6 +247,26 @@ text-decoration: none;
     white-space: nowrap;
   }
 
+#button--carrusel{
+    
+border: solid 3px #cfff00;
+    
+background-color: #0000003b;
+    
+padding: 3px 20px 3px 20px;
+    
+font-family: 'lato',sans-serif;
+    
+font-weight: 600;
+    
+border-radius: 5px;
+    
+color: #cfff00;
+    
+margin-bottom: 10px;
+    
+text-decoration: none;
+}
 @media (min-width: 768px)  { 
     .main--section-s{
         display: flex;

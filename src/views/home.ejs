@@ -130,9 +130,7 @@
             <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>" alt="">
           </a>
             <p title="<%= name %>"><%= name %> </p>
-            <button class="button--carrusel">
-              <a href="/products/detalle/<%= id %>">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-            </button>
+              <a id="button--carrusel" href="/products/detalle/<%= id %>">Ver más <i class="fa-solid fa-arrow-right"></i></a>
           </article>
         <% }) %>
       </div>
