@@ -12,17 +12,13 @@
     font-weight: 500;
     margin: 0;
 }
-.footerLogo{
-    width: 80px;
-}
+.footerLogo{width: 80px;}
 .footerDiv a{
     display: flex;
     margin: 5px;
     gap: 5px;
 }
-.footerMetodosDePago{
-    width: 250px;
-}
+.footerMetodosDePago{width: 250px;}
 @media(max-width: 767px){
     .footerLogo{display: none;}
     .footerMetodosDePago{display: none;}
