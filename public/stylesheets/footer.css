@@ -1,17 +1,39 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+.footerBox{
+    background-color: var(--escalaDeGrises);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: center;
+    padding: 15px;
+}
+.footerBox p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
-.footer{
-    background-color: var(--escalaDeGrises);
-    height: 10vh;
+
+.footerLogo{width: 80px;}
+
+.footerRedes a{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 5px;
+    gap: 5px;
 }
+.footerContactos a{
+    display: flex;
+    margin: 5px;
+    gap: 5px;
+}
+.footerMetodosDePago{
+    width: 250px;
+}
+
+
+
+
+
+
 
 .footer--div{
     display: flex;
@@ -127,7 +149,7 @@ gap: 5px;
 
     .footer{
         background-color: var(--escalaDeGrises);
-        height: 25vh;
+        /* height: 25vh; */
         display: flex;
         align-items: center;
         justify-content: center;
