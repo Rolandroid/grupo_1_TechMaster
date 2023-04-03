@@ -1,70 +1,47 @@
 <header class="home--header">
-    <div class="header-top">
-      <div class="logo--master">
-        <a class="logo" href="/"><img src="/Images/logo-x2.png" alt=""></a>
-        <a class="tecmater--logo" href="/"><img src="/Images/LOGO-TECHMASTER-2.png" alt=""></a>
-      </div>
-      <form class="search" action="/search" method="GET">
-        <input type="text" name="keywords" placeholder="Buscar productos" />
-        <hr />
-        <select class="Filter" name="category" id="">
-          <option value="">Filtrar</option>
-<!--           <option value="todos">Todos</option> -->
-          <option value="Auricular">Auricular</option>
-          <option value="Monitor">Monitor</option>
-          <option value="Mouse">Mouse</option>
-          <option value="Teclado">Teclado</option>
-<!--           <option value="Ofertas">Ofertas</option> -->
+  <div class="header-top">
+    <div>
+      <a class="TechmasterHomeLink" href="/">
+        <img class="TechmasterIsotipo" src="/Images/logo-x2.png" alt="">
+        <img class="TechmasterLogotipo" src="/Images/LOGO-TECHMASTER-2.png" alt="">
+      </a>
+    </div>
+    <form class="search" action="/search" method="GET">
+      <input type="text" name="keywords" placeholder="Buscar productos" />
+      <select class="Filter" name="category" id="">
+        <option value="">Todo</option>
+        <option value="Auricular">Auricular</option>
+        <option value="Monitor">Monitor</option>
+        <option value="Mouse">Mouse</option>
+        <option value="Teclado">Teclado</option>
+      </select>
+      <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
+    </form>
 
-        </select>
-        <hr />
-         <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
-<!--         <nav>
-          <div class="header__buerger--menu">
-            <i class="fas fa-bars"></i>
-          </div>
-        </nav> -->
-
-      </form>
-      
-<!--       <nav>
-          <div class="header__buerger--menu">
-            <i class="fas fa-bars"></i>
-          </div>
-        </nav>
- -->
-
-      <div class="home__header--local">
-      
-        <!-- <div> <i class="fa-solid fa-location-dot">  <div> <a href="/users/register">Ubicacion </a> <a href="/users/register">Cordoba     </a> </div> </i> </div> -->
-<!--         <div> <i class="fa-solid fa-user">          <div> <a href="/users/login">Ingresar     </a> <a href="/users/register">Registrarse </a> </div> </i> </div>
-        <div> <i class="fa-solid fa-cart-shopping"> <div> <a href="/carrito">comprar          </a> <a href="/products/creacion">vender    </a> </div> </i> </div> -->
-
-
-        <div class="dropdown" id="dropdown">
-          <button id="button" onclick="toggleDropdown()">
-            <span class="fa-solid fa-user"></span>
-            <% if (locals.userLogin) { %>
-              Hola <%= locals.userLogin.name %>
+    <div class="dropdown" id="dropdown">
+      <button id="button" onclick="toggleDropdown()">
+        <span class="fa-solid fa-user"></span>
+        <% if (locals.userLogin) { %>
+          Hola <%= locals.userLogin.name %>
             <% }else{%>
-              Ingresar/Registrarse
-            <% }%>
-            <span id="chevron" class="chevron fa-solid fa-chevron-down">
-            </span>
+              Ingresar
+              <% }%>
+                <span id="chevron" class="chevron fa-solid fa-chevron-down">
+                </span>
+      </button>
+      <div id="menu" class="menu">
+        <% if (locals.userLogin) { %>
+          <button onclick="window.location.href='/users/profile';" class="btn">
+            <span class="fa-solid fa-lock" id="menu_icon"></span>
+            Cuenta
           </button>
-          <div id="menu" class="menu">
-            <% if (locals.userLogin) { %>
-              <button onclick="window.location.href='/users/profile';" class="btn">
-                <span class="fa-solid fa-lock" id="menu_icon"></span>
-                Cuenta
-              </button>
-              <% if (locals.userLogin.rol === 'admin') { %>
-                <button onclick="window.location.href='dashboard';" class="btn">
-                  <span id="menu_icon" class="fa-solid fa-gauge">
-                  </span>
-                  Dashboard
-                </button>
-              <% } %>              
+          <% if (locals.userLogin.rol==='admin' ) { %>
+            <button onclick="window.location.href='dashboard';" class="btn">
+              <span id="menu_icon" class="fa-solid fa-gauge">
+              </span>
+              Dashboard
+            </button>
+            <% } %>
               <button onclick="window.location.href='#';" class="btn">
                 <span id="menu_icon" class="fa-solid fa-location-dot">
                 </span>
@@ -79,91 +56,87 @@
                 <span id="menu_icon" class="fa-solid fa-right-to-bracket"></span>
                 Cerrar Sesión
               </button>
-            <% } else { %>
-              <button onclick="window.location.href='/users/register';" class="btn">
-                <span id="menu_icon" class="fa-solid fa-user-plus"></span>
-                Registrarse
-              </button>            
-              <button onclick="window.location.href='/users/login';" class="btn">
-                <span id="menu_icon" class="fa-solid fa-right-to-bracket"></span>
-                Ingresar 
-              </button>
-            <% } %>
-          </div>
-        </div>
-        
-        
-        
-        
-
-
-        <script>
-          const button = document.getElementById("button");
-          const buttonRect = button.getBoundingClientRect();
-          const chevron = document.getElementById("chevron");
-          const chevronRect = chevron.getBoundingClientRect();
-          const menuRight = buttonRect.right - chevronRect.right;
-          const menutop = chevronRect.top - buttonRect.top;
-
-          const menu = document.getElementById("menu");
-          menu.style.top = `${menutop}px`;
-          menu.style.right = `${menuRight}px`;
-
-          const toggleDropdown = () => {
-            const dropdown = document.getElementById("dropdown");
-            if(dropdown.classList.contains("open")) {
-              menu.style.top = `${menutop}px`;
-              menu.style.right = `${menuRight}px`;
-            }else{
-              menu.style.top = `${button.clientHeight + 10}px`;
-              menu.style.right = 0;
-            }
-
-            dropdown.classList.toggle("open")
-          };
-        </script>
-      
+              <% } else { %>
+                <button onclick="window.location.href='/users/login';" class="btn">
+                  <span id="menu_icon" class="fa-solid fa-right-to-bracket"></span>
+                  Ingresar
+                </button>
+                <button onclick="window.location.href='/users/register';" class="btn">
+                  <span id="menu_icon" class="fa-solid fa-user-plus"></span>
+                  Registrarse
+                </button>
+                <% } %>
       </div>
     </div>
-    <nav class="home__header__barra--nav">
-      <div class="home__header--barra">
-        <ul class="header--barra">
-          
-          <li><a href="/products/list">Todos</a></li>
-          <li><a href="/products/list/Monitor">Monitores</a></li>
-          <li><a href="/products/list/Mouse">Mouses</a></li>
-          <li><a href="/products/list/Teclado">Teclados</a></li>
-          <li><a href="/products/list/Auricular">Auriculares</a></li>
-          <li><a href="/products/list/discount">Ofertas</a></li>
-          <hr />
-          <li><a href="#footer">Contactos</a></li>
-          <li><a href="#footer">Sobre nosotros</a></li>
-        </ul>
-      </div>
-    </nav>
     <script>
-const links = document.querySelectorAll(".header--barra a");
-const urlActual = window.location.href;
+      const button = document.getElementById("button");
+      const buttonRect = button.getBoundingClientRect();
+      const chevron = document.getElementById("chevron");
+      const chevronRect = chevron.getBoundingClientRect();
+      const menuRight = buttonRect.right - chevronRect.right;
+      const menutop = chevronRect.top - buttonRect.top;
 
-links.forEach(link => {
-  if (link.href === urlActual) {
-    link.classList.add("activo");
-  }
-});
-document.addEventListener("DOMContentLoaded", function() {
-  const links = document.querySelectorAll(".header--barra a");
-  const urlActual = window.location.href;
+      const menu = document.getElementById("menu");
+      menu.style.top = `${menutop}px`;
+      menu.style.right = `${menuRight}px`;
 
-  links.forEach(link => {
-    if (link.href === urlActual) {
-      link.classList.add("activo");
-    }
-  });
-});
+      const toggleDropdown = () => {
+        const dropdown = document.getElementById("dropdown");
+        if (dropdown.classList.contains("open")) {
+          menu.style.top = `${menutop}px`;
+          menu.style.right = `${menuRight}px`;
+        } else {
+          menu.style.top = `${button.clientHeight + 10}px`;
+          menu.style.right = 0;
+        }
 
-/* ================================== */
-
-
+        dropdown.classList.toggle("open")
+      };
     </script>
 
-  </header>
+ 
+
+  <nav class="home__header__barra--nav">
+    <ul class="header--barra">
+      
+      <li><a href="/products/list">Todo</a></li>
+      <li class="magicList"><a href="/products/list/Monitor">Monitores</a></li>
+      <li class="magicList"><a href="/products/list/Mouse">Mouses</a></li>
+      <li class="magicList"><a href="/products/list/Teclado">Teclados</a></li>
+      <li class="magicList"><a href="/products/list/Auricular">Auriculares</a></li>
+      <li class="magicList"><a href="/products/list/discount">Ofertas</a></li>
+    </ul>
+    <ul class="ulContactos">
+      <li></li>
+      <li><a href="#footer">Contactos</a></li>
+      <li><a href="#footer">Sobre nosotros</a></li>
+    </ul>
+  </nav>
+ </div>
+
+  <script>
+    const links = document.querySelectorAll(".header--barra a");
+    const urlActual = window.location.href;
+
+    links.forEach(link => {
+      if (link.href === urlActual) {
+        link.classList.add("activo");
+      }
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".header--barra a");
+      const urlActual = window.location.href;
+
+      links.forEach(link => {
+        if (link.href === urlActual) {
+          link.classList.add("activo");
+        }
+      });
+    });
+
+    /* ================================== */
+
+
+  </script>
+
+</header>

@@ -18,15 +18,8 @@
     margin: 5px;
     gap: 5px;
 }
-.footerDiv a:hover{
-    text-decoration: none;
-}
-.footerDiv a div{
-    color:white;
-    text-decoration: none;
-}
-
-
+.footerDiv a:hover{text-decoration: none;}
+.footerDiv a div{color:white;}
 .footerMetodosDePago{width: 250px;}
 @media(max-width: 767px){
     .footerBox p{font-size: 1rem;}
