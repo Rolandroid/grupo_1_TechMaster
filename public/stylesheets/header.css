@@ -5,10 +5,8 @@
 .header-top {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-}
-.TechmasterHomeLink{
 }
 .TechmasterHomeLink:hover {
     text-decoration: none;
@@ -17,6 +15,7 @@
 
 .TechmasterIsotipo {
     width: 50px;
+    margin: 10px 10px 0px 0px;
 }
 
 .TechmasterLogotipo {
@@ -54,6 +53,7 @@
 .home__header__barra--nav {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-end;
 }
 
 .header--barra {
@@ -105,9 +105,7 @@
     .TechmasterLogotipo {
         margin: 15px;
     }
-    .Filter {
-        display: none;
-    }
+    
 }
 @media(max-width: 767px){
     .TechmasterLogotipo {
@@ -115,10 +113,20 @@
     }
     .TechmasterIsotipo {
         display: block;
-        margin: 10px 0px 0px 10px;
+        margin: 10px 10px 0px 0px;
+    }
+    .Filter {
+        display: none;
     }
     
     .magicList{display: none;}
+    .header--barra {
+        display: flex;
+        background-color: var(--colorGranate);
+        font-size: 1rem;
+        gap: 0.6rem;
+        padding: 0.6rem;
+    }
     
 }
 
