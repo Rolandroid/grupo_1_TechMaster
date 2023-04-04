@@ -34,6 +34,7 @@
     border: none;
     border-radius: 5px 0px 0px 5px;
     padding: 10px;
+    width: 98px;
 }
 
 .Filter {
@@ -41,7 +42,7 @@
     border: none;
     padding: 10px;
 }
-
+.specialOption{}
 
 .lupa {
     padding: 10px;
@@ -115,8 +116,9 @@
         display: block;
         margin: 10px 10px 0px 0px;
     }
-    .Filter {
-        display: none;
+    
+    #specialOption{
+        display:none;
     }
     
     .magicList{display: none;}
