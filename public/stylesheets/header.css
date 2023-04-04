@@ -34,7 +34,6 @@
     border: none;
     border-radius: 5px 0px 0px 5px;
     padding: 10px;
-    width: 98px;
 }
 
 .Filter {
@@ -116,7 +115,9 @@
         display: block;
         margin: 10px 10px 0px 0px;
     }
-    
+    .search input {
+        width: 100px;
+    }
     #specialOption{
         display:none;
     }
