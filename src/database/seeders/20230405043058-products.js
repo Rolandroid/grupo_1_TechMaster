@@ -4,23 +4,26 @@
 
 const productsJson = require('../../data/products.json')
 
-const products = productsJson.map(({name,price,description,discount,category}) =>{
- /*  if (category === 'Auricular') {
-    return 1
-  }else if(category === 'Monitor'){
-    return 2
-  }else if(category === 'Mouse'){
-    return 3
-  }else{
-    return 4
+function getCategoryID(category) {
+  switch (category) {
+    case 'Auricular':
+      return 1;
+    case 'Monitor':
+      return 2;
+    case 'Mouse':
+      return 3;
+    default:
+      return 4;
   }
- */
+}
+
+const products = productsJson.map(({name,price,description,discount,category}) =>{
   return {
     name,
     price,
     description,
     discount,
-    categoryId: category,
+    categoryId: getCategoryID(category),
     createdAt: new Date(),
     updatedAt: new Date()
   }
@@ -28,14 +31,14 @@ const products = productsJson.map(({name,price,description,discount,category}) =
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-  
+
    await queryInterface.bulkInsert('Products',products, {});
-   
+
   },
 
   async down (queryInterface, Sequelize) {
-   
+
    await queryInterface.bulkDelete('Products', null, {});
-   
+
   }
 };
