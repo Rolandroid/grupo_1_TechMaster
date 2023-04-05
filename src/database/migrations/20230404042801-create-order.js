@@ -11,12 +11,13 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-        references : {
-          model :{
-            tableName : "Users"
+        references: {
+          model: {
+            tableName: "Users"
           },
-          key : 'id'
-        }
+          key: 'id'
+        },
+        onDelete: 'cascade'
       },
       date: {
         type: Sequelize.DATE
