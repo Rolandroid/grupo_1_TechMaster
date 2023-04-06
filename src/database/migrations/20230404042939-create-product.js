@@ -21,6 +21,9 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER
       },
+      visible: {
+        type: Sequelize.BOOLEAN
+      },
       categoryId: {
         type: Sequelize.INTEGER,
         references : {
