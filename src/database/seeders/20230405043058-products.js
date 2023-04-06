@@ -4,31 +4,23 @@
 
 const productsJson = require('../../data/products.json')
 
-function getCategoryID(category) {
-  switch (category) {
-    case 'Auricular':
-      return 1;
-    case 'Monitor':
-      return 2;
-    case 'Mouse':
-      return 3;
-    default:
-      return 4;
-  }
-}
-
-const products = productsJson.map(({name,price,description,discount,category}) =>{
+const products = productsJson.map(({name, price, description, discount, category}) => {
+  const categoryIDs = {
+    'Auricular': 1,
+    'Monitor': 2,
+    'Mouse': 3,
+    'Teclado': 4
+  };
   return {
     name,
     price,
     description,
     discount,
-    categoryId: getCategoryID(category),
+    categoryId: categoryIDs[category] ,
     createdAt: new Date(),
     updatedAt: new Date()
   }
-})
-
+});
 module.exports = {
   async up (queryInterface, Sequelize) {
 
