@@ -3,7 +3,7 @@ const path = require("path");
 const products = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
 );
-const { writeJSON, readJSON } = require("../data/index");
+/* const { writeJSON, readJSON } = require("../data/index"); */
 const db = require("../database/models");
 module.exports = {
     
@@ -21,13 +21,28 @@ module.exports = {
   },
 
   detalle: (req, res) => {
-    const products = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
-    );
     const { id } = req.params;
-    const product = products.find((product) => product.id === +id);
-    console.log(product);
-    return res.render("products/detalle", { ...product, products });
+
+    db.Product.findByPk(id, {
+      include: [
+        {
+          association : "images",
+          attributes : "name"
+        }
+      ]
+    }).then((product) => {
+      db.Product.findAll({
+        where : {
+            visible : true
+        },
+        include : ['images'],
+    }).then((product,products) => {
+      const product = products.find((product) => product.id === +id);
+      console.log(product);
+      return res.render("products/detalle", { ...product, products });
+    })
+    })
+
   },
 
 
