@@ -54,7 +54,7 @@
           <div class="box__button-editar">
             <a href="/products/edicion/<%= dataValues.id %>"> <button type="submit">Editar</button> </a>
          </div>
-         <form class="box__button-eliminar" action="/products/remove/<%= id %>?_method=DELETE" method="post">
+         <form class="box__button-eliminar" action="/products/remove/<%= dataValues.id %>?_method=DELETE" method="post">
            <a href="/products/remove/<%= dataValues.id %>"> <button type="submit">Eliminar</button> </a>
          </form>
         </div>

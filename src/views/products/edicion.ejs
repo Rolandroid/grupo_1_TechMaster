@@ -12,54 +12,47 @@
 
     <main class="estaCreacion">
      
-      <form action="/products/edicion/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <form action="/products/edicion/<%= dataValues.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         
           <h1 class="esteTitulo">EDITA TU PRODUCTO</h1>
         <div class="div_1">
           <label for="name"> Nombre </label>
-          <input  class="inputNombre" type="form_text" class="texto" name="name" value="<%= name %>">
+          <input  class="inputNombre" type="form_text" class="texto" name="name" value="<%= dataValues.name %>">
         </div>
 <div class="div_a">
-        <div class="div_2">
-          <label for="category"> Categoría </label>
-          <select class="inputCategoria" class="selector" name="category" id="">
-            <option class="estaOpcion" > </option>
-            <option class="estaOpcion" <%= category === "Monitor" && 'selected' %> value="Monitor">Monitor </option>
-            <option class="estaOpcion" <%= category === "Teclado" && 'selected' %> value="Teclado">Teclado </option>
-            <option class="estaOpcion" <%= category === "Mouse" && 'selected' %> value="Mouse">Mouse </option>
-            <option class="estaOpcion" <%= category === "Auriculares" && 'selected' %> value="Auriculares">Auriculares</option>
+  <div class="div_2">
+    <label for="category"> Categoría </label>
+    <select class="inputCategoria" class="selector <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="category" id="">
+      <!-- <option value="" selected hidden>Seleccione...</option> -->
+      <% categories.forEach(({name, id}) => { %>
+        <option value="<%= id %>" <%= locals.old && old.category && old.category === name ? 'selected' : null %>><%= name %></option>
+       <% }) %>
+    </select>
+  </div>
+        <div class="div_4">
+          <label for="visible">Visibilidad</label>
+          <select class="inputColor" class="selector <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="visible" id="">
+            <option value="1" selected>Visible</option>
+            <option value="0">No visible</option>
           </select>
         </div>
-          <div class="div_3">
-            <label for="color"> Color </label>
-            <select class="selector" name="color" id="color">
-              <option class="estaOpcion" value=""> </option>
-              <option class="estaOpcion" <%= color === "Blanco" && 'selected' %> value="Blanco">Blanco</option>
-              <option class="estaOpcion" <%= color === "Negro" && 'selected' %> value="Negro">Negro</option>
-              <option class="estaOpcion" <%= color === "Rojo" && 'selected' %> value="Rojo">Rojo</option>
-              <option class="estaOpcion" <%= color === "Amarillo" && 'selected' %> value="Amarillo">Amarillo </option>
-              <option class="estaOpcion" <%= color === "Azul" && 'selected' %> value="Azul">Azul </option>
-              <option class="estaOpcion" <%= color === "Vioeleta" && 'selected' %> value="Vioeleta">Vioeleta</option>
-              <option class="estaOpcion" <%= color === "Naranja" && 'selected' %> value="Naranja">Naranja</option>
-              <option class="estaOpcion" <%= color === "Violeta" && 'selected' %> value="Violeta">Violeta</option>
-           </select>           
-      </div>
+          <small class="text-darger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null  %></small>
     </div>
     <div class="div_b">
 <!--         <p class="esteStock">Indique el stock disponible:</p>
         <div class="inputStock" ><input type=" number" class="numero" >Unidades</div> -->
       <div class="div_4">
         <label for="price"> Precio </label>
-        <input type="number" class="inputPrecio" name="price" value="<%= price %>">
+        <input type="number" class="inputPrecio" name="price" value="<%= dataValues.price %>">
        </div> 
        <div class="div_5">
         <label for="discount"> Descuento </label>
-        <input type="number" class="inputDescuento" name="discount" value="<%= discount %>">
+        <input type="number" class="inputDescuento" name="discount" value="<%= dataValues.discount %>">
       </div>
     </div>
       <div class="div_6">
         <label for="description"> Descripción </label>
-        <textarea class="inputDescripcion" name="description" rows="5"><%= description %></textarea>
+        <textarea class="inputDescripcion" name="description" rows="5"><%= dataValues.description %></textarea>
       </div>
       <div class="div_7" >
         <label for="images"> Agrega 3 imágenes </label>

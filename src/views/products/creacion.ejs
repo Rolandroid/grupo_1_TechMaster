@@ -28,14 +28,16 @@
               <option value="<%= id %>" <%= locals.old && old.category && old.category === name ? 'selected' : null %>><%= name %></option>
              <% }) %>
           </select>
+        </div>
+          <div class="div_4">
           <label for="visible">Visibilidad</label>
           <select class="inputColor" class="selector <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="visible" id="">
-            <option value="" selected hidden>Seleccione...</option>
-            <option value="1">Visible</option>
+            <option value="1" selected>Visible</option>
             <option value="0">No visible</option>
           </select>
-          <small class="text-darger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null  %></small>
         </div>
+          <small class="text-darger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null  %></small>
+        
     </div>
     <div class="div_b">
 <!--         <p class="esteStock">Indique el stock disponible:</p>

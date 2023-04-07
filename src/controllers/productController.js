@@ -52,33 +52,47 @@ module.exports = {
   },
 
   create: (req, res) => {
-    const { name, image, description, discount, price, category, color } =
+    const { name, image, description, discount, price, category, visible } =
       req.body;
 
-    const newProduct = {
-      id: products[products.length - 1].id + 1,
+    db.Product.create ({
       name: name.trim(),
-      price: +price,
+      price,
       description: description.trim(),
-      image: req.files.length ? req.files.map((file) => file.filename) : null,
-      discount: +discount,
-      category: category.trim(),
-      color: color,
-    };
+      discount,
+      categoryId: category,
+      visible : visible
+    }).then((product) => {
+      req.files.forEach((image) => {
+        db.Image.create({
+          name: image.filename,
+          productId: product.id,
+        });
+      });
 
-    products.push(newProduct);
+      return res.redirect("/products/list");
+    }).catch((error) => console.log(error));
 
-    writeJSON("products.json", products);
-
-    // return res.send(req.file)
-    return res.redirect("/products/list");
   },
   edicion: (req, res) => {
     const { id } = req.params;
-    const product = products.find((product) => product.id === +id);
-    return res.render("products/edicion", {
-      ...product,
-    });
+    db.Product.findAll({
+      where : {
+        visible : true
+      },
+      include : ['images'],
+    })
+    .then((products) => {
+      let product = products.find((product) => product.id === +id);
+      return db.Category.findAll({
+        order: [["name"]],
+        attributes: ["name", "id"],
+      })
+      .then((categories) => {
+        return res.render("products/edicion", { ...product, categories });
+      })
+    })
+    .catch(error => console.log(error))
   },
 
   update: (req, res) => {
