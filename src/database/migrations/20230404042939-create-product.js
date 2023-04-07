@@ -22,7 +22,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       visible: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       categoryId: {
         type: Sequelize.INTEGER,

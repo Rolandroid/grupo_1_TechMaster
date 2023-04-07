@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     discount: DataTypes.INTEGER,
+    visible: DataTypes.BOOLEAN,
     categoryId: DataTypes.INTEGER
   }, {
     sequelize,
