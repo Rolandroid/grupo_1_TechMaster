@@ -38,25 +38,17 @@ module.exports = {
 
 
   creacion: (req, res) => {
-    const products = db.Product.findAll({
-      order: [["name"]],
-      attributes: ["name", "id"],
-    });
+
 
     const categories = db.Category.findAll({
       order: [["name"]],
       attributes: ["name", "id"],
-    });
-
-    Promise.all([products, categories])
-      .then(([products, categories]) => {
+    })
+      .then((categories) => {
         return res.render("products/creacion", {
-          products,
           categories,
-        });
-      })
-      .catch((error) => console.log(error));
-    
+        })
+      }).catch((error) => console.log(error));
   },
 
   create: (req, res) => {

@@ -22,28 +22,20 @@
 <div class="div_a">
         <div class="div_2">
           <label for="category"> Categoría </label>
-          <select class="inputCategoria" class="selector" name="category" id="">
-            <option class="estaOpcion" > </option>
-            <option class="estaOpcion" value="Monitor">Monitor </option>
-            <option class="estaOpcion" value="Teclado">Teclado </option>
-            <option class="estaOpcion" value="Mouse">Mouse </option>
-            <option class="estaOpcion" value="Auriculares">Auriculares</option>
+          <select class="inputCategoria" class="selector <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="category" id="">
+            <option value="" selected hidden>Seleccione...</option>
+            <% categories.forEach(({name, id}) => { %>
+              <option value="<%= id %>" <%= locals.old && old.category && old.category === name ? 'selected' : null %>><%= name %></option>
+             <% }) %>
           </select>
+          <label for="visible">Visibilidad</label>
+          <select class="inputColor" class="selector <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="visible" id="">
+            <option value="" selected hidden>Seleccione...</option>
+            <option value="1">Visible</option>
+            <option value="0">No visible</option>
+          </select>
+          <small class="text-darger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null  %></small>
         </div>
-          <div class="div_3">
-            <label for="color"> Color </label>
-          <select class="inputColor" class="selector" name="color" id="">
-            <option class="estaOpcion" > </option>
-            <option class="estaOpcion" value="Blanco">Blanco</option>
-            <option class="estaOpcion" value="Negro">Negro</option>
-            <option class="estaOpcion" value="Rojo">Rojo</option>
-            <option class="estaOpcion" value="Amarillo">Amarillo </option>
-            <option class="estaOpcion" value="Azul">Azul </option>
-            <option class="estaOpcion" value="Vioeleta">Vioeleta</option>
-            <option class="estaOpcion" value="Naranja">Naranja</option>
-            <option class="estaOpcion" value="Violeta">Violeta</option>
-          </select>
-      </div>
     </div>
     <div class="div_b">
 <!--         <p class="esteStock">Indique el stock disponible:</p>
