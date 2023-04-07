@@ -1,10 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-const products = JSON.parse(
+/* const products = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
-);
+); */
 /* const { writeJSON, readJSON } = require("../data/index"); */
 const db = require("../database/models");
+const product = require("../database/models/product");
 module.exports = {
     
   list: (req, res) => {
@@ -22,32 +23,40 @@ module.exports = {
 
   detalle: (req, res) => {
     const { id } = req.params;
-
-    db.Product.findByPk(id, {
-      include: [
-        {
-          association : "images",
-          attributes : "name"
-        }
-      ]
-    }).then((product) => {
       db.Product.findAll({
         where : {
             visible : true
         },
         include : ['images'],
-    }).then((product,products) => {
-      const product = products.find((product) => product.id === +id);
-      console.log(product);
+    }).then((products) => {
+      let product = products.find((product) => product.id === +id);
+      console.log(products);
       return res.render("products/detalle", { ...product, products });
-    })
-    })
+    }).catch(error => console.log(error))
 
   },
 
 
   creacion: (req, res) => {
-    return res.render("products/creacion");
+    const products = db.Product.findAll({
+      order: [["name"]],
+      attributes: ["name", "id"],
+    });
+
+    const categories = db.Category.findAll({
+      order: [["name"]],
+      attributes: ["name", "id"],
+    });
+
+    Promise.all([products, categories])
+      .then(([products, categories]) => {
+        return res.render("products/creacion", {
+          products,
+          categories,
+        });
+      })
+      .catch((error) => console.log(error));
+    
   },
 
   create: (req, res) => {
