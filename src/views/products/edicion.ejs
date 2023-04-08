@@ -12,21 +12,20 @@
 
     <main class="estaCreacion">
      
-      <form action="/products/edicion/<%= dataValues.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <form action="/products/edicion/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         
           <h1 class="esteTitulo">EDITA TU PRODUCTO</h1>
         <div class="div_1">
           <label for="name"> Nombre </label>
-          <input  class="inputNombre" type="form_text" class="texto" name="name" value="<%= dataValues.name %>">
+          <input  class="inputNombre" type="form_text" class="texto" name="name" value="<%= product.name %>">
         </div>
 <div class="div_a">
   <div class="div_2">
     <label for="category"> Categoría </label>
-    <select class="inputCategoria" class="selector <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="category" id="">
-      <!-- <option value="" selected hidden>Seleccione...</option> -->
+    <select name="category">
       <% categories.forEach(({name, id}) => { %>
-        <option value="<%= id %>" <%= locals.old && old.category && old.category === name ? 'selected' : null %>><%= name %></option>
-       <% }) %>
+        <option value="<%= id %>" <%= product.category.id === id ? 'selected' : null %>><%= name %></option>
+      <% }) %>
     </select>
   </div>
         <div class="div_4">
@@ -43,16 +42,16 @@
         <div class="inputStock" ><input type=" number" class="numero" >Unidades</div> -->
       <div class="div_4">
         <label for="price"> Precio </label>
-        <input type="number" class="inputPrecio" name="price" value="<%= dataValues.price %>">
+        <input type="number" class="inputPrecio" name="price" value="<%= product.price %>">
        </div> 
        <div class="div_5">
         <label for="discount"> Descuento </label>
-        <input type="number" class="inputDescuento" name="discount" value="<%= dataValues.discount %>">
+        <input type="number" class="inputDescuento" name="discount" value="<%= product.discount %>">
       </div>
     </div>
       <div class="div_6">
         <label for="description"> Descripción </label>
-        <textarea class="inputDescripcion" name="description" rows="5"><%= dataValues.description %></textarea>
+        <textarea class="inputDescripcion" name="description" rows="5"><%= product.description %></textarea>
       </div>
       <div class="div_7" >
         <label for="images"> Agrega 3 imágenes </label>

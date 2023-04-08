@@ -30,7 +30,6 @@ module.exports = {
         include : ['images'],
     }).then((products) => {
       let product = products.find((product) => product.id === +id);
-      console.log(products);
       return res.render("products/detalle", { ...product, products });
     }).catch(error => console.log(error))
 
@@ -76,23 +75,19 @@ module.exports = {
   },
   edicion: (req, res) => {
     const { id } = req.params;
-    db.Product.findAll({
-      where : {
-        visible : true
-      },
-      include : ['images'],
+    return db.Product.findByPk(id, {
+      include : ['images','category'],
     })
-    .then((products) => {
-      let product = products.find((product) => product.id === +id);
+    .then((product) => {
       return db.Category.findAll({
         order: [["name"]],
         attributes: ["name", "id"],
       })
       .then((categories) => {
-        return res.render("products/edicion", { ...product, categories });
+        return res.render("products/edicion", { product, categories});
       })
     })
-    .catch(error => console.log(error))
+    .catch(error => console.log(error))    
   },
 
   update: (req, res) => {
