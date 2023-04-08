@@ -91,6 +91,36 @@ module.exports = {
   },
 
   update: (req, res) => {
+    const { name, image, description, discount, price, category, visible } =
+    req.body;
+
+    const id = +req.params.id
+
+  db.Product.update(
+    {
+      name: name.trim(),
+      price,
+      description: description.trim(),
+      discount,
+      categoryId: category,
+      visible : visible
+    },
+    {
+      where : {
+        id,
+      }  
+    }
+  ).then(() => {
+    req.files.forEach((image) => {
+      db.Image.update({
+        name: image.filename,
+        productId: product.id,
+      });
+    });
+
+    return res.redirect(`/products/detalle/` +id);
+  }).catch((error) => console.log(error));
+/* 
     const { name, image, description, discount, price, category, color } =
       req.body;
     const id = +req.params.id;
@@ -116,11 +146,11 @@ module.exports = {
       }
 
       return product;
-    });
+    });*/
 
     /* fs.writeFileSync('../data/products.json',JSON.stringify(productModified, null, 3), 'utf-8') */
-    writeJSON("products.json", productModified);
-    return res.redirect(`/products/detalle/${id}`);
+   /*  writeJSON("products.json", productModified); */
+     
   },
 
   remove: (req, res) => {
