@@ -13,7 +13,7 @@
   <main class="mainResultados">
     <h1>Todos los Productos</h1>
     <section>
-      <% products.forEach(({id,name,images,description,discount,price,color,category}) => { %>
+      <% products.forEach(({id,name,images,description,discount,price,category}) => { %>
        <article class="articleResultados">
         <span>
           <img src="/Images/products/<%= images.length ? images[0].name : `default-image.png` %>"></img>
@@ -34,5 +34,6 @@
       </main>
   <%- include('../partials/footer')  %> 
 </body>
+
 
 </html>

@@ -153,11 +153,32 @@ module.exports = {
      
   },
 
-  remove: (req, res) => {
+  remove: async(req, res) => {
     const id = req.params.id;
-    const productModified = products.filter((product) => product.id !== +id);
-
-    writeJSON("products.json", productModified);
-    return res.redirect(`/products/list`);
-  },
+      
+    try {
+      // Buscar el producto a eliminar
+      const product = await db.Product.findByPk(id);
+      
+      // Verificar si el producto existe
+      if (!product) {
+        return res.status(404).json({ message: 'Producto no encontrado' });
+      }
+  
+      // Buscar todas las imágenes asociadas al producto
+      const images = await db.Image.findAll({ where: { productId: product.id } });
+  
+      // Eliminar todas las imágenes asociadas al producto
+      await Promise.all(images.map(image => image.destroy()));
+  
+      // Eliminar el producto
+      product.destroy();
+      
+      return res.redirect('/products/list')
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ message: 'Error al eliminar el producto' });
+    }
+  }
+  ,
 };
