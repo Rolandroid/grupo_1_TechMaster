@@ -2,102 +2,121 @@
 <html lang="en">
 
 <!-- HEAD -->
-<%- include('../partials/head',{title : 'Registro'}) %>
-<body>
- 
+<%- include('../partials/head',{title : 'Registro' }) %>
+
+  <body>
+
     <main class="register__main">
-        <section class="register__main__section">
-            <article class="register__main__section__article">
-              
-              
-                <form class="form__register" action="" method="POST">
-                  <div class="register__main__form">
-                    <div class="register__form__header">
-                      
-                        <h2>Bienvenid@ a</h2>
-
-                        <div class="register__logo--master">
-                          <a class="register__logo" href="/"><img src="/Images/LOGO.png" alt="Logo" /></a>
-                          <a class="register__techmater" href="/"><img src="/Images/LOGO-TECHMASTER.svg" alt=""></a>
-                        </div>
-                        
-                        <div class="register__descripcion">
-                          <p>TechMaster te brindará el mejor servicio de compra y venta de productos tecnologicos y afines.</p>
-                        </div>
-
-                        <div class="form__header--links">
-                        <a href="">
-                          <i class="fa-brands fa-facebook"></i>
-                          Continuar con Facebook
-                        </a>
-                        </div>
-                      <div class="form__header--links">
-                        <a href="">
-                          <i class="fa-brands fa-google"></i>
-                          Continuar con Google
-                        </a>
-                        </div>
-                      
-
-                    </div>
-                  </div>
-                  <div class="register__main__form2">
-                    <h1 class="register__main--h1">Crea tu cuenta</h1>
-
-                    <div class="register__form__box">
-                        
-                        <input type="text" placeholder="Nombre"  class="<%= (locals.errors && errors.name) && 'is-invalid'%>" name="name" id="name" value="<%= (locals.old && old.name) && old.name %>" autocomplete="off">
-                    </div>
-                    <small class="register__errors"><%= locals.errors && errors.name ? errors.name.msg : null %></small>
-
-                    <div class="register__form__box">
-                        <input type="text" placeholder="Apellido" name="surname" id="surname" autocomplete="off" value="<%= (locals.old && old.surname) && old.surname %>">
-                    </div>
-                    <small class="register__errors"><%= locals.errors && errors.surname? errors.surname.msg : null  %></small>
-                    <div class="register__form__box">
-                        <input type="email" placeholder="Email" name="email" id="email" autocomplete="off" value="<%= (locals.old && old.email) && old.email %>">
-                    </div>
-                    <small class="register__errors"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
+      <section class="register__main__section">
+        <article class="register__main__section__article">
 
 
+          <form class="form__register" action="" method="POST">
+            <div class="register__main__form">
+              <div class="register__form__header">
 
-                    <div class="register__form__box">
-                        <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
-                    </div>
-                    <small class="register__errors"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
+                <h2>Bienvenid@ a</h2>
+
+                <div class="register__logo--master">
+                  <a class="register__logo" href="/"><img src="/Images/LOGO.png" alt="Logo" /></a>
+                  <a class="register__techmater" href="/"><img src="/Images/LOGO-TECHMASTER.svg" alt=""></a>
+                </div>
+
+                <div class="register__descripcion">
+                  <p>TechMaster te brindará el mejor servicio de compra y venta de productos tecnologicos y afines.</p>
+                </div>
+
+                <div class="form__header--links">
+                  <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                    Continuar con Facebook
+                  </a>
+                </div>
+                <div class="form__header--links">
+                  <a href="">
+                    <i class="fa-brands fa-google"></i>
+                    Continuar con Google
+                  </a>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="register__main__form2">
+              <h1 class="register__main--h1">Crea tu cuenta</h1>
+
+              <div class="register__form__box">
+
+                <input type="text" placeholder="Nombre" class="<%= (locals.errors && errors.name) && 'is-invalid'%>"
+                  name="name" id="name" value="<%= (locals.old && old.name) && old.name %>" autocomplete="off">
+              </div>
+              <small class="register__errors">
+                <%= locals.errors && errors.name ? errors.name.msg : null %>
+              </small>
+
+              <div class="register__form__box">
+                <input type="text" placeholder="Apellido" name="surname" id="surname" autocomplete="off"
+                  value="<%= (locals.old && old.surname) && old.surname %>">
+              </div>
+              <small class="register__errors">
+                <%= locals.errors && errors.surname? errors.surname.msg : null %>
+              </small>
+              <div class="register__form__box">
+                <input type="email" placeholder="Email" name="email" id="email"
+                  value="<%= (locals.old && old.email) && old.email %>">
+              </div>
+              <small class="register__errors">
+                <%= locals.errors && errors.email ? errors.email.msg : null %>
+              </small>
+
+
+
+              <div class="register__form__box">
+                <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
+              </div>
+              <small class="register__errors">
+                <%= locals.errors && errors.password ? errors.password.msg : null %>
+              </small>
 
 
 
 
-                    <div class="register__form__box">
-                        <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2" autocomplete="off">
-                    </div>
-                    <small class="register__errors"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></small>
-                    <div class="register__form__oferta">
-                      <input type="checkbox" placeholder="" name="offerNotifier" value="<%= (locals.old && old.policy) && old.policy %>" >
-                      <span class="register__span"  > Recibir oferta de producto</span>
-                    </div>
-                    
-                    <div class="register__form__oferta1">
-                      <input type="checkbox" placeholder="" name="policy" value="<%= (locals.old && old.policy) && old.policy %>">
-                      <span class="register__span" >Estoy de acuerdo con los términos y la política</span>
-                    </div>
-                    <small class="register__errors"><%= locals.errors && errors.policy ? errors.policy.msg : null %></small>
+              <div class="register__form__box">
+                <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2"
+                  autocomplete="off">
+              </div>
+              <small class="register__errors">
+                <%= locals.errors && errors.password2 ? errors.password2.msg : null %>
+              </small>
+              <div class="register__form__oferta">
+                <input type="checkbox" placeholder="" name="offerNotifier"
+                  value="<%= (locals.old && old.policy) && old.policy %>">
+                <span class="register__span"> Recibir oferta de producto</span>
+              </div>
+
+              <div class="register__form__oferta1">
+                <input type="checkbox" placeholder="" name="policy"
+                  value="<%= (locals.old && old.policy) && old.policy %>">
+                <span class="register__span">Estoy de acuerdo con los términos y la política</span>
+              </div>
+              <small class="register__errors">
+                <%= locals.errors && errors.policy ? errors.policy.msg : null %>
+              </small>
 
 
-                    
-                    <div class="register__form__box--buttons">
-                      <button class="buttons buttons__primary" type="submit">Registrarme</button>
-                      <button class="buttons buttons__secondary" type="submit"> <a href="/users/login">Ingresar</a> </button>
-                 
-                    </div>
-                  </div>
-                </form>
-            </article>
-        </section>
-      </main>
 
-      <%- include('../partials/scripts')  %>
-</body>
+              <div class="register__form__box--buttons">
+                <button class="buttons buttons__primary" type="submit">Registrarme</button>
+                <button class="buttons buttons__secondary" type="submit"> <a href="/users/login">Ingresar</a> </button>
+
+              </div>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <%- include('../partials/scripts') %>
+  </body>
 
 </html>
