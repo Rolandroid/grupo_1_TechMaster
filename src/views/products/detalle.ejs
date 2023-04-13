@@ -49,7 +49,7 @@
             <p><i class="fa-sharp fa-solid fa-truck-fast"></i> Llega gratis hoy</p>
           </div>
         </div>
-        <% if (locals.userLogin && locals.userLogin.rol === 'admin') { %>
+        <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
          <div class="container__buttons">
           <div class="box__button-editar">
             <a href="/products/edicion/<%= dataValues.id %>"> <button type="submit">Editar</button> </a>

@@ -35,7 +35,7 @@
             <span class="fa-solid fa-lock" id="menu_icon"></span>
             Cuenta
           </button>
-          <% if (locals.userLogin.rol==='admin' ) { %>
+          <% if (locals.userLogin.rol=== 1 ) { %>
             <button onclick="window.location.href='dashboard';" class="btn">
               <span id="menu_icon" class="fa-solid fa-gauge">
               </span>
