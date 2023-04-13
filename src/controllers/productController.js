@@ -89,69 +89,64 @@ module.exports = {
     })
     .catch(error => console.log(error))    
   },
+  
+  update: async (req, res) => {
 
-  update: (req, res) => {
+    try {
+      
+  
     const { name, image, description, discount, price, category, visible } =
-    req.body;
+      req.body;
 
     const id = +req.params.id
+    const removeImagesBefore = req.query.removeImageBefore
+    const product = await db.Product.findByPk(id, { include: ['images'] })
 
-  db.Product.update(
-    {
-      name: name.trim(),
-      price,
-      description: description.trim(),
-      discount,
-      categoryId: category,
-      visible : visible
-    },
-    {
-      where : {
-        id,
-      }  
-    }
-  ).then(() => {
-    req.files.forEach((image) => {
-      db.Image.update({
-        name: image.filename,
-        productId: product.id,
-      });
-    });
+    product.name = name.trim();
+    product.price = +price;
+    product.description = description.trim();
+    product.discount = +discount;
+    product.categoryId = category;
+    product.visible = visible;
 
-    return res.redirect(`/products/detalle/` +id);
-  }).catch((error) => console.log(error));
-/* 
-    const { name, image, description, discount, price, category, color } =
-      req.body;
-    const id = +req.params.id;
-    const product = products.find((product) => product.id === +id);
-    const objetoNull = null;
+    await product.save()
 
-    const productUpdate = {
-      id,
-      name: name.trim(),
-      price: +price,
-      description: description.trim(),
-      image: req.files.length
-        ? req.files.map((file) => file.filename)
-        : product.image || null,
-      discount: +discount,
-      category: category.trim(),
-      color: color, // Utilizamos el valor seleccionado del elemento select
-    };
+    if (req.files) {
 
-    const productModified = products.map((product) => {
-      if (product.id === id) {
-        return productUpdate;
+      const images = req.files.map(image => {
+        return {
+          name: image.filename,
+          productId: id
+        }
+      })
+
+      if (removeImagesBefore) {
+        
+        product.images.forEach(image => {
+          if(/_products_/.test(image.name)){
+            
+          fs.existsSync(path.join(__dirname, `../../public/images/products/${image.name}`)) &&
+            fs.unlinkSync(path.join(__dirname, `../../public/images/products/${image.name}`))
+          }
+        })
+
+        db.Image.destroy({
+          where: { productId: id }
+        })
       }
 
-      return product;
-    });*/
+      db.Image.bulkCreate(images)
+    }
 
-    /* fs.writeFileSync('../data/products.json',JSON.stringify(productModified, null, 3), 'utf-8') */
-   /*  writeJSON("products.json", productModified); */
-     
+    return res.redirect(`/products/detalle/` + id);
+  } catch (error) {
+      console.log(error)
+  }
+
   },
+  
+     
+  
 
   remove: async(req, res) => {
     const id = req.params.id;
