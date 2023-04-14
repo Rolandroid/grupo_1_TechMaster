@@ -16,7 +16,7 @@ router
 .get('/newPassword',newPassword)
 .get('/logout',checkUserLogin,logout)
 .get('/profile', checkUserLogin, profile)
-.put('/profile',uploadImageUser, processProfile)
+.put('/profile',uploadImageUser.single("avatar"), processProfile)
 
 
 

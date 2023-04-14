@@ -10,10 +10,10 @@ const storageProductImages = multer.diskStorage({
     }
 });
 
-const uploadProductImagesUser = multer({
+const uploadImageUser = multer({
     storage : storageProductImages
 });
 
 module.exports = {
-    uploadProductImagesUser
+    uploadImageUser
 }
