@@ -8,326 +8,102 @@ display: none;
     
 }
 .main-profile{
+    color: white;
     height: 80%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
 .main__p-regresar {
     text-decoration: none;
     color: white;
-    display: flex;
-    gap: 5px;
+    align-self: flex-start;
+    margin: 5px;
 }
-.main-profile h1{
-    font-size: 20px;
-    text-align: center;
-    margin: 20px 0 20px;
-    color: white;    
-}
-.main__section-profile{
-    display: flex;
-    flex-direction: column;
-    /* background-color: var(--colorGranate); */
-}
-.container {
-    max-width: 960px;
-    /* margin: 0px auto; */
-    padding: 1px;
-    text-align: left;
-}
-
-.avatar-upload {
-    position: relative;
-    max-width: 192px;
-    margin: 30px auto;
-}
-.avatar-upload .avatar-edit {
-    position: absolute;
-    right: 77px;
-    z-index: 1;
-    top: 7px;
-}
-
-.avatar-upload .avatar-edit input {
-    display: none;
-}
-.avatar-upload .avatar-edit input + label {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin-bottom: 0;
-    border-radius: 100%;
-    background: #ffffff;
-    border: 1px solid transparent;
-    box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 12%);
-    cursor: pointer;
-    font-weight: normal;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-}
-
-.avatar-upload .avatar-edit input + label:after {
-    content: "\f040";
-    font-family: "FontAwesome";
-    color: #757575;
-    position: absolute;
-    top: 5px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    margin: auto;
-}
-
-.avatar-upload .avatar-preview {
-    width: 110px;
-    height: 110px;
-    position: relative;
-    border-radius: 100%;
-    border: 6px solid #f8f8f8;
-    box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 10%);
-}
-
-.avatar-upload .avatar-preview > div {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.avatar-preview img{
-    
-width: 100%;
-    
-border-radius: 50%;
-    
-height: 100%;
-}
-.main__form-profile--name{
-        
-    display: none;
-}
-.main__form-info{    
-    display: flex;
-    flex-direction: column;
-    
-}
-.main__form-info-p {
-    display: none;
-}
-
-.main__form-info a{
+.profile_boxRow{
     color: white;
-    text-decoration: none;
-    }
-.main__form-info article{
+    display: flex;
     background-color: var(--colorGranate);
-    height: 10%;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    padding: 14px;
-    margin: 1px 23px;
-    justify-content: space-between;
-}
-.main__form-info article:hover {
-    background-color: rgb(107, 34, 77) ;
-    
-    
-}
-#main__form__article--sesion{
-height: 0;
-}
-#main__form__article--sesion-a {
-    display: flex;
-    margin: 0 auto;
     align-items: center;
-    background-color: var(--colorGranate);
-    color: white;
-    width: 85%;
-    justify-content: space-between;
-    border: none;
-    height: 0;
-    }
-.main__form__article--sesion-button {
-    border: none;
-    background-color: var(--colorGranate);
-    color: white;
-    font-size: 16px;
+    width: 768px;
+    margin-bottom: 10px;
+    padding: 10px;
+    gap: 10px;
+    text-decoration: none;
+}
+.profile_box{
     display: flex;
-    padding: 15px;
-    }
-
-    .profile--buttom{
-    position: absolute;
-    left: 37rem;
-    top: 4rem;
-    border-radius: 5px;
+    background-color: var(--colorGranate);
+    width: 768px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+    align-items: flex-start;
+}
+.profile_box input{
     border: none;
-    background-color: #008eff;
-    color: #FFF;
-    padding: 9px;
-    }
- 
-@media (min-width: 768px) {
-    .main__form-profile{
-        display: flex;
-        background-color: var(--colorGranate);
-        margin: 21px auto;
-        width: 79%;
-        flex-direction: row;
-    }
-    .container {
-        display: flex;
-        padding: 1px;
-    }
-    
-    .avatar-upload {
-        display: flex;
-        margin: 27px;
-    }
-    .main__form-profile--name{
-        
-        color: white;       
-        display: flex;       
-        justify-content: center;      
-        flex-direction: column-reverse;
-    }
-    .main__form-info{
-       display:flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: center;
-       width: 100%;
-    }
-    .main__form-info-p {
-        display: block;
-    }
-    .main__form-info article{
-       display:flex;
-       flex-direction: column;
-       padding: 0 11px;
-       width: 38%;
-       height: 86px;
-       justify-content: center;
-       margin: 14px 10px;
-    }
-    .main__form-info p {
-        color: rgba(255, 255, 255, 0.596);
-     }
-     .main__form__article-icon{
-        display: flex;
-        width: 100%;
-     }
-    .main__form__article--datos{
-        margin: 10px 120px;
-        padding: 25px 122px;
-        display: flex;
-    }
-    #main__form__article--sesion{
-        display: flex;
-        width: 78%;
-        height: 40px;
-        margin: 19px auto;
+    background-color: #3b0d28;
+    font-size: 1rem;
+    color: white;
 }
-    #main__form__article--sesion-a{
-        width: 80%;
-        display: flex;
-        border: none;
-        
-    }
-    
-    .main__form__article--sesion-button { 
-        padding: 15px;
-        }
-    .main__form__article__div--flecha{
-        display: none;
-     }
-     .main__form-info a{
-        width: 100%;       
-        display: flex;      
-        gap: 10px;
-     }
-
+.profile_box input:focus-visible{
+    outline: none;
+}
+.profile_box p{
+    border: none;
+    background-color: #3b0d28;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    margin-top: 3px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.main__p-regresar{}
+.profile_form{
+    display: flex;
+    flex-direction: column;
+}
+.profile_greatings{}
+.profile_picture{
+    width: 100px;
+    margin: 5px;
+    border-radius: 50%;
 }
 
-@media (min-width: 1024px) {
-    .main__form-profile{
-        display: flex;
-        flex-direction: row;
-        background-color: var(--colorGranate);
-        margin: 0 auto;
-        width: 83%;
-    }
-    .container {
-        display: flex;
-        padding: 1px;
-    }
-    
-    .avatar-upload {
-        display: flex;
-        justify-content: flex-start;
-        margin: 27px;
-    }
-    .main__form-profile--name{
-        
-        color: white;        
-        display: flex;      
-        justify-content: center;      
-        align-items: center;
-    }
-    .main__form-info{
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .main__form-info article{
-        display:flex;
-        flex-direction: column;
-        padding: 0 30px;
-       /* flex-wrap: wrap; */
-       /* text-align: start; */
-        width: 40%;
-        height: 86px;
-        align-items: flex-start;
-        justify-content: center;
-        margin: 16px 22px;
-    }
-    .main__form-info p {
-        /* margin: 3px 0; */
-        color: rgba(255, 255, 255, 0.596);
-     }
-    
-    .main__form__article--datos{
-        margin: 10px 120px;
-        padding: 25px 122px;
-        display: flex;
-    }
-    #main__form__article--sesion{
-        
-        display: flex;      
-        width: 83%;     
-        height: 40px;
-        margin: 19px auto;
-    }
-    #main__form__article--sesion-a{
-        width: 100%;
-        display: flex;
-        border: none;
-    }
-    .main__form__article--sesion-button {
-        
-        padding: 15px;
-        }
-    .main__form__article__div--flecha{
-
-        display: none;
-     }
-
+.profile_datosBox{}
+.profile_titulo{margin-top: 4px;font-size: 1rem;font-weight: 600;}
+.profile_subtitulo{
+    margin-top: 4px;
 }
+.profile_input{}
+.profile_buttonBox{
+    display: flex;
+    margin: 10px 10px 0px 10px;
+    gap: 10px;
+    align-self: flex-end;
+}
+.profile_button{
+    background-color: lightgrey;
+    border-radius: 5px;
+    margin: 15px 15px 0px 15px;
+    padding: 5px;
+    color: #282626;
+    font-weight:700;
+    width: 162px;
+}
+.profile_cart{}
+.profile_carrito{}
+.profile_compras{}
+
+
+
+
+
+
+
+
+
+
+

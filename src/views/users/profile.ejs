@@ -10,64 +10,61 @@
 
   <title>TechMaster Perfil de usuario</title>
 </head>
+
 <body class="body-profile" id="profile-page">
-  
-  <%- include('../partials/header') %> 
+
+  <%- include('../partials/header') %>
 
 
-  <main class="main-profile">
-    
-      <a class="main__p-regresar" href="/"><i class="fa-solid fa-arrow-left"></i>  Regresar</a>
-    
+    <main class="main-profile">
 
-    <h1>Perfil de usuario</h1>
+      <a class="main__p-regresar" href="/"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
 
-    <form class="main__form-profile">
-      
-      <div class="avatar-upload">
-          <form  action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
-            <div class="avatar-edit">
-                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="avatar"/>
-                <label for="imageUpload"></i></label>
-                <button class="profile--buttom" type="submit">Actualizar Perfil </button>
-              </form>
+
+      <div class="profile_boxRow">
+        <img class="profile_picture" src="/Images/users/<%= user.avatar? user.avatar : 'default-user.png' %>" alt="">
+        <h1 class="profile_greatings">Hola <%= locals.userLogin.name %>
+            <%=locals.userLogin.surname %>
+        </h1>
+      </div>
+      <form class="profile_form" method="POST" action="/users/profile?_method=PUT">
+        <div class="profile_box">
+          <span class="profile_titulo">Mis datos</span>
+          <small class="profile_subtitulo">Editá tu informacion personal</small>
+
+          <p>Nombre:<input type="text" value="<%=locals.userLogin.name%>"></p>
+          <p>Apellido:<input type="text" value="<%=locals.userLogin.surname%>"></p>
+          <p>Email:<input type="text" value="<%=locals.userLogin.email%>"></p>
+          <small class="profile_subtitulo">Ubicacion</small>
+          <p>Direccion:<input type="text" value="<%=locals.userLogin.location.address%>"></p>
+          <p>Ciudad:<input type="text" value="<%=locals.userLogin.location.city%>"></p>
+          <p>Provincia:<input type="text" value="<%=locals.userLogin.location.province%>"></p>
+          <p>Codigo Postal:<input type="text" value="<%=locals.userLogin.location.zipCode%>"></p>
+          <small class="profile_subtitulo">Avatar</small>
+          <p><input type="file"></p>
+          
+          
+          <div class="profile_buttonBox">
+            <button class="profile_button" type="reset"> Resetear </button>
+            <button class="profile_button" type="submit"> Guardar </button>
           </div>
-            <div class="avatar-preview">
-              <img id="imagePreview" class="d-block " src="/images/users/<%= user.avatar ? user.avatar : 'default-user.png' %>" >
-               <!--  <div id="imagePreview" style="background-image: url(img-prueba-1.png);"> -->
-                </div>
-            </div>
+          </div>
+      </form>
+
+
+      <a class="profile_boxRow" href="/carrito">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="profile_carritoDatabox">
+          <p>Mi Carrito</p>
+          <small>Consulta tu orden en proceso</small>
         </div>
-        <div class="main__form-profile--name">
-          <h2>Hola <%= locals.userLogin.name %></h2>
+      </a>
+      <a class="profile_boxRow" href="/carrito">
+        <i class="fa-regular fa-file-lines"></i>
+        <div class="profile_carritoDatabox">
+          <p>Mis compras</p>
+          <small>Consulta el recivo de tus compras concretadas</small>
         </div>
-    </form>
-
-    <form class="main__form-info">
-
-      <article class="main__form__article--datos">
-        <div class="main__form__article-icon"><a href=""><i class="fa-solid fa-user"></i> Mis Datos</a> </div>
-        <p class="main__form-info-p">Gestioná tus datos personales.</p>
-        <div class="main__form__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
-
-      </article>
-      <article class="main__form__article--compras">
-        <div class="main__form__article-icon"><a href=""><i class="fa-solid fa-cart-shopping"></i> Mis compras </a> </div>
-        <p class="main__form-info-p">Seguí el estado de tus compras y consultá tus facturas.</p>
-        <div class="main__form__article__div--flecha"> <i class="fa-solid fa-chevron-right"></i></div>
-      </article>
-      
-      <article id="main__form__article--sesion" > 
-        <button  id="main__form__article--sesion-a" type="submit"><span>Cerrar sesion </span><i class="fa-solid fa-arrow-right-from-bracket"></i> </button>
-      </article>
-
-    </form>
-    
-  </main>
-
-  <%- include('../partials/footer')  %> 
-
-</body>
-<script src="/public/javaScript/profile.js"></script>
-
-</html>
+      </a>
+      </main>
+      <%- include('../partials/footer')  %> 

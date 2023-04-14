@@ -51,14 +51,21 @@ module.exports = {
         db.User.findOne({
             where : {
                 email : req.body.email
-            }
+            },
+        include : ['location']
         })
-        .then( ({id, name, rolId}) => {
+        .then( ({id, name,surname,email,password,rolId,location,avatar }) => {
 
             req.session.userLogin = {
                 id,
                 name,
-                rol : rolId
+                surname,
+                email,
+                password,
+                location,
+                avatar,
+                rolId,
+
             };
 
             if(req.body.remember){
@@ -77,29 +84,24 @@ module.exports = {
     },
 
     profile : (req,res) => {
-       const id = req.session.userLogin.id
-       console.log(id);
-       let user = readJSON('users.json').find(user => user.id === id);
+        const user = req.session.userLogin
+        console.log(req.session.userLogin)
+        return res.render('users/profile', {user})
+        },
+      
+
+      /*  let user = readJSON('users.json').find(user => user.id === id);
        console.log(user);
         return res.render('users/profile',{
             title : "perfil de sesión",
             user
-
-        })
-    },
+-
+        }) */
+    
     processProfile : (req,res) => {
        
         const id = req.session.userLogin.id
-        const users =  readJSON('users.json').map(user => {
-            if(user.id === id){
-                return {
-                    ...user,
-                    avatar: req.file ? req.file.filename : "default.png"
-                }
-            }
-            return user;
-        }) 
-        writeJSON('users.json', users);
+        return res.send(req.body)
         return res.redirect('/users/profile')
         
     },
