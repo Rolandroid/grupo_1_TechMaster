@@ -12,9 +12,11 @@ display: none;
     display: flex;
     flex-direction: column;
 }
-.main__p-regresar a{
+.main__p-regresar {
     text-decoration: none;
     color: white;
+    display: flex;
+    gap: 5px;
 }
 .main-profile h1{
     font-size: 20px;
@@ -101,24 +103,24 @@ border-radius: 50%;
     
 height: 100%;
 }
-.main__section-profile--name{
+.main__form-profile--name{
         
     display: none;
 }
-.main__section-info{    
+.main__form-info{    
     display: flex;
     flex-direction: column;
     
 }
-.main__section-info-p {
+.main__form-info-p {
     display: none;
 }
 
-.main__section-info a{
+.main__form-info a{
     color: white;
     text-decoration: none;
     }
-.main__section-info article{
+.main__form-info article{
     background-color: var(--colorGranate);
     height: 10%;
     color: white;
@@ -130,15 +132,15 @@ height: 100%;
     margin: 1px 23px;
     justify-content: space-between;
 }
-.main__section-info article:hover {
+.main__form-info article:hover {
     background-color: rgb(107, 34, 77) ;
     
     
 }
-#main__section__article--sesion{
+#main__form__article--sesion{
 height: 0;
 }
-#main__section__article--sesion-a {
+#main__form__article--sesion-a {
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -149,7 +151,7 @@ height: 0;
     border: none;
     height: 0;
     }
-.main__section__article--sesion-button {
+.main__form__article--sesion-button {
     border: none;
     background-color: var(--colorGranate);
     color: white;
@@ -170,7 +172,7 @@ height: 0;
     }
  
 @media (min-width: 768px) {
-    .main__section-profile{
+    .main__form-profile{
         display: flex;
         background-color: var(--colorGranate);
         margin: 21px auto;
@@ -186,24 +188,24 @@ height: 0;
         display: flex;
         margin: 27px;
     }
-    .main__section-profile--name{
+    .main__form-profile--name{
         
         color: white;       
         display: flex;       
         justify-content: center;      
         flex-direction: column-reverse;
     }
-    .main__section-info{
+    .main__form-info{
        display:flex;
        flex-direction: row;
        flex-wrap: wrap;
        justify-content: center;
        width: 100%;
     }
-    .main__section-info-p {
+    .main__form-info-p {
         display: block;
     }
-    .main__section-info article{
+    .main__form-info article{
        display:flex;
        flex-direction: column;
        padding: 0 11px;
@@ -212,38 +214,38 @@ height: 0;
        justify-content: center;
        margin: 14px 10px;
     }
-    .main__section-info p {
+    .main__form-info p {
         color: rgba(255, 255, 255, 0.596);
      }
-     .main__section__article-icon{
+     .main__form__article-icon{
         display: flex;
         width: 100%;
      }
-    .main__section__article--datos{
+    .main__form__article--datos{
         margin: 10px 120px;
         padding: 25px 122px;
         display: flex;
     }
-    #main__section__article--sesion{
+    #main__form__article--sesion{
         display: flex;
         width: 78%;
         height: 40px;
         margin: 19px auto;
 }
-    #main__section__article--sesion-a{
+    #main__form__article--sesion-a{
         width: 80%;
         display: flex;
         border: none;
         
     }
     
-    .main__section__article--sesion-button { 
+    .main__form__article--sesion-button { 
         padding: 15px;
         }
-    .main__section__article__div--flecha{
+    .main__form__article__div--flecha{
         display: none;
      }
-     .main__section-info a{
+     .main__form-info a{
         width: 100%;       
         display: flex;      
         gap: 10px;
@@ -252,7 +254,7 @@ height: 0;
 }
 
 @media (min-width: 1024px) {
-    .main__section-profile{
+    .main__form-profile{
         display: flex;
         flex-direction: row;
         background-color: var(--colorGranate);
@@ -269,14 +271,14 @@ height: 0;
         justify-content: flex-start;
         margin: 27px;
     }
-    .main__section-profile--name{
+    .main__form-profile--name{
         
         color: white;        
         display: flex;      
         justify-content: center;      
         align-items: center;
     }
-    .main__section-info{
+    .main__form-info{
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -285,7 +287,7 @@ height: 0;
         width: 100%;
     }
 
-    .main__section-info article{
+    .main__form-info article{
         display:flex;
         flex-direction: column;
         padding: 0 30px;
@@ -297,33 +299,33 @@ height: 0;
         justify-content: center;
         margin: 16px 22px;
     }
-    .main__section-info p {
+    .main__form-info p {
         /* margin: 3px 0; */
         color: rgba(255, 255, 255, 0.596);
      }
     
-    .main__section__article--datos{
+    .main__form__article--datos{
         margin: 10px 120px;
         padding: 25px 122px;
         display: flex;
     }
-    #main__section__article--sesion{
+    #main__form__article--sesion{
         
         display: flex;      
         width: 83%;     
         height: 40px;
         margin: 19px auto;
     }
-    #main__section__article--sesion-a{
+    #main__form__article--sesion-a{
         width: 100%;
         display: flex;
         border: none;
     }
-    .main__section__article--sesion-button {
+    .main__form__article--sesion-button {
         
         padding: 15px;
         }
-    .main__section__article__div--flecha{
+    .main__form__article__div--flecha{
 
         display: none;
      }
