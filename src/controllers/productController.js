@@ -45,8 +45,8 @@ module.exports = {
     })
       .then((categories) => {
         return res.render("products/creacion", {
-          categories,
-        })
+          categories}
+          )
       }).catch((error) => console.log(error));
   },
 
@@ -95,8 +95,7 @@ module.exports = {
     try {
       
   
-    const { name, image, description, discount, price, category, visible } =
-      req.body;
+    const { name, image, description, discount, price, category, visible} = req.body;
 
     const id = +req.params.id
     const removeImagesBefore = req.query.removeImageBefore

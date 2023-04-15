@@ -23,23 +23,23 @@
 
       <div class="profile_boxRow">
         <img class="profile_picture" src="/Images/users/<%= user.avatar? user.avatar : 'default-user.png' %>" alt="">
-        <h1 class="profile_greatings">Hola <%= locals.userLogin.name %>
-            <%=locals.userLogin.surname %>
+        <h1 class="profile_greatings">Hola <%= user.name %>
+            <%=user.surname %>
         </h1>
       </div>
-      <form class="profile_form" action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
+      <form class="profile_form" action="/users/profile?_method=PUT&removeImageBefore=1" method="POST" enctype="multipart/form-data">
         <div class="profile_box">
           <span class="profile_titulo">Mis datos</span>
           <small class="profile_subtitulo">Editá tu informacion personal</small>
 
-          <p>Nombre:<input name="name" type="text" value="<%=locals.userLogin.name%>"></p>
-          <p>Apellido:<input name="surname" type="text" value="<%=locals.userLogin.surname%>"></p>
-          <p>Email:<input name="email" type="text" value="<%=locals.userLogin.email%>"></p>
+          <p>Nombre:<input name="name" type="text" value="<%=user.name%>"></p>
+          <p>Apellido:<input name="surname" type="text" value="<%=user.surname%>"></p>
+          <p>Email:<input name="email" type="text" value="<%=user.email%>"></p>
           <small class="profile_subtitulo">Ubicacion</small>
-          <p>Direccion:<input name="address" type="text" value="<%=locals.userLogin.location.address%>"></p>
-          <p>Ciudad:<input name="city" type="text" value="<%=locals.userLogin.location.city%>"></p>
-          <p>Provincia:<input name="province" type="text" value="<%=locals.userLogin.location.province%>"></p>
-          <p>Codigo Postal:<input name="zipCode" type="text" value="<%=locals.userLogin.location.zipCode%>"></p>
+          <p>Direccion:<input name="address" type="text" value="<%=user.location.address%>"></p>
+          <p>Ciudad:<input name="city" type="text" value="<%=user.location.city%>"></p>
+          <p>Provincia:<input name="province" type="text" value="<%=user.location.province%>"></p>
+          <p>Codigo Postal:<input name="zipCode" type="text" value="<%=user.location.zipCode%>"></p>
           <small class="profile_subtitulo">Avatar</small>
           <p><input name="avatar" type="file"></p>
           
