@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <%- include('./partials/head',{title : 'About Us'}) %>
+<body class="aboutUs__home">
+  <main class="aboutUs__main">
+    <a class="aboutUs_header" href="/">
+      <img src="/Images/logo-x2.png" alt="">
+      <h1>Sobre nosotros</h1>
+    </a> 
+    <div class="bios_box">
+      <img src="/Images/users/default-user.png" alt="">
+      <div class="bio">
+        <h6>Nombre y apellido</h6>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, excepturi?</p>
+      </div>
+      <img src="/Images/users/default-user.png" alt="">
+      <div class="bio">
+        <h6>Nombre y apellido</h6>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, excepturi?</p>
+      </div>
+      <img src="/Images/users/default-user.png" alt="">
+      <div class="bio">
+        <h6>Nombre u apellido</h6>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, excepturi?</p>
+      </div>
+      <img src="/Images/users/default-user.png" alt="">
+      <div class="bio">
+        <h6>Nombre y apellido</h6>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, excepturi?</p>
+      </div>
+    </div>
+    <p class="aboutUs_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur velit quia deserunt at consequatur dignissimos </p>
+    <form class="aboutUs_form" action="" method="post">
+      <h3>Dejanos tu opinon</h3>
+      <input type="text">
+      <textarea name="comment"></textarea>
+      <button type="submit">comentar</button>
+    </form>
+    <div class="aboutUs_comments">
+      <h2>Comentarios</h2>
+      <div class="comment">
+        <span>nombre</span>
+        <div>
+          <p>lorem ipsum dolor</p></div>
+          <a>delete</a>
+        </div>
+    </div>
+  </main>
+  <%- include('./partials/footer')  %> 
+
+</body>
+</html>

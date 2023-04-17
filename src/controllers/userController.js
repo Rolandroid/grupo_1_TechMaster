@@ -57,9 +57,10 @@ module.exports = {
                 },
                 include: ['location']
             })
-                .then(({ id, name }) => {
+                .then(({ id, rolId, name }) => {
 
                     req.session.userLogin = {
+                        rol: rolId,
                         id,
                         name,
                     };

@@ -54,5 +54,8 @@ module.exports = {
     dashboard : (req, res) => {
         let products = readJSON('products.json')
         return res.render('dashboard',{products})
-    }
+    },
+    aboutUs : (req, res) => {
+      return res.render('aboutUs')
+  }
 }

@@ -1,0 +1,31 @@
+.aboutUs__home{
+}
+.aboutUs__main{}
+.aboutUs_header{
+    display: flex;
+}
+.aboutUs_header img{
+    width: 25px;
+}
+.aboutUs_header h1{}
+.bios_box{
+    display: flex;
+    align-items: flex-start;
+}
+.bios_box img{
+    width: 80px;
+}
+.bio{}
+.bio h2{}
+.bio p{}
+.aboutUs_text{}
+.aboutUs_form{
+    display: flex;
+    flex-direction: column;
+}
+.aboutUs_form h3{}
+.aboutUs_form input{}
+.aboutUs_form textarea{}
+.aboutUs_form button{}
+.aboutUs_comments{}
+.aboutUs_comments div{}
