@@ -1,53 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- HEAD -->
-  <%- include('./partials/head',{title : 'About Us'}) %>
-<body class="aboutUs__home">
-  <main class="aboutUs__main">
-    <a class="aboutUs_header" href="/">
-      <img src="/Images/logo-x2.png" alt="">
-      <h1>Sobre nosotros</h1>
-    </a> 
-    <div class="bios_box">
-      <img src="/Images/users/default-user.png" alt="">
-      <div class="bio">
-        <h6>Nombre y apellido</h6>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, excepturi?</p>
+<!-- HEAD -->
+<%- include('./partials/head',{title : 'About Us' }) %>
+
+  <body class="aboutUs__home">
+    <main class="aboutUs__main">
+      <div class="aboutUs_header">
+        <a href="/"><img src="/Images/logo-x2.png" alt=""></a>
+        <h1>Sobre nosotros</h1>
       </div>
-      <img src="/Images/users/default-user.png" alt="">
-      <div class="bio">
-        <h6>Nombre y apellido</h6>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, excepturi?</p>
+
+      <div class="bios">
+
+        <div class="bios_data">
+          <div>
+            <img src="/Images/users/default-user.png" alt="">
+            <div>
+              <h5>Florencia Amado</h5>
+              <h6>- 17 Años</h6>
+              <h6>- Lanús</h6>
+            </div>
+          </div>
+          <p class="bios_bio">Actualmente cursando 7mo en un Secundario Tecnico. Cuando no le dedico tiempo al curso,
+            mis tiempos libres los paso con mi familia/amigos o mirando series.</p>
+
+        </div>
+
+        <div class="bios_data">
+          <div>
+            <img src="/Images/users/default-user.png" alt="">
+            <div>
+              <h5>Carlos Guillen</h5>
+              <h6>- 19 Años</h6>
+              <h6>- CABA</h6>
+            </div>
+          </div>
+          <p class="bios_bio">Joven, con un breve conocimiento en informática, tengo terminado la secundaria en un
+            colegio informático y me gusta mucho el mundo de la Ciberseguridad.</p>
+        </div>
+        <div class="bios_data">
+          <div>
+            <img src="/Images/users/default-user.png" alt="">
+            <div>
+              <h5>Braian Almiron</h5>
+              <h6>- 26 Años</h6>
+              <h6>- Lanús</h6>
+            </div>
+          </div>
+            <p class="bios_bio">Actualmente cursando Desarrollador Web Full Stack de Fundación Formar (Digital House) y Argentina Programa.</p>
+        </div>
+        <div class="bios_data">
+          <div>
+            <img src="/Images/users/default-user.png" alt="">
+            <div>
+              <h5>Rolando Lisarazo</h5>
+              <h6>- 30 Años</h6>
+              <h6>- Córdoba</h6>
+            </div>
+          </div>
+          <p class="bios_bio">Entusiasta de el diseño de videojuegos y juegos de mesa. con carrera en construccion y
+            desempeño en tareas en equipo.</p>
+        </div>
       </div>
-      <img src="/Images/users/default-user.png" alt="">
-      <div class="bio">
-        <h6>Nombre u apellido</h6>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, excepturi?</p>
-      </div>
-      <img src="/Images/users/default-user.png" alt="">
-      <div class="bio">
-        <h6>Nombre y apellido</h6>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, excepturi?</p>
-      </div>
-    </div>
-    <p class="aboutUs_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur velit quia deserunt at consequatur dignissimos </p>
-    <form class="aboutUs_form" action="" method="post">
-      <h3>Dejanos tu opinon</h3>
-      <input type="text">
-      <textarea name="comment"></textarea>
-      <button type="submit">comentar</button>
-    </form>
-    <div class="aboutUs_comments">
-      <h2>Comentarios</h2>
-      <div class="comment">
-        <span>nombre</span>
-        <div>
-          <p>lorem ipsum dolor</p></div>
+      <h4 class="aboutUs_text">Este trabajo practico nos permitio crecer programadores y como equipo. Gracias al talento de los Profesores de Digital House pudimos explayar nuestro conocimiento y tecnica a la hora de construir un comercio digital. <br>Esperamos que te agrade la experiencia de navegar atravez de TechMaster y agradecemos inmensamente tu opinion o saludo en la seccion de comentario 😊</h4>
+      <form class="aboutUs_form" action="" method="post">
+        <h3>Dejanos tu opinon</h3>
+        <input type="text">
+        <textarea name="comment"></textarea>
+        <button type="submit">comentar</button>
+      </form>
+      <div class="aboutUs_comments">
+        <h2>Comentarios</h2>
+        <div class="comment">
+          <span>nombre</span>
+          <div>
+            <p>lorem ipsum dolor</p>
+          </div>
           <a>delete</a>
         </div>
-    </div>
-  </main>
-  <%- include('./partials/footer')  %> 
+      </div>
+    </main>
+    <%- include('./partials/footer') %>
 
-</body>
+  </body>
+
 </html>

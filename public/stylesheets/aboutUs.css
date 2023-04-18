@@ -1,26 +1,66 @@
 .aboutUs__home{
 }
-.aboutUs__main{}
+.aboutUs__main{
+    color: white;
+    background-color: var(--escalaDeGrises);
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.aboutUs_header:hover{
+    text-decoration: none;
+}
 .aboutUs_header{
     display: flex;
+    background-color: var(--colorGranate);
+    align-items: center;
 }
 .aboutUs_header img{
     width: 25px;
+    margin: 0 10px;
 }
-.aboutUs_header h1{}
-.bios_box{
+.aboutUs_header h1{
+    color: white;
+}
+.bios{
     display: flex;
-    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-.bios_box img{
+.bios_data{
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    max-width: 25%;
+}
+.bios_data div{
+    display: flex;
+    flex-direction: row;
+}
+.bios_data div img{
     width: 80px;
+    margin-right: 5px;
 }
-.bio{}
-.bio h2{}
-.bio p{}
-.aboutUs_text{}
+.bios_data div div{
+    display: flex;
+    flex-direction: column;
+}
+.bios_data div div h5{}
+.bios_data div div h6{}
+.bios_data p{
+    margin: 0;
+    padding: 0px 10px 15px 0;
+}
+
+.aboutUs_text{
+    margin: 0px 10px;
+    padding: 15px 25px;
+    background-color: var(--colorGranate);
+}
 .aboutUs_form{
     display: flex;
+    width: 320px;
     flex-direction: column;
 }
 .aboutUs_form h3{}
