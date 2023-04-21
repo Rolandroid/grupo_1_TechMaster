@@ -50,16 +50,34 @@ module.exports = {
       res.redirect('/');
     }
   },
-  navBar: (req, res) => {
-    let resultSearch = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
+  navBar: async (req, res) => {
     let { category } = req.params
-    if (category === "discount") {
-      resultSearch = resultSearch.filter(product => product.discount > 1)
-      category = "Oferta"
-      return res.render('results', { resultSearch, keywords: category })
-    } else {
-      resultSearch = resultSearch.filter(product => product.category === category)
-      return res.render('results', { resultSearch, keywords: category })
+    try {
+      if (category === "discount") {
+        let resultSearch = await db.Product.findAll({
+          where: {
+            discount: { [Op.gte]: 1 }
+          },
+          include: ['images']
+        })
+        return res.render('results', { resultSearch, keywords: category })
+      }
+      else {
+        let resultSearch = await db.Product.findAll({
+         
+          include: ['category','images'],
+          where: {
+            '$category.name$': category
+          }
+        }
+
+        )
+        console.log(resultSearch.product)
+        res.render('results', { resultSearch, keywords: category })
+
+      }
+    } catch (error) {
+      console.log(error)
     }
   },
   dashboard: async (req, res) => {
