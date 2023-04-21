@@ -70,7 +70,30 @@ module.exports = {
       return res.render('dashboard', { products });
     } catch (error) { console.log(error) }
   },
-  aboutUs: (req, res) => {
-    return res.render('aboutUs')
+
+
+  aboutUs: async (req, res) => {
+    try {
+       const comments = db.Comment.findAll()
+    return res.render('aboutUs',{comments})
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'error en la peticion de base de datos' });
+  }
+},
+
+
+
+  comments:(req, res) =>{
+    const {name, content} =req.body
+
+    db.Comment.create ({
+      name: name.trim(),
+      content,
+      visible : true
+    }).then(()=>{
+    return res.redirect('/aboutUs')
+  })
+    .catch((error) => console.log(error));
   }
 }

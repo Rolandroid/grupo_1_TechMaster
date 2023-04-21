@@ -63,21 +63,25 @@
         </div>
       </div>
       <h4 class="aboutUs_text">Este trabajo practico nos permitio crecer programadores y como equipo. Gracias al talento de los Profesores de Digital House pudimos explayar nuestro conocimiento y tecnica a la hora de construir un comercio digital. <br>Esperamos que te agrade la experiencia de navegar atravez de TechMaster y agradecemos inmensamente tu opinion o saludo en la seccion de comentario 😊</h4>
-      <form class="aboutUs_form" action="" method="post">
+      <form class="aboutUs_form" method="POST">
         <h3>Dejanos tu opinon</h3>
-        <input type="text">
-        <textarea name="comment"></textarea>
+        <input name="name" type="text">
+        <textarea name="content" name="comment"></textarea>
         <button type="submit">comentar</button>
       </form>
       <div class="aboutUs_comments">
         <h2>Comentarios</h2>
-        <div class="comment">
-          <span>nombre</span>
+        <% comments.forEach(comment => { %>
+          <div class="comment">
+             <span><% comment.name %></span>
           <div>
-            <p>lorem ipsum dolor</p>
+            <p><% comment.content %></p>
           </div>
-          <a>delete</a>
+          <a href="/Deletecomment/<% comment.id %>">delete</a>
         </div>
+        <% }) %>
+
+         
       </div>
     </main>
     <%- include('./partials/footer') %>
