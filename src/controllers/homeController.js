@@ -75,6 +75,7 @@ module.exports = {
   aboutUs: async (req, res) => {
     try {
        const comments = db.Comment.findAll()
+       console.log(comments);
     return res.render('aboutUs',{comments})
   } catch (error) {
     console.error(error);

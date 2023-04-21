@@ -71,15 +71,13 @@
       </form>
       <div class="aboutUs_comments">
         <h2>Comentarios</h2>
-        <% comments.forEach(comment => { %>
           <div class="comment">
-             <span><% comment.name %></span>
+             <span><% comments.name %></span>
           <div>
-            <p><% comment.content %></p>
+            <p><% comments.content %></p>
           </div>
-          <a href="/Deletecomment/<% comment.id %>">delete</a>
+          <a href="/Deletecomment/<% comments.id %>">delete</a>
         </div>
-        <% }) %>
 
          
       </div>
