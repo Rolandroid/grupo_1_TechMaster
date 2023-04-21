@@ -95,6 +95,9 @@
 .header--barra li a{
     color: white;
 }
+.header--barra li a:hover{
+    text-decoration: none;
+}
 .header--barra li a.activo {
     border-bottom: 3px solid white;
 }

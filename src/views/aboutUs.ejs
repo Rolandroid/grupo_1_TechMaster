@@ -4,11 +4,11 @@
 <%- include('./partials/head',{title : 'About Us' }) %>
 
   <body class="aboutUs__home">
+    <div class="aboutUs_header">
+      <a href="/"><img src="/Images/logo-x2.png" alt=""></a>
+      <h1>Sobre nosotros</h1>
+    </div>
     <main class="aboutUs__main">
-      <div class="aboutUs_header">
-        <a href="/"><img src="/Images/logo-x2.png" alt=""></a>
-        <h1>Sobre nosotros</h1>
-      </div>
 
       <div class="bios">
 
@@ -67,29 +67,31 @@
         de los Profesores de Digital House pudimos explayar nuestro conocimiento y tecnica a la hora de construir un
         comercio digital. <br>Esperamos que te agrade la experiencia de navegar atravez de TechMaster y agradecemos
         inmensamente tu opinion o saludo en la seccion de comentario 😊</h4>
-      <form class="aboutUs_form" method="POST">
-        <h3>Dejanos tu opinon</h3>
-        <input name="name" type="text">
-        <textarea name="content" name="comment"></textarea>
-        <button type="submit">comentar</button>
-      </form>
-      <div class="aboutUs_comments">
-        <h2>Comentarios</h2>
-        <% comments.forEach(comment=> { %>
+      <div class="aboutUs_commentsBox">
+        <form class="aboutUs_form" method="POST">
+          <h3>Dejanos tu opinon</h3>
+          <div>Nombre:<input name="name" type="text"></div>
+          <textarea name="content" name="comment"></textarea>
+          <button type="submit">comentar</button>
+        </form>
+        <div class="aboutUs_comments">
+          <h2>Comentarios</h2>
+          <% comments.forEach(comment=> { %>
 
-          <div class="comment">
-            <span>
-              <%= comment.name %>
-            </span>
-            <div>
+            
+
+
+
+            <div class="comment">
+              <span>
+                <%= comment.name %>
+              </span>
               <p>
                 <%= comment.content %>
               </p>
             </div>
-            <a href="/Deletecomment/<%= comment.id %>">delete</a>
-          </div>
-          <% }) %>
-
+            <% }) %>
+        </div>
 
       </div>
     </main>

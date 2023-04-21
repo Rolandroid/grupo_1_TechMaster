@@ -23,18 +23,34 @@ module.exports = {
 
   search: async (req, res) => {
     const { keywords, category } = req.query;
+    console.log(req.query)
 
-    if (keywords !== '') {
-      try {
-        const resultSearch = await db.Product.findAll({
+    try {
+      if(category){const resultSearch = await db.Product.findAll({
+          include: ['category','images'],
           where: {
             [Op.and]: [{
-              [Op.or]: [{ name: { [Op.substring]: keywords } }, { description: { [Op.substring]: keywords } }]
+              [Op.or]: [{ name: { [Op.substring]: keywords } }, { description: { [Op.substring]: keywords } },{ '$category.name$': { [Op.substring]: keywords } }]
             },
-            { categoryId: category },
+            { '$category.name$': category },
             { visible: true }]
-          },
-          include: ['images']
+          }
+        }
+
+        );
+
+        res.render('results', {
+          resultSearch,
+          keywords
+        });}
+        else{const resultSearch = await db.Product.findAll({
+          include: ['category','images'],
+          where: {
+            [Op.and]: [{
+              [Op.or]: [{ name: { [Op.substring]: keywords } }, { description: { [Op.substring]: keywords } },{ '$category.name$': { [Op.substring]: keywords } }]
+            },
+            { visible: true }]
+          }
         }
 
         );
@@ -43,12 +59,13 @@ module.exports = {
           resultSearch,
           keywords
         });
+
+        }
+        
       } catch (error) {
         console.log(error)
       }
-    } else {
-      res.redirect('/');
-    }
+    
   },
   navBar: async (req, res) => {
     let { category } = req.params
