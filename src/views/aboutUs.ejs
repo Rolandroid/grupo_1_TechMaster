@@ -47,7 +47,8 @@
               <h6>- Lanús</h6>
             </div>
           </div>
-            <p class="bios_bio">Actualmente cursando Desarrollador Web Full Stack de Fundación Formar (Digital House) y Argentina Programa.</p>
+          <p class="bios_bio">Actualmente cursando Desarrollador Web Full Stack de Fundación Formar (Digital House) y
+            Argentina Programa.</p>
         </div>
         <div class="bios_data">
           <div>
@@ -62,7 +63,10 @@
             desempeño en tareas en equipo.</p>
         </div>
       </div>
-      <h4 class="aboutUs_text">Este trabajo practico nos permitio crecer programadores y como equipo. Gracias al talento de los Profesores de Digital House pudimos explayar nuestro conocimiento y tecnica a la hora de construir un comercio digital. <br>Esperamos que te agrade la experiencia de navegar atravez de TechMaster y agradecemos inmensamente tu opinion o saludo en la seccion de comentario 😊</h4>
+      <h4 class="aboutUs_text">Este trabajo practico nos permitio crecer programadores y como equipo. Gracias al talento
+        de los Profesores de Digital House pudimos explayar nuestro conocimiento y tecnica a la hora de construir un
+        comercio digital. <br>Esperamos que te agrade la experiencia de navegar atravez de TechMaster y agradecemos
+        inmensamente tu opinion o saludo en la seccion de comentario 😊</h4>
       <form class="aboutUs_form" method="POST">
         <h3>Dejanos tu opinon</h3>
         <input name="name" type="text">
@@ -71,15 +75,22 @@
       </form>
       <div class="aboutUs_comments">
         <h2>Comentarios</h2>
-          <div class="comment">
-             <span><% comments.name %></span>
-          <div>
-            <p><% comments.content %></p>
-          </div>
-          <a href="/Deletecomment/<% comments.id %>">delete</a>
-        </div>
+        <% comments.forEach(comment=> { %>
 
-         
+          <div class="comment">
+            <span>
+              <%= comment.name %>
+            </span>
+            <div>
+              <p>
+                <%= comment.content %>
+              </p>
+            </div>
+            <a href="/Deletecomment/<%= comment.id %>">delete</a>
+          </div>
+          <% }) %>
+
+
       </div>
     </main>
     <%- include('./partials/footer') %>
