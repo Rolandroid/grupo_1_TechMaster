@@ -23,73 +23,47 @@ module.exports = {
                 },
             };
             res.json(respuesta);
-            // let categories = 
-
-
-            /*  db.Product.findAll({ include: ['category'] })
-                 .then(products => {
-                     products = products.map(product => {
-                         return {
-                             id: product.id,
-                             name: product.name,
-                             description: product.description,
-                             detail: "api/products/" + product.id
-                         };
- 
-                         // let categories = 
-                     }); */
-            /* 
-● api/products/
-○ Deberá devolver un objeto literal con la siguiente estructura:
-■ count → cantidad total de productos en la base.
-■ countByCategory → objeto literal con una propiedad por categoría
-con el total de productos.
- 
-{
-    pc: 5,
-    teclados: 10,
-    monitor: 2
-}
- 
-■ products → array con la colección de productos, cada uno con:
-● id
-● name
-● description
-● un array con principal relación de uno a muchos (ej:
-categories).
-● detail → URL para obtener el detalle. */
-
-
+            
         } catch (error) {
             console.log(error)
         }
     },
 
-    detail: (req, res) => {
-        db.product.findByPk(req.params.id)
-            .then(product => {
-                let usuario = {
-                    name: product.name,
-                    surname: product.surname,
-                    email: product.email,
-                    avatar: `http://localhost:3000/Images/products/${product.avatar}`,
-                    createdAt: product.createdAt,
-                    updatedAt: product.updatedAt
-                }
+    detail: async (req, res) => {
+       const product = await db.Product.findByPk(req.params.id,{
+        include : ['images','category']
+       })
+       try {
+       const arrayImages = product.images.map(image => {
+           return  `http://localhost:3000/Images/products/${image.name}`
+        });
+        let producto = {
+            id : product.id,
+            name: product.name,
+            description : product.description,
+            price: product.price,
+            discount: product.discount,
+            images: arrayImages,
+            category : product.category.name,
+            createdAt: product.createdAt,
+            updatedAt: product.updatedAt
+        }
 
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        total: product.length,
-                        url: '/api/actor/:id'
-                    },
-                    data: product
-                }
-                res.json(usuario);
-            }).catch(error => {
-                console.log(error);
-            });
-    },
+        /* let respuesta = {
+            meta: {
+                status: 200,
+                total: product.length,
+                url: '/api/actor/:id'
+            },
+            data: producto
+        } */
+        res.json(producto);
+       } catch (error) {
+        
+            console.log(error);
+       }
+            
+    }
 
 
 }
