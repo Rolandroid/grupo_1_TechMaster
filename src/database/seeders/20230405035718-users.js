@@ -14,7 +14,7 @@ module.exports = {
           name : "Admin",
           surname : "Test",
           email : "admin@test.com",
-          password : '$2a$10$schew/Gg1Yr5CiWrj74CX.G7MEukzK91F.RI53W4QManbJLLgILkO', 
+          password : '$2a$10$schew/Gg1Yr5CiWrj74CX.G7MEukzK91F.RI53W4QManbJLLgILkO',
           avatar : null,
           rolId : 1,
           locationId : 1,
