@@ -1,3 +1,4 @@
+const { name } = require('ejs')
 const db = require('../../database/models')
 
 module.exports = {
@@ -13,13 +14,23 @@ module.exports = {
             },{})
             //console.log(countByCategory)
 
+            const detalleProducto = products.map((product)=>{
+               return {
+                id: product.id,
+                name: product.name,
+                description: product.description,
+                category: product.category.name,
+                detailUrl:'http://localhost:3000/api/products/' + product.id
+                }
+            })
+           // console.log(detalleProducto);
             let respuesta = {
                 meta: {
                     status: 200,
                     total: products.length,
                     countByCategory,
                     url: 'api/products',
-                    products: products
+                    products: detalleProducto
                 },
             };
             res.json(respuesta);
