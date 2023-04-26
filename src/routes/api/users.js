@@ -6,7 +6,7 @@ const {list, detail} = require('../../controllers/api/userApiController');
 //api/users
 router
 .get('/',list)
-.post('/:id',detail)
+.get('/:id',detail)
 
 
 
