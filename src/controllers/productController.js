@@ -73,21 +73,15 @@ module.exports = {
     }).catch((error) => console.log(error));
 
   },
-  edicion: (req, res) => {
+  edicion: async (req, res) => {
     const { id } = req.params;
-    return db.Product.findByPk(id, {
-      include : ['images','category'],
-    })
-    .then((product) => {
-      return db.Category.findAll({
-        order: [["name"]],
-        attributes: ["name", "id"],
-      })
-      .then((categories) => {
-        return res.render("products/edicion", { product, categories});
-      })
-    })
-    .catch(error => console.log(error))    
+    try {
+      const product =await db.Product.findByPk(id, {include : ['images','category']})
+      const categories =await db.Category.findAll({order: [["name"]], attributes: ["name", "id"]})
+       return res.render("products/edicion", { product, categories});
+    } catch (error) {
+      console.log(error)
+    }  
   },
   
   update: async (req, res) => {
@@ -151,21 +145,13 @@ module.exports = {
     const id = req.params.id;
       
     try {
-      // Buscar el producto a eliminar
       const product = await db.Product.findByPk(id);
-      
-      // Verificar si el producto existe
       if (!product) {
         return res.status(404).json({ message: 'Producto no encontrado' });
       }
-  
-      // Buscar todas las imágenes asociadas al producto
       const images = await db.Image.findAll({ where: { productId: product.id } });
-  
-      // Eliminar todas las imágenes asociadas al producto
       await Promise.all(images.map(image => image.destroy()));
   
-      // Eliminar el producto
       product.destroy();
       
       return res.redirect('/products/list')

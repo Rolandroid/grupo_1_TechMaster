@@ -2,12 +2,9 @@
 <html lang="en">
 <!-- HEAD -->
 <%- include('./partials/head',{title : 'About Us' }) %>
-
+<%- include('./partials/header',{title : 'About Us' }) %>
   <body class="aboutUs__home">
-    <div class="aboutUs_header">
-      <a href="/"><img src="/Images/logo-x2.png" alt=""></a>
-      <h1>Sobre nosotros</h1>
-    </div>
+      <h1 class="aboutUs_title">Sobre nosotros</h1>
     <main class="aboutUs__main">
 
       <div class="bios">
@@ -79,9 +76,19 @@
           <% comments.forEach(comment=> { %>
 
             
-
-
-
+            <% if (locals.userLogin && locals.userLogin.rol=== 1 ) { %>
+              <div class="comment">
+                <div><span>
+                  <%= comment.name %>
+                </span>
+                <label for="visiblecheck<%= comment.id %>">Visible <input name="visiblecheck<%= comment.id %>" id="visiblecheck<%= comment.id %>" type="checkbox"> </label>
+              </div>
+                <p>
+                  <%= comment.content %>
+                </p>
+              </div>
+                <% }else{%>
+                  
             <div class="comment">
               <span>
                 <%= comment.name %>
@@ -90,6 +97,9 @@
                 <%= comment.content %>
               </p>
             </div>
+                  <% }%> 
+
+
             <% }) %>
         </div>
 

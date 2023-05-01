@@ -9,20 +9,11 @@
     gap: 15px;
     padding: 15px;
 }
-.aboutUs_header:hover{
-    text-decoration: none;
-}
-.aboutUs_header{
-    display: flex;
-    background-color: var(--colorGranate);
-    align-items: center;
-}
-.aboutUs_header img{
-    width: 25px;
-    margin: 0 10px;
-}
-.aboutUs_header h1{
+
+.aboutUs_title{
     color: white;
+    margin: 0;
+    background-color: var(--colorGranate);
 }
 .bios{
     display: flex;
@@ -77,10 +68,19 @@
     flex-wrap: wrap;
 }
 .comment{
+    max-width: 300px;
     padding: 0 10px;
     margin: 0 10px;
     background-color: var(--escalaDeGrises);
     border-radius: 10px;
 }
-.comment span{font-size: 1.5rem;}
+.comment div{
+    display: flex;
+    justify-content: space-between;
+}
+.comment div span{font-size: 1.5rem;}
+.comment div label {
+    user-select: none;
+}
+.comment div label input{}
 .comment p{margin-left: 12px;}
