@@ -48,7 +48,7 @@
 .aboutUs_text{
     margin: 0px 10px;
     padding: 15px 25px;
-    background-color: var(--colorGranate);
+    background-color: var(--colorVioleta);
 }
 .aboutUs_form{
     display: flex;
