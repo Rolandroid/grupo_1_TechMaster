@@ -20,6 +20,10 @@ module.exports = {
   resultados: (req, res) => {
     return res.render('resultados')
   },
+  contact: (req, res) => {
+    return res.render('contact')
+    
+ },
 
   search: async (req, res) => {
     const { keywords, category } = req.query;

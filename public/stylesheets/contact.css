@@ -1,0 +1,10 @@
+.contact__body{
+    background-color: var(--colorGrisOscuro);
+    color: white;
+}
+.contact__main{
+
+}
+.contact__form{
+    margin: 10%;
+}
