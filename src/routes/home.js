@@ -5,8 +5,6 @@ const {home,detalle,carrito,search,navBar,dashboard,aboutUs,comments} = require(
 
 router
 .get('/',home)
-.get('/detalle',detalle)
-.get('/carrito',carrito)
 .get('/search',search)
 .get('/products/list/:category',navBar)
 .get('/dashboard',dashboard)

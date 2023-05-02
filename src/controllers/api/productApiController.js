@@ -74,7 +74,34 @@ module.exports = {
             console.log(error);
        }
             
-    }
+    },
+    create: async (req, res) => {
+        try {
+          const { name, price, description, discount, categoryId, visible } =
+            req.body;
+      
+          const product = await db.Product.create({
+            name: name.trim(),
+            price,
+            description: description.trim(),
+            discount,
+            categoryId: categoryId,
+            visible : visible
+          });
+      
+          req.files.forEach(async (image) => {
+            await db.Image.create({
+              name: image.filename,
+              productId: product.id,
+            });
+          });
+      
+          return res.json(product);
+        } catch (error) {
+          console.log(error);
+          return res.status(500).json({ error: "Internal server error" });
+        }
+      }
 
 
 }

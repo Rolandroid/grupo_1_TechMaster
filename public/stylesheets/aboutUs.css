@@ -43,12 +43,14 @@
 .bios_data p{
     margin: 0;
     padding: 0px 10px 15px 0;
+    font-size: 0.8rem;
 }
 
 .aboutUs_text{
     margin: 0px 10px;
     padding: 15px 25px;
-    background-color: var(--colorVioleta);
+    background-color: var(--colorGranate);
+    font-size: 1rem;
 }
 .aboutUs_form{
     display: flex;

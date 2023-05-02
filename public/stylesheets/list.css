@@ -81,6 +81,7 @@
 }
 
 .articleResultados div div button{
+    cursor: pointer;
     border: solid 3px #cfff00;
     background-color: #0000003b;
     padding: 3px 20px 3px 20px;

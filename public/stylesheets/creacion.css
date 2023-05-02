@@ -1,7 +1,7 @@
 .estaCreacion{display: flex;justify-content: center;background: white;}
 .estaCreacion form{
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 85%;
     min-width: 300px;
     background-color: white;
@@ -51,14 +51,14 @@
 }
 
 .inputCategoria{
-    height: 34px;
+    height: 22px;
     background-color: lightgray;
     border: none;
     border-radius: 3px;
 }
 
 .inputColor{
-    height: 33px;
+    height: 21px;
     background-color: lightgray;
     border: none;
     border-radius: 3px;
@@ -86,8 +86,12 @@
     border-radius: 3px;
 }
 
-.esteBoton1{width: 80%;color: white;border: none;border-radius: 3px;background-color: var(--escalaDeGrises);}
+.esteBoton1{width: 80%;color: white;border: none;border-radius: 3px;text-align: center;background-color: var(--escalaDeGrises);font-size: 0.8rem;}
 
-.esteBoton2{width: 80%;}
+.esteBoton2{width: 80%;font-size: 0.8rem;}
 
-
+.esteBoton1:hover{
+    text-decoration: none;
+    color: white;
+    cursor: default;
+}

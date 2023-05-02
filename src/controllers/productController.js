@@ -78,6 +78,7 @@ module.exports = {
     try {
       const product =await db.Product.findByPk(id, {include : ['images','category']})
       const categories =await db.Category.findAll({order: [["name"]], attributes: ["name", "id"]})
+      console.log(product.dataValues)
        return res.render("products/edicion", { product, categories});
     } catch (error) {
       console.log(error)

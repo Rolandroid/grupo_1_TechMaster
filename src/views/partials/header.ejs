@@ -37,7 +37,7 @@
             Cuenta
           </button>
           <% if (locals.userLogin.rol=== 1 ) { %>
-            <button onclick="window.location.href='dashboard';" class="btn">
+            <button onclick="window.location.href='/dashboard';" class="btn">
               <span id="menu_icon" class="fa-solid fa-gauge">
               </span>
               Dashboard
@@ -106,9 +106,9 @@
       <li ><a href="/products/list/Teclado">Teclados</a></li>
       <li ><a href="/products/list/Auricular">Auriculares</a></li>
       <li class="magicList"><a href="/products/list/discount">Ofertas</a></li>
+      <li class="magicList"></li>
     </ul>
-    <ul class="ulContactos">
-      <li></li>
+    <ul class="header--barra">
       <li><a href="#footer">Contactos</a></li>
       <li><a href="/aboutUs">Sobre nosotros</a></li>
     </ul>

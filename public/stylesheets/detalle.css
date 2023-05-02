@@ -102,6 +102,7 @@
     padding: 8px;
     border-radius: 6px;
     width: 90%;
+    cursor: pointer;
 }
 
 .box__button-eliminar {
@@ -111,8 +112,9 @@
 
 .box__button-eliminar button {
     border: none;
-    background-color: red;
+    background-color: var(--colorGranate);
     color: white;
+    cursor: pointer;
     padding: 8px;
     border-radius: 6px;
     width: 90%;
@@ -130,7 +132,8 @@
     color: white;
     padding: 10px;
     border-radius: 6px;
-    width: 95%;
+    width: 43%;
+    cursor: pointer;
 }
 
 .box__button-agregar {
@@ -145,6 +148,7 @@
     padding: 10px;
     border-radius: 6px;
     width: 95%;
+    cursor: pointer;
 }
 
 .detalle__section-description hr {

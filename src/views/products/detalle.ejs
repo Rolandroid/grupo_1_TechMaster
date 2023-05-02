@@ -56,16 +56,15 @@
          </form>
         </div>
         <% } %>
-        
-        
-            <div class="box__button-comprar">
-               <a href="/carrito"> <button type="submit">Comprar ahora</button> </a>
-            </div>
-            <div class="box__button-agregar">
-              <a href="/carrito"> <button type="submit">Agregar al carrito</button> </a>
-            </div>
+        <div class="container__buttons">
+          <div class="box__button-editar">
+            <a href="/products/edicion/<%= dataValues.id %>"> <button type="submit">Comprar Ahora</button> </a>
+         </div>
+         <form class="box__button-eliminar" action="/products/remove/<%= dataValues.id %>?_method=DELETE" method="post">
+           <a href="/products/remove/<%= dataValues.id %>"> <button type="submit">Agregar al carrito</button> </a>
+         </form>
+        </div>
 
-  
       </section>
 
       <section class="detalle__section-description">
