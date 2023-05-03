@@ -11,10 +11,9 @@ module.exports = {
                return {
                 id: comment.id,
                 name: comment.name,
-                description: comment.content,
+                content: comment.content,
                 }
             })
-           // console.log(detalleProducto);
             let respuesta = {
                 meta: {
                     status: 200,
@@ -31,37 +30,25 @@ module.exports = {
     },
 
     one: async (req, res) => {
-       const product = await db.Product.findByPk(req.params.id,{
-        include : ['images','category']
-       })
-       try {
-       const arrayImages = product.images.map(image => {
-           return  `http://localhost:3000/Images/products/${image.name}`
-        });
-        let producto = {
-            id : product.id,
-            name: product.name,
-            description : product.description,
-            price: product.price,
-            discount: product.discount,
-            images: arrayImages,
-            category : product.category.name,
-            createdAt: product.createdAt,
-            updatedAt: product.updatedAt
+        const {id} = req.params
+        try {
+           const comment = await db.Comment.findByPk(id)
+        let aComment = {
+            id : comment.id,
+            name: comment.name,
+            content: comment.content
         }
 
-        /* let respuesta = {
+        let respuesta = {
             meta: {
                 status: 200,
-                total: product.length,
-                url: '/api/actor/:id'
+                url: 'http:localhost3000/api/comment/:id'
             },
-            data: producto
-        } */
-        res.json(producto);
+            data: aComment
+        }
+        res.json(respuesta);
        } catch (error) {
-        
-            console.log(error);
+        console.log(error);
        }
             
     }
