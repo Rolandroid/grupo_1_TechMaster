@@ -1,4 +1,4 @@
-const { name } = require('ejs')
+const paginate = require('sequelize-paginate');
 const db = require('../../database/models')
 
 module.exports = {
@@ -12,9 +12,8 @@ module.exports = {
                 obj[category.name] = category.products.length
                 return obj
             },{})
-            //console.log(countByCategory)
 
-            const detalleProducto = products.map((product)=>{
+            const productosListados = products.map((product)=>{
                return {
                 id: product.id,
                 name: product.name,
@@ -23,14 +22,13 @@ module.exports = {
                 detailUrl:'http://localhost:3000/api/products/' + product.id
                 }
             })
-           // console.log(detalleProducto);
             let respuesta = {
                 meta: {
                     status: 200,
                     total: products.length,
                     countByCategory,
                     url: 'api/products',
-                    products: detalleProducto
+                    products: productosListados
                 },
             };
             res.json(respuesta);
@@ -60,15 +58,15 @@ module.exports = {
             updatedAt: product.updatedAt
         }
 
-        /* let respuesta = {
+         let respuesta = {
             meta: {
                 status: 200,
                 total: product.length,
                 url: '/api/actor/:id'
             },
             data: producto
-        } */
-        res.json(producto);
+        }
+        res.json(respuesta);
        } catch (error) {
         
             console.log(error);

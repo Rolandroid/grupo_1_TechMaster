@@ -83,16 +83,13 @@
 .container__buttons {
     display: flex;
     padding-bottom: 10px;
-
-    justify-content: space-between;
     flex-wrap: wrap;
-
-
+    flex-direction: row;
 }
 
 .box__button-editar {
     text-align: center;
-    width: 48%;
+    width: 20%;
 }
 
 .box__button-editar button {
@@ -101,13 +98,13 @@
     color: white;
     padding: 8px;
     border-radius: 6px;
-    width: 90%;
+    width: 150px;
     cursor: pointer;
 }
 
 .box__button-eliminar {
     text-align: center;
-    width: 48%;
+    width: 20%;
 }
 
 .box__button-eliminar button {
@@ -117,7 +114,7 @@
     cursor: pointer;
     padding: 8px;
     border-radius: 6px;
-    width: 90%;
+    width: 150px;
 }
 
 .box__button-comprar {
