@@ -3,42 +3,45 @@ const db = require('../../database/models')
 
 
 module.exports = {
-    list:  (req, res) => {
-
-        const page = parseInt(req.query.page) || 1;
-        const limit = parseInt(req.query.limit) || 1;
-        const offset = (page - 1) * limit;
+    list: async (req, res) => {
+       try {
+            const limit = parseInt(req.query.limit) || 10;
+            const page = parseInt(req.query.page) || 1;
+            const offset = (page - 1) * limit;
         
-        db.User.findAndCountAll({
-            limit : limit,
-            offset : offset,
-        })
-        .then(users => {
-            const totalPages = Math.ceil(users.length / limit); 
-            users = users.rows.map(user => {
-                return {
-                  id: user.id,
-                  name: user.name,
-                  email: user.email,
-                  detail: "http://localhost:3000/api/users/" + user.id
-                };
-              });
-            
-
-            let respuesta = {
-                meta: {
-                    status : 200,
-                    total: users.length,
-                    url: 'api/users',
-                    users: users,
-                    page: page,
-                    totalPages
-                },
+            const userlist = await db.User.findAndCountAll({
+              limit: limit,
+              offset: offset, 
+            });
+        
+            const users = userlist.rows.map(user => {
+              return {
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                detail: `http://localhost:3000/api/users/${user.id}`,
+              };
+            });
+        
+            const meta = {
+              status: 200,
+              total: userlist.count,
+              page: page,
+              pages: Math.ceil(userlist.count / limit),
+              url: '/api/users',
             };
-                res.json(respuesta);
-            }).catch(error=>{
-                console.log(error);
-            })
+        
+            const response = {
+              meta: meta,
+              data: users,
+            };
+        
+        res.json(response);
+        
+       } catch (error) {
+            console.log(error);
+       }
+       
     },
 
     detail: (req, res) => {
