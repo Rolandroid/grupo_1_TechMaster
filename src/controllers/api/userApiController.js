@@ -14,7 +14,7 @@ module.exports = {
             offset : offset,
         })
         .then(users => {
-            const totalPages = Math.ceil(users.length / limit); 
+            const totalPages = Math.ceil(users.count / limit); 
             users = users.rows.map(user => {
                 return {
                   id: user.id,
@@ -28,7 +28,7 @@ module.exports = {
             let respuesta = {
                 meta: {
                     status : 200,
-                    total: users.length,
+                    total: users.count,
                     url: 'api/users',
                     users: users,
                     page: page,
