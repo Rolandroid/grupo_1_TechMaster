@@ -2,41 +2,51 @@ const paginate = require('sequelize-paginate');
 const db = require('../../database/models')
 
 module.exports = {
-    list: async (req, res) => {
+  list: async (req, res) => {
+    try {
+        const page = parseInt(req.query.page) || 1; // obtener la página actual del query string
+        const limit = parseInt(req.query.limit) || 4; // obtener el límite de registros por página del query string
+        const offset = (page - 1) * limit; // calcular el offset a partir de la página actual y el límite de registros por página
 
-        try {
-            const products = await db.Product.findAll({ include: ['category'] })
-            const categories = await db.Category.findAll({include:['products']})
+        const products = await db.Product.findAndCountAll({ // incluir count para saber la cantidad total de productos
+            include: ['category'],
+            limit,
+            offset,
+            order: [['createdAt', 'DESC']], // ordenar por fecha de creación
+        });
 
-            const countByCategory = categories.reduce((obj,category) => {
-                obj[category.name] = category.products.length
-                return obj
-            },{})
+        const totalPages = Math.ceil(products.count / limit); // calcular la cantidad total de páginas
+        const categories = await db.Category.findAll({ include: ['products'] });
 
-            const productosListados = products.map((product)=>{
-               return {
-                id: product.id,
-                name: product.name,
-                description: product.description,
-                category: product.category.name,
-                detailUrl:'http://localhost:3000/api/products/' + product.id
-                }
-            })
-            let respuesta = {
-                meta: {
-                    status: 200,
-                    total: products.length,
-                    countByCategory,
-                    url: 'api/products',
-                    products: productosListados
-                },
-            };
-            res.json(respuesta);
-            
-        } catch (error) {
-            console.log(error)
-        }
-    },
+        const countByCategory = categories.reduce((obj, category) => {
+            obj[category.name] = category.products.length;
+            return obj;
+        }, {});
+
+        const detalleProducto = products.rows.map((product) => ({
+            id: product.id,
+            name: product.name,
+            description: product.description,
+            category: product.category.name,
+            detailUrl: `http://localhost:3000/api/products/${product.id}`,
+        }));
+
+        const respuesta = {
+            meta: {
+                status: 200,
+                total: products.count,
+                totalPages, // agregar la cantidad total de páginas a la respuesta
+                currentPage: page, // agregar la página actual a la respuesta
+                countByCategory,
+                url: 'api/products',
+                products: detalleProducto,
+            },
+        };
+        res.json(respuesta);
+    } catch (error) {
+        console.log(error);
+    }
+},
 
     detail: async (req, res) => {
        const product = await db.Product.findByPk(req.params.id,{
