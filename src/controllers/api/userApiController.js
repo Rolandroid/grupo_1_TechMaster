@@ -3,10 +3,19 @@ const db = require('../../database/models')
 
 
 module.exports = {
-    list: (req, res) => {
-        db.User.findAll()
+    list:  (req, res) => {
+
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 1;
+        const offset = (page - 1) * limit;
+        
+        db.User.findAndCountAll({
+            limit : limit,
+            offset : offset,
+        })
         .then(users => {
-            users = users.map(user => {
+            const totalPages = Math.ceil(users.length / limit); 
+            users = users.rows.map(user => {
                 return {
                   id: user.id,
                   name: user.name,
@@ -21,7 +30,9 @@ module.exports = {
                     status : 200,
                     total: users.length,
                     url: 'api/users',
-                    users: users
+                    users: users,
+                    page: page,
+                    totalPages
                 },
             };
                 res.json(respuesta);
