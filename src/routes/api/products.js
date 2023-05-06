@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { uploadProductImages } = require('../../middlewares/upload');
 
 const {list, detail, create} = require('../../controllers/api/productApiController');
 
@@ -7,7 +8,7 @@ const {list, detail, create} = require('../../controllers/api/productApiControll
 router
 .get('/',list)
 .get('/:id',detail)
-.post('/create', create)
+.post('/create',uploadProductImages.array("images"), create)
 
 
 

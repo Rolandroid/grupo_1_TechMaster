@@ -73,6 +73,7 @@ module.exports = {
        }
             
     },
+    /* Para la funcion create, se espera por body: name, price, description, discount, categoryId, visible e images, donde images es un array de hasta 3 imagenes. */
     create: async (req, res) => {
         try {
           const { name, price, description, discount, categoryId, visible } =
@@ -86,15 +87,38 @@ module.exports = {
             categoryId: categoryId,
             visible : visible
           });
+          
       
           req.files.forEach(async (image) => {
-            await db.Image.create({
+             await db.Image.create({
               name: image.filename,
               productId: product.id,
             });
           });
-      
-          return res.json(product);
+          var finalProduct = {
+            status : 200,
+            url:"http://localhost:3000/api/products/create",
+            productData: {
+              name: product.dataValues.name,
+              price: +product.dataValues.price,
+              discount: +product.dataValues.discount,
+              finalPrice: product.dataValues.price - (product.dataValues.discount / 100) * product.dataValues.price,
+              description: product.dataValues.description,
+              categoryId : product.dataValues.discount,
+              images : req.files.map((file, index) => {
+                return images ={
+                  position: index,
+                  filename: file.filename,
+                  location: `http://localhost:3000/Images/products/${file.filename}`
+                };
+              })
+              
+            },
+          };
+
+          
+          console.log(finalProduct);
+          return res.json({finalProduct});          
         } catch (error) {
           console.log(error);
           return res.status(500).json({ error: "Internal server error" });
