@@ -178,6 +178,17 @@ module.exports = {
     }
 
   },
+  remove: async (req,res)=>{
+    const id = +req.params.id
+    try {
+      await db.Image.destroy({ where: { productId: id } });
+      await db.Product.destroy({ where: { id: id } });
+      return res.status(200).json({ message: 'Elimination successful' });
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ error: 'Internal server error' });
+    }
+  }
 
 }
 
