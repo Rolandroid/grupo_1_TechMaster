@@ -44,16 +44,12 @@ module.exports = {
                 products: detalleProducto,
             },
         };
+        
         res.json(respuesta);
     } catch (error) {
-        console.log(error);
+      res.json(error);
     }
 },
-
-    } catch (error) {
-      console.log(error)
-    }
-  },
 
   detail: async (req, res) => {
     const product = await db.Product.findByPk(req.params.id, {
