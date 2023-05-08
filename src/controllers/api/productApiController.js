@@ -98,8 +98,8 @@ module.exports = {
         });
       });
       var finalProduct = {
-        status: 200,
-        url: "http://localhost:3000/api/products/" + id,
+        status: 201,
+        url: "http://localhost:3000/api/products/",
         productData: {
           id : product.id,
           name: product.dataValues.name,
