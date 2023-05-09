@@ -6,6 +6,7 @@ const path = require("path");
 /* const { writeJSON, readJSON } = require("../data/index"); */
 const db = require("../database/models");
 const product = require("../database/models/product");
+const { validationResult } = require("express-validator");
 module.exports = {
     
   list: (req, res) => {
@@ -38,7 +39,6 @@ module.exports = {
 
   creacion: (req, res) => {
 
-
     const categories = db.Category.findAll({
       order: [["name"]],
       attributes: ["name", "id"],
@@ -51,9 +51,12 @@ module.exports = {
   },
 
   create: (req, res) => {
-    const { name, image, description, discount, price, category, visible } =
-      req.body;
+    const errors = validationResult(req);
 
+    /* res.send(errors) */
+
+    if (errors.isEmpty()) {
+      const { name, image, description, discount, price, category, visible } = req.body;
     db.Product.create ({
       name: name.trim(),
       price,
@@ -72,7 +75,26 @@ module.exports = {
       return res.redirect("/products/list");
     }).catch((error) => console.log(error));
 
-  },
+      }else{
+       
+        const categories = db.Category.findAll({
+          order: [["name"]],
+          attributes: ["name", "id"],
+        })
+        Promise.all([ categories])
+        .then(([ categories]) => {
+          return res.render("products/creacion", {
+            categories,
+            errors: errors.mapped(),
+            old: req.body,
+          });
+        })
+        .catch((error) => console.log(error));
+
+
+      }
+
+},
   edicion: async (req, res) => {
     const { id } = req.params;
     try {

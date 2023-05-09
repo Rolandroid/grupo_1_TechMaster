@@ -4,12 +4,13 @@ const router = express.Router();
 const {detalle,list,creacion,edicion,create,update,remove} = require('../controllers/productController');
 const checkUserAdmin = require('../middlewares/checkUserAdmin');
 const { uploadProductImages } = require('../middlewares/upload');
+const productCreateValidator = require('../validations/productCreateValidator');
 
 router
 .get('/detalle/:id',detalle)
 .get('/list',list)
 .get('/creacion',checkUserAdmin,creacion)
-.post('/creacion',uploadProductImages.array("images"),create)
+.post('/creacion',uploadProductImages.array("images"),productCreateValidator,create)
 .get('/edicion/:id',checkUserAdmin,edicion)
 .put('/edicion/:id',uploadProductImages.array("images"),update)
 .delete('/remove/:id',remove)
