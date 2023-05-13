@@ -18,6 +18,9 @@
         <div class="div_1">
           <label for="name"> Nombre </label>
           <input  class="inputNombre" type="form_text" class="texto" name="name" value="<%= product.name %>">
+          <small class="register__errors">
+            <%= locals.errors && errors.name ? errors.name.msg : null  %>
+          </small>
         </div>
 <div class="div_a">
   <div class="div_2">
@@ -43,15 +46,24 @@
       <div class="div_4">
         <label for="price"> Precio </label>
         <input type="number" class="inputPrecio" name="price" value="<%= product.price %>">
+        <small class="register__errors">
+          <%= locals.errors && errors.price ? errors.price.msg : null  %>
+        </small>
        </div> 
        <div class="div_5">
         <label for="discount"> Descuento </label>
-        <input type="number" class="inputDescuento" name="discount" value="<%= product.discount %>">
+        <input type="number" class="inputDescuento" name="discount" value="<%= locals.old && old.discount ? old.discount : product.discount%>">
+        <small class="register__errors">
+          <%= locals.errors && errors.discount ? errors.discount.msg : null  %>
+        </small>
       </div>
     </div>
       <div class="div_6">
         <label for="description"> Descripción </label>
         <textarea class="inputDescripcion" name="description" rows="5"><%= product.description %></textarea>
+        <small class="register__errors">
+          <%= locals.errors && errors.description ? errors.description.msg : null  %>
+        </small>
       </div>
       <div class="div_7" >
         <label for="images"> Agrega 3 imágenes </label>

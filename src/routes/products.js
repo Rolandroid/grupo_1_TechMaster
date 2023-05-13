@@ -5,6 +5,7 @@ const {detalle,list,creacion,edicion,create,update,remove} = require('../control
 const checkUserAdmin = require('../middlewares/checkUserAdmin');
 const { uploadProductImages } = require('../middlewares/upload');
 const productCreateValidator = require('../validations/productCreateValidator');
+const productEditValidator = require('../validations/productEditValidator');
 
 router
 .get('/detalle/:id',detalle)
@@ -12,7 +13,7 @@ router
 .get('/creacion',checkUserAdmin,creacion)
 .post('/creacion',uploadProductImages.array("images"),productCreateValidator,create)
 .get('/edicion/:id',checkUserAdmin,edicion)
-.put('/edicion/:id',uploadProductImages.array("images"),update)
+.put('/edicion/:id',uploadProductImages.array("images"),productEditValidator,update)
 .delete('/remove/:id',remove)
 
 

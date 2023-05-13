@@ -18,20 +18,23 @@
           <div class="div_1">
             <label for="name"> Nombre </label>
             <input class="inputNombre" type="form_text" name="name" value="<%= (locals.old && old.name) && old.name %>">
+            <small class="register__errors">
+              <%= locals.errors && errors.name ? errors.name.msg : null %>
+            </small>
           </div>
-          <small class="register__errors">
-            <%= locals.errors && errors.name ? errors.name.msg : null %>
-          </small>
 
 <div class="div_a">
         <div class="div_2">
           <label for="category"> Categoría </label>
-          <select  class="inputCategoria" name="category" id="">
-            <option value="" selected hidden>Seleccione...</option>
+          <select  class="inputCategoria" name="category"  id="">
+            <option value=""  selected hidden>Seleccione...</option>
             <% categories.forEach(({name, id}) => { %>
               <option value="<%= id %>"><%= name %></option>
              <% }) %>
           </select>
+          <small class="register__errors">
+            <%= locals.errors && errors.category ? errors.category.msg : null %>
+          </small>
         </div>
           <div class="div_4">
           <label for="visible">Visibilidad</label>
@@ -48,26 +51,26 @@
         <label for="price"> Precio </label>
         <input type="number" class="inputPrecio" name="price" 
         value="<%= locals.old && old.price ? old.price : null %>">
+        <small class="register__errors">
+          <%= locals.errors && errors.price ? errors.price.msg : null %>
+        </small>
        </div> 
-       <small class="register__errors">
-        <%= locals.errors && errors.price ? errors.price.msg : null %>
-      </small>
        
        <div class="div_5">
         <label for="discount"> Descuento </label>
         <input type="number" class="inputDescuento" name="discount" >
+        <small class="register__errors">
+          <%= locals.errors && errors.discount ? errors.discount.msg : null %>
+        </small>
       </div>
-      <small class="register__errors">
-        <%= locals.errors && errors.discount ? errors.discount.msg : null %>
-      </small>
     </div>
       <div class="div_6">
         <label for="description"> Descripción </label>
         <textarea class="inputDescripcion" name="description" rows="5"></textarea>
+        <small class="register__errors">
+          <%= locals.errors && errors.description ? errors.description.msg : null %>
+        </small>
       </div>
-      <small class="register__errors">
-        <%= locals.errors && errors.description ? errors.description.msg : null %>
-      </small>
       <div class="div_7" >
         <label for="images"> Agrega 3 imágenes </label>
         <input class="inputimagen" type="file" name="images" multiple>

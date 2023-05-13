@@ -109,6 +109,8 @@ module.exports = {
   
   update: async (req, res) => {
 
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
     try {
       
   
@@ -127,31 +129,29 @@ module.exports = {
 
     await product.save()
 
-    if (req.files) {
-
+    if (req.files && req.files.length) {
       const images = req.files.map(image => {
         return {
           name: image.filename,
           productId: id
         }
       })
-
+    
       if (removeImagesBefore) {
-        
         product.images.forEach(image => {
           if(/_products_/.test(image.name)){
-            
-          fs.existsSync(path.join(__dirname, `../../public/images/products/${image.name}`)) &&
-            fs.unlinkSync(path.join(__dirname, `../../public/images/products/${image.name}`))
+            fs.existsSync(path.join(__dirname, `../../public/images/products/${image.name}`)) &&
+              fs.unlinkSync(path.join(__dirname, `../../public/images/products/${image.name}`))
           }
         })
-
+    
         db.Image.destroy({
           where: { productId: id }
         })
       }
-
+    
       db.Image.bulkCreate(images)
+      console.log(images)
     }
 
     return res.redirect(`/products/detalle/` + id);
@@ -159,11 +159,23 @@ module.exports = {
       console.log(error)
   }
 
-  },
+  }else{
+    try {
+      const id = +req.params.id
+      const product = await db.Product.findByPk(id, {include : ['images','category']})
+      const categories = await db.Category.findAll({order: [["name"]], attributes: ["name", "id"]})
   
-     
-  
-
+      return res.render("products/edicion", {
+        product,
+        categories,
+        errors: errors.mapped(),
+        old: req.body,
+      });
+    } catch (error) {
+      console.log(error)
+    } 
+  }
+},
   remove: async(req, res) => {
     const id = req.params.id;
       
