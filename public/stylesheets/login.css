@@ -153,6 +153,11 @@ justify-content: center;
     margin-top: 10px;
 }
 
+.isInvalid {
+    border-bottom: 2px solid rgb(157, 0, 0);
+}
+
+
 @media (min-width:768px) {
 
     .login__main__div__logo{
@@ -240,4 +245,6 @@ justify-content: center;
     .login__main__form--forget{
         flex-direction: column;
     }
+    
+   
 }

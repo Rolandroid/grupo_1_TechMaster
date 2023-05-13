@@ -153,9 +153,15 @@
     }
 
     .register__span{
-        color: black;
-        font-size: 0.8rem;
-        font-weight: 600;
+        
+color: black;
+        
+font-size: 0.8rem;
+        
+font-weight: 600;
+    }
+    .isInvalid input {
+        border: 2px solid rgb(157, 0, 0);
     }
     @media (min-width:720px)  { 
 
@@ -233,7 +239,7 @@
             
         }
         .form__header--links{
-            margin-top: 50px;
+            margin-top: 32px;
         }
 
         
