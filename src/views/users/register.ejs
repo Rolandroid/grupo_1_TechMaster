@@ -50,7 +50,7 @@
                 <input type="text" placeholder="Nombre" class="<%= (locals.errors && errors.name) && 'is-invalid'%>"
                   name="name" id="name" value="<%= (locals.old && old.name) && old.name %>" autocomplete="off">
               </div>
-              <small class="register__errors">
+              <small class="register__errors " id="errorName">
                 <%= locals.errors && errors.name ? errors.name.msg : null %>
               </small>
 
@@ -58,14 +58,14 @@
                 <input type="text" placeholder="Apellido" name="surname" id="surname" autocomplete="off"
                   value="<%= (locals.old && old.surname) && old.surname %>">
               </div>
-              <small class="register__errors">
+              <small class="register__errors" id="errorSurname">
                 <%= locals.errors && errors.surname? errors.surname.msg : null %>
               </small>
               <div class="register__form__box">
                 <input type="email" placeholder="Email" name="email" id="email"
                   value="<%= (locals.old && old.email) && old.email %>">
               </div>
-              <small class="register__errors">
+              <small class="register__errors" id="errorEmail">
                 <%= locals.errors && errors.email ? errors.email.msg : null %>
               </small>
 
@@ -74,7 +74,7 @@
               <div class="register__form__box">
                 <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
               </div>
-              <small class="register__errors">
+              <small class="register__errors" id="errorPassword" >
                 <%= locals.errors && errors.password ? errors.password.msg : null %>
               </small>
 
@@ -85,7 +85,7 @@
                 <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2"
                   autocomplete="off">
               </div>
-              <small class="register__errors">
+              <small class="register__errors" id="errorPassword2">
                 <%= locals.errors && errors.password2 ? errors.password2.msg : null %>
               </small>
               <div class="register__form__oferta">
@@ -117,6 +117,8 @@
     </main>
 
     <%- include('../partials/scripts') %>
+    <script src="/javaScript/login.js"></script>
+
   </body>
 
 </html>

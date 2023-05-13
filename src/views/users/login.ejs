@@ -16,7 +16,7 @@
                 <a class="login__main__div__logo--tablet" href="/"><img src="/Images/LOGO.png" alt="Logo" /><img src="/Images/LOGO-TECHMASTER.svg" alt="Logo" /></a>
 
                 <div class="login__main__div__logo--textinfo">
-                    <h3>TechMaster te brindará el mejor servicio de compra y venta de productos tecnologicos y afines.</h3>
+                    <p>TechMaster te brindará el mejor servicio de compra y venta de productos tecnologicos y afines.</p>
                 </div>
                 
 
@@ -46,12 +46,12 @@
                 <div class="login__main__form--boxes">
                     <input type="email" placeholder="Email" name="email" id="email" autocomplete="off">
                 </div>
-                <small class="register__errors"><%= (locals.errors && errors.email) && errors.email.msg %></small>
+                <small class="register__errors" id="errorEmail"><%= (locals.errors && errors.email) && errors.email.msg %></small>
     
                 <div class="login__main__form--boxes">
                     <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
                 </div>
-                <small class="register__errors"><%= (locals.errors && errors.password) && errors.password.msg %></small>
+                <small class="register__errors" id="errorPass"><%= (locals.errors && errors.password) && errors.password.msg %></small>
                 <div class="register__form__oferta1">
                     <input type="checkbox" placeholder="" name="remember">
                       <span class="register__span" >Recordame</span>
@@ -70,6 +70,7 @@
     </main>
 
     <%- include('../partials/scripts')  %>
+    <script src="/javaScript/login.js"></script>
 </body>
 
 </html>
