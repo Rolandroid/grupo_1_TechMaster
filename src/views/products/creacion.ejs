@@ -74,6 +74,9 @@
       <div class="div_7" >
         <label for="images"> Agrega 3 imágenes </label>
         <input class="inputimagen" type="file" name="images" multiple>
+        <small class="register__errors">
+          <%= locals.errors && errors.images ? errors.images.msg : null %>
+        </small>
       </div>
       <div class="div_c">
       <div class="div_8">

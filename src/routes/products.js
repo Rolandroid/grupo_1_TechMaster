@@ -11,9 +11,9 @@ router
 .get('/detalle/:id',detalle)
 .get('/list',list)
 .get('/creacion',checkUserAdmin,creacion)
-.post('/creacion',uploadProductImages.array("images"),productCreateValidator,create)
+.post('/creacion',uploadProductImages,productCreateValidator,create)
 .get('/edicion/:id',checkUserAdmin,edicion)
-.put('/edicion/:id',uploadProductImages.array("images"),productEditValidator,update)
+.put('/edicion/:id',uploadProductImages,productEditValidator,update)
 .delete('/remove/:id',remove)
 
 

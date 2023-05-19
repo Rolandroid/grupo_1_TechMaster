@@ -8,8 +8,8 @@ const {list, detail, create, update, remove} = require('../../controllers/api/pr
 router
 .get('/',list)
 .get('/:id',detail)
-.post('/create',uploadProductImages.array("images"), create)
-.put('/update/:id',uploadProductImages.array("images"), update)
+.post('/create',uploadProductImages, create)
+.put('/update/:id',uploadProductImages, update)
 .delete('/:id',remove)
 
 
