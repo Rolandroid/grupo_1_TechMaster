@@ -151,7 +151,16 @@
         color: red;
         padding-bottom: 14px;
     }
-
+    .register-list-pass{
+        text-align: initial;
+        margin-left: 25%;
+        /* display: flex; */
+    }
+    .register-list-pass p{
+        margin: 0;
+        font-size: 12px;
+    }
+    
     .register__span{
         
 color: black;
@@ -183,7 +192,7 @@ font-weight: 600;
           }
           .register__form__box input{
             width: 50%;
-            margin: 10px;
+            margin: 5px;
           }
 
           .buttons__primary{
@@ -209,8 +218,9 @@ font-weight: 600;
         }
         .form__register{
             display: flex;
-            height: 100vh;
+            /* height: 100vh; */
             width: 100vw;
+            align-items: stretch;
         }
         .register__main__form{
             display: flex;

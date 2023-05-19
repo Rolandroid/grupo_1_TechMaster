@@ -1,11 +1,11 @@
-.estaCreacion{display: flex;justify-content: center;background: white;}
+.estaCreacion{display: flex;justify-content: center;background-image:url('../Images/setup4.jpg');background-repeat: no-repeat;background-size: cover;}
 .estaCreacion form{
     max-width: 550px;
     font-weight: 500;
     font-size: 1rem;
     width: 85%;
     min-width: 300px;
-    background-color: white;
+    background-color: hsl(0deg 0% 100% / 67%);
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
@@ -92,7 +92,10 @@
 .esteBoton2{width: 80%;font-size: 0.8rem;}
 
 .esteBoton1:hover{
-    text-decoration: none;
-    color: white;
-    cursor: default;
+    
+text-decoration: none;
+    
+color: white;
+    
+cursor: default;
 }

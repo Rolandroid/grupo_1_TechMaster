@@ -77,14 +77,14 @@
               <small class="register__errors" id="errorPass" >
                 <%= locals.errors && errors.password ? errors.password.msg : null %>
               </small>
-              <ul id="msgPass" class="small ms-2" hidden>
+              <ul id="msgPass" class="register-list-pass" hidden >
                 <p>Debe contener:</p>
-                <li id="mayu">Una mayúscula</li>
-                <li id="minu">Una minúscula</li>
-                <li id="num">Un número</li>
-                <li id="esp">Un caracter especial ($@!%*?&_-)</li>
-                <li id="min">Mínimo 6 caracteres</li>
-                <li id="max">Máximo 12 caracteres</li>
+                <p class="register-error-item" id="mayu">Una mayúscula</p>
+                <p class="register-error-item" id="minu">Una minúscula</p>
+                <p class="register-error-item" id="num">Un número</p>
+                <p class="register-error-item" id="esp">Un caracter especial ($@!%*?&_-)</p>
+                <p class="register-error-item" id="min">Mínimo 6 caracteres</p>
+                <p class="register-error-item" id="max">Máximo 12 caracteres</p>
               </ul>
 
 

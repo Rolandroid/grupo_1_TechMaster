@@ -1,11 +1,12 @@
 .boby__view__edicion{}
 .mainEdicion{
-    background-color: rgba(28, 28, 28, 1);
+   /*  background-color: rgba(28, 28, 28, 1); */
     padding: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    background-image:url('../Images/setup4.jpg');background-repeat: no-repeat;background-size: cover;
 }
 .titulo{
     color: white;
@@ -13,7 +14,8 @@
 .mainEdicion h1{/* color: #282626; */}
 .mainEdicion form{
     /* max-width: 443px; */
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
+    background-color: rgb(255 255 255 / 57%);
     border-radius: 5px;
     padding: 10px;
     color: #282626;
