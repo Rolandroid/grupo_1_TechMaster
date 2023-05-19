@@ -74,10 +74,18 @@
               <div class="register__form__box">
                 <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
               </div>
-              <small class="register__errors" id="errorPassword" >
+              <small class="register__errors" id="errorPass" >
                 <%= locals.errors && errors.password ? errors.password.msg : null %>
               </small>
-
+              <ul id="msgPass" class="register-list-pass" hidden >
+                <p>Debe contener:</p>
+                <p class="register-error-item" id="mayu">Una mayúscula</p>
+                <p class="register-error-item" id="minu">Una minúscula</p>
+                <p class="register-error-item" id="num">Un número</p>
+                <p class="register-error-item" id="esp">Un caracter especial ($@!%*?&_-)</p>
+                <p class="register-error-item" id="min">Mínimo 6 caracteres</p>
+                <p class="register-error-item" id="max">Máximo 12 caracteres</p>
+              </ul>
 
 
 
@@ -85,7 +93,7 @@
                 <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2"
                   autocomplete="off">
               </div>
-              <small class="register__errors" id="errorPassword2">
+              <small class="register__errors" id="errorPass2">
                 <%= locals.errors && errors.password2 ? errors.password2.msg : null %>
               </small>
               <div class="register__form__oferta">
@@ -94,12 +102,12 @@
                 <span class="register__span"> Recibir oferta de producto</span>
               </div>
 
-              <div class="register__form__oferta1">
+              <div class="register__form__oferta1" id="terms">
                 <input type="checkbox" placeholder="" name="policy"
                   value="<%= (locals.old && old.policy) && old.policy %>">
                 <span class="register__span">Estoy de acuerdo con los términos y la política</span>
               </div>
-              <small class="register__errors">
+              <small class="register__errors" id="error-terms">
                 <%= locals.errors && errors.policy ? errors.policy.msg : null %>
               </small>
 
@@ -117,7 +125,7 @@
     </main>
 
     <%- include('../partials/scripts') %>
-    <script src="/javaScript/login.js"></script>
+    <script src="/javaScript/register.js"></script>
 
   </body>
 
