@@ -70,17 +70,18 @@ module.exports = {
             });
     },
     verifyEmail : async (req,res) => {
-       try {
+      try {
 
-            let existUser = await verifyUserByEmail(req.body.email);
+          let existUser = await verifyUserByEmail(req.body.email);
 
-            return res.status(200).json({
-                ok : true,
-                data : {
-                    existUser
-                }
-            })
-          } catch (error) {
+          return res.status(200).json({
+              ok : true,
+              data : {
+                  existUser
+              }
+          })
+
+      } catch (error) {
           console.log(error)
           return res.status(error.status || 500).json({
               ok : false,
@@ -91,6 +92,5 @@ module.exports = {
           })
       }
   }
-
 
 }

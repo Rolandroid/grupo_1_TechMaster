@@ -36,10 +36,10 @@ window.addEventListener('load',function(){
         case !this.value.trim():
             msgError('errorName','El nombre es obligatorio',e)
             break;
-        case e.this.value.length > 2:
+        case this.value.length < 2 || this.value.trim().length > 20:
             msgError('errorName','Mímino 2 caracteres',e)
             break;
-        case regExLetter.test(e.this.value):
+        case !regExLetter.test(this.value.trim()):
             msgError('errorName','Solo caracteres alfabéticos',e)
             break;    
         default:
@@ -57,10 +57,10 @@ window.addEventListener('load',function(){
      case !this.value.trim():
          msgError('errorSurname','El apellido es obligatorio',e)
          break;
-     case e.this.value.length > 2:
+     case this.value.length < 2 || this.value.trim().length > 20:
          msgError('errorSurname','Mímino 2 caracteres',e)
          break;
-     case regExLetter.test(e.this.value):
+     case !regExLetter.test(this.value.trim()):
          msgError('errorSurname','Solo caracteres alfabéticos',e)
          break;    
      default:
@@ -114,29 +114,108 @@ window.addEventListener('load',function(){
 
    //validaciones del password
    password.addEventListener('blur',function(e){
-    if(!this.value.trim()){
-        msgError('errorPass','La contraseña es obligatoria',e)
-    }else{
-        this.classList.add('isValid')
-    }
+    get('msgPass').hidden = true;
+
+      switch (true) {
+        case !this.value.trim():
+        msgError("errorPass", "La contraseña es obligatorio", e);
+        break;
+        case !regExPass.test(this.value.trim()):
+        msgError("errorPass",
+        "Debe ser entre 6 y 12 caracteres y tener una mayúscula, una minúscula, carácter especial y un número",e);
+        break;
+        default:
+        this.classList.add("isValid");
+        break;
+  }
     })
     password.addEventListener('focus',function(e){
-        cleanError('errorPass', e)
+        cleanError('errorPass', e);
+        get("msgPass").hidden = false;
         })
 
+        const exRegs = {
+            exRegMayu: /[A-Z]/,
+            exRegMinu: /[a-z]/,
+            exRegNum: /[0-9]/,
+            exRegEsp: /[$@!%*?&_-]/,
+            exRegMin: /.{6,}/,
+            exRegMax: /.{13}/,
+          };
+          
+          const validPassword = (element, exReg, value) => {
+            if (!exReg.test(value)) {
+              get(element).classList.add("text-danger");
+            } else {
+              get(element).classList.add("text-success");
+              get(element).classList.remove("text-danger");
+            }
+          };
+          
+          const validMaxPassword = (element, exReg, value) => {
+            if (exReg.test(value)) {
+              get(element).classList.add("text-danger");
+            } else {
+              get(element).classList.add("text-success");
+              get(element).classList.remove("text-danger");
+            }
+          };
+        
+          password.addEventListener("keyup", function () {
+            validPassword("mayu", exRegs.exRegMayu, this.value);
+            validPassword("minu", exRegs.exRegMinu, this.value);
+            validPassword("num", exRegs.exRegNum, this.value);
+            validPassword("esp", exRegs.exRegEsp, this.value);
+            validPassword("min", exRegs.exRegMin, this.value);
+            validMaxPassword("max", exRegs.exRegMax, this.value);
+          });
+//validaciones pass 2
+          password2.addEventListener("blur", function (e) {
+            switch (true) {
+              case !this.value.trim():
+                msgError("errorPass2", "Debes confirmar la contraseña", e);
+                break;
+              case this.value.trim() !== password.value.trim():
+                msgError("errorPass2", "La confirmación no coincide", e);
+                break;
+              default:
+                this.classList.add("isValid");
+                break;
+            }
+          });
+
+          password2.addEventListener("focus", function (e) {
+            cleanError("errorPass2", e);
+          });
+    //validacion de terminos y politicas
+    get("terms").addEventListener("click", function (e) {
+        this.classList.remove("isInvalid");
+        get("error-terms").innerHTML = null;
+      });
 
     //validaciones del formulario 
     form.addEventListener('submit',function(e){
 
         e.preventDefault();
         let error = false;
-        for (let i = 0; i < this.elements.length -1; i++) {
-            if (!this.elements[i].value.trim() || this.elements[i].classList.contains('isInvalid')) {
-                error = true
+
+        if (!get("terms").checked) {
+        error = true;
+        get("error-terms").innerHTML = "Debes aceptar las bases y condiciones";
+        get("terms").classList.add("isInvalid");
+         }
+
+        for (let i = 0; i < this.elements.length - 2; i++) {
+            if (
+              !this.elements[i].value.trim() ||
+              this.elements[i].classList.contains("isInvalid")
+            ) {
+              error = true;
+              this.elements[i].classList.add("isInvalid");
+              get("error-form").innerHTML = "Hay campos con errores o están vacíos";
             }
         }
-   
-        !error && this.submit()
 
+        !error && this.submit();
     })
 })

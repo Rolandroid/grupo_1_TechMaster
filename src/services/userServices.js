@@ -1,7 +1,12 @@
 const db = require('../database/models');
 
 module.exports = {
-    
+    getAllUsers : async () => {
+
+    },
+    getUserById : async () => {
+
+    },
     verifyUserByEmail : async (email) => {
         try {
 
