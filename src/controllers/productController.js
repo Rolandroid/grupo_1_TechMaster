@@ -117,6 +117,14 @@ module.exports = {
 
   update: async (req, res) => {
     const errors = validationResult(req);
+
+
+    if (req.fileValidationError) {
+      errors.errors.push({
+       ...req.fileValidationError
+      });
+    }
+
     if (errors.isEmpty()) {
       try {
         const { name, image, description, discount, price, category, visible } =

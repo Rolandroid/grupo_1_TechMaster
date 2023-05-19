@@ -6,6 +6,7 @@ const checkUserAdmin = require('../middlewares/checkUserAdmin');
 const { uploadProductImages } = require('../middlewares/upload');
 const productCreateValidator = require('../validations/productCreateValidator');
 const productEditValidator = require('../validations/productEditValidator');
+const { uploadProductImagesEdit } = require('../middlewares/uploadProductoEdit');
 
 router
 .get('/detalle/:id',detalle)
@@ -13,7 +14,7 @@ router
 .get('/creacion',checkUserAdmin,creacion)
 .post('/creacion',uploadProductImages,productCreateValidator,create)
 .get('/edicion/:id',checkUserAdmin,edicion)
-.put('/edicion/:id',uploadProductImages,productEditValidator,update)
+.put('/edicion/:id',uploadProductImagesEdit,productEditValidator,update)
 .delete('/remove/:id',remove)
 
 

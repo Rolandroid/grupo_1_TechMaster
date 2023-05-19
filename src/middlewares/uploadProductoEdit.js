@@ -1,8 +1,6 @@
 const multer = require("multer");
 const path = require("path");
 
-
-
 const storageProductImages = multer.diskStorage({
   destination: function (req, file, callback) {
     callback(null, "public/images/products");
@@ -20,8 +18,7 @@ const configUploadProductImages = multer({
   fileFilter: (req, file, cb) => {
     let existError = false;
     const param = { param: "images" };
-    if (!file.originalname.match(/\.(jpg|jpeg|png|webp)$/)) {
-        
+    if (!file.originalname.match(/\.(jpg|png|jpeg)$/)) {
       existError = true;
       req.fileValidationError = {
         msg: "Los archivos deben ser imágenes",
@@ -41,15 +38,15 @@ const configUploadProductImages = multer({
   },
 });
 
-const uploadProductImages = (req, res, next) => {
+const uploadProductImagesEdit = (req, res, next) => {
   const upload = configUploadProductImages.array("images");
   
-  if (!req.files?.length || !req.files) {
+/*   if (!req.files?.length || !req.files) {
     req.fileValidationError = {
       msg: "Las imágenes son requeridas",
       param: "images",
     };
-  } 
+  }  */
   upload(req, res, function (error) {
     next();
   });
@@ -58,5 +55,5 @@ const uploadProductImages = (req, res, next) => {
 
 
 module.exports = {
-  uploadProductImages,
+  uploadProductImagesEdit,
 };
