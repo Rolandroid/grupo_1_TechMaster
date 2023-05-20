@@ -1,13 +1,16 @@
 const multer = require("multer");
 const path = require("path");
-const fs = require("fs")
+const fs = require("fs");
 
 const storageProductImages = multer.diskStorage({
   destination: function (req, file, callback) {
     callback(null, "public/images/products");
   },
   filename: function (req, file, callback) {
-    callback(null, `${Date.now()}_products_${path.extname(file.originalname)}`);
+    callback(
+      null,
+      `${Date.now()}_products_${path.extname(file.originalname)}`
+    );
   },
 });
 
@@ -29,21 +32,20 @@ const uploadProductImagesEdit = (req, res, next) => {
   const upload = configUploadProductImages.array("images");
 
   upload(req, res, function (error) {
- if (req.files.length !== 3) {
-      req.fileValidationError = "Debes ingresar tres imágenes ";
+    if (!req.files?.length) {
+    } else if (req.files.length !== 3) {
+      req.fileValidationError = "Debes ingresar 3 imágenes";
     }
+
     if (req.fileValidationError) {
       req.files.forEach((file) => {
         fs.unlinkSync(file.path);
       });
     }
- /*    console.log(req.fileValidationErro); */
+
     next();
   });
 };
-
-
-
 
 module.exports = {
   uploadProductImagesEdit,
