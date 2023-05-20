@@ -1,7 +1,6 @@
 const multer = require("multer");
 const path = require("path");
-
-
+const fs = require('fs')
 
 const storageProductImages = multer.diskStorage({
   destination: function (req, file, callback) {
@@ -13,49 +12,39 @@ const storageProductImages = multer.diskStorage({
 });
 
 const configUploadProductImages = multer({
-  storage: storageProductImages,
-  limit: {
-    files: 3,
-  },
-  fileFilter: (req, file, cb) => {
-    let existError = false;
-    const param = { param: "images" };
-    if (!file.originalname.match(/\.(jpg|jpeg|png|webp)$/)) {
-        
-      existError = true;
-      req.fileValidationError = {
-        msg: "Los archivos deben ser imágenes",
-        ...param,
-      };
-    } else if (req.files.length !== 3) {
-      req.fileValidationError = {
-        msg: "Debes ingresar tres imágenes",
-        ...param,
-      };
-      existError = true;
-    }
-    if (existError) {
-      return cb(null, false, req.fileValidationError);
-    }
-    cb(null, true);
-  },
-});
-
-const uploadProductImages = (req, res, next) => {
-  const upload = configUploadProductImages.array("images");
-  
-  if (!req.files?.length || !req.files) {
-    req.fileValidationError = {
-      msg: "Las imágenes son requeridas",
-      param: "images",
-    };
-  } 
-  upload(req, res, function (error) {
-    next();
+    storage: storageProductImages,
+    limits: {
+      files: 3,
+    },
+    fileFilter: (req, file, cb) => {
+      if (!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/)) {
+        req.fileValidationError = "Solo se permiten imágenes";
+        return cb(null, false, req.fileValidationError);
+      }
+      cb(null, true);
+    },
   });
-};
-
-
+  
+  const uploadProductImages = (req, res, next) => {
+    const upload = configUploadProductImages.array("images");
+  
+    upload(req, res, function (error) {
+      if (error instanceof multer.MulterError) {
+        req.fileValidationError = "Debes ingresar tres imágenes";
+      } else if (req.files.length !== 3) {
+        req.fileValidationError = "Debes ingresar tres imágenes";
+      }
+  
+      if (req.fileValidationError) {
+        req.files.forEach((file) => {
+          fs.unlinkSync(file.path);
+        });
+      }
+  
+      next();
+    });
+  };
+  
 
 module.exports = {
   uploadProductImages,
