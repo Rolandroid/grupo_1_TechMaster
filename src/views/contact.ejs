@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<%- include('./partials/head',{title : 'Contact' }) %>
+
+
+  <body class="contact__body">
+    <%- include('./partials/header') %>
+    
+    <main class="contact__main">
+      
+      <form class="contact__form">
+        <h1>Contacto</h1>
+        <div class="mb-3 div-input">
+          <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-floating div-input">
+          <label for="floatingTextarea">Comentario</label>
+          <textarea class="form-control" placeholder="Escriba su comentario" id="floatingTextarea"></textarea>
+        </div>
+        <button type="submit" class="btn btn-light div-input">Enviar</button>
+      </form>
+      
+    </main>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+
+  </body>
+
+</html>

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {home,detalle,carrito,search,navBar,dashboard,aboutUs,comments} = require('../controllers/homeController')
+const {home,detalle,carrito,search,navBar,dashboard,aboutUs,comments,contact} = require('../controllers/homeController')
 
 router
 .get('/',home)
@@ -10,5 +10,6 @@ router
 .get('/dashboard',dashboard)
 .get('/aboutUs',aboutUs)
 .post('/aboutUs',comments)
+.get('/contact',contact)
 
 module.exports = router;

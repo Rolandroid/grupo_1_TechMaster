@@ -11,6 +11,20 @@ module.exports = {
       products
     })
   },
+  carrito: (req, res) => {
+    return res.render('carrito')
+  },
+  detalle: (req, res) => {
+    return res.render('detalle')
+  },
+  resultados: (req, res) => {
+    return res.render('resultados')
+  },
+  contact: (req, res) => {
+    return res.render('contact')
+    
+ },
+
   search: async (req, res) => {
     const { keywords, category } = req.query;
     console.log(req.query)

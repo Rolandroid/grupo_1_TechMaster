@@ -1,0 +1,21 @@
+.contact__body{
+    background-color: var(--colorGrisOscuro);
+    color: white;
+}
+.contact__main{
+    background-image: url("../Images/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+.contact__form h1{
+    text-align: center;
+}
+.contact__form{
+    background-color: rgb(56 56 56 / 61%);
+    padding: 15%;
+}
+.div-input{
+    margin:5px;
+}
