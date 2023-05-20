@@ -131,9 +131,26 @@ module.exports = {
     const errors = validationResult(req);
 
 
-    if (req.fileValidationError) {
+/*     if (req.fileValidationError) {
       errors.errors.push({
        ...req.fileValidationError
+      });
+    } */
+/*     if (!req.files.length && !req.fileValidationError) {
+      errors.errors.push({
+        value: "",
+        msg: "El producto debe tener por lo menos una imagen",
+        param: "images",
+        location: "files",
+      });
+    } */
+
+    if (req.fileValidationError) {
+      errors.errors.push({
+        value: "",
+        msg: req.fileValidationError,
+        param: "images",
+        location: "files",
       });
     }
 
