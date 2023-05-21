@@ -2,9 +2,12 @@ body#profile-page .home__header--barra{
 display: none;
 }
 .body-profile {
-    background: rgb(43, 42, 42);
+    /* background: rgb(43, 42, 42); */
     font-family: "Open Sans", sans-serif;
     /* border: solid red dashed; */
+    background-image: url("../Images/profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 .main-profile{
@@ -13,6 +16,7 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #1c1c1c6e;
 }
 
 .main__p-regresar {
@@ -24,7 +28,7 @@ display: none;
 .profile_boxRow{
     color: white;
     display: flex;
-    background-color: var(--colorGranate);
+    background-color: #1c1c1cdb;
     align-items: center;
     width: 768px;
     margin-bottom: 10px;
@@ -34,7 +38,7 @@ display: none;
 }
 .profile_box{
     display: flex;
-    background-color: var(--colorGranate);
+    background-color: #1c1c1cdb;
     width: 768px;
     flex-direction: column;
     margin-bottom: 10px;
@@ -43,7 +47,7 @@ display: none;
 }
 .profile_box input{
     border: none;
-    background-color: #3b0d28;
+    background-color: #ffffff00;
     font-size: 1rem;
     color: white;
 }
@@ -52,7 +56,7 @@ display: none;
 }
 .profile_box p{
     border: none;
-    background-color: #3b0d28;
+    background-color: #ffffff5b;
     font-size: 1rem;
     color: white;
     width: 100%;
