@@ -9,16 +9,22 @@
     text-align: center;
 }
 .register__form__header{
-        background-color: var(--colorGranate);
-        color: white;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 8px;
-        align-items: center;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        flex-wrap: wrap;
+       /*  background-color: var(--colorGranate); */
+       color: white;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       gap: 8px;
+       align-items: center;
+       padding-top: 25px;
+       padding-bottom: 25px;
+       flex-wrap: wrap;
+       background-color: rgb(74 54 133 / 59%);
+    }
+    .register__main-capa{
+        background-image: url('../Images/giphy4.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     
 .register__form__header h2{
