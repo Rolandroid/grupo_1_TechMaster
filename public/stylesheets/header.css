@@ -68,6 +68,14 @@
     padding: 0.5rem;
     margin-bottom: 1rem;
 }
+.header--barra li a:hover::before {
+  transform: scale(1.1);
+}
+
+.header--barra li a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff;
+}
 
 .header--barra li {
     height: 2rem;
@@ -91,6 +99,14 @@
 .ulContactos li a {
     color: white;
     text-decoration: none;
+}
+.ulContactos li a:hover::before {
+  transform: scale(1.1);
+}
+
+.ulContactos li a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff;
 }
 .header--barra li a{
     color: white;
