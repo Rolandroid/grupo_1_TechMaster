@@ -29,7 +29,7 @@ display: none;
 .profile_boxRow{
     color: white;
     display: flex;
-    background-color: #ffffff73;
+    background-color: #333333a6;
     align-items: center;
     width: 768px;
     margin-bottom: 10px;
@@ -39,7 +39,7 @@ display: none;
 }
 .profile_box{
     display: flex;
-    background-color: #ffffff66;
+    background-color: #333333a6;
     width: 768px;
     flex-direction: column;
     margin-bottom: 10px;
@@ -50,14 +50,14 @@ display: none;
     border: none;
     background-color: #ffffff00;
     font-size: 1rem;
-    color: white;
+    color: #ffffffb8;
 }
 .profile_box input:focus-visible{
     outline: none;
 }
 .profile_box p{
     border: solid 2px #ffff;
-    background-color: #62272775;
+    /* background-color: #62272775; */
     font-size: 1rem;
     color: white;
     width: 100%;
