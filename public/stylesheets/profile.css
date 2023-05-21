@@ -5,10 +5,9 @@ display: none;
     /* background: rgb(43, 42, 42); */
     font-family: "Open Sans", sans-serif;
     /* border: solid red dashed; */
-    background-image: url("../Images/profile.jpg");
+    background-image: url("../Images/profile3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 .main-profile{
     color: white;
@@ -16,7 +15,9 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #1c1c1c6e;
+    /* height: 101vh; */
+    /* width: 100vw; */
+    /* background: #1c1c1c6e; */
 }
 
 .main__p-regresar {
@@ -28,7 +29,7 @@ display: none;
 .profile_boxRow{
     color: white;
     display: flex;
-    background-color: #1c1c1cdb;
+    background-color: #4d4d4d73;
     align-items: center;
     width: 768px;
     margin-bottom: 10px;
@@ -38,7 +39,7 @@ display: none;
 }
 .profile_box{
     display: flex;
-    background-color: #1c1c1cdb;
+    background-color: #4d4d4d73;
     width: 768px;
     flex-direction: column;
     margin-bottom: 10px;
@@ -55,14 +56,15 @@ display: none;
     outline: none;
 }
 .profile_box p{
-    border: none;
-    background-color: #ffffff5b;
-    font-size: 1rem;
+    border: solid 2px #ffffff63;
+    /* background-color: #727272a6; */
+    font-size: 1.1rem;
     color: white;
     width: 100%;
     margin-top: 3px;
     padding: 5px;
     border-radius: 5px;
+    margin: 16px 0px;
 }
 .main__p-regresar{}
 .profile_form{
@@ -89,13 +91,14 @@ display: none;
     align-self: flex-end;
 }
 .profile_button{
-    background-color: lightgrey;
+    background-color: #ffffff;
     border-radius: 5px;
     margin: 15px 15px 0px 15px;
-    padding: 5px;
+    padding: 10px;
     color: #282626;
-    font-weight:700;
-    width: 162px;
+    font-weight: 600;
+    width: 170px;
+    font-size: 1rem;
 }
 .profile_cart{}
 .profile_carrito{}
