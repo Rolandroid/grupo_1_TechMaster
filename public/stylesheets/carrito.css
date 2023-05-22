@@ -7,8 +7,13 @@
 
 .mainCarrito{
     padding: 5px;
-    background-color: dimgray;
+    background-color: var(--colorGranate);
+    /* background: #212121; */
     height: 100%;
+    color: white;/* 
+    background-image: url('../Images/cartcolor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 .mainCarrito h1{
     color: white;
@@ -23,12 +28,13 @@
 }
 
 .articleCarrito{
-    background: #cfcfcf;
+    background: #4d4d4d;
     width: 95%;
     display: flex;
     max-width: 570px;
     border-radius: 5px;
     margin: 0vw 2vw 2vw 2vw;
+    box-shadow: 0px -1px 13px 5px rgb(0 0 0 / 34%);
 }
 .articleCarrito img{
     width: 140px;
@@ -47,7 +53,7 @@
 }
 .articleCarrito div h3{
     border-bottom: 1px var(--escalaDeGrises) solid;
-    color: var(--escalaDeGrises);
+    color: white;
 }
 .articleCarrito div h2{
     
@@ -63,6 +69,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 9px;
+    color: white;
 }
 
 .articleCarrito div div button{
@@ -95,11 +102,12 @@
 
 .totalCarrito{
     margin: 0vw 2vw 2vw 2vw;
-    background: var(--escalaDeGrises);
+    background: #4d4d4d;
     width: 95%;
     display: flex;
     max-width: 570px;
     border-radius: 10px;
+    box-shadow: 0px -1px 5px 3px rgb(255 255 255 / 34%);
 }
 .totalCarrito img{
     width: 35%;
@@ -117,7 +125,7 @@
 }
 .totalCarrito div h1{
     border-bottom: 1px white solid;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .totalCarrito div h2{
     align-self: flex-end;
