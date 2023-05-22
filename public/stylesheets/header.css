@@ -12,6 +12,9 @@
     display: flex;
     align-items: center;
 }
+.TechmasterHomeLink i{
+    color: white;
+}
 .TechmasterHomeLink:hover {
     text-decoration: none;
     
