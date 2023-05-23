@@ -39,14 +39,14 @@
           <p>Direccion:   <input name="address" type="text" value="<%=user.location.address%>"></p>
           <p>Ciudad:   <input name="city" type="text" value="<%=user.location.city%>"></p>
           <p>Provincia:   <input name="province" type="text" value="<%=user.location.province%>"></p>
-          <p>Codigo Postal:   <input name="zipCode" type="text" value="<%=user.location.zipCode%>"></p>
+          <p>Codigo Postal:   <input id="input-cod-postal" name="zipCode" type="text" value="<%=user.location.zipCode%>"></p>
           <!-- <small class="profile_subtitulo">Avatar</small> -->
           <p><label for="avata">Avatar:   </label><input name="avatar" type="file"></p>
           
           
-          <div class="profile_buttonBox">
-            <button class="profile_button" type="reset"> Resetear </button>
-            <button class="profile_button" type="submit"> Guardar </button>
+          <div class="profile_buttonBox" >
+            <button class="btn btn-outline-light" type="reset"> Resetear </button>
+            <button class="btn btn-light" type="submit"> Guardar </button>
           </div>
           </div>
       </form>
@@ -67,4 +67,7 @@
         </div>
       </a> -->
       </main>
+
       <%- include('../partials/footer')  %> 
+      <%- include('../partials/scripts')  %>
+    </body>
