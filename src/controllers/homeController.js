@@ -58,7 +58,7 @@ module.exports = {
         }
 
         );
-
+ 
         res.render('results', {
           resultSearch,
           keywords

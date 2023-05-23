@@ -12,13 +12,14 @@
 
     <main class="estaCreacion">
      
-      <form method="POST" enctype="multipart/form-data">
+      <form method="POST" enctype="multipart/form-data" id="creationForm">
         
           <h1 class="esteTitulo">CREA TU PRODUCTO</h1>
           <div class="div_1">
             <label for="name"> Nombre </label>
-            <input class="inputNombre" type="form_text" name="name" value="<%= (locals.old && old.name) && old.name %>">
-            <small class="register__errors">
+            <input class=" inputNombre <%= (locals.errors && errors.name) && 'is-invalid'%>" 
+             id="name" name="name" value="<%= (locals.old && old.name) && old.name %>">
+            <small class="register__errors" id="errorName">
               <%= locals.errors && errors.name ? errors.name.msg : null %>
             </small>
           </div>
@@ -26,13 +27,13 @@
 <div class="div_a">
         <div class="div_2">
           <label for="category"> Categoría </label>
-          <select  class="inputCategoria" name="category"  id="">
+          <select  class="inputCategoria <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="category"  id="category">
             <option value=""  selected hidden>Seleccione...</option>
             <% categories.forEach(({name, id}) => { %>
               <option value="<%= id %>"><%= name %></option>
              <% }) %>
           </select>
-          <small class="register__errors">
+          <small class="register__errors" id="errorCategory">
             <%= locals.errors && errors.category ? errors.category.msg : null %>
           </small>
         </div>
@@ -49,16 +50,16 @@
         <div class="inputStock" ><input type=" number" class="numero" >Unidades</div> -->
       <div class="div_4">
         <label for="price"> Precio </label>
-        <input type="number" class="inputPrecio" name="price" 
+        <input type="number" class="inputPrecio <%= locals.errors && errors.price ? 'is-invalid' : null%>" name="price" id="price"
         value="<%= locals.old && old.price ? old.price : null %>">
-        <small class="register__errors">
+        <small class="register__errors" id="errorPrice">
           <%= locals.errors && errors.price ? errors.price.msg : null %>
         </small>
        </div> 
        
        <div class="div_5">
         <label for="discount"> Descuento </label>
-        <input type="number" class="inputDescuento" name="discount" >
+        <input type="number" class="inputDescuento" name="discount" value="0">
         <small class="register__errors">
           <%= locals.errors && errors.discount ? errors.discount.msg : null %>
         </small>
@@ -66,18 +67,21 @@
     </div>
       <div class="div_6">
         <label for="description"> Descripción </label>
-        <textarea class="inputDescripcion" name="description" rows="5"></textarea>
-        <small class="register__errors">
+        <textarea class="inputDescripcion <%= locals.errors && errors.price ? 'is-invalid' : null%>" name="description" rows="5" id="description"></textarea>
+        <small class="register__errors" id="errorDescription">
           <%= locals.errors && errors.description ? errors.description.msg : null %>
         </small>
       </div>
       <div class="div_7" >
-        <label for="images"> Agrega 3 imágenes </label>
-        <input class="inputimagen" type="file" name="images" multiple>
-        <small class="register__errors">
+        <label for="images" id="btnImages"> Agrega 3 imágenes </label>
+        <input class="inputimagen" type="file" name="images" id="images" multiple>
+        <small class="register__errors" id="errorImages">
           <%= locals.errors && errors.images ? errors.images.msg : null %>
         </small>
       </div>
+      <div class="col-12 col-md-6 d-flex justify-content-around" id="boxImagesPreview">
+      </div>
+
       <div class="div_c">
       <div class="div_8">
           <button class="esteBoton1" type="reset">Resetear</button>
@@ -92,6 +96,7 @@
     <%- include('../partials/footer') %>
 
     <%- include('../partials/scripts')  %>
+    <script src="/javaScript/creacion.js"></script>
 </body>
 
 </html>
