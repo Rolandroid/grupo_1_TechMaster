@@ -23,9 +23,11 @@
     padding-bottom: 25px;
 
 }
-
+#bolt{
+    width: 60px;
+}
 .login__main__div__logo--tablet{
-    display: none;
+    display: flex;
 }
 
 .login__main__div__titulo{
@@ -37,9 +39,6 @@
 }
 
 .login__main__div--links{
-  /*   width: 240px;
-    padding: 10px;
-    border: 1px solid rgb(255, 255, 255); */
     border: 1px solid white;
     width: 260px;
     padding: 5px 8px;text-align: center;

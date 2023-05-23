@@ -5,8 +5,8 @@
     
     } */
 .register__main__section__article{
-    
-    text-align: center;
+    text-align: center;
+    /* margin: 1px; */
 }
 .register__form__header{
        /*  background-color: var(--colorGranate); */
@@ -34,6 +34,9 @@
 .register__form__header a{
     text-decoration: none;
 }
+#bolt{
+    width: 60px;
+}
     
 .register__logo--master{
         text-align: center;
@@ -47,9 +50,9 @@
         display: flex;
 }
     
-.register__techmater{
+/* .register__techmater{
       display: none;
-}
+} */
 .register__descripcion{
     display:none;
     text-align: center;
