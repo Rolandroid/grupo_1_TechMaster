@@ -100,7 +100,7 @@ body#profile-page .home__header--barra{
         width: 240px;
         justify-content: center;
     }
-    .profile_button{
+    /* .profile_button{
         background-color: #ffffff;
         border-radius: 5px;
         margin: 15px 15px 0px 15px;
@@ -108,7 +108,7 @@ body#profile-page .home__header--barra{
         color: #282626;
         font-weight: 600;
         width: 170px;
-    }
+    } */
     /* .profile_cart{}
     .profile_carrito{}
     .profile_compras{} */
@@ -211,13 +211,6 @@ body#profile-page .home__header--barra{
                 gap: 10px;
                 align-self: flex-end;
             }
-            .profile_button{
-                background-color: #ffffff;
-                border-radius: 5px;
-                margin: 15px 15px 0px 15px;
-                padding: 10px;
-                color: #282626;
-                font-weight: 600;
-                width: 170px;
-    }
+            
+    
 }
