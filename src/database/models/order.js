@@ -11,11 +11,32 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsToMany(models.Product,{
+        through: 'Cart',
+        foreignKey:'orderId',
+        otherKey:'productId',
+        as: 'cart'
+      }),
+      this.belongsTo(models.User,{
+        foreignKey:'userId',
+        as:'user'
+      })
     }
   }
   Order.init({
     userId: DataTypes.INTEGER,
-    date: DataTypes.DATE
+    total: DataTypes.INTEGER,
+    date: DataTypes.DATE,
+    status:{
+      type:DataTypes.STRING,
+      defaultValue:"pending",
+      validate:{
+        isIn:{
+          args:["pending","completed","canceled"],
+          msg:"Los valores validos son: pending, completed o canceled"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Order',

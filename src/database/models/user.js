@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         as : 'location',
         foreignKey : 'locationId',
         onDelete : 'cascade'
+      }),
+      User.hasMany(models.Order,{
+        foreignKey:'userId',
+        as:'orders'
       })
 
       // define association here
