@@ -37,7 +37,7 @@ text-align: center;
     text-decoration: none;
 }
 #bolt{
-    width: 50px;
+    width: 60px;
 }
     
 .register__logo--master{
@@ -47,6 +47,7 @@ text-align: center;
         /* margin: 0; */
         justify-content: center;
         padding: 10px 0px 10px 0px;
+        width: 20p;
 }
 .register__logo {
         display: flex;
@@ -278,9 +279,9 @@ font-weight: 600;
         .register__main__form2{
             display: flex;
             flex-direction: column;
-            width: 58vw;
+            width: 60vw;
             justify-content: center;
-        }
+        }z
 
         .register__main__section__article-logo{
             width: 50%;
@@ -299,24 +300,6 @@ font-weight: 600;
         .form__header--links{
             margin-top: 32px;
         }
-        .register__form__box--buttons{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: center;
-        gap: 25px;
-        font-size: 20px;
-        margin-top: 3px ;
-    }
-    
-    .register__form__box--buttons a{
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-    }
-    .register__form__box--buttons a:hover{
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-    }
 
         
 
