@@ -22,7 +22,7 @@
 
 
       <div class="profile_boxRow">
-        <img class="profile_picture" src="/Images/users/<%= user.avatar? user.avatar : 'default-user.png' %>" alt="">
+        <img class="profile_picture" src="<%= /http/.test(user.avatar) ? user.avatar : ` /Images/users/${user.avatar || 'default-user.png'}` %>" alt="">
         <h1 class="profile_greatings">Hola <%= user.name %>
             <%=user.surname %>
         </h1>
