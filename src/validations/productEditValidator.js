@@ -11,6 +11,9 @@ module.exports = [
         .notEmpty().withMessage('El precio es obligatorio ').bail()
         .isInt({min:1}).withMessage('Solo números positivos'),
 
+        check('category')
+        .notEmpty().withMessage('La categoría es obligatorio'),
+
         check('description')
         .notEmpty().withMessage('La description es obligatorio ').bail()
         .isLength({min:20,  max: 500}).withMessage('mínimo 20 letras'),

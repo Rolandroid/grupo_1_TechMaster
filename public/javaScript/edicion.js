@@ -4,8 +4,12 @@ window.addEventListener('load',function(){
     const CreationForm = $('CreationForm')
     const name = $('name')
     const category = $('category');
+    const visible = $('visible');
     const price = $('price');
+    const discount = $('discount');
     const images = $('images');
+    const resetear = $('resetear');
+    const crear = $('crear');
     const description = $('description');
 
     //campos invalidos
@@ -38,18 +42,6 @@ window.addEventListener('load',function(){
        cleanError('errorName', e)
    })
 
-   category.addEventListener('blur', function (event) {
-    if (!this.value) {
-      msgError('errorCategory', "Debes indicar una categoria", event)
-    } else {
-      this.classList.add('is-valid')
-    }
-  })
-
-  category.addEventListener('focus', function () {
-    cleanError('errorCategory', event)
-  })
-
   price.addEventListener('blur', function (event) {
     if (!this.value) {
       msgError('errorPrice', "El precio es obligatorio", event)
@@ -58,10 +50,7 @@ window.addEventListener('load',function(){
     }
   })
 
-  description.addEventListener('focus', function () {
-    cleanError('errorDescription', event)
-  })
-
+  
   description.addEventListener('blur', function (event) {
     if (!this.value) {
       msgError('errorDescription', "La descripción es obligatoria", event);
@@ -74,13 +63,12 @@ window.addEventListener('load',function(){
       }
     }
   });
-
+  
   description.addEventListener('focus', function () {
-    cleanError('errorCategory', event)
+    cleanError('errorDescription', event)
   })
-
-
-
+  
+  
 
 
   const regExExt = /(.jpg|.jpeg|.png|.gif|.webp)$/i;

@@ -17,36 +17,38 @@
           <h1 class="esteTitulo">EDITA TU PRODUCTO</h1>
         <div class="div_1">
           <label for="name"> Nombre </label>
-          <input  class="inputNombre" type="form_text" class="texto" name="name" value="<%= product.name %>">
-          <small class="register__errors">
+          <input  class=" inputNombre <%= (locals.errors && errors.name) && 'is-invalid'%>" type="form_text" class="texto" name="name" id="name" value="<%= product.name %>">
+          <small class="register__errors"  id="errorName">
             <%= locals.errors && errors.name ? errors.name.msg : null  %>
           </small>
         </div>
 <div class="div_a">
   <div class="div_2">
     <label for="category"> Categoría </label>
-    <select name="category">
+    <select  class="inputCategoria <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="category" id="category">
       <% categories.forEach(({name, id}) => { %>
         <option value="<%= id %>" <%= product.category.id === id ? 'selected' : null %>><%= name %></option>
       <% }) %>
     </select>
+    <small class="register__errors" id="errorCategory">
+      <%= locals.errors && errors.category ? errors.category.msg : null %>
+    </small>
   </div>
         <div class="div_4">
           <label for="visible">Visibilidad</label>
-          <select class="inputColor" class="selector <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="visible" id="">
+          <select class="inputColor" class="selector" name="visible" id="">
             <option value="1" selected>Visible</option>
             <option value="0">No visible</option>
           </select>
         </div>
-          <small class="text-darger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null  %></small>
-    </div>
+      </div>
+        
+        
     <div class="div_b">
-<!--         <p class="esteStock">Indique el stock disponible:</p>
-        <div class="inputStock" ><input type=" number" class="numero" >Unidades</div> -->
       <div class="div_4">
         <label for="price"> Precio </label>
-        <input type="number" class="inputPrecio" name="price" value="<%= product.price %>">
-        <small class="register__errors">
+        <input type="number" class="inputPrecio <%= locals.errors && errors.price ? 'is-invalid' : null%>" id="price" name="price" value="<%= product.price %>">
+        <small class="register__errors" id="errorPrice">
           <%= locals.errors && errors.price ? errors.price.msg : null  %>
         </small>
        </div> 
@@ -60,17 +62,19 @@
     </div>
       <div class="div_6">
         <label for="description"> Descripción </label>
-        <textarea class="inputDescripcion" name="description" rows="5"><%= product.description %></textarea>
-        <small class="register__errors">
+        <textarea class="inputDescripcion  <%= locals.errors && errors.price ? 'is-invalid' : null%>" name="description" id="description" rows="5"><%= product.description %></textarea>
+        <small class="register__errors" id="errorDescription">
           <%= locals.errors && errors.description ? errors.description.msg : null  %>
         </small>
       </div>
       <div class="div_7" >
         <label for="images"> Agrega 3 imágenes </label>
-        <input class="inputimagen" type="file" name="images" multiple>
-        <small class="register__errors">
+        <input class="inputimagen" type="file" name="images" id="images" multiple>
+        <small class="register__errors" id="errorImages">
           <%= locals.errors && errors.images ? errors.images.msg : null  %>
         </small>
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-around" id="boxImagesPreview">
       </div>
       <div class="div_c">
       <div class="div_8">
@@ -89,6 +93,7 @@
     <%- include('../partials/footer') %>
 
     <%- include('../partials/scripts')  %>
+    <script src="/javaScript/edicion.js"></script>
 </body>
 
 </html>
