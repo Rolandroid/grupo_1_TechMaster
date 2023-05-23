@@ -5,8 +5,10 @@
     
     } */
 .register__main__section__article{
-    text-align: center;
-    /* margin: 1px; */
+    
+text-align: center;
+    
+/* margin: 1px; */
 }
 .register__form__header{
        /*  background-color: var(--colorGranate); */
@@ -35,14 +37,14 @@
     text-decoration: none;
 }
 #bolt{
-    width: 60px;
+    width: 50px;
 }
     
 .register__logo--master{
         text-align: center;
         align-items: center;
         display: flex;
-        margin: 0;
+        /* margin: 0; */
         justify-content: center;
         padding: 10px 0px 10px 0px;
 }
@@ -122,7 +124,7 @@
     /* .register__form__box--buttons{
     
     } */
-    .register__form__box--buttons a{
+    /* .register__form__box--buttons a{
         
     text-decoration: none;
     font-weight: 700;
@@ -154,6 +156,24 @@
     }
     .buttons__secondary:hover a{
         color: white;
+    } */
+    .register__form__box--buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: center;
+        gap: 25px;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    
+    .register__form__box--buttons a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    .register__form__box--buttons a:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
     }
 
     .register__errors{
@@ -211,6 +231,25 @@ font-weight: 600;
           .buttons__secondary{
             width: 25%;
           }
+          .register__form__box--buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: center;
+        gap: 25px;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    
+    .register__form__box--buttons a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    .register__form__box--buttons a:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
 
     }
     
@@ -239,7 +278,7 @@ font-weight: 600;
         .register__main__form2{
             display: flex;
             flex-direction: column;
-            width: 60vw;
+            width: 58vw;
             justify-content: center;
         }
 
@@ -260,6 +299,24 @@ font-weight: 600;
         .form__header--links{
             margin-top: 32px;
         }
+        .register__form__box--buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: center;
+        gap: 25px;
+        font-size: 20px;
+        margin-top: 3px ;
+    }
+    
+    .register__form__box--buttons a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    .register__form__box--buttons a:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
 
         
 
