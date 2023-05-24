@@ -102,9 +102,9 @@ text-decoration: none;
     }
 
     .main__ul--info img{
-        display: flex;
+        /* display: flex; */
         gap: 30px;
-        margin: 0px;
+        /* margin: 0px; */
         width: 72%;
     }
 

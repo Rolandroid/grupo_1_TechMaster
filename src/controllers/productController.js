@@ -120,8 +120,8 @@ module.exports = {
         order: [["name"]],
         attributes: ["name", "id"],
       });
-      console.log(product.dataValues);
       return res.render("products/edicion", { product, categories });
+      return res.json(product);
     } catch (error) {
       console.log(error);
     }

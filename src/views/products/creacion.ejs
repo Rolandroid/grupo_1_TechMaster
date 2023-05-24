@@ -59,8 +59,8 @@
        
        <div class="div_5">
         <label for="discount"> Descuento </label>
-        <input type="number" class="inputDescuento" name="discount" value="0">
-        <small class="register__errors">
+        <input type="number" class="inputDescuento <%= locals.errors && errors.discount ? 'is-invalid' : null%>" name="discount" value="0" id="discount">
+        <small class="register__errors" id="errorDiscount">
           <%= locals.errors && errors.discount ? errors.discount.msg : null %>
         </small>
       </div>
@@ -79,7 +79,7 @@
           <%= locals.errors && errors.images ? errors.images.msg : null %>
         </small>
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-around" id="boxImagesPreview">
+      <div style="display:flex;justify-content: space-evenly;" id="boxImagesPreview">
       </div>
 
       <div class="div_c">

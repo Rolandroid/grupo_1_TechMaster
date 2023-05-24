@@ -9,17 +9,17 @@ module.exports = [
 
         check('price')
         .notEmpty().withMessage('El precio es obligatorio ').bail()
-        .isInt({min:1}).withMessage('Solo números positivos'),
+        .isInt({min:1}).withMessage('El precio tiene que ser mayor a 0'),
 
         check('category')
-        .notEmpty().withMessage('La categoría es obligatorio'),
+        .notEmpty().withMessage('La categoría es obligatoria'),
 
         check('description')
-        .notEmpty().withMessage('La description es obligatorio ').bail()
+        .notEmpty().withMessage('La description es obligatoria').bail()
         .isLength({min:20,  max: 500}).withMessage('mínimo 20 letras'),
 
         check('discount')
-        .isInt({min:0,  max: 100}).withMessage('El descuento debe ser mínimo 0 a 100'),
+        .isInt({min:0,  max: 100}).withMessage('El descuento tiene que ser entre 0 y 100'),
 
 
     ]

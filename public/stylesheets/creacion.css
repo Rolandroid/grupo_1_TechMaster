@@ -29,7 +29,7 @@
 .div_3{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
 
 .div_b{display: flex;}
-.div_4{display: flex;margin: 1% 2%;flex-direction: column;width: 50%;}
+.div_4{display: flex;margin: 2% 2%;flex-direction: column;width: 50%;}
 .div_5{display: flex ;margin: 2%;flex-direction: column;width: 50%;}
 
 .div_6{display: flex;margin: 0 2%;flex-direction: column;}
@@ -46,6 +46,7 @@
 }
 
 .inputNombre{
+    padding-left: 5px;
     background-color: lightgray;
     border: none;
     border-radius: 3px;
@@ -66,6 +67,7 @@
 }
 
 .inputPrecio{
+    padding-left: 5px;
     background-color: lightgray;
     border: none;
     border-radius: 3px;
@@ -76,10 +78,11 @@
     background-color: lightgray;
     border: none;
     border-radius: 3px;
-    width: 100%;
+    /* width: 100%; */
+    padding-left: 5px;
 }
 
-.inputDescripcion{}
+.inputDescripcion{padding-left: 5px;}
 
 .inputimagen{
     background-color: lightgray;
@@ -99,3 +102,5 @@ color: white;
     
 cursor: default;
 }
+
+.magicImage{}

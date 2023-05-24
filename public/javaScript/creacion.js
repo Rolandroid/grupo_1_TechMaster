@@ -5,8 +5,10 @@ window.addEventListener('load',function(){
     const name = $('name')
     const category = $('category');
     const price = $('price');
+    const discount = $('discount');
     const images = $('images');
     const description = $('description');
+
 
     //campos invalidos
     const msgError = (element,message, {target}) => {
@@ -53,13 +55,27 @@ window.addEventListener('load',function(){
   price.addEventListener('blur', function (event) {
     if (!this.value) {
       msgError('errorPrice', "El precio es obligatorio", event)
+    }else if(this.value < 1){
+      msgError('errorPrice', "El precio tiene que ser mayor a 0", event)
     } else {
       this.classList.add('is-valid')
     }
   })
 
-  description.addEventListener('focus', function () {
-    cleanError('errorDescription', event)
+  price.addEventListener('focus', function () {
+    cleanError('errorPrice', event)
+  })
+
+  discount.addEventListener('blur', function (event) {
+    if(this.value < 0 || this.value > 100 ){
+      msgError('errorDiscount', "El descuento tiene que ser entre 0 y 100", event)
+    } else {
+      this.classList.add('is-valid')
+    }
+  })
+
+  discount.addEventListener('focus', function () {
+    cleanError('errorDiscount', event)
   })
 
   description.addEventListener('blur', function (event) {
