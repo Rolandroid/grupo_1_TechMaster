@@ -4,13 +4,13 @@
 
 const users = require('../../data/users.json');
 
-const location = users.map(({ }) => {
-  return {
+const location =  [{
 
     address:"Calle 111",
     city: "Cordoba",
     province: "Cordoba",
     zipCode: "1324",
+    userId : 1,
     createdAt: new Date(),
     updatedAt: new Date(),
   }, {
@@ -18,10 +18,10 @@ const location = users.map(({ }) => {
     city: "Lanus",
     province: "Buenos Aires",
     zipCode: 321,
+    userId : 2,
     createdAt: new Date(),
     updatedAt: new Date(),
-  }
-});
+  }];
 
 
 module.exports = {

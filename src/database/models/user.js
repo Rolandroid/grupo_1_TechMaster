@@ -10,11 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      User.belongsTo(models.Location,{
+
+     /*  User.hasOne(models.Location,{
         as : 'location',
         foreignKey : 'locationId',
         onDelete : 'cascade'
-      })
+      }) */
 
       // define association here
     }
@@ -24,8 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     surname: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    rolId: DataTypes.INTEGER,
-    locationId: DataTypes.INTEGER,
+    socialId: DataTypes.STRING,
+    socialProvider: DataTypes.STRING,
+    rolId: { type: DataTypes.INTEGER, defaultValue: 2 },
     avatar: DataTypes.STRING
   }, {
     sequelize,

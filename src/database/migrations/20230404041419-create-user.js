@@ -24,20 +24,17 @@ module.exports = {
       avatar: {
         type: Sequelize.STRING,
       },
+      socialId: {
+        type: Sequelize.STRING
+      },
+      socialProvider: {
+        type: Sequelize.STRING
+      },
       rolId: {
         type: Sequelize.INTEGER,
         references : {
           model :{
             tableName : "Rols"
-          },
-          key : 'id'
-        }
-      },
-      locationId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model :{
-            tableName : "Locations"
           },
           key : 'id'
         }
