@@ -64,7 +64,7 @@ display: none;
     margin-top: 3px;
     padding: 5px;
     border-radius: 5px;
-    margin: 16px 0px;
+    margin: 0px 0px 15px 0px;
 }
 .main__p-regresar{}
 .profile_form{
@@ -97,7 +97,7 @@ display: none;
     padding: 10px;
     color: #282626;
     font-weight: 600;
-    width: 170px;
+    width: 120px;
 }
 .profile_cart{}
 .profile_carrito{}

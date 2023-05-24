@@ -10,7 +10,7 @@ module.exports = {
     } = req.session.passport.user;
 
     try {
-        const location = await db.Location.create()
+       
          const [{id,rolId}, isCreate]= await db.User.findOrCreate({
            where: {
              socialId : googleId,
@@ -20,11 +20,14 @@ module.exports = {
              surname,
              email,
              avatar:picture,
-             locationId: location.id,
              socialId: googleId,
              socialProvider:provider,
            },
          });
+        const location = await db.Location.create({
+          userId : id
+        },)
+
 
          if(!isCreate){
             await location.destroy()

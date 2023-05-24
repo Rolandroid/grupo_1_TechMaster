@@ -99,46 +99,43 @@ module.exports = {
     },
 
     processProfile: (req, res) => {
-        const { name, surname, email, password, address, city, province, zipCode, rolId } =
+        const { name, surname, password, address, city, province, zipCode, rolId } =
             req.body;
-        const id = req.session.userLogin.id
-        const removeImagesBefore = req.query.removeImageBefore
+        const id = req.session.userLogin.id;
+        const removeImagesBefore = req.query.removeImageBefore;
         db.User.findByPk(id)
             .then(user => {
+                const userUpdate = db.User.update({
+                    name: name.trim(),
+                    surname: surname.trim(),
+                    avatar: req.file ? req.file.filename : user.avatar
+                }, {
+                    where: {
+                        id
+                    }
+                });
+    
                 const locationUpdate = db.Location.update(
                     {
                         address: address ? address.trim() : null,
                         province: province ? province.trim() : null,
                         city: city ? city.trim() : null,
                         zipCode: zipCode ? zipCode : null
-                        
                     },
                     {
-                        where: { id: user.locationId }
+                        where: { Userid: id }
                     }
-                )
-
-                const userUpdate = db.User.update({
-                    name: name.trim(),
-                    surname: surname.trim(),
-                    email: email.trim(),
-                    avatar: req.file ? req.file.filename : user.avatar
-                }, {
-                    where: {
-                        id
-                    }
-                })
-                Promise.all(([locationUpdate, userUpdate]))
+                );
+    
+                Promise.all([locationUpdate, userUpdate])
                     .then(() => {
                         (req.file &&
                             fs.existsSync('public/images/users/' + user.image))
-                            && fs.unlinkSync('public/images/users/' + user.image)
-                        return res.redirect('/users/profile')
-                    })
-
-            }).catch(error => console.log(error))
-
-
+                            && fs.unlinkSync('public/images/users/' + user.image);
+                        return res.redirect('/users/profile');
+                    });
+            })
+            .catch(error => console.log(error));
     },
 
     newPassword: (req, res) => {

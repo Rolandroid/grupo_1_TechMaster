@@ -20,35 +20,49 @@
 
       <a class="main__p-regresar" href="/"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
 
-
+      
       <div class="profile_boxRow">
-        <img class="profile_picture" src="<%= /http/.test(user.avatar) ? user.avatar : ` /Images/users/${user.avatar || 'default-user.png'}` %>" alt="">
+        <div style="display: flex; flex-direction: column; align-items: center">
+          <span class="profile_titulo">Tu perfil</span>
+        <img class="profile_picture"
+          src="<%= /http/.test(user.avatar) ? user.avatar : ` /Images/users/${user.avatar || 'default-user.png'}` %>"
+          alt="">
+        </div>
+      <div>
         <h1 class="profile_greatings">Hola <%= user.name %>
             <%=user.surname %>
         </h1>
+        <span class="profile_titulo">
+          <%=user.email%>
+        </span>
       </div>
-      <form class="profile_form" action="/users/profile?_method=PUT&removeImageBefore=1" method="POST" enctype="multipart/form-data">
+      </div>
+      <form class="profile_form" action="/users/profile?_method=PUT&removeImageBefore=1" method="POST"
+        enctype="multipart/form-data">
         <div class="profile_box">
-          <span class="profile_titulo">Mis datos</span>
-          <small class="profile_subtitulo">Editá tu informacion personal</small>
 
-          <p>Nombre:   <input name="name" type="text" value="<%=user.name%>"></p>
-          <p>Apellido:   <input name="surname" type="text" value="<%=user.surname%>"></p>
-          <p>Email:   <input name="email" type="text" value="<%=user.email%>"></p>
-          <!-- <small class="profile_subtitulo">Ubicacion</small> -->
-          <p>Direccion:   <input name="address" type="text" value="<%=location.address%>"></p>
-          <p>Ciudad:   <input name="city" type="text" value="<%=location.city%>"></p>
-          <p>Provincia:   <input name="province" type="text" value="<%=location.province%>"></p>
-          <p>Codigo Postal:   <input name="zipCode" type="text" value="<%=location.zipCode%>"></p>
-          <!-- <small class="profile_subtitulo">Avatar</small> -->
-          <p><label for="avata">Avatar:   </label><input name="avatar" type="file"></p>
-          
-          
+          <span class="profile_titulo">Tus datos personales</span>
+
+          <p>Nombre: <input name="name" type="text" value="<%=user.name%>"></p>
+          <p>Apellido: <input name="surname" type="text" value="<%=user.surname%>"></p>
+          <span class="profile_titulo">Tu bicacion</span>
+          <p>Direccion: <input name="address" type="text" value="<%=location.address%>"></p>
+          <p>Ciudad: <input name="city" type="text" value="<%=location.city%>"></p>
+          <p>Provincia: <input name="province" type="text" value="<%=location.province%>"></p>
+          <p>Codigo Postal: <input name="zipCode" type="text" value="<%=location.zipCode%>"></p>
+          <span class="profile_titulo">Modifica tu vatar</span>
+          <p><label for="avata">Cambia tu avatar: </label><input name="avatar" type="file"></p>
+
+
           <div class="profile_buttonBox">
+            <div>
+              <small class="profile_subtitulo">ingresa tu contraseña para modificar tu perfil</small>
+              <p><label for="password">Contraseña: </label><input name="password" type="password"></p>
+            </div>
             <button class="profile_button" type="reset"> Resetear </button>
             <button class="profile_button" type="submit"> Guardar </button>
           </div>
-          </div>
+        </div>
       </form>
 
 
@@ -66,5 +80,5 @@
           <small>Consulta el recivo de tus compras concretadas</small>
         </div>
       </a> -->
-      </main>
-      <%- include('../partials/footer')  %> 
+    </main>
+    <%- include('../partials/footer') %>
