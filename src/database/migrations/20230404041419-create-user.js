@@ -39,15 +39,6 @@ module.exports = {
           key : 'id'
         }
       },
-      locationId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model :{
-            tableName : "Locations"
-          },
-          key : 'id'
-        }
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
