@@ -56,5 +56,31 @@ module.exports = mtd = {
     },
     createCart:({orderId,productId}) => {
         return db.Cart.create({orderId,productId})
+    },
+    removeCart:  ( {orderId,productId} ) => {
+        db.Cart.destroy({
+            where:{// indicamos q tiene que coincidir con el id de la orden y del product para eliminar un solo item/product del cart
+                [Op.and] :[
+                    {
+                        orderId
+                    },
+                    {
+                        productId
+                    }
+                ]
+            }
+        })
+    },
+    removeProductFromCart: async({userId,productId}) =>{
+
+        if (!userId || !productId) {// se evalue que vengan estos dos valores:userId y productId, ambos tienen que existir
+            throw{
+                ok:false,
+                message:"Debes ingresar el userId y productId"
+            }
+        }
+        const order = await mtd.getOrder({userId})//obtengo la orden que corresponda al userId y desde esta orden elimino un carrito
+
+        return mtd.removeCart({orderId:order.id,productId})
     }
 }

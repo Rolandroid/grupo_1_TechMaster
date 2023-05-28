@@ -3,7 +3,7 @@ const db = require('../../database/models')
  */
 const sendErrorResponse = require('../../helpers/sendErrorResponse');
 const sendSuccessResponse = require('../../helpers/sendSuccessResponse');
-const {getOrder, createProductInCart} = require('../../services/cartServices')
+const {getOrder, createProductInCart, removeProductFromCart} = require('../../services/cartServices')
 module.exports = {
     //obtengo la orden pendiente / la info de la misma / su estado 
     getOrderPending: async (req,res) =>{
@@ -24,8 +24,11 @@ module.exports = {
     addProduct: async (req,res) =>{
         try {
             const {productId} = req.body;
-            /* const {id} = req.session.userLogin */
-            await createProductInCart({userId:3,productId}) //el id de user lo obtengo de la session(linea26), el id del product del body (linea25)
+            const {id} = req.session.userLogin 
+            //const {productId, userId} = req.body;
+            //const user = req.session.userLogin
+            await createProductInCart({userId:id,productId}) //el id de user lo obtengo de la session(linea26), el id del product del body (linea25)
+            //{userId:user?.id || userId,productId} si esxite el user de la session que traiga el id || que traiga userId del body (todo esto para crear por thunder)
             sendSuccessResponse(res)
             
         } catch (error) {
@@ -34,8 +37,20 @@ module.exports = {
         }
     },
     //elimino el producto del carrito
-    removeProduct:(req,res) =>{
+    removeProduct: async(req,res) =>{
+        try {
+            //const {productId,userId} = req.body;
+            //const user = req.session.userLogin 
+            //await removeProductFromCart({userId:user?.id ||userId,productId}) 
+            const {productId} = req.body;
+            const {id} = req.session.userLogin 
+            await removeProductFromCart({userId:id ,productId}) 
+            sendSuccessResponse(res)
+            
+        } catch (error) {
+            sendErrorResponse(res,error)
 
+        }
     },
     //aumento la cantidad del producto
     moreQuantity: (req,res) =>{
