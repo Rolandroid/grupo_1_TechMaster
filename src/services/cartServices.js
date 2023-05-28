@@ -36,6 +36,9 @@ module.exports = mtd = {
                 /* attributes:{
                 include:['quantity']
             }, */
+                through:{
+                    attributes:['quantity']
+                },
                 include:['images']
             }]
 
@@ -52,12 +55,58 @@ module.exports = mtd = {
        const order = await mtd.getOrder({userId}) // obtengo o recibo la orden, getOrden crea la orden vacia y le asigna el user
     // mtd (method) reemplaza al this, ya que el this no se puede usar en un arrow function, desde el mtd leo la orden
     
-     await mtd.createCart({orderId:order.id,productId}) //productId lo traigo del mismo metodo createProductinCart
+     await mtd.getCart({orderId:order.id,productId}) //productId lo traigo del mismo metodo createProductinCart
+    //si no existe el cart me lo agrega y si existe no pasa nada
+
+     const orderReload = await order.reload({include: {all:true} })
+     order.total = mtd.calcularTotal(orderReload);
+     await order.save()
     },
-    createCart:({orderId,productId}) => {
+    removeProductFromCart: async({userId,productId}) =>{
+        
+        if (!userId || !productId) {// se evalue que vengan estos dos valores:userId y productId, ambos tienen que existir
+            throw{
+                ok:false,
+                message:"Debes ingresar el userId y productId"
+            }
+        }
+        const order = await mtd.getOrder({userId})//obtengo la orden que corresponda al userId y desde esta orden elimino un carrito
+
+        return mtd.removeCart({orderId:order.id,productId})
+    },
+    moreQuantityFromProduct: async({userId,productId}) =>{
+        if (!userId || !productId) {// se evalue que vengan estos dos valores:userId y productId, ambos tienen que existir
+            throw{
+                ok:false,
+                message:"Debes ingresar el userId y productId"
+            }
+        }
+        const order = await mtd.getOrder({userId})//obtengo la orden que corresponda al userId y desde esta orden elimino un carrito
+        
+        const [cart, isCreated] = await mtd.getCart({orderId:order.id,productId})
+
+        if (!isCreated) {//si no fue creado se modifica la cantidad
+        cart.quantity++;
+        await cart.save(); 
+        }
+        
+        //console.log(order.cart[0].Carts.quantity);//para ver el contenido 
+
+        //una vez que aumentamos la cantidad, tmb tenemos q calcular el total
+        //reduce acumula cada valor de cada product y con esos valores hago la siguiente cuenta
+        
+        const orderReload = await order.reload({include:{all:true}})
+        
+        order.total = mtd.calcularTotal(orderReload)
+        //console.log(order.total)
+        await order.save();
+
+        return order;
+    },
+    createCart: ({orderId,productId}) => {// se reemplaza por getCart
         return db.Cart.create({orderId,productId})
     },
-    removeCart:  ( {orderId,productId} ) => {
+    removeCart: ({orderId,productId}) => {
         db.Cart.destroy({
             where:{// indicamos q tiene que coincidir con el id de la orden y del product para eliminar un solo item/product del cart
                 [Op.and] :[
@@ -71,16 +120,30 @@ module.exports = mtd = {
             }
         })
     },
-    removeProductFromCart: async({userId,productId}) =>{
-
-        if (!userId || !productId) {// se evalue que vengan estos dos valores:userId y productId, ambos tienen que existir
-            throw{
-                ok:false,
-                message:"Debes ingresar el userId y productId"
+    getCart: ({orderId,productId}) =>{
+        return db.Cart.findOrCreate({// retorna un [cart,isCreated] array con cart y si se creo
+            where:{
+                [Op.and]:[
+                    {
+                        orderId
+                    },
+                    {
+                        productId
+                    }
+                ]
+            },
+            defaults:{
+                orderId,
+                productId
             }
-        }
-        const order = await mtd.getOrder({userId})//obtengo la orden que corresponda al userId y desde esta orden elimino un carrito
+        })
+    },
+    calcularTotal: ({cart}) => {
+       return cart.reduce((acum,{price, Cart, discount})=>{
 
-        return mtd.removeCart({orderId:order.id,productId})
+        const priceTotal = discount ? price - (price * discount / 100) : price;
+            acum += price * Cart.quantity
+            return acum;
+        },0);
     }
 }
