@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.belongsToMany(models.Product,{
-        through: 'Cart',
+        through: 'Carts',
         foreignKey:'orderId',
         otherKey:'productId',
         as: 'cart'
@@ -25,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Order.init({
     userId: DataTypes.INTEGER,
-    total: DataTypes.INTEGER,
-    date: DataTypes.DATE,
+    total:{type: DataTypes.INTEGER, defaultValue:0},
+    date: {type:DataTypes.DATE,defaultValue:new Date()},
     status:{
       type:DataTypes.STRING,
       defaultValue:"pending",

@@ -16,6 +16,7 @@ const localsUserCheck = require('./middlewares/localsUserCheck');
 const userApiRouter = require('./routes/api/users');
 const productApiRouter = require('./routes/api/products');
 const commentApiRouter = require('./routes/api/comments');
+const cartApiRouter = require('./routes/api/cart');
 
 const app = express();
 
@@ -49,6 +50,7 @@ app.use('/products', productsRouter);
 app.use('/api/users', userApiRouter);
 app.use('/api/products', productApiRouter);
 app.use('/api/comments', commentApiRouter);
+app.use('/api/cart', cartApiRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
