@@ -142,7 +142,7 @@ module.exports = mtd = {
        return cart.reduce((acum,{price, Cart, discount})=>{
 
         const priceTotal = discount ? price - (price * discount / 100) : price;
-            acum += price * Cart.quantity
+            acum += priceTotal * Cart.quantity
             return acum;
         },0);
     }

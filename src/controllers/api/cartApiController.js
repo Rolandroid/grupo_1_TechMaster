@@ -23,13 +23,13 @@ module.exports = {
     //agrego el producto al carrito
     addProduct: async (req,res) =>{
         try {
-            /* const {productId} = req.body;
-            const {id} = req.session.userLogin  */
-            const {productId, userId} = req.body;
-            const user = req.session.userLogin
+            const {productId} = req.body;
+            const {id} = req.session.userLogin  
+            /*const {productId, userId} = req.body;
+            const user = req.session.userLogin*/
 
-            //await createProductInCart({userId:id,productId}) //el id de user lo obtengo de la session(linea26), el id del product del body (linea25)
-            await createProductInCart({userId:user?.id || userId,productId})
+            await createProductInCart({userId:id,productId}) //el id de user lo obtengo de la session(linea26), el id del product del body (linea25)
+            //await createProductInCart({userId:user?.id || userId,productId})
             //{userId:user?.id || userId,productId} si esxite el user de la session que traiga el id || que traiga userId del body (todo esto para crear por thunder)
             sendSuccessResponse(res)
             
@@ -57,17 +57,17 @@ module.exports = {
     //aumento la cantidad del producto
     moreQuantity: async(req,res) =>{
         try {
-           const {productId,userId} = req.body;
+           /*const {productId,userId} = req.body;
            const user = req.session.userLogin 
            const order = await moreQuantityFromProduct({userId:user?.id ||userId,productId}) 
-            
-            /* const {productId} = req.body;
+           */ 
+             const {productId} = req.body;
             const {id} = req.session.userLogin 
-            await moreQuantityFromProduct({userId:id ,productId})  */
+            await moreQuantityFromProduct({userId:id ,productId})  
 
             //sendSuccessResponse(res,{data:cart})// para ver si encuentra el valor de cart
-            sendSuccessResponse(res,{data:order})
-            //sendSuccessResponse(res)
+            //sendSuccessResponse(res,{data:order})
+            sendSuccessResponse(res)
         } catch (error) {
             sendErrorResponse(res,error)
 
