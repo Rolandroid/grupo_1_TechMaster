@@ -142,12 +142,26 @@ module.exports = mtd = {
                 message:"Debes ingresar el userId "
             }
         }
-        //debo acceder a la orden antes de borrar un producto del carrito
+        //debo acceder a la orden antes de borrar los productos del carrito
         const order = await mtd.getOrder({userId})
 
         return db.Cart.destroy({//retorno la promesa y la resuelvo desde el controller
             where:{orderId: order.id}
         })
+    },
+    modifyStatusFromOrder: async ({userId,status}) =>{
+
+        if (!userId || !status) {
+            throw{
+                ok:false,
+                message:"Debes ingresar el userId y status"
+            }
+        }
+
+        const order = await mtd.getOrder({userId}) // obtengo la orden
+
+        order.status = status //modifico el status de la orden obtenida - se modifica el estado
+        return order.save() //retorno la promesa y aplico el await en el controller - retorna la promesa de guardar
     },
     removeCart: ({orderId,productId}) => {
         db.Cart.destroy({

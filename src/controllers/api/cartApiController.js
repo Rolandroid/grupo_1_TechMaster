@@ -3,7 +3,7 @@ const db = require('../../database/models')
  */
 const sendErrorResponse = require('../../helpers/sendErrorResponse');
 const sendSuccessResponse = require('../../helpers/sendSuccessResponse');
-const {getOrder, createProductInCart, removeProductFromCart, moreOrLessQuantityFromProduct, clearAllProductFromCart} = require('../../services/cartServices')
+const {getOrder, createProductInCart, removeProductFromCart, moreOrLessQuantityFromProduct, clearAllProductFromCart, modifyStatusFromOrder} = require('../../services/cartServices')
 module.exports = {
     //obtengo la orden pendiente / la info de la misma / su estado 
     getOrderPending: async (req,res) =>{
@@ -103,7 +103,6 @@ module.exports = {
             const {id} = req.session.userLogin;
             await clearAllProductFromCart({userId:id})
 
-
             sendSuccessResponse(res)
         } catch (error) {
             sendErrorResponse(res,error)
@@ -111,8 +110,23 @@ module.exports = {
         }
     },
     //cambio el estado en el que esta la orden de pendiente a completado
-    statusOrder: (req,res) =>{
+    statusOrder: async(req,res) =>{
+        try{   
 
+           /* const {userId,status} = req.body; //descomento para probar por thunder
+            const user = req.session.userLogin 
+            
+            await modifyStatusFromOrder({userId:user?.id ||userId, status})  
+           */
+            const {id} = req.session.userLogin;
+            const {status} = req.body;// si o si necesito recibir un estado
+            await modifyStatusFromOrder({userId:id,status}) 
+
+            sendSuccessResponse(res)
+        } catch (error) {
+            sendErrorResponse(res,error)
+
+        }
     }
 
 }
