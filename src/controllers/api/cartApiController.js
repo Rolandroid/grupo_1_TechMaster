@@ -3,7 +3,7 @@ const db = require('../../database/models')
  */
 const sendErrorResponse = require('../../helpers/sendErrorResponse');
 const sendSuccessResponse = require('../../helpers/sendSuccessResponse');
-const {getOrder, createProductInCart, removeProductFromCart, moreQuantityFromProduct} = require('../../services/cartServices')
+const {getOrder, createProductInCart, removeProductFromCart, moreOrLessQuantityFromProduct, clearAllProductFromCart} = require('../../services/cartServices')
 module.exports = {
     //obtengo la orden pendiente / la info de la misma / su estado 
     getOrderPending: async (req,res) =>{
@@ -57,14 +57,14 @@ module.exports = {
     //aumento la cantidad del producto
     moreQuantity: async(req,res) =>{
         try {
-           /*const {productId,userId} = req.body;
-           const user = req.session.userLogin 
-           const order = await moreQuantityFromProduct({userId:user?.id ||userId,productId}) 
-           */ 
-             const {productId} = req.body;
+            /*  const {productId,userId} = req.body;
+                const user = req.session.userLogin 
+                const order = await moreOrLessQuantityFromProduct({userId:user?.id ||userId,productId}) 
+           */
+            const {productId} = req.body;
             const {id} = req.session.userLogin 
-            await moreQuantityFromProduct({userId:id ,productId})  
-
+            await moreOrLessQuantityFromProduct({userId:id ,productId})  
+ 
             //sendSuccessResponse(res,{data:cart})// para ver si encuentra el valor de cart
             //sendSuccessResponse(res,{data:order})
             sendSuccessResponse(res)
@@ -74,12 +74,41 @@ module.exports = {
         }
     },
     //disminuyo la cantidad del producto
-    lessQuantity:(req,res) =>{
+    lessQuantity: async(req,res) =>{
+         try{   
 
+            /*const {productId,userId} = req.body;
+            const user = req.session.userLogin 
+            const order = await moreOrLessQuantityFromProduct({userId:user?.id ||userId,productId,action:"less"}) 
+           */
+            const {productId} = req.body
+            const {id} = req.session.userLogin 
+            await moreOrLessQuantityFromProduct({userId:id, productId,action:"less" })  
+ 
+            sendSuccessResponse(res)
+        } catch (error) {
+            sendErrorResponse(res,error)
+
+        }
     },
     //vaciar el carrito, elimino todos los productos del mismo/ sigue pendiente pero vacio la orden
-    clearCart: (req,res) =>{
+    clearCart: async(req,res) =>{
+        try{   
 
+            /* const {userId} = req.body;
+            const user = req.session.userLogin 
+            
+            await clearAllProductFromCart({userId:user?.id ||userId})  */
+           
+            const {id} = req.session.userLogin;
+            await clearAllProductFromCart({userId:id})
+
+
+            sendSuccessResponse(res)
+        } catch (error) {
+            sendErrorResponse(res,error)
+
+        }
     },
     //cambio el estado en el que esta la orden de pendiente a completado
     statusOrder: (req,res) =>{

@@ -74,7 +74,7 @@ module.exports = mtd = {
 
         return mtd.removeCart({orderId:order.id,productId})
     },
-    moreQuantityFromProduct: async({userId,productId}) =>{
+    moreOrLessQuantityFromProduct: async({userId,productId, action = 'more'}) =>{
         if (!userId || !productId) {// se evalue que vengan estos dos valores:userId y productId, ambos tienen que existir
             throw{
                 ok:false,
@@ -86,7 +86,12 @@ module.exports = mtd = {
         const [cart, isCreated] = await mtd.getCart({orderId:order.id,productId})
 
         if (!isCreated) {//si no fue creado se modifica la cantidad
-        cart.quantity++;
+        if (action === 'more') {
+            cart.quantity++; 
+        }else{
+            cart.quantity--; 
+
+        }
         await cart.save(); 
         }
         
@@ -103,8 +108,46 @@ module.exports = mtd = {
 
         return order;
     },
+    lessQuantityFromProduct: async({userId,productId}) =>{// otra manera de disminuir cantidad
+        if (!userId || !productId) {
+            throw{
+                ok:false,
+                message:"Debes ingresar el userId y productId"
+            }
+        }
+        const order = await mtd.getOrder({userId})
+        
+        const [cart, isCreated] = await mtd.getCart({orderId:order.id,productId})
+
+        if (!isCreated) {
+        cart.quantity--;//lo unico q cambia es esta linea comparando con moreQuantityFromProduct
+        await cart.save(); 
+        }
+        
+        const orderReload = await order.reload({include:{all:true}})
+        
+        order.total = mtd.calcularTotal(orderReload)
+        
+        await order.save();
+
+        return order;
+    },
     createCart: ({orderId,productId}) => {// se reemplaza por getCart
         return db.Cart.create({orderId,productId})
+    },
+    clearAllProductFromCart: async({userId})=>{
+        if (!userId ) {
+            throw{
+                ok:false,
+                message:"Debes ingresar el userId "
+            }
+        }
+        //debo acceder a la orden antes de borrar un producto del carrito
+        const order = await mtd.getOrder({userId})
+
+        return db.Cart.destroy({//retorno la promesa y la resuelvo desde el controller
+            where:{orderId: order.id}
+        })
     },
     removeCart: ({orderId,productId}) => {
         db.Cart.destroy({
