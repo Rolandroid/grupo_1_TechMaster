@@ -35,6 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           args:[["pending","completed","canceled"]],
           msg:"Los valores validos son: pending, completed o canceled"
         }
+        //DOC: https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/
       }
     }
   }, {

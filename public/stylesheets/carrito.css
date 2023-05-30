@@ -5,29 +5,30 @@
     min-height: 100vh;
 } 
 
-.mainCarrito{
+#mainCarrito{
     padding: 5px;
     background-color: var(--colorGranate);
     /* background: #212121; */
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     color: white;/* 
     background-image: url('../Images/cartcolor.jpg');
     background-repeat: no-repeat;
     background-size: cover; */
 }
-.mainCarrito h1{
+#mainCarrito h1{
     color: white;
     /* margin:0vw 2vw 0vw 2vw; */
     font-size: 25px;
 }
 
-.mainCarrito section{
+#mainCarrito section{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.articleCarrito{
+/* .articleCarrito{
     background: #4d4d4d;
     width: 95%;
     display: flex;
@@ -91,10 +92,10 @@
     border-style: none;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    /* border-style: solid; */
+    
     border-radius: 5px;
     padding: 6px 0px 6px 6px;
-    /* background-color: lightgray; */
+    
     text-align: center;
     font-size: 20px;
 }
@@ -136,7 +137,7 @@
     margin: auto 0;
     display: flex;
     gap: 2vw;
-}
+} 
 
 .totalCarrito div div button{
     background-color: white;
@@ -149,16 +150,64 @@
     font-weight: 500;
     border-radius: 5px;
     border: 1PX solid  transparent;
+}*/
+#cart-card{
+    height:fit-content;
+    top:20px;
+    color:white;
+    background-color:var(--escalaDeGrises);
+    padding: 2px 20px;
+    box-shadow: 0px -1px 5px 3px rgba(255, 255, 255, 0.186);
+    /* font-size: 18px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column; */
 }
+#clear-cart {
+    border: solid 2px rgb(144, 29, 29);
+    background-color: rgb(144, 29, 29);
+    color: white;
+    transition: background-color 200ms, color 200ms;
+  }
 
+#clear-cart:hover {
+    border: solid 2px rgb(109, 24, 24);
+    background-color: rgb(109, 24, 24);
+    color: white;
+  }
+  #btn-buy{
+    background-color:rgb(50, 144, 29) ;
+    border: solid 2px rgb(50, 144, 29);
+    color: white;
+    transition: background-color 200ms, color 200ms;
+  }
+  #btn-buy:hover {
+    border: solid 2px rgb(34, 98, 19);
+    background-color: rgb(34, 98, 19);
+    color: white;
+  }
+  #btn-keep-looking{
+    transition: background-color 200ms, color 200ms;
+    border: solid 2px rgba(255, 255, 255, 0.712);
+    
+  }
+  #btn-keep-looking:hover {
+    background-color: rgb(255, 255, 255);
+    color: var(--escalaDeGrises);
+    font-weight: 610;
+  }
+  #total{
+    font-weight: 500;
+    font-size: 18px;
+  }
 @media (max-width:767px) {
-    .articleCarrito{
+    /* .articleCarrito{
         flex-direction: column;
     }
     .articleCarrito img{
         width: 140px;
         align-self: center;
-    }
+    } */
     
 }
 
