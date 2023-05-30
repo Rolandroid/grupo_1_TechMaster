@@ -92,7 +92,7 @@ window.addEventListener('load',function(){
   });
 
   description.addEventListener('focus', function () {
-    cleanError('errorCategory', event)
+    cleanError('errorDescription', event)
   })
 
 
