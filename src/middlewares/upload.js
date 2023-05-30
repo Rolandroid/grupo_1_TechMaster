@@ -27,7 +27,7 @@ const configUploadProductImages = multer({
   
   const uploadProductImages = (req, res, next) => {
     const upload = configUploadProductImages.array("images");
-  
+    console.log(uploadProductImages);
     upload(req, res, function (error) {
       if (error instanceof multer.MulterError) {
         req.fileValidationError = "Debes ingresar tres imágenes";
@@ -35,11 +35,11 @@ const configUploadProductImages = multer({
         req.fileValidationError = "Debes ingresar tres imágenes";
       }
   
-      if (req.fileValidationError) {
+/*       if (req.fileValidationError) {
         req.files.forEach((file) => {
           fs.unlinkSync(file.path);
         });
-      }
+      } */
   
       next();
     });

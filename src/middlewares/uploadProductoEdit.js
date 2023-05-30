@@ -16,37 +16,46 @@ const storageProductImages = multer.diskStorage({
 
 const configUploadProductImages = multer({
   storage: storageProductImages,
-  limits: {
-    files: 3,
-  },
   fileFilter: (req, file, cb) => {
     if (!file.originalname.match(/\.(jpg|png|jpeg)$/)) {
       req.fileValidationError = "Los archivos deben ser imágenes";
-      return cb(null, false, req.fileValidationError);
+      return cb(new Error(req.fileValidationError), false);
     }
     cb(null, true);
   },
+  limits: {
+    files: 3,
+  },
+  abortEarly: true, // Agregar la opción abortEarly para evitar que se guarden las imágenes si hay errores
 });
 
 const uploadProductImagesEdit = (req, res, next) => {
   const upload = configUploadProductImages.array("images");
 
   upload(req, res, function (error) {
-    if (!req.files?.length) {
+    if (error instanceof multer.MulterError) {
+      req.fileValidationError = "Debes ingresar 3 imágenes";
+    } else if (!req.files?.length) {
     } else if (req.files.length !== 3) {
       req.fileValidationError = "Debes ingresar 3 imágenes";
-    }
-
-    if (req.fileValidationError) {
-      req.files.forEach((file) => {
-        fs.unlinkSync(file.path);
+      console.log(req.files);
+     
+      req.files.forEach(file => {
+        fs.unlink(file.path, err => {
+          if (err) {
+            console.error("Error al eliminar la imagen:", err);
+          }
+        });
       });
+      delete req.files;
     }
 
-    next();
+    return next();
   });
 };
+
 
 module.exports = {
   uploadProductImagesEdit,
 };
+
