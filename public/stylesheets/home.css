@@ -5,7 +5,7 @@
 }
 
 .main--section-s{
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .glider-track{
@@ -272,7 +272,7 @@ text-decoration: none;
         display: flex;
         align-items: center;
         gap: 15px;
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
     .carousel{
         width: 51%;
@@ -353,6 +353,7 @@ text-decoration: none;
             gap: 12px;
             width: 48%;
             flex-direction: column;
+            
         }
         .main__image--card2{
             display: flex;
@@ -509,7 +510,9 @@ text-decoration: none;
         .main__image--card{
             display: flex;
             gap: 12px;
-            /* width: 47%; */
+            /* height: -26vh; */
+            width: 47%;
+            height: 0;
         }
         .main__image--card2{
             display: flex;
