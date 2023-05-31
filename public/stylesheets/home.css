@@ -149,10 +149,10 @@ text-decoration: none;
     overflow: auto;
     scrollbar-width: none;
     padding-bottom: 33px;
-
     grid-auto-flow: column;
     padding-left: 10px;
     padding-right: 10px;
+    justify-content: start;
  }
 
  .carrousel img{
