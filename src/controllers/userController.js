@@ -115,7 +115,7 @@ module.exports = {
             name : name.trim(),
             surname : surname.trim(),
             email : email.trim(),
-            avatar : req.file ? req.file.filename : "default-user.png"
+            avatar : req.file ? req.file.filename : user.avatar
         }, {
             where: {
                 id
@@ -140,7 +140,7 @@ newPassword: (req, res) => {
 
     logout: (req, res) => {
         req.session.destroy();
-        res.clearCookie('userTechMaster');
+        res.clearCookie('TechMaster');
         return res.redirect('/')
     }
 

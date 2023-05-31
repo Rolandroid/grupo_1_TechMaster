@@ -5,20 +5,26 @@
     
     } */
 .register__main__section__article{
-    
-    text-align: center;
+    text-align: center;
+    /* margin: 1px; */
 }
 .register__form__header{
-        background-color: var(--colorGranate);
-        color: white;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 8px;
-        align-items: center;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        flex-wrap: wrap;
+       /*  background-color: var(--colorGranate); */
+       color: white;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       gap: 8px;
+       align-items: center;
+       padding-top: 25px;
+       padding-bottom: 25px;
+       flex-wrap: wrap;
+       background-color: rgb(0 0 1 / 54%);
+    }
+    .register__main-capa{
+        background-image: url('../Images/giphy4.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     
 .register__form__header h2{
@@ -28,22 +34,26 @@
 .register__form__header a{
     text-decoration: none;
 }
+#bolt{
+    width: 60px;
+}
     
 .register__logo--master{
         text-align: center;
         align-items: center;
         display: flex;
-        margin: 0;
+        /* margin: 0; */
         justify-content: center;
         padding: 10px 0px 10px 0px;
+        width: 20p;
 }
 .register__logo {
         display: flex;
 }
     
-.register__techmater{
+/* .register__techmater{
       display: none;
-}
+} */
 .register__descripcion{
     display:none;
     text-align: center;
@@ -113,7 +123,7 @@
     /* .register__form__box--buttons{
     
     } */
-    .register__form__box--buttons a{
+    /* .register__form__box--buttons a{
         
     text-decoration: none;
     font-weight: 700;
@@ -145,6 +155,24 @@
     }
     .buttons__secondary:hover a{
         color: white;
+    } */
+    .register__form__box--buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: center;
+        gap: 25px;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    
+    .register__form__box--buttons a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    .register__form__box--buttons a:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
     }
 
     .register__errors{
@@ -202,13 +230,32 @@ font-weight: 600;
           .buttons__secondary{
             width: 25%;
           }
+          .register__form__box--buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: center;
+        gap: 25px;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    
+    .register__form__box--buttons a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    .register__form__box--buttons a:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
 
     }
     
     @media (min-width:1024px) { 
         .register__main__section__article{
             display: flex;
-            width: 50vw;
+            /* width: 50vw; */
         }
         .register__form__header{
            margin: 0;

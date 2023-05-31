@@ -17,6 +17,7 @@
     display: flex;
     margin: 5px;
     gap: 5px;
+    text-decoration: none;
 }
 .footerDiv a:hover{text-decoration: none;}
 .footerDiv a div{color:white;}
