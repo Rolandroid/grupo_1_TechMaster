@@ -25,15 +25,21 @@ module.exports = {
 
   detalle: (req, res) => {
     const { id } = req.params;
-    db.Product.findAll({
-      where: {
-        visible: true,
-      },
-      include: ["images"],
-    })
-      .then((products) => {
-        let product = products.find((product) => product.id === +id);
-        return res.render("products/detalle", { ...product, products });
+    db.Product.findByPk(id, { include: ["images"] })
+      .then((product) => {
+        const categoryId = product.categoryId;
+        db.Product.findAll({
+          where: {
+            visible: true,
+            categoryId: categoryId
+          },
+          include: ["images"],
+          limit: 10
+        })
+          .then((relatedProducts) => {
+            return res.render("products/detalle", { product, relatedProducts });
+          })
+          .catch((error) => console.log(error));
       })
       .catch((error) => console.log(error));
   },
