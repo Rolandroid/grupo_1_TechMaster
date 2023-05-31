@@ -18,13 +18,13 @@ const getOrder = () => {
 
 const paintProducts = ({products}) =>{
     cardsContainer.innerHTML += '';
-    products.forEach((product) => {
+    products.forEach(({title,description,images,price}) => {
         const templete = `
         <!-- COURSE TEMPLATE CARD -->
               <div class="card col-12 col-lg-8 my-5">
                 <div class="card-body row">
                   
-                  <img class="col-4" style="width:150px" style="object-fit: contain;" src="/images/courses/${
+                  <img class="col-4" style="width:150px" style="object-fit: contain;" src="/images/products/${
                     images[0].name
                   }" alt="">
                   <div class="col-8 position-relative">
@@ -32,7 +32,7 @@ const paintProducts = ({products}) =>{
     
                     <h5 class="card-title">${title}</h5>
                     <p class="card-text text-truncate">${description}</p>
-                    <p class="card-text">${priceFormatARG}${
+                    <p class="card-text">${price}${
           discount
             ? `<span class="text-danger mx-3">${discount}% OFF</span>`
             : ""
@@ -46,7 +46,7 @@ const paintProducts = ({products}) =>{
                         ${Cart.quantity}
                       </output>
                       <button onclick="moreProduct(${id})" class="btn btn-light">+</button>
-                      <a href="/courses/detail/${id}" class="btn btn-outline-dark">Ver más</a>
+                      <a href="/products/detail/${id}" class="btn btn-outline-dark">Ver más</a>
                     </p>
                   </div>
                

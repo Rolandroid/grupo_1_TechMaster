@@ -46,7 +46,7 @@
             <p><i class="fa-sharp fa-solid fa-truck-fast"></i> Llega gratis hoy</p>
           </div>
         </div>
-        <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
+        <!-- <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
          <div class="container__buttons">
           <div class="box__button-editar">
             <a href="/products/edicion/<%= dataValues.id %>"> <button type="submit">Editar</button> </a>
@@ -55,14 +55,15 @@
            <a href="/products/remove/<%= dataValues.id %>"> <button type="submit">Eliminar</button> </a>
          </form>
         </div>
-        <% } %>
+        <% } %> -->
         <div class="container__buttons">
-          <div class="box__button-editar">
+          <!-- <div class="box__button-editar">
             <a href="/products/edicion/<%= dataValues.id %>"> <button type="submit">Comprar Ahora</button> </a>
-         </div>
+         </div> 
          <form class="box__button-eliminar" action="/products/remove/<%= dataValues.id %>?_method=DELETE" method="post">
            <a href="/products/remove/<%= dataValues.id %>"> <button type="submit">Agregar al carrito</button> </a>
-         </form>
+         </form>-->
+         <a href="" class="btn btn-primary" onclick=`addProductToCart(${id})`> Añadir al carrito </a>
         </div>
 
       </section>
@@ -83,7 +84,7 @@
         <% products.slice(0, 10).forEach(product => { %>
           <div id="detalle-items" class="card card-carrousel" > 
             <a href="/products/detalle/<%= product.dataValues.id %>" title="<%= product.dataValues.name %>">
-            <img src="/Images/products/<%= product.dataValues.images[0].name %>" class="card-img-top" alt="...">
+            <img src="/Images/products/<%= /* product.dataValues.images[0].name */ %>" class="card-img-top" alt="...">
           </a>
             <div class="card-body">
               <h5 class="card-title">$ <%= product.dataValues.price %></h5>
@@ -157,5 +158,7 @@ cardsCarrousel.forEach(card => {
 })
       </script>
 
+<script src="../../../public/javaScript/addProductToCart.js"></script>
+<script src="../../../public/javaScript/libraries/sweetAlert.js"></script>
     </body>
   </html>
