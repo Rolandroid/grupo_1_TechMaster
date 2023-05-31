@@ -7,6 +7,7 @@ const path = require("path");
 const db = require("../database/models");
 const product = require("../database/models/product");
 const { validationResult } = require("express-validator");
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
   list: (req, res) => {
     db.Product.findAll({
@@ -18,6 +19,7 @@ module.exports = {
       .then((products) => {
         return res.render("products/list", {
           products,
+          toThousand
         });
       })
       .catch((error) => console.log(error));
@@ -97,7 +99,7 @@ module.exports = {
             });
           });
 
-          return res.redirect("/products/list");
+          return res.redirect("/dashboard");
         })
         .catch((error) => console.log(error));
     } else {
@@ -213,7 +215,7 @@ module.exports = {
           console.log(images);
         }
 
-        return res.redirect(`/products/detalle/` + id);
+        return res.redirect(`/dashboard`);
       } catch (error) {
         console.log(error);
       }
@@ -254,7 +256,7 @@ module.exports = {
 
       product.destroy();
 
-      return res.redirect("/products/list");
+      return res.redirect("/dashboard");
     } catch (error) {
       console.error(error);
       return res.status(500).json({ message: "Error al eliminar el producto" });

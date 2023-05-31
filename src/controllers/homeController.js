@@ -4,6 +4,7 @@ const { readJSON, writeJSON } = require('../data')
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
 const db = require("../database/models")
 const { Op } = require("sequelize")
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
   home: (req, res) => {
@@ -45,7 +46,8 @@ module.exports = {
 
         res.render('results', {
           resultSearch,
-          keywords
+          keywords,
+          toThousand
         });}
         else{const resultSearch = await db.Product.findAll({
           include: ['category','images'],
@@ -61,7 +63,8 @@ module.exports = {
  
         res.render('results', {
           resultSearch,
-          keywords
+          keywords,
+          toThousand
         });
 
         }
@@ -94,7 +97,7 @@ module.exports = {
 
         )
         console.log(resultSearch.product)
-        res.render('results', { resultSearch, keywords: category })
+        res.render('results', { resultSearch, keywords: category,toThousand })
 
       }
     } catch (error) {
@@ -103,10 +106,12 @@ module.exports = {
   },
   dashboard: async (req, res) => {
     try {
-      const products = await db.Product.findAll({
-        include: ['images']
-      });
-      return res.render('dashboard', { products });
+      const products  = await db.Product.findAll({
+        include: ['category','images']
+        })
+      const users  = await db.User.findAll()
+      const comments = await db.Comment.findAll()
+      return res.render('dashboard', {products, users,comments});
     } catch (error) { console.log(error) }
   },
 
