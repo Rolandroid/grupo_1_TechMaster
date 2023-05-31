@@ -1,13 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-/* const products = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
-); */
-/* const { writeJSON, readJSON } = require("../data/index"); */
 const db = require("../database/models");
-const product = require("../database/models/product");
 const { validationResult } = require("express-validator");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 module.exports = {
   list: (req, res) => {
     db.Product.findAll({

@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- HEAD -->
 <%- include('../partials/head',{title : 'Listado de productos'}) %>
-<body class="boby__view__resultados">
+<body class="boby__view__resultados" data-idUser="<%= locals.userLogin?.id %>">
   
   
 
@@ -12,7 +12,9 @@
 
   <main class="mainResultados">
     <h1>Todos los Productos</h1>
-    <section>
+
+    <%- include('../partials/pagination') %> 
+    <section id="container-courses-card">
       <% products.forEach(({id,name,images,description,discount,price,category}) => { %>
        <article class="articleResultados">
         <span>
@@ -33,6 +35,7 @@
       <% }) %>
       </main>
   <%- include('../partials/footer')  %> 
+  <script src="/javaScript/paginatorViewList.js"></script>
 </body>
 
 

@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const { readJSON, writeJSON } = require('../data')
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json"), 'utf-8'));
 const db = require("../database/models")
 const { Op } = require("sequelize")
