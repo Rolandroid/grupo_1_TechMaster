@@ -29,7 +29,7 @@
           </div>
           <div>
             <a href="/products/detalle/<%= id %>"><button>Detalles</button></a>
-            <a href="/carrito"><button>Adquirir</button></a>
+            <a href="#" onclick="addProductToCart('<%= id %>')"><button>Adquirir</button></a>
           </div>
         </div>
       </article>
@@ -40,6 +40,7 @@
     
 
   <%- include('./partials/footer')  %> 
+  <script src="/javaScript/addProductToCart.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,3 @@
-const { Swal } = require("./libraries/sweetAlert")
-
 const URL_API_SERVER = "http://localhost:3000/api"
 
 
@@ -16,7 +14,7 @@ const addProductToCart = async (id) =>{
     })
     Swal.fire({
         title:ok ? "Producto agregado al carrito" : "Ups",
-        icon: ok ? "Success" : "warning",
+        icon: ok ? "success" : "warning",
         showConfirmButton:false,
         timer:800
     })

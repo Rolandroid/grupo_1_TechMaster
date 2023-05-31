@@ -43,7 +43,10 @@ module.exports = mtd = {
             }]
 
         })
-        return order
+       
+      order.total = mtd.calcularTotal(order);
+      await order.save();
+      return order
     },
     createProductInCart: async ({userId,productId}) => {
         if (!userId || !productId) {
@@ -72,7 +75,11 @@ module.exports = mtd = {
         }
         const order = await mtd.getOrder({userId})//obtengo la orden que corresponda al userId y desde esta orden elimino un carrito
 
-        return mtd.removeCart({orderId:order.id,productId})
+        mtd.removeCart({orderId:order.id,productId})
+
+        const orderReload = await order.reload({include: {all:true} })
+        order.total = mtd.calcularTotal(orderReload);
+        await order.save()
     },
     moreOrLessQuantityFromProduct: async({userId,productId, action = 'more'}) =>{
         if (!userId || !productId) {// se evalue que vengan estos dos valores:userId y productId, ambos tienen que existir
@@ -164,7 +171,7 @@ module.exports = mtd = {
         return order.save() //retorno la promesa y aplico el await en el controller - retorna la promesa de guardar
     },
     removeCart: ({orderId,productId}) => {
-        db.Cart.destroy({
+       return db.Cart.destroy({
             where:{// indicamos q tiene que coincidir con el id de la orden y del product para eliminar un solo item/product del cart
                 [Op.and] :[
                     {

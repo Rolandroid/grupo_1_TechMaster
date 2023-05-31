@@ -41,7 +41,7 @@ const paintProducts = (products) => {
         </div>
         <div>
           <a href="/products/detalle/${id}"><button>DETALLES</button></a>
-          <a href="/carrito"><button>ADQUIRIR</button></a>
+          <a><button onclick="addProductToCart(${id})">ADQUIRIR</button></a>
         </div>
       </div>
     </article>
@@ -127,12 +127,12 @@ const addProductToCart = async (id) => {
       return;
     }
 
-    const objCourseId = {
-      courseId: id,
+    const objProductId = {
+      productId: id,
     };
     const { ok } = await fetch(`${URL_API_SERVER}/cart/addProduct`, {
       method: "POST",
-      body: JSON.stringify(objCourseId),
+      body: JSON.stringify(objProductId),
       headers: {
         "Content-Type": "application/json",
       },

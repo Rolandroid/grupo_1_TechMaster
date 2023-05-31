@@ -1,28 +1,27 @@
-.boby__view__carrito{
+.carrito .boby__view__carrito{
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
-    min-height: 100vh;
+/*     min-height: 100vh; */
 } 
 
-#mainCarrito{
+.carrito #mainCarrito{
     padding: 5px;
     background-color: var(--colorGranate);
     /* background: #212121; */
-    height: 100vh;
     width: 100vw;
     color: white;/* 
     background-image: url('../Images/cartcolor.jpg');
     background-repeat: no-repeat;
     background-size: cover; */
 }
-#mainCarrito h1{
+.carrito #mainCarrito h1{
     color: white;
     /* margin:0vw 2vw 0vw 2vw; */
     font-size: 25px;
 }
 
-#mainCarrito section{
+.carrito #mainCarrito section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,14 +36,14 @@
     margin: 0vw 2vw 2vw 2vw;
     box-shadow: 0px -1px 13px 5px rgb(0 0 0 / 34%);
 }
-.articleCarrito img{
+.carrito .articleCarrito img{
     width: 140px;
     margin: 10px;
     border-radius: 5px;
     max-height: 140px;
 }
 
-.articleCarrito div{
+.carrito .articleCarrito div{
     color: var(--escalaDeGrises);
     font-size: 18px;
     padding: 5px;
@@ -52,18 +51,18 @@
     display: flex;
     flex-direction: column;
 }
-.articleCarrito div h3{
+.carrito .articleCarrito div h3{
     border-bottom: 1px var(--escalaDeGrises) solid;
     color: white;
 }
-.articleCarrito div h2{
+.carrito .articleCarrito div h2{
     
     align-self: flex-end;
 }
-.articleCarrito div h4{}
+.carrito .articleCarrito div h4{}
 
 
-.articleCarrito div div{
+.carrito .articleCarrito div div{
     font-size: 0.6rem;
     margin: auto 0;
     display: flex;
@@ -73,7 +72,7 @@
     color: white;
 }
 
-.articleCarrito div div button{
+.carrito .articleCarrito div div button{
     background-color: white;
     max-width: 150px;
     width: 101%;
@@ -84,10 +83,10 @@
     border-radius: 5px;
     border: 1PX solid  transparent;
 }
-.articleCarrito div div a button:hover{
+.carrito .articleCarrito div div a button:hover{
     background-color: var(green);}
 
-.articleCarrito div div  input{
+.carrito .articleCarrito div div  input{
     width: 50px;
     border-style: none;
     font-family: 'Lato', sans-serif;
@@ -101,7 +100,7 @@
 }
 
 
-.totalCarrito{
+.carrito .totalCarrito{
     margin: 0vw 2vw 2vw 2vw;
     background: #4d4d4d;
     width: 95%;
@@ -110,13 +109,13 @@
     border-radius: 10px;
     box-shadow: 0px -1px 5px 3px rgb(255 255 255 / 34%);
 }
-.totalCarrito img{
+.carrito .totalCarrito img{
     width: 35%;
     height: 81%;
     padding: 10px;
 }
 
-.totalCarrito div{
+.carrito .totalCarrito div{
     color:white;
     font-size: 18px;
     padding: 10px;
@@ -124,22 +123,22 @@
     display: flex;
     flex-direction: column;
 }
-.totalCarrito div h1{
+.carrito .totalCarrito div h1{
     border-bottom: 1px white solid;
     font-size: 1.5rem;
 }
-.totalCarrito div h2{
+.carrito .totalCarrito div h2{
     align-self: flex-end;
 }
 
-.totalCarrito div div{
+.carrito .totalCarrito div div{
     font-size: 0.6rem;
     margin: auto 0;
     display: flex;
     gap: 2vw;
 } 
 
-.totalCarrito div div button{
+.carrito .totalCarrito div div button{
     background-color: white;
     max-width: 150px;
     width: 100%;
@@ -151,7 +150,7 @@
     border-radius: 5px;
     border: 1PX solid  transparent;
 }*/
-#cart-card{
+.carrito #cart-card{
     height:fit-content;
     top:20px;
     color:white;
@@ -163,40 +162,40 @@
     display: flex;
     flex-direction: column; */
 }
-#clear-cart {
+.carrito #clear-cart {
     border: solid 2px rgb(144, 29, 29);
     background-color: rgb(144, 29, 29);
     color: white;
     transition: background-color 200ms, color 200ms;
   }
 
-#clear-cart:hover {
+.carrito #clear-cart:hover {
     border: solid 2px rgb(109, 24, 24);
     background-color: rgb(109, 24, 24);
     color: white;
   }
-  #btn-buy{
+  .carrito #btn-buy{
     background-color:rgb(50, 144, 29) ;
     border: solid 2px rgb(50, 144, 29);
     color: white;
     transition: background-color 200ms, color 200ms;
   }
-  #btn-buy:hover {
+  .carrito #btn-buy:hover {
     border: solid 2px rgb(34, 98, 19);
     background-color: rgb(34, 98, 19);
     color: white;
   }
-  #btn-keep-looking{
+  .carrito #btn-keep-looking{
     transition: background-color 200ms, color 200ms;
     border: solid 2px rgba(255, 255, 255, 0.712);
     
   }
-  #btn-keep-looking:hover {
+  .carrito #btn-keep-looking:hover {
     background-color: rgb(255, 255, 255);
     color: var(--escalaDeGrises);
     font-weight: 610;
   }
-  #total{
+  .carrito #total{
     font-weight: 500;
     font-size: 18px;
   }
@@ -204,11 +203,11 @@
     /* .articleCarrito{
         flex-direction: column;
     }
-    .articleCarrito img{
+    .carrito .articleCarrito img{
         width: 140px;
         align-self: center;
     } */
-    
+
 }
 
 
