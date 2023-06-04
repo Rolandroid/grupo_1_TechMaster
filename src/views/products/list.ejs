@@ -1,42 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- HEAD -->
-<%- include('../partials/head',{title : 'Listado de productos'}) %>
-<body class="boby__view__resultados" data-idUser="<%= locals.userLogin?.id %>">
-  
-  
+<!-- HEAD -->
+<%- include('../partials/head',{title : 'Listado de productos' }) %>
 
-  
-  <%- include('../partials/header') %> 
-
-
-  <main class="mainResultados">
-    <h1>Todos los Productos</h1>
-
-    <%- include('../partials/pagination') %> 
-    <section id="container-courses-card">
-      <% products.forEach(({id,name,images,description,discount,price,category}) => { %>
-       <article class="articleResultados">
-        <span>
-          <img src="/Images/products/<%= images.length ? images[0].name : `default-image.png` %>"></img>
-        </span>
-        <div>
-            <h3><%= name %></h3>
-          <div class="precioYOferta">
-            <h4><%= discount ? discount+' % OFF' : ""%></h4>
-            <h2>$<%=toThousand((price - (price* discount) / 100))%></h2>
-          </div>
-          <div>
-            <a href="/products/detalle/<%= id %>"><button>DETALLES</button></a>
-            <a href="/carrito"><button>COMPRAR</button></a>
-          </div>
-        </div>
-      </article>
-      <% }) %>
+  <body class="boby__view__resultados" data-idUser="<%= locals.userLogin?.id %>">
+    <%- include('../partials/header') %>
+      <main class="mainResultados">
+        <h1>Todos los Productos</h1>
+        <%- include('../partials/pagination') %>
+          <section id="container-courses-card">
       </main>
-  <%- include('../partials/footer')  %> 
-  <script src="/javaScript/paginatorViewList.js"></script>
-</body>
+      <%- include('../partials/footer') %>
+        <script src="/javaScript/paginatorViewList.js"></script>
+  </body>
 
 
 </html>
