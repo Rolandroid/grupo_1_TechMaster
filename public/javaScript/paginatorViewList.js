@@ -59,11 +59,19 @@ const getPage = async (page) => {
 
 const paintItemsPage = ({ numberPages, itemActive }) => {
   containerItemsPage.innerHTML = "";
-  for (let i = 1; i <= numberPages; i++) {
+  const visiblePages = 3;
+  let startPage = Math.max(itemActive - Math.floor(visiblePages / 2), 1);
+  let endPage = Math.min(startPage + visiblePages - 1, numberPages);
+
+  if (endPage - startPage < visiblePages - 1) {
+    startPage = Math.max(endPage - visiblePages + 1, 1);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
     containerItemsPage.innerHTML += `
-    <li class="page-item ${
-      itemActive == i && "active"
-    }"><button class="page-link" onclick="getPage(${i})">${i}</button></li>
+      <li class="page-item ${itemActive == i && "active"}">
+        <button class="page-link" onclick="getPage(${i})">${i}</button>
+      </li>
     `;
   }
 };
@@ -86,6 +94,18 @@ const visualImpact = async ({ pages, currentPage, products }) => {
   paintProducts(products);
   paintItemsPage({ numberPages: pages, itemActive: currentPage });
   statusPrevAndNext({ currentPage, pages });
+
+  if (currentPage === 1) {
+    btnPrev.style.display = "none";
+  } else {
+    btnPrev.style.display = "inline-block";
+  }
+
+  if (currentPage === pages) {
+    btnNext.style.display = "none";
+  } else {
+    btnNext.style.display = "inline-block";
+  }
 };
 
 window.addEventListener("load", async () => {
