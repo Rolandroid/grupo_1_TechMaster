@@ -9,6 +9,7 @@ const session = require("express-session");
 const passport = require("passport")
 const { loginGoogleInitialize } = require("./services/googleServices");
 loginGoogleInitialize
+const cors = require('cors')
 
 
 const homeRouter = require('./routes/home');
@@ -23,6 +24,7 @@ const commentApiRouter = require('./routes/api/comments');
 const cartApiRouter = require('./routes/api/cart');
 
 const app = express();
+app.use(cors())
 loginGoogleInitialize()
 
 
