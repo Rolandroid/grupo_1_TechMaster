@@ -23,18 +23,18 @@
 
       <div class="profile_boxRow">
         <img class="profile_picture" src="<%= /http/.test(user.avatar) ? user.avatar : ` /Images/users/${user.avatar || 'default-user.png'}` %>" alt="">
-        <h1 class="profile_greatings">Hola <%= user.name %>
-            <%=user.surname %>
-        </h1>
+        <h1 class="profile_greatings">Hola <%= user.name %> <%=user.surname %></h1>
+        <p><%=user.email%></p>
+
       </div>
       <form class="profile_form" action="/users/profile?_method=PUT&removeImageBefore=1" method="POST" enctype="multipart/form-data">
         <div class="profile_box">
-          <span class="profile_titulo">Mis datos</span>
-          <small class="profile_subtitulo">Editá tu informacion personal</small>
+          <span class="profile_titulo">Datos personales</span>
 
           <p>Nombre:   <input name="name" type="text" value="<%=user.name%>"></p>
           <p>Apellido:   <input name="surname" type="text" value="<%=user.surname%>"></p>
-          <p>Email:   <input name="email" type="text" value="<%=user.email%>"></p>
+          <span class="profile_titulo">ubicacion</span>
+
           <!-- <small class="profile_subtitulo">Ubicacion</small> -->
           <p>Direccion:   <input name="address" type="text" value="<%=location.address%>"></p>
           <p>Ciudad:   <input name="city" type="text" value="<%=location.city%>"></p>

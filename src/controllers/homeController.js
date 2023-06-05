@@ -83,7 +83,7 @@ module.exports = {
           },
           include: ['images']
         })
-        return res.render('results', { resultSearch, keywords: category })
+        return res.render('results', { resultSearch, keywords: category,toThousand })
       }
       else {
         let resultSearch = await db.Product.findAll({

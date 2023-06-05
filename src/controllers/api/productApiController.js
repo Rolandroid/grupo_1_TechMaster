@@ -1,8 +1,35 @@
 const fs = require("fs");
 const path = require("path");
 const db = require("../../database/models");
-
+const {
+  findAllProducts,
+  findByPkPProducts,
+  updateProductById,
+  createProduct,
+  destroyProductById,
+} = require("../../services/productServices");
 module.exports = {
+  getAllProducts: async (req, res) => {
+    try {
+      const products = await findAllProducts(req, res);
+  
+      let respuesta = {
+        meta: {
+          status: 200,
+          url: `http://localhost:3000/api/products/`,
+          totalProducts: products.length,
+        },
+        data: {
+          products
+        }
+      };
+  
+      res.json(respuesta);
+      console.log(products);
+    } catch (error) {
+      console.log(error);
+    }
+  },
   list: async (req, res) => {
     try {
       const page = parseInt(req.query.page) || 1; // obtener la página actual del query string
@@ -11,7 +38,7 @@ module.exports = {
 
       const products = await db.Product.findAndCountAll({
         // incluir count para saber la cantidad total de productos
-        include: ["category"],
+        include: ["category","images"],
         limit,
         offset,
         order: [["createdAt", "DESC"]], // ordenar por fecha de creación
@@ -40,6 +67,7 @@ module.exports = {
           totalPages, // agregar la cantidad total de páginas a la respuesta
           currentPage: page, // agregar la página actual a la respuesta
           countByCategory,
+
           url: "api/products",
           products: detalleProducto,
         },
@@ -87,32 +115,18 @@ module.exports = {
     }
   },
   detail: async (req, res) => {
-    const product = await db.Product.findByPk(req.params.id, {
-      include: ["images", "category"],
-    });
     try {
+    const product = await findByPkPProducts(req, res);
       const arrayImages = product.images.map((image) => {
-        return `http://localhost:3000/Images/products/${image.name}`;
+        return `/Images/products/${image.name}`;
       });
-      let producto = {
-        id: product.id,
-        name: product.name,
-        description: product.description,
-        price: product.price,
-        discount: product.discount,
-        images: arrayImages,
-        category: product.category.name,
-        createdAt: product.createdAt,
-        updatedAt: product.updatedAt,
-      };
-
       let respuesta = {
         meta: {
           status: 200,
-          total: product.length,
-          url: "/api/actor/:id",
+          url: `http://localhost:3000/api/products/${product.id}`,
+          arrayImages
         },
-        data: producto,
+        data: product,
       };
       res.json(respuesta);
     } catch (error) {

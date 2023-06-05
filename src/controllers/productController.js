@@ -2,23 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
   list: (req, res) => {
-    db.Product.findAll({
-      where: {
-        visible: true,
-      },
-      include: ["images"],
-    })
-      .then((products) => {
-        return res.render("products/list", {
-          products,
-          toThousand
-        });
-      })
-      .catch((error) => console.log(error));
+       return res.render("products/list");         
   },
 
   detalle: (req, res) => {
