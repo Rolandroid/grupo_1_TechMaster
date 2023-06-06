@@ -190,6 +190,7 @@
     border-radius: 5px;
     background: #FFF;
     color: #000;
+    width: 45% !important;
 }
 
 .btn-primary {
@@ -270,12 +271,20 @@
         display: flex;
         justify-content: flex-start;
       }
+
       @media (min-width:320px) {
         .swiper-slide img {
             display: flex;
             width: auto;
             height: 80%;
             object-fit: cover;
+        }
+        #TEST{
+        width: 100%;
+        }
+
+        .glider-track{  
+        width: 1170px !important;
         }
     }   
 

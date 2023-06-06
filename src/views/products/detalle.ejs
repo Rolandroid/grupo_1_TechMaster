@@ -93,7 +93,7 @@
           <h4>productos relacionados</h4>
         </div>
         <div class="glider-contain">
-          <div class="glider">
+          <div class="glider" id="TEST">
             <% relatedProducts.forEach(product => { %>
               <div id="detalle-items" class="card card-carrousel"> 
                 <a href="/products/detalle/<%= product.id %>" title="<%= product.name %>">
@@ -188,6 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </script>
 <script src="/javaScript/addProductToCart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     </body>
   </html>
