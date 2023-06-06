@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- HEAD -->
 <%- include('../partials/head',{title : 'Detalle de productos'}) %>
-<body>
+<body class="detail">
   <%- include('../partials/header') %> 
 
       <main class="detalle__main">
@@ -10,25 +10,25 @@
         <section class="detalle__section">
         <h3 class="detalle__title"><%= product.name %></h3>
        
-        <div id="carouselExample"  class="carousel slide detalle__carousel"  data-ride="carousel">
+ <!-- <div id="carouselExample"  class="carousel slide detalle__carousel"  data-ride="carousel">
             <ol class="carousel-indicators">
-              <% product.images.forEach((image,index) => { %>
-              <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>" class="<%= index === 0 && "active" %>"></li>
-              <% }) %>
+              <%# product.images.forEach((image,index) => { %>
+              <li data-target="#carouselExampleIndicators" data-slide-to="<%#= index %>" class="<%#= index === 0 && "active" %>"></li>
+              <%# }) %>
             </ol>
            
             <div class="carousel-inner">
-              <% product.images.forEach((image,index) => { %>
+              <%# product.images.forEach((image,index) => { %>
   
-               <div class="carousel-item <%= index === 0 && "active" %>">
+               <div class="carousel-item <%#= index === 0 && "active" %>">
                 
                 <div class="Home_div_imagenBox1">
-                  <img class="Home_img_imagen" src='/Images/products/<%=image.name%>'>
+                  <img class="Home_img_imagen" src='/Images/products/<%#=image.name%>'>
                 </div>
                 
               </div>
 
-              <% }) %>
+              <%# }) %>
             </div>
           <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -38,7 +38,27 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
+        </div> -->
+
+        <!-- Swiper -->
+
+    <div class="swiper carousel">
+
+      <div class="swiper-wrapper">
+
+        <% product.images.forEach((image,index) => { %>
+
+          <div class="swiper-slide card-carrousel <%= index === 0 ? 'active' : '' %>">
+
+          <img src="/Images/products/<%=image.name%>" alt="" />
         </div>
+        <% }) %>
+
+      </div>
+      <button type="button" class="swiper-button-next"></button>
+      <button type="button" class="swiper-button-prev"></button>
+      <div class="swiper-pagination"></div>
+    </div>
                    
 
         <div class="detalle__info">
@@ -51,14 +71,13 @@
             <p><i class="fa-sharp fa-solid fa-truck-fast"></i> Llega gratis hoy</p>
           </div>
         </div>
+        <div class="container-boton">
         <div class="container__buttons">
           <div class="box__button-editar">
-            <a href="/products/edicion/<%= product.id %>"> <button type="submit">Comprar Ahora</button> </a>
+            <a href="#"  onclick="addProductToCart('<%= product.id %>')"><button>Agregar al carrito</button> </a>
          </div>
-         <form class="box__button-eliminar" action="/products/remove/<%= product.id %>?_method=DELETE" method="post">
-           <a href="/products/remove/<%= product.id %>"> <button type="submit">Agregar al carrito</button> </a>
-         </form>
         </div>
+      </div>
 
       </section>
 
@@ -148,9 +167,27 @@ const backgrounds = [
 cardsCarrousel.forEach(card => {
   card.style.background = backgrounds[Math.floor(Math.random() * 7)]
 })
-      </script>
 
-<script src="../../../public/javaScript/addProductToCart.js"></script>
-<script src="../../../public/javaScript/libraries/sweetAlert.js"></script>
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var mySwiper = new Swiper('.swiper.carousel', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
+});
+
+</script>
+<script src="/javaScript/addProductToCart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     </body>
   </html>
