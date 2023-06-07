@@ -25,11 +25,11 @@
             <h3><%= name %></h3>
           <div class="precioYOferta">
             <h4><%= discount ? discount+' % OFF' : ""%></h4>
-            <h2>$<%=(price - (price* discount) / 100)%></h2>
+            <h2>$<%=toThousand((price - (price* discount) / 100))%></h2>
           </div>
           <div>
             <a href="/products/detalle/<%= id %>"><button>Detalles</button></a>
-            <a href="/carrito"><button>Adquirir</button></a>
+            <a href="#" onclick="addProductToCart('<%= id %>')"><button>Adquirir</button></a>
           </div>
         </div>
       </article>
@@ -40,6 +40,7 @@
     
 
   <%- include('./partials/footer')  %> 
+  <script src="/javaScript/addProductToCart.js"></script>
 </body>
 
 </html>

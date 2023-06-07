@@ -106,22 +106,30 @@ justify-content: center;
     padding: 1%;
 }
 
-
+/* 
 .login__button:hover {
     background-color: rgb(107, 34, 77) ;
     
-}
+} */
 
 .login__main__form--buttons{
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: center;
+    gap: 25px;
+    font-size: 20px;
 }
 
 .login__main__form--buttons a{
-    color: white;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
+.login__main__form--buttons a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+/* 
 
 .login__button2{
     background-color: white;
@@ -130,7 +138,6 @@ justify-content: center;
     border: solid 1px black;
     height: 45px;
 }
-
 .login__button{
     background-color: var(--colorGranate);
     color: white;
@@ -147,7 +154,7 @@ justify-content: center;
 }
 .login__button2:hover a{
     color: white;
-}
+} */
 
 .login__main__form--forget{
     display: flex;

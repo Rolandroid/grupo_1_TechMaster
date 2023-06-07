@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const sequelizePaginate = require('sequelize-paginate')
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     /**
@@ -19,6 +20,12 @@ module.exports = (sequelize, DataTypes) => {
       Product.belongsTo(models.Category,{
         as : 'category',
         foreignKey : 'categoryId'
+      }),
+      Product.belongsToMany(models.Order,{
+        through: 'Cart',
+        foreignKey:'productId',
+        otherKey:'orderId',
+        as: 'cart'
       })
     }
   }
@@ -34,6 +41,6 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Product',
   });
-  
+  sequelizePaginate.paginate(Product)
   return Product;
 };

@@ -9,6 +9,7 @@ const session = require("express-session");
 const passport = require("passport")
 const { loginGoogleInitialize } = require("./services/googleServices");
 loginGoogleInitialize
+const cors = require('cors')
 
 
 const homeRouter = require('./routes/home');
@@ -20,8 +21,10 @@ const localsUserCheck = require('./middlewares/localsUserCheck');
 const userApiRouter = require('./routes/api/users');
 const productApiRouter = require('./routes/api/products');
 const commentApiRouter = require('./routes/api/comments');
+const cartApiRouter = require('./routes/api/cart');
 
 const app = express();
+app.use(cors())
 loginGoogleInitialize()
 
 
@@ -56,6 +59,7 @@ app.use('/auth',authRouter)
 app.use('/api/users', userApiRouter);
 app.use('/api/products', productApiRouter);
 app.use('/api/comments', commentApiRouter);
+app.use('/api/cart', cartApiRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

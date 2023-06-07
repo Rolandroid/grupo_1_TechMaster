@@ -5,8 +5,10 @@
     
     } */
 .register__main__section__article{
-    text-align: center;
-    /* margin: 1px; */
+    
+text-align: center;
+    
+/* margin: 1px; */
 }
 .register__form__header{
        /*  background-color: var(--colorGranate); */
@@ -42,9 +44,10 @@
         text-align: center;
         align-items: center;
         display: flex;
-        margin: 0;
+        /* margin: 0; */
         justify-content: center;
         padding: 10px 0px 10px 0px;
+        width: 20p;
 }
 .register__logo {
         display: flex;
@@ -122,7 +125,7 @@
     /* .register__form__box--buttons{
     
     } */
-    .register__form__box--buttons a{
+    /* .register__form__box--buttons a{
         
     text-decoration: none;
     font-weight: 700;
@@ -154,6 +157,24 @@
     }
     .buttons__secondary:hover a{
         color: white;
+    } */
+    .register__form__box--buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: center;
+        gap: 25px;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    
+    .register__form__box--buttons a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    .register__form__box--buttons a:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
     }
 
     .register__errors{
@@ -211,13 +232,32 @@ font-weight: 600;
           .buttons__secondary{
             width: 25%;
           }
+          .register__form__box--buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: center;
+        gap: 25px;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    
+    .register__form__box--buttons a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    .register__form__box--buttons a:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
 
     }
     
     @media (min-width:1024px) { 
         .register__main__section__article{
             display: flex;
-            width: 50vw;
+            /* width: 50vw; */
         }
         .register__form__header{
            margin: 0;

@@ -2,28 +2,33 @@
 <html lang="en">
   <!-- HEAD -->
 <%- include('../partials/head',{title : 'Detalle de productos'}) %>
-<body>
+<body class="detail">
   <%- include('../partials/header') %> 
 
       <main class="detalle__main">
 
         <section class="detalle__section">
-        <h3 class="detalle__title"><%= dataValues.name %></h3>
+        <h3 class="detalle__title"><%= product.name %></h3>
        
-        <div id="carouselExample"  class="carousel slide detalle__carousel"  data-ride="carousel">
+ <!-- <div id="carouselExample"  class="carousel slide detalle__carousel"  data-ride="carousel">
             <ol class="carousel-indicators">
-              <% dataValues.images.forEach((image,index) => { %>
-              <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>" class="<%= index === 0 && "active" %>"></li>
-              <% }) %>
+              <%# product.images.forEach((image,index) => { %>
+              <li data-target="#carouselExampleIndicators" data-slide-to="<%#= index %>" class="<%#= index === 0 && "active" %>"></li>
+              <%# }) %>
             </ol>
            
             <div class="carousel-inner">
-              <% dataValues.images.forEach((image,index) => { %>
+              <%# product.images.forEach((image,index) => { %>
   
-               <div class="carousel-item <%= index === 0 && "active" %>">
-                <img class="d-block " src="/Images/products/<%= image.name %>" alt="First slide">
+               <div class="carousel-item <%#= index === 0 && "active" %>">
+                
+                <div class="Home_div_imagenBox1">
+                  <img class="Home_img_imagen" src='/Images/products/<%#=image.name%>'>
+                </div>
+                
               </div>
-              <% }) %>
+
+              <%# }) %>
             </div>
           <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -33,74 +38,81 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
+        </div> -->
+
+        <!-- Swiper -->
+
+    <div class="swiper carousel">
+
+      <div class="swiper-wrapper">
+
+        <% product.images.forEach((image,index) => { %>
+
+          <div class="swiper-slide card-carrousel <%= index === 0 ? 'active' : '' %>">
+
+          <img src="/Images/products/<%=image.name%>" alt="" />
         </div>
+        <% }) %>
+
+      </div>
+      <button type="button" class="swiper-button-next"></button>
+      <button type="button" class="swiper-button-prev"></button>
+      <div class="swiper-pagination"></div>
+    </div>
                    
 
         <div class="detalle__info">
             <div>
-            <span class="detalle__price">$<%=(dataValues.price - (dataValues.price* dataValues.discount) / 100)%></span>
+            <span class="detalle__price">$<%=(product.price - (product.price* product.discount) / 100)%></span>
             </div>
-            <span class="detalle__cuotas"><%= dataValues.discount ? dataValues.discount+' % OFF' : ""%></span>
+            <span class="detalle__cuotas"><%= product.discount ? product.discount+' % OFF' : ""%></span>
         
         <div>
             <p><i class="fa-sharp fa-solid fa-truck-fast"></i> Llega gratis hoy</p>
           </div>
         </div>
-        <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
-         <div class="container__buttons">
-          <div class="box__button-editar">
-            <a href="/products/edicion/<%= dataValues.id %>"> <button type="submit">Editar</button> </a>
-         </div>
-         <form class="box__button-eliminar" action="/products/remove/<%= dataValues.id %>?_method=DELETE" method="post">
-           <a href="/products/remove/<%= dataValues.id %>"> <button type="submit">Eliminar</button> </a>
-         </form>
-        </div>
-        <% } %>
+        <div class="container-boton">
         <div class="container__buttons">
           <div class="box__button-editar">
-            <a href="/products/edicion/<%= dataValues.id %>"> <button type="submit">Comprar Ahora</button> </a>
+            <a href="#"  onclick="addProductToCart('<%= product.id %>')"><button>Agregar al carrito</button> </a>
          </div>
-         <form class="box__button-eliminar" action="/products/remove/<%= dataValues.id %>?_method=DELETE" method="post">
-           <a href="/products/remove/<%= dataValues.id %>"> <button type="submit">Agregar al carrito</button> </a>
-         </form>
         </div>
+      </div>
 
       </section>
 
       <section class="detalle__section-description">
         <hr>
         <span>descripción</span>
-        <p><%= dataValues.description %></p>
+        <p><%= product.description %></p>
         <hr>
       </section>
 
-<section class="detalle__main-productos">
-  <div class="detalle__title-relacionados">
-  <h4>productos relacionados</h4>
-</div>
-    <div class="glider-contain">
-      <div class="glider">
-        <% products.slice(0, 10).forEach(product => { %>
-          <div id="detalle-items" class="card card-carrousel" > 
-            <a href="/products/detalle/<%= product.dataValues.id %>" title="<%= product.dataValues.name %>">
-            <img src="/Images/products/<%= product.dataValues.images[0].name %>" class="card-img-top" alt="...">
-          </a>
-            <div class="card-body">
-              <h5 class="card-title">$ <%= product.dataValues.price %></h5>
-              <p class="card-text" title="<%= product.dataValues.name %>"><%= product.dataValues.name %></p>
-              <a href="/products/detalle/<%= product.dataValues.id %>" class="btn btn-primary button-buy">Comprar</a>
-            </div>
+      <section class="detalle__main-productos">
+        <div class="detalle__title-relacionados">
+          <h4>productos relacionados</h4>
+        </div>
+        <div class="glider-contain">
+          <div class="glider" id="TEST">
+            <% relatedProducts.forEach(product => { %>
+              <div id="detalle-items" class="card card-carrousel"> 
+                <a href="/products/detalle/<%= product.id %>" title="<%= product.name %>">
+                  <img src="/Images/products/<%= product.images[0].name %>" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">$ <%= product.price %></h5>
+                  <p class="card-text" title="<%= product.name %>"><%= product.name %></p>
+                  <a href="/products/detalle/<%= product.id %>" class="btn btn-primary button-buy">Comprar</a>
+                </div>
+              </div>
+            <% }) %>
           </div>
-        <% }) %>
-
-      </div>
-      <button aria-label="Previous" class="glider-prev">«</button>
- 
-  <div role="tablist" class="dots"></div>
-</div>
-
-
-    </section>
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <div role="tablist" class="dots"></div>
+        </div>
+      </section>
+      
+      
       </main>
 
       <%- include('../partials/footer')  %> 
@@ -155,7 +167,27 @@ const backgrounds = [
 cardsCarrousel.forEach(card => {
   card.style.background = backgrounds[Math.floor(Math.random() * 7)]
 })
-      </script>
 
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var mySwiper = new Swiper('.swiper.carousel', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
+});
+
+</script>
+<script src="/javaScript/addProductToCart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     </body>
   </html>

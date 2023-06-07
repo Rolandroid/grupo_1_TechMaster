@@ -14,6 +14,8 @@
 }
 .TechmasterHomeLink i{
     color: white;
+    text-decoration: none;
+    
 }
 .TechmasterHomeLink:hover {
     text-decoration: none;
@@ -113,6 +115,7 @@
 }
 .header--barra li a{
     color: white;
+    text-decoration: none;
 }
 .header--barra li a:hover{
     text-decoration: none;

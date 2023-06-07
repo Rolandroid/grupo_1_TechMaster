@@ -17,21 +17,23 @@ module.exports = {
         const errors = validationResult(req);
         if (errors.isEmpty()) {
             const { name, surname, email, password } = req.body;
-            db.Location.create()
-                .then(location => {
-                    db.User.create({
-                        name: name.trim(),
-                        surname: surname.trim(),
-                        email: email.trim(),
-                        password: hashSync(password, 12),
-                        avatar: null,
-                        rolId: 2,
-                        locationId: location.id
-                    }).then(user => {
-                        console.log(user)
+
+            db.User.create({
+                name: name.trim(),
+                surname: surname.trim(),
+                email: email.trim(),
+                password: hashSync(password, 12),
+                avatar: null,
+                rolId: 2,
+            }).then(user => {
+                db.Location.create({
+                    userId: user.id
+                })
+                    .then(location => {
+                        console.log(user, location)
                         return res.redirect('/users/login')
                     })
-                }).catch(error => console.log(error))
+            }).catch(error => console.log(error))
 
         } else {
             return res.render('users/register', {
@@ -55,7 +57,6 @@ module.exports = {
                 where: {
                     email: req.body.email
                 },
-                include: ['location']
             })
                 .then(({ id, rolId, name }) => {
 
@@ -81,62 +82,65 @@ module.exports = {
     },
 
     profile: (req, res) => {
-        user = db.User.findOne({
+        db.User.findOne({
             where: {
                 id: req.session.userLogin.id
             },
-            include: ['location']
         }).then((user) => {
-            console.log(user)
-            return res.render('users/profile', { user })
+
+            db.Location.findOne({
+                where: { userId: user.id }
+            }).then((location) => {
+                console.log(user, location)
+                return res.render('users/profile', { user, location })
+            })
+
         }).catch((error) => console.log(error))
     },
 
     processProfile: (req, res) => {
-        const { name, surname, email, password, address, city, province, zipCode, rolId } =
+        const { name, surname, password, address, city, province, zipCode, rolId } =
             req.body;
-        const id = req.session.userLogin.id
-        const removeImagesBefore = req.query.removeImageBefore
+        const id = req.session.userLogin.id;
+        const removeImagesBefore = req.query.removeImageBefore;
         db.User.findByPk(id)
             .then(user => {
+                const userUpdate = db.User.update({
+                    name: name.trim(),
+                    surname: surname.trim(),
+                    avatar: req.file ? req.file.filename : user.avatar
+                }, {
+                    where: {
+                        id
+                    }
+                });
+    
                 const locationUpdate = db.Location.update(
                     {
-                    address: address ? address.trim() : null,
-                    province: province ? province.trim() : null,
-                    city: city ? city.trim() : null,
-                    zipCode: zipCode ? zipCode : null
-                }, 
-                {
-                    where: { id: user.locationId }
-                }
-                )
-            
-        const userUpdate = db.User.update({
-            name : name.trim(),
-            surname : surname.trim(),
-            email : email.trim(),
-            avatar : req.file ? req.file.filename : user.avatar
-        }, {
-            where: {
-                id
-            }
-        })
-        Promise.all(([locationUpdate, userUpdate]))
-            .then(() => {
-                (req.file &&
-                    fs.existsSync('public/images/users/' + user.image))
-                    && fs.unlinkSync('public/images/users/' + user.image)
-                return res.redirect('/users/profile')
-            })
-
-        }).catch(error => console.log(error))
-
+                        address: address ? address.trim() : null,
+                        province: province ? province.trim() : null,
+                        city: city ? city.trim() : null,
+                        zipCode: zipCode ? zipCode : null
+                    },
+                    {
+                        where: { Userid: id }
+                    }
+                );
     
-},
+                Promise.all([locationUpdate, userUpdate])
+                    .then(() => {
+                        (req.file &&
+                            fs.existsSync('public/images/users/' + user.image))
+                            && fs.unlinkSync('public/images/users/' + user.image);
+                        return res.redirect('/users/profile');
+                    });
+            })
+            .catch(error => console.log(error));
+    },
 
-newPassword: (req, res) => {
-    return res.render('users/newPassword')
-},
+    newPassword: (req, res) => {
+        return res.render('users/newPassword')
+    },
 
     logout: (req, res) => {
         req.session.destroy();

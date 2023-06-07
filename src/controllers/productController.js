@@ -1,39 +1,30 @@
 const fs = require("fs");
 const path = require("path");
-/* const products = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
-); */
-/* const { writeJSON, readJSON } = require("../data/index"); */
 const db = require("../database/models");
-const product = require("../database/models/product");
 const { validationResult } = require("express-validator");
+
 module.exports = {
   list: (req, res) => {
-    db.Product.findAll({
-      where: {
-        visible: true,
-      },
-      include: ["images"],
-    })
-      .then((products) => {
-        return res.render("products/list", {
-          products,
-        });
-      })
-      .catch((error) => console.log(error));
+       return res.render("products/list");         
   },
 
   detalle: (req, res) => {
     const { id } = req.params;
-    db.Product.findAll({
-      where: {
-        visible: true,
-      },
-      include: ["images"],
-    })
-      .then((products) => {
-        let product = products.find((product) => product.id === +id);
-        return res.render("products/detalle", { ...product, products });
+    db.Product.findByPk(id, { include: ["images"] })
+      .then((product) => {
+        const categoryId = product.categoryId;
+        db.Product.findAll({
+          where: {
+            visible: true,
+            categoryId: categoryId
+          },
+          include: ["images"],
+          limit: 10
+        })
+          .then((relatedProducts) => {
+            return res.render("products/detalle", { product, relatedProducts });
+          })
+          .catch((error) => console.log(error));
       })
       .catch((error) => console.log(error));
   },
@@ -91,7 +82,7 @@ module.exports = {
             });
           });
 
-          return res.redirect("/products/list");
+          return res.redirect("/dashboard");
         })
         .catch((error) => console.log(error));
     } else {
@@ -120,8 +111,8 @@ module.exports = {
         order: [["name"]],
         attributes: ["name", "id"],
       });
-      console.log(product.dataValues);
       return res.render("products/edicion", { product, categories });
+      return res.json(product);
     } catch (error) {
       console.log(error);
     }
@@ -207,7 +198,7 @@ module.exports = {
           console.log(images);
         }
 
-        return res.redirect(`/products/detalle/` + id);
+        return res.redirect(`/dashboard`);
       } catch (error) {
         console.log(error);
       }
@@ -248,7 +239,7 @@ module.exports = {
 
       product.destroy();
 
-      return res.redirect("/products/list");
+      return res.redirect("/dashboard");
     } catch (error) {
       console.error(error);
       return res.status(500).json({ message: "Error al eliminar el producto" });

@@ -5,7 +5,7 @@
 }
 
 .main--section-s{
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .glider-track{
@@ -102,9 +102,9 @@ text-decoration: none;
     }
 
     .main__ul--info img{
-        display: flex;
+        /* display: flex; */
         gap: 30px;
-        margin: 0px;
+        /* margin: 0px; */
         width: 72%;
     }
 
@@ -149,10 +149,10 @@ text-decoration: none;
     overflow: auto;
     scrollbar-width: none;
     padding-bottom: 33px;
-
     grid-auto-flow: column;
     padding-left: 10px;
     padding-right: 10px;
+    justify-content: start;
  }
 
  .carrousel img{
@@ -267,12 +267,14 @@ margin-bottom: 10px;
     
 text-decoration: none;
 }
+
+
 @media (min-width: 768px)  { 
     .main--section-s{
         display: flex;
         align-items: center;
         gap: 15px;
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
     .carousel{
         width: 51%;
@@ -353,6 +355,7 @@ text-decoration: none;
             gap: 12px;
             width: 48%;
             flex-direction: column;
+            
         }
         .main__image--card2{
             display: flex;
@@ -509,7 +512,9 @@ text-decoration: none;
         .main__image--card{
             display: flex;
             gap: 12px;
-            /* width: 47%; */
+            /* height: -26vh; */
+            width: 47%;
+            height: 0;
         }
         .main__image--card2{
             display: flex;

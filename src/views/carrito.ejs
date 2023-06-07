@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- HEAD -->
 <%- include('./partials/head',{title : 'Carrito de productos'}) %>
-<body class="boby__view__carrito">
+<body class="boby__view__carrito carrito">
   
   
 
@@ -10,7 +10,7 @@
   <%- include('./partials/header') %> 
 
 
-  <main class="mainCarrito">
+  <!-- <main class="mainCarrito">
     <h1>Carrito De Compra</h1>
     <section>
 
@@ -58,9 +58,39 @@
       </article>
       
     </section>
+  </main> -->
+
+  <main class="container " id="mainCarrito" >
+
+    <div class="row position-relative" >
+
+      <div id="cards-container" class="col-12 col-lg-6">
+        <!-- cards -->
+      </div>
+
+  
+      <div class="card col-12 col-lg-4 my-5 position-sticky"  id="cart-card">
+        <div class="card-body my-2 d-flex flex-column gap-2">
+          <button class="btn w-100 btn-danger" id="clear-cart">Vaciar Carrito</button>
+          <button class="btn w-100 btn-success" id="btn-buy">Comprar</button>
+          <a href="/products/list" class="btn w-100 btn-outline-secondary" id="btn-keep-looking">Seguir mirando</a>
+          <div class="text-end fs-3" >
+            <span id="total">
+              Total:
+            </span>
+            <output id="output-total">
+              0
+            </output>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <%- include('./partials/footer')  %> 
+  <%- include('./partials/scripts') %>
+  <script src="/javaScript/cart.js"></script>
 </body>
 
 </html>
