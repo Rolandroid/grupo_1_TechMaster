@@ -1,3 +1,28 @@
+function togglePasswordVisibility() {
+  var passwordInput = document.getElementById("password");
+  var eyeIcon = document.getElementById("eye-icon");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcon.className = "fa fa-eye-slash";
+  } else {
+    passwordInput.type = "password";
+    eyeIcon.className = "fa fa-eye";
+  }
+}
+function togglePasswordVisibility2() {
+  var passwordInput = document.getElementById("password2");
+  var eyeIcon = document.getElementById("eye-icon2");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcon.className = "fa fa-eye-slash";
+  } else {
+    passwordInput.type = "password";
+    eyeIcon.className = "fa fa-eye";
+  }
+}
+
 window.addEventListener('load',function(){
     //form & inputs
     

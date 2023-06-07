@@ -189,6 +189,7 @@ justify-content: center;
     .login__main__form--boxes{
     border: none;
     padding: 1%;
+    display: flex;
 }
 
 .login__main__form--forget{
