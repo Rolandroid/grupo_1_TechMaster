@@ -38,8 +38,8 @@ const paintProducts = ({products}) =>{
                     <img style="object-fit:cover;width:150px" src="/images/products/${
                       images[0].name || 'default-image.png'
                     }" alt="">
-                    <div class="col-8 position-relative">
-                      <button onclick="removeProductToCart(${id})" class="fs-5 p-0 border-0 bg-transparent position-absolute text-danger " style="top:-3px;right:10px"><i style="padding:2px" class="rounded-circle btn-clear far fa-times-circle"></i></button>
+                    <div class="col-8 position-relative" id="cart-card-article">
+                      <button onclick="removeProductToCart(${id})"  class="fs-5 p-0 border-0 bg-transparent position-absolute text-danger " style="top:-3px;right:10px"><i   style="padding:4px" class="rounded-circle btn-clear far fa-times-circle"></i></button>
       
                       <h5 class="card-title">${name}</h5>
                       <p class="card-text text-truncate ">${description}</p>
@@ -50,15 +50,19 @@ const paintProducts = ({products}) =>{
           }</p>
                       <p class="d-flex align-items-center gap-2">
                         <label for=""></label>
-                        <button id="lessQuantity" onclick="lessProduct(${id},${
+                       
+                       <div id="cart-buttons-article"> 
+                       <button id="lessQuantity" onclick="lessProduct(${id},${
             Cart.quantity
           })" class="btn btn-light">-</button>
-                        <output id="moreQuantity" style="width:40px"  class="form-control text-center">
+                        <output id="buttonQuantity" style="width:40px"  class="form-control text-center">
                           ${Cart.quantity}
                         </output>
-                        <button onclick="moreProduct(${id})" class="btn btn-light">+</button>
+                        <button id="moreQuantity" onclick="moreProduct(${id})" class="btn btn-light">+</button>
                         <a href="/products/detalle/${id}" class="btn btn-outline-light">Ver más</a>
                       </p>
+
+                    </div>
                     </div>
                  
                   </div>
