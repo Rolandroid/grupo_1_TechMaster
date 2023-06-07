@@ -52,6 +52,7 @@
     
                 <div class="login__main__form--boxes">
                     <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
+                    <i class="fa fa-eye eye-icon eyeButton" id="eye-icon" onclick="togglePasswordVisibility()"></i>
                 </div>
                 <small class="register__errors" id="errorPass"><%= (locals.errors && errors.password) && errors.password.msg %></small>
                 <div class="register__form__oferta1">

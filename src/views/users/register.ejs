@@ -74,6 +74,8 @@
 
               <div class="register__form__box">
                 <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
+                <i class="fa fa-eye eye-icon eyeButton" id="eye-icon" onclick="togglePasswordVisibility()"></i>
+
               </div>
               <small class="register__errors" id="errorPass" >
                 <%= locals.errors && errors.password ? errors.password.msg : null %>
@@ -94,6 +96,8 @@
               <div class="register__form__box">
                 <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2"
                   autocomplete="off">
+                  <i class="fa fa-eye eye-icon eyeButton" id="eye-icon2" onclick="togglePasswordVisibility2()"></i>
+
               </div>
               <small class="register__errors" id="errorPass2">
                 <%= locals.errors && errors.password2 ? errors.password2.msg : null %>

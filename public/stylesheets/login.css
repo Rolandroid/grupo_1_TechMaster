@@ -190,6 +190,7 @@ justify-content: center;
     .login__main__form--boxes{
     border: none;
     padding: 1%;
+    display: flex;
 }
 
 .login__main__form--forget{
@@ -259,3 +260,4 @@ justify-content: center;
     
    
 }
+.eyeButton{/* position: absolute; *//* margin-left: -30px; *//* margin-top: 20px; */}
