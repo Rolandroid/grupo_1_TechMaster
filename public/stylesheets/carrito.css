@@ -219,6 +219,8 @@
     padding: 0;
     width: 100vw;
   }
+  #moreQuantity{
+  }
 @media (max-width:767px) {
     /* .articleCarrito{
         flex-direction: column;
