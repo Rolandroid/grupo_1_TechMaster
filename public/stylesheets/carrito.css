@@ -212,6 +212,7 @@
     /* justify-content: end; */
     /* padding: 11px; */
     /* text-align: center; */
+    flex-direction: column;
   }
   #mainCarrito-div{
     background-color: var(--colorGranate);

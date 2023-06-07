@@ -14,32 +14,30 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide 1 - Set the background image for this slide in the line below -->
-        <div class="carousel-item active"  style="background-image: url('/Images/PC-1.png')">
+        <div class="carousel-item active"  style="background-image: url('/Images/CarruselImg1.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Black Friday sale</h3>
-            <h2>UPTO</h2> 
-            <h1>50% OFF</h1>
-            <button><a href="/carrito">COMPRAR</a></button>
+            <h3></h3>
+            <h2>Junio 2023</h2> 
+            <h1>Nuestro Catalogo</h1>
+            <a href="/products/list" class="button1" >Ver más</a>
 
           </div>
         </div>
         <!-- Slide 2 - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('/Images/PC-2.png')">
+        <div class="carousel-item" style="background-image: url('/Images/CarruselImg2.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Black Friday sale</h3>
-            <h2>UPTO</h2>
-            <h1>50% OFF</h1>
-            <button><a href="/carrito">COMPRAR</a></button>
+            <h3></h3>
+            <h2></h2>
+            <h1>Nuestras ofertas</h1>
+            <a href="/products/list/discount" class="button1" >Ver más</a>
           </div>
         </div>
         <!-- Slide 3 - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('/Images/PC-3.png')">
+        <div class="carousel-item" style="background-image: url('/Images/CarruselImg3.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Black Friday sale</h3>
-            <h2>UPTO</h2>
-            <h1>50% OFF</h1>
-            <button><a href="/carrito">COMPRAR</a></button>
-
+            <h3></h3>
+            <h2></h2>
+            <h1>Los mejores precios</h1>
           </div>
         </div>
 
@@ -55,14 +53,14 @@
     </div>
     <div class="main__image--card">
     <div class="image--lado card card-carrousel">
-      <img src="/Images/PC-1.png" alt="">
-      <h2>Gaming computer</h2>
-      <span>1TB SSD <br>
-      16GB RAM <br>
-      AMD-5600G
+      <img src="Images/products/<%=products[4].images[0].name %>" alt="">
+      <h2><%=products[4].name %></h2>
+      <span>Producto destacado <br>
+        <%=products[4].price %> <br>
+        <%=products[4].discount %>
     </span> 
       
-      <button class="button1" onclick="window.location.href='/carrito';">COMPRAR</button>
+      <button class="button2" onclick="window.location.href='/carrito';">COMPRAR</button>
       </div>
       <div class="direction">
       <div class="main__image--card2">

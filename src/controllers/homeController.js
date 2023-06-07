@@ -6,10 +6,17 @@ const { Op } = require("sequelize")
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
-  home: (req, res) => {
+  home: async (req, res) => {
+    try{
+      const products = await db.Product.findAll({
+      include: ['category','images'],
+    })
+    console.log(products)
     return res.render('home', {
       products
-    })
+    })}
+    catch{(error)=>{console.log(error)}}
+    
   },
   carrito: (req, res) => {
     return res.render('carrito')

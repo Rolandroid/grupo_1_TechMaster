@@ -34,10 +34,11 @@ const paintProducts = ({products}) =>{
           <!-- COURSE TEMPLATE CARD -->
                 <div id="articleCarrito"class="card my-5">
                   <div  class="card-body row">
-                    
+                    <div >
                     <img style="object-fit:cover;width:150px" src="/Images/products/${
                       images[0].name || 'default-image.png'
                     }" alt="">
+                    </div>
                     <div class="col-8 position-relative" id="cart-card-article">
                       <button onclick="removeProductToCart(${id})"  class="fs-5 p-0 border-0 bg-transparent position-absolute text-danger " style="top:-3px;right:10px"><i   style="padding:4px" class="rounded-circle btn-clear far fa-times-circle"></i></button>
       
