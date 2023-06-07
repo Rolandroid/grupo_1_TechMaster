@@ -21,7 +21,6 @@
     align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
-
 }
 #bolt{
     width: 60px;
@@ -41,7 +40,9 @@
 .login__main__div--links{
     border: 1px solid white;
     width: 260px;
-    padding: 5px 8px;text-align: center;
+    padding: 5px 8px;
+    text-align: center;
+  /*   background-color: rgba(128, 128, 128, 0.13); */
 }
 
 .login__main__div--links a{

@@ -179,16 +179,20 @@ text-align: center;
 
     .register__errors{
         color: red;
-        padding-bottom: 14px;
+        /* padding-bottom: 14px; */
     }
     .register-list-pass{
         text-align: initial;
-        margin-left: 25%;
-        /* display: flex; */
+        margin-left: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
     }
     .register-list-pass p{
         margin: 0;
         font-size: 12px;
+        padding: 0;
     }
     
     .register__span{
@@ -201,6 +205,12 @@ font-weight: 600;
     }
     .isInvalid input {
         border: 2px solid rgb(157, 0, 0);
+    }
+    #register-list-password{
+        width: 70%;
+        display: flex;
+        margin: 0;
+        padding: 0;
     }
     @media (min-width:720px)  { 
 
