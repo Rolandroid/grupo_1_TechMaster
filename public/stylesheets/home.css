@@ -1,3 +1,16 @@
+.button1 {
+    width: 113px;
+    border: solid 3px #cfff00;
+    background-color: #0000003b;
+    padding: 3px 20px 3px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #cfff00;
+    position: initial;
+    margin-bottom: 10px;
+    /* left: 120px; */
+}
+
 .home__main {
     background-color: var(--colorGrisOscuro);
     padding: 0px 5px 0px 5px;
@@ -50,10 +63,14 @@
 }
 
 .carousel-item h1 {
-text-shadow: 3px 1px 3px hwb(0deg 0% 100%);
-display: flex;
-justify-content: flex-end;
-font-size: 54px;
+
+text-shadow: 3px 1px 3px hwb(0deg 0% 100%);
+
+display: flex;
+
+justify-content: flex-end;
+
+font-size: 54px;
 }
 
 .carousel-item button {
@@ -251,18 +268,30 @@
 }
 
 #button--carrusel {
-bottom: 10px;
-/* left: 10px; */
-border: solid 3px #cfff00;
-background-color: #0000003b;
-padding: 3px 20px 3px 20px;
-font-family: 'lato', sans-serif;
-font-weight: 600;
-border-radius: 5px;
-position: absolute;
-color: #cfff00;
-margin-bottom: 10px;
-text-decoration: none;
+
+bottom: 10px;
+
+/* left: 10px; */
+
+border: solid 3px #cfff00;
+
+background-color: #0000003b;
+
+padding: 3px 20px 3px 20px;
+
+font-family: 'lato', sans-serif;
+
+font-weight: 600;
+
+border-radius: 5px;
+
+/* position: absolute; */
+
+color: #cfff00;
+
+margin-bottom: 10px;
+
+text-decoration: none;
 }
 
 
@@ -397,16 +426,7 @@
         color: #FFF;
     }
 
-    .button1 {
-        position: absolute;
-        display: flex;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 5px;
-        top: 9.5rem;
-        right: 13rem;
-    }
-
+   
     .button2 {
         position: absolute;
         display: flex;
@@ -421,10 +441,7 @@
         display: none;
     }
 
-    .button1 a,
-    .button2 a {
-        color: #fff300;
-    }
+    
 
 }
 
@@ -602,18 +619,7 @@
         color: #ffff;
     }
 
-    .button1 {
-        width: 113px;
-        border: solid 3px #cfff00;
-        background-color: #0000003b;
-        padding: 3px 20px 3px 20px;
-        font-weight: 600;
-        border-radius: 5px;
-        color: #cfff00;
-        position: initial;
-        margin-bottom: 10px;
-        /* left: 120px; */
-    }
+    
 
     .button2 {
         position: absolute;
@@ -650,304 +656,5 @@
 
 }
 
-@media (min-width: 1440px) {
-
-    /*  .home__main{
-        height: 90vh;
-    } */
-    .main--section-s {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .carousel {
-        width: 51%;
-    }
-
-    .carousel-item {
-        height: 30vh;
-        min-height: 400px;
-        background: no-repeat center center scroll;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
-    }
-
-    .carousel-item h3 {
-        position: initial;
-        display: flex;
-        font-size: 32px;
-        color: #ffffff;
-    }
-
-    .carousel-item button {
-        display: flex;
-        margin-left: 66%;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 11px;
-    }
-
-    .main--info {
-        font-size: 20px;
-    }
-
-    .main__ul--info img {
-        display: flex;
-        margin: 0px;
-    }
-
-    .main__div--info span {
-        display: flex;
-        font-size: 16px;
-        font-family: 'lato', sans-serif;
-    }
 
 
-    .image--lado {
-        position: relative;
-        height: 15vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-width: 14.3rem;
-        min-height: 12.2rem;
-    }
-
-    .image--lado2 {
-        height: 22vh;
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        min-width: 14.3rem;
-        min-height: 12.2rem;
-    }
-
-    .image--lado3 {
-        height: 15vh;
-        width: 98%;
-        display: flex;
-        justify-content: center;
-        min-width: 14.3rem;
-        min-height: 12.2rem;
-    }
-
-    .image--lado img {
-        width: 27%;
-    }
-
-    .image--lado2 img {
-        width: 65%;
-    }
-
-    .image--lado3 img {
-        width: 47%;
-    }
-
-    .main__image--card {
-        display: flex;
-        gap: 12px;
-        /* width: 47%; */
-    }
-
-    .main__image--card2 {
-        display: flex;
-        gap: 12px;
-        flex-direction: column;
-    }
-
-    .main__image--card3 {
-        display: flex;
-        gap: 12px;
-        flex-direction: column;
-    }
-
-    .direction {
-        display: flex;
-        gap: 3px;
-    }
-
-    .button1 {
-        position: absolute;
-        display: flex;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 5px;
-        top: 9.5rem;
-        right: 32rem;
-    }
-
-    .button2 {
-        position: absolute;
-        display: flex;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 5px;
-        top: 9.5rem;
-        right: 13rem;
-    }
-
-    .button3 {
-        position: absolute;
-        display: flex;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 5px;
-        top: 9.5rem;
-        right: 8rem;
-    }
-}
-
-@media (min-width: 1920px) {
-    .main--section-s {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .carousel {
-        width: 51%;
-    }
-
-    .carousel-item {
-        height: 30vh;
-        min-height: 400px;
-        background: no-repeat center center scroll;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
-    }
-
-    .carousel-item h3 {
-        position: initial;
-        display: flex;
-        font-size: 32px;
-        color: #ffffff;
-    }
-
-    .carousel-item button {
-        display: flex;
-        margin-left: 66%;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 11px;
-    }
-
-    .main--info {
-        font-size: 20px;
-    }
-
-    .main__ul--info img {
-        display: flex;
-        margin: 0px;
-    }
-
-    .main__div--info span {
-        display: flex;
-        font-size: 16px;
-        font-family: 'lato', sans-serif;
-    }
-
-
-    .image--lado {
-        position: relative;
-        height: 15vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-width: 14.3rem;
-        min-height: 12.2rem;
-    }
-
-    .image--lado2 {
-        height: 22vh;
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        min-width: 14.3rem;
-        min-height: 12.2rem;
-    }
-
-    .image--lado3 {
-        height: 15vh;
-        width: 98%;
-        display: flex;
-        justify-content: center;
-        min-width: 14.3rem;
-        min-height: 12.2rem;
-    }
-
-    .image--lado img {
-        width: 27%;
-    }
-
-    .image--lado2 img {
-        width: 65%;
-    }
-
-    .image--lado3 img {
-        width: 47%;
-    }
-
-    .main__image--card {
-        display: flex;
-        gap: 12px;
-        /* width: 47%; */
-    }
-
-    .main__image--card2 {
-        display: flex;
-        gap: 12px;
-        flex-direction: column;
-    }
-
-    .main__image--card3 {
-        display: flex;
-        gap: 12px;
-        flex-direction: column;
-    }
-
-    .direction {
-        display: flex;
-        gap: 3px;
-    }
-
-    .button1 {
-        position: absolute;
-        display: flex;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 5px;
-        top: 9.5rem;
-        right: 47rem;
-    }
-
-    .button2 {
-        position: absolute;
-        display: flex;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 5px;
-        top: 9.5rem;
-        right: 26rem;
-    }
-
-    .button3 {
-        position: absolute;
-        display: flex;
-        border: none;
-        background-color: #ef3a7cbd;
-        padding: 5px;
-        top: 9.5rem;
-        right: 10rem;
-    }
-}
