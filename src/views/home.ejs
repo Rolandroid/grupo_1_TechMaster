@@ -67,6 +67,9 @@
               <h2>
                 <%=products[item1].name %>
               </h2>
+              <span>
+                <%=products[item1].discount + "% Off" %>
+              </span>
               
               <h6 style="position: absolute;
       top: 30px;
@@ -83,7 +86,7 @@
                     <%=products[item2].name %>
                   </h2>
                   <span>
-                    <%=products[item2].price %>
+                    <%=products[item2].discount + "% Off" %>
                   </span>
                  
                   <h6 style="position: absolute;
@@ -100,9 +103,9 @@
                   <h2>
                     <%=products[item3].name %>
                   </h2>
-                  <h2>
-                    <%=products[item3].discount ? products[item3].discount + "% Off" : "" %>
-                  </h2>
+                  <span>
+                    <%=products[item3].discount + "% Off" %>
+                  </span>
               
 
                   <a id="button--carrusel" href="/products/detalle/<%= products[item3].id %>">Ver más</a>
