@@ -12,8 +12,9 @@
     background-size: cover;
 }
 .mainResultados{
-    background-color: rgb(143 143 143 / 27%);
+    /* background-color: rgb(150 150 150); */
     min-height: 100vh;
+    background-color: var(--colorGranate);
 }
 .mainResultados h1{
     color: white;
