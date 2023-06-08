@@ -21,12 +21,12 @@
                 </div>
                 
 
-                <div class="login__main__div--links">
+               <!--  <div class="login__main__div--links">
                     <a href="">
                     <i class="fa-brands fa-facebook"></i>
                   Continuar con Facebook
                     </a>
-                </div>
+                </div> -->
 
                 <div class="login__main__div--links">
                     <a href="/auth/login/google">
@@ -52,6 +52,7 @@
     
                 <div class="login__main__form--boxes">
                     <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
+                    <i class="fa fa-eye eye-icon eyeButton" id="eye-icon" onclick="togglePasswordVisibility()"></i>
                 </div>
                 <small class="register__errors" id="errorPass"><%= (locals.errors && errors.password) && errors.password.msg %></small>
                 <div class="register__form__oferta1">

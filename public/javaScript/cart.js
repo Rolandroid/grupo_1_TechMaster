@@ -32,33 +32,38 @@ const paintProducts = ({products}) =>{
       const priceFormatARG = convertFormatPeso(priceWithDiscount);
           const templete = `
           <!-- COURSE TEMPLATE CARD -->
-                <div class="card my-5">
-                  <div class="card-body row">
-                    
+                <div id="articleCarrito"class="card my-5">
+                  <div  class="card-body row">
+                    <div >
                     <img style="object-fit:cover;width:150px" src="/Images/products/${
                       images[0].name || 'default-image.png'
                     }" alt="">
-                    <div class="col-8 position-relative">
-                      <button onclick="removeProductToCart(${id})" class="fs-5 p-0 border-0 bg-transparent position-absolute text-danger " style="top:-3px;right:10px"><i style="padding:2px" class="rounded-circle btn-clear far fa-times-circle"></i></button>
+                    </div>
+                    <div class="col-8 position-relative" id="cart-card-article">
+                      <button onclick="removeProductToCart(${id})"  class="fs-5 p-0 border-0 bg-transparent position-absolute text-danger " style="top:-3px;right:10px"><i   style="padding:4px" class="rounded-circle btn-clear far fa-times-circle"></i></button>
       
                       <h5 class="card-title">${name}</h5>
-                      <p class="card-text text-truncate text-dark">${description}</p>
-                      <p class="card-text text-dark">${priceFormatARG}${
+                      <p class="card-text text-truncate ">${description}</p>
+                      <p class="card-text ">${priceFormatARG}${
             discount
-              ? `<span class="text-danger mx-3">${discount}% OFF</span>`
+              ? `<span class="text-success mx-2">${discount}% OFF</span>`
               : ""
           }</p>
                       <p class="d-flex align-items-center gap-2">
                         <label for=""></label>
-                        <button onclick="lessProduct(${id},${
+                       
+                       <div id="cart-buttons-article"> 
+                       <button id="lessQuantity" onclick="lessProduct(${id},${
             Cart.quantity
           })" class="btn btn-light">-</button>
-                        <output style="width:50px"  class="form-control text-center">
+                        <output id="buttonQuantity" style="width:40px"  class="form-control text-center">
                           ${Cart.quantity}
                         </output>
-                        <button onclick="moreProduct(${id})" class="btn btn-light">+</button>
-                        <a href="/products/detalle/${id}" class="btn btn-outline-dark">Ver más</a>
+                        <button id="moreQuantity" onclick="moreProduct(${id})" class="btn btn-light">+</button>
+                        <a href="/products/detalle/${id}" class="btn btn-outline-light">Ver más</a>
                       </p>
+
+                    </div>
                     </div>
                  
                   </div>

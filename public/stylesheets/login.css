@@ -21,7 +21,6 @@
     align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
-
 }
 #bolt{
     width: 60px;
@@ -41,7 +40,9 @@
 .login__main__div--links{
     border: 1px solid white;
     width: 260px;
-    padding: 5px 8px;text-align: center;
+    padding: 5px 8px;
+    text-align: center;
+  /*   background-color: rgba(128, 128, 128, 0.13); */
 }
 
 .login__main__div--links a{
@@ -189,6 +190,7 @@ justify-content: center;
     .login__main__form--boxes{
     border: none;
     padding: 1%;
+    display: flex;
 }
 
 .login__main__form--forget{
@@ -258,3 +260,4 @@ justify-content: center;
     
    
 }
+.eyeButton{/* position: absolute; *//* margin-left: -30px; *//* margin-top: 20px; */}

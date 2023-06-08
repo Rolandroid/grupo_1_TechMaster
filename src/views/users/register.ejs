@@ -27,12 +27,12 @@
                   <p>TechMaster te brindará el mejor servicio de compra y venta de productos tecnologicos y afines.</p>
                 </div>
 
-                <div class="form__header--links">
+                <!-- <div class="form__header--links">
                   <a href="">
                     <i class="fa-brands fa-facebook"></i>
                     Continuar con Facebook
                   </a>
-                </div>
+                </div> -->
                 <div class="form__header--links">
                   <a href="/auth/login/google">
                     <i class="fa-brands fa-google"></i>
@@ -74,25 +74,30 @@
 
               <div class="register__form__box">
                 <input type="password" placeholder="Contraseña" name="password" id="password" autocomplete="off">
+                <i class="fa fa-eye eye-icon eyeButton" id="eye-icon" onclick="togglePasswordVisibility()"></i>
+
               </div>
               <small class="register__errors" id="errorPass" >
                 <%= locals.errors && errors.password ? errors.password.msg : null %>
               </small>
+              <div id="register-list-password" >
               <ul id="msgPass" class="register-list-pass" hidden >
-                <p>Debe contener:</p>
-                <p class="register-error-item" id="mayu">Una mayúscula</p>
-                <p class="register-error-item" id="minu">Una minúscula</p>
-                <p class="register-error-item" id="num">Un número</p>
-                <p class="register-error-item" id="esp">Un caracter especial ($@!%*?&_-)</p>
-                <p class="register-error-item" id="min">Mínimo 6 caracteres</p>
-                <p class="register-error-item" id="max">Máximo 12 caracteres</p>
+                <p>Debe contener: </p>
+                <p class="register-error-item" id="mayu"> una mayúscula ,</p>
+                <p class="register-error-item" id="minu">una minúscula ,</p>
+                <p class="register-error-item" id="num">un número ,</p>
+                <p class="register-error-item" id="esp">un caracter especial ($@!%*?&_-) ,</p>
+                <p class="register-error-item" id="min">mínimo 6 caracteres ,</p>
+                <p class="register-error-item" id="max">máximo 12 caracteres</p>
               </ul>
-
+</div>
 
 
               <div class="register__form__box">
                 <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2"
                   autocomplete="off">
+                  <i class="fa fa-eye eye-icon eyeButton" id="eye-icon2" onclick="togglePasswordVisibility2()"></i>
+
               </div>
               <small class="register__errors" id="errorPass2">
                 <%= locals.errors && errors.password2 ? errors.password2.msg : null %>
