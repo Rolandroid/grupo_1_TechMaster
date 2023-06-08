@@ -252,24 +252,18 @@
 }
 
 #button--carrusel {
-
-    border: solid 3px #cfff00;
-
-    background-color: #0000003b;
-
-    padding: 3px 20px 3px 20px;
-
-    font-family: 'lato', sans-serif;
-
-    font-weight: 600;
-
-    border-radius: 5px;
-
-    color: #cfff00;
-
-    margin-bottom: 10px;
-
-    text-decoration: none;
+bottom: 10px;
+left: 10px;
+border: solid 3px #cfff00;
+background-color: #0000003b;
+padding: 3px 20px 3px 20px;
+font-family: 'lato', sans-serif;
+font-weight: 600;
+border-radius: 5px;
+position: absolute;
+color: #cfff00;
+margin-bottom: 10px;
+text-decoration: none;
 }
 
 
@@ -350,7 +344,10 @@
     }
 
     .image--lado img {
+        max-width: 180px;
         width: 50%;
+        position: absolute;
+        z-index: 3;
     }
 
     .image--lado2 img {
@@ -434,7 +431,9 @@
 
 @media (min-width: 1024px) {
 
-    .home__main {}
+    .home__main {
+    padding-top: 21px;
+}
 
     .main--section-s {
         display: flex;
@@ -520,7 +519,10 @@
     }
 
     .image--lado img {
+        max-width: 180px;
         width: 50%;
+        position: absolute;
+        z-index: 3;
     }
 
     .image--lado2 img {
@@ -528,6 +530,7 @@
     }
 
     .image--lado3 img {
+        z-index: 1;
         width: 59%;
     }
 
@@ -546,6 +549,7 @@
     }
 
     .main__image--card3 {
+        overflow: hidden;
         display: flex;
         gap: 12px;
         flex-direction: column;
@@ -557,8 +561,8 @@
     }
 
     .image--lado h2 {
-        position: absolute;
-        display: flex;
+        /* position: absolute; */
+        /* display: flex; */
         font-size: 21px;
         text-transform: uppercase;
         font-weight: 700;
@@ -568,7 +572,8 @@
     }
 
     .image--lado span {
-        position: absolute;
+        /* position: absolute; */
+        overflow: hidden;
         display: flex;
         font-size: 21px;
         top: 31px;
