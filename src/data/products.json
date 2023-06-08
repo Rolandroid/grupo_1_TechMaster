@@ -222,5 +222,47 @@
       "category": "Teclado",
       "discount": 5,
       "price": 800
+   },
+   {
+      "id": 17,
+      "name": "Auricular Logitech G Series G435 ",
+      "image": [
+         "logitechauri1.png",
+         "logitechauri2.png",
+         "logitechauri3.png"
+      ],
+      "description": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Logitech G435 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.",
+      "color": "Negro",
+      "category": "Auricular",
+      "discount": 0,
+      "price": 64729
+   },
+   {
+      "id": 18,
+      "name": "Logitech M170",
+      "image": [
+         "logitechmouse1.png",
+         "logitechmouse2.png",
+         "logitechmouse3.png"
+      ],
+      "description": "Logitech diseña productos y experiencias que ocupan un lugar cotidiano en la vida de las personas, poniendo foco en la innovación y la calidad. Su objetivo es crear momentos verdaderamente únicos y significativos para sus usuarios. Los mouses Logitech se adaptan a la forma de tu mano para proporcionarte horas de comodidad. Sin necesidad de mover el brazo para deslizar el cursor, tu mano se fatigará menos. Son ideales para cualquier espacio de trabajo y quienes tienen la mesa llena de diversos objetos.",
+      "color": "Negro",
+      "category": "Mouse",
+      "discount": 0,
+      "price": 64729
+   },
+   {
+      "id": 19,
+      "name": "Teclado Logitech K120 QWERTY",
+      "image": [
+         "logitechteclado1.png",
+         "logitechteclado2.png",
+         "logitechteclado3.png"
+      ],
+      "description": "Innovadores en diseño y tecnología, Logitech se encarga de brindar la mejor experiencia de uso para sus usuarios. Sus teclados resaltan por ser resistentes y muy de buena calidad, por lo que podrás disfrutarlos por un largo tiempo.",
+      "color": "Negro",
+      "category": "Mouse",
+      "discount": 0,
+      "price": 5699
    }
 ]
