@@ -1,112 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- HEAD -->
-  <%- include('./partials/head',{title : 'TechMaster Home'}) %>
-<body class="boby__view__home">
-  <%- include('./partials/header') %> 
-  <main class="home__main">
-    <section class="main--section-s">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <!-- Slide 1 - Set the background image for this slide in the line below -->
-        <div class="carousel-item active"  style="background-image: url('/Images/CarruselImg1.png')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3></h3>
-            <h2>Junio 2023</h2> 
-            <h1>Nuestro Catalogo</h1>
-            <a href="/products/list" class="button1" >Ver más</a>
+<!-- HEAD -->
+<%- include('./partials/head',{title : 'TechMaster Home' }) %>
 
-          </div>
-        </div>
-        <!-- Slide 2 - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('/Images/CarruselImg2.png')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3></h3>
-            <h2></h2>
-            <h1>Nuestras ofertas</h1>
-            <a href="/products/list/discount" class="button1" >Ver más</a>
-          </div>
-        </div>
-        <!-- Slide 3 - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('/Images/CarruselImg3.png')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3></h3>
-            <h2></h2>
-            <h1>Los mejores precios</h1>
-          </div>
-        </div>
+  <body class="boby__view__home">
+    <%- include('./partials/header') %>
 
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    </div>
-    <div class="main__image--card">
-    <div class="image--lado card card-carrousel">
-      <img src="Images/products/<%=products[4].images[0].name %>" alt="">
-      <h2><%=products[4].name %></h2>
-      <span>Producto destacado <br>
-        <%=products[4].price %> <br>
-        <%=products[4].discount %>
-    </span> 
-      
-      <button class="button2" onclick="window.location.href='/carrito';">COMPRAR</button>
-      </div>
-      <div class="direction">
-      <div class="main__image--card2">
-      <div class="image--lado card card-carrousel">
-        <img src="/Images/PC-1.png" alt="">
-        <h2>Gaming computer</h2>
-        <span>1TB SSD <br>
-        16GB RAM <br>
-        AMD-5600G
-      </span> 
-        
-        <button class="button2" onclick="window.location.href='/carrito';">COMPRAR</button>
-        </div>
-      </div>
-      <div class="main__image--card3">
-        <div class="image--lado3 card card-carrousel">
-          <img src="/Images/PC-1.png" alt="">
-          <h2>Gaming computer</h2>
-          <span>1TB SSD <br>
-          16GB RAM <br>
-          AMD-5600G
-        </span> 
+      <main class="home__main">
+        <section class="main--section-s">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <!-- Slide 1 - Set the background image for this slide in the line below -->
+              <div class="carousel-item active" style="background-image: url('/Images/CarruselImg1.png')">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3></h3>
+                  <h2>Junio 2023</h2>
+                  <h1>Nuestro Catalogo</h1>
+                  <a href="/products/list" class="button1">Ver más</a>
+
+                </div>
+              </div>
+              <!-- Slide 2 - Set the background image for this slide in the line below -->
+              <div class="carousel-item" style="background-image: url('/Images/CarruselImg2.png')">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3></h3>
+                  <h2></h2>
+                  <h1>Nuestras ofertas</h1>
+                  <a href="/products/list/discount" class="button1">Ver más</a>
+                </div>
+              </div>
+              <!-- Slide 3 - Set the background image for this slide in the line below -->
+              <div class="carousel-item" style="background-image: url('/Images/CarruselImg3.png')">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3></h3>
+                  <h2></h2>
+                  <h1>Los mejores precios</h1>
+                </div>
+              </div>
+
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <% function obtenerNumeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+          } 
+          const item1 = obtenerNumeroAleatorio(9, 13)
+          const item3 = obtenerNumeroAleatorio(0, 3)
+          const item2 = obtenerNumeroAleatorio(4, 8)
           
-          <button class="button3" onclick="window.location.href='/carrito';">COMPRAR</button>
+          %>
+          <div class="main__image--card">
+            <div class="image--lado card card-carrousel">
+              <img src="Images/products/<%=products[item1].images[0].name %>" alt="">
+              <h2>
+                <%=products[item1].name %>
+              </h2>
+              <span>
+                <%=products[item1].discount + "% Off" %>
+              </span>
+              
+              <h6 style="position: absolute;
+      top: 30px;
+      padding: 7px;">
+              </h6>
+
+              <a id="button--carrusel" href="/products/detalle/<%= products[item1].id %>">Ver más</a>
+            </div>
+            <div class="direction">
+              <div class="main__image--card2">
+                <div style="overflow: hidden;" class="image--lado card card-carrousel">
+                  <img src="Images/products/<%=products[item2].images[0].name %>" alt="">
+                  <h2>
+                    <%=products[item2].name %>
+                  </h2>
+                  <span>
+                    <%=products[item2].discount + "% Off" %>
+                  </span>
+                 
+                  <h6 style="position: absolute;
+        top: 30px;
+        padding: 7px;">
+                  </h6>
+
+                  <a id="button--carrusel" href="/products/detalle/<%= products[item2].id %>">Ver más</a>
+                </div>
+              </div>
+              <div class="main__image--card3">
+                <div style="overflow: hidden;" class="image--lado3 card card-carrousel">
+                  <img src="Images/products/<%=products[item3].images[0].name %>" alt="">
+                  <h2>
+                    <%=products[item3].name %>
+                  </h2>
+                  <span>
+                    <%=products[item3].discount + "% Off" %>
+                  </span>
+              
+
+                  <a id="button--carrusel" href="/products/detalle/<%= products[item3].id %>">Ver más</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-  </div>
-</section>
-    <section>
+        </section>
+        <section>
 
-    </section>
+        </section>
 
-    <section>
+        <section>
 
-      <div class="main__div--info">
-        <ul class="main__ul--info">
-          <li><img src="/Images/fast-delivery.svg" alt=""><!-- <h4>ENVIÓ RÁPIDO</h4> --></li>
-          <li><img src="/Images/secure.svg" alt=""><!-- <h4>PLATAFORMA EN LINEA SEGURO</h4> --></li>
-          <li><img src="/Images/money-back.svg" alt=""><!-- <h4>GARANTÍA DE REEMBOLSO</h4> --></li>
-          <li><img src="/Images/avatar.svg" alt=""><!-- <h4>ATENCIÓN AL CLIENTE 24/7</h4> --></li>
-        </ul>
-      </div>
+          <div class="main__div--info">
+            <ul class="main__ul--info">
+              <li><img src="/Images/fast-delivery.svg" alt=""><!-- <h4>ENVIÓ RÁPIDO</h4> --></li>
+              <li><img src="/Images/secure.svg" alt=""><!-- <h4>PLATAFORMA EN LINEA SEGURO</h4> --></li>
+              <li><img src="/Images/money-back.svg" alt=""><!-- <h4>GARANTÍA DE REEMBOLSO</h4> --></li>
+              <li><img src="/Images/avatar.svg" alt=""><!-- <h4>ATENCIÓN AL CLIENTE 24/7</h4> --></li>
+            </ul>
+          </div>
 
 
-<!--       <article class="main--article--info">
+          <!--       <article class="main--article--info">
         <div class="main--info">
           <ul class="main__info--icon">
             <li><a href="#"><img src="/Images/fast-delivery.svg" alt="">
@@ -119,77 +143,81 @@
           </ul>
         </div>
       </article> -->
-    </section>
-    <div class="conteudo">
-      <div class="glider carrousel">
-        <% products.slice(0, 10).forEach(({id,name,image}) => { %>
-          <article class="card card-carrousel">
-            <a href="/products/detalle/<%= id %>" title="<%= name %>">
-            <img src="/Images/products/<%= image ? image[0] : 'default-image.png' %>" alt="">
-          </a>
-            <p title="<%= name %>"><%= name %> </p>
-              <a id="button--carrusel" href="/products/detalle/<%= id %>">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-        <% }) %>
-      </div>
-    </div>
-  </main>
-  <!-- ---------------------------------------------------- -->
-  <%- include('./partials/footer')  %> 
+        </section>
+        <div class="conteudo">
+          <div class="glider carrousel">
+            <% products.slice(0, 10).forEach(({id,name,images})=> { %>
+              <article class="card card-carrousel">
+                <a href="/products/detalle/<%= id %>" title="<%= name %>">
+                  <img src="/Images/products/<%= images ? images[0].name : 'default-image.png' %>" alt="">
+                </a>
+                <p title="<%= name %>">
+                  <%= name %>
+                </p>
+                <a id="button--carrusel" href="/products/detalle/<%= id %>">Ver más <i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </article>
+              <% }) %>
+          </div>
+        </div>
+      </main>
+      <!-- ---------------------------------------------------- -->
+      <%- include('./partials/footer') %>
 
-  <%- include('./partials/scripts')  %>
-  
+        <%- include('./partials/scripts') %>
 
-  <script>
-    new Glider(document.querySelector('.glider'), {
-slidesToShow: 1.5,
-slidesToScroll: 1,
-draggable: true,
-dots: '.dots',
-arrows: {
-prev: '.glider-prev',
-next: '.glider-next'
-},
-responsive: [
-{
-  // screens greater than >= 775px
-  breakpoint: 768,
-  settings: {
-    // Set to `auto` and provide item width to adjust to viewport
-    slidesToShow: 3,
-    slidesToScroll: 'auto',
-    itemWidth: 150,
-    duration: 0.25
-  }
-},{
-  // screens greater than >= 1024px
-  breakpoint: 1024,
-  settings: {
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    itemWidth: 150,
-    duration: 0.25
-  }
-}
-]
-});
 
-const cardsCarrousel =Array.from(document.querySelectorAll(".card-carrousel"))
-console.log(cardsCarrousel)
-const backgrounds = [
-  "linear-gradient(-229deg, #fbd52d, #ef3a7c)",
-  "linear-gradient(-229deg, #FF70AF, #5fa8f5)",
-  "linear-gradient(-229deg, #0cebeb, #29ffc6)",
-  "linear-gradient(-229deg, #88F7F9, #048FFF)",
-  "linear-gradient(-229deg, #0093E9, #80D0C7)",
-  "linear-gradient(-229deg, #cf91ff, #5782F5)",
-  "linear-gradient(-229deg, #642B73, #C6426E)"
-];
-cardsCarrousel.forEach(card => {
-  card.style.background = backgrounds[Math.floor(Math.random() * 7)]
-})
-  </script>
-  <script src="javaScript/home.js"></script>
+          <script>
+            new Glider(document.querySelector('.glider'), {
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+              draggable: true,
+              dots: '.dots',
+              arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+              },
+              responsive: [
+                {
+                  // screens greater than >= 775px
+                  breakpoint: 768,
+                  settings: {
+                    // Set to `auto` and provide item width to adjust to viewport
+                    slidesToShow: 3,
+                    slidesToScroll: 'auto',
+                    itemWidth: 150,
+                    duration: 0.25
+                  }
+                }, {
+                  // screens greater than >= 1024px
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    itemWidth: 150,
+                    duration: 0.25
+                  }
+                }
+              ]
+            });
 
-</body>
+            const cardsCarrousel = Array.from(document.querySelectorAll(".card-carrousel"))
+            console.log(cardsCarrousel)
+            const backgrounds = [
+              "linear-gradient(-229deg, #fbd52d, #ef3a7c)",
+              "linear-gradient(-229deg, #FF70AF, #5fa8f5)",
+              "linear-gradient(-229deg, #0cebeb, #29ffc6)",
+              "linear-gradient(-229deg, #88F7F9, #048FFF)",
+              "linear-gradient(-229deg, #0093E9, #80D0C7)",
+              "linear-gradient(-229deg, #cf91ff, #5782F5)",
+              "linear-gradient(-229deg, #642B73, #C6426E)"
+            ];
+            cardsCarrousel.forEach(card => {
+              card.style.background = backgrounds[Math.floor(Math.random() * 7)]
+            })
+          </script>
+          <script src="javaScript/home.js"></script>
+
+  </body>
+
 </html>

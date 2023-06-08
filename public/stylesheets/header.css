@@ -201,7 +201,7 @@
 .menu {
     position: absolute;
     overflow: hidden;
-    z-index: 2;
+    z-index: 4;
     width: 100%;
     height: auto;
     opacity: 0;

@@ -16,7 +16,16 @@
     <% }else{ %>
     <h1>Resultados de la búsqueda: <%= keywords  %></h1>
     <section>
-      <% resultSearch.forEach(({id,name,images,description,discount,price,color,category}) => { %>
+      <% resultSearch.forEach(({id,name,images,description,discount,price,color,category}) => { 
+        const priceWithDiscount = discount
+        ? price - (price * discount) / 100
+        : price;
+      const priceFormatARG = priceWithDiscount.toLocaleString("es-AR", {
+        style: "currency",
+        currency: "ARS",
+      });
+      
+      %>
        <article class="articleResultados">
         <span>
           <img src="/Images/products/<%= images.length ? images[0].name : 'default-image.png' %>"></img>
@@ -24,8 +33,9 @@
         <div>
             <h3><%= name %></h3>
           <div class="precioYOferta">
+            
             <h4><%= discount ? discount+' % OFF' : ""%></h4>
-            <h2>$<%=toThousand((price - (price* discount) / 100))%></h2>
+            <h2><%=priceFormatARG%></h2>
           </div>
           <div>
             <a href="/products/detalle/<%= id %>"><button>Detalles</button></a>
