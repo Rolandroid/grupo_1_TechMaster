@@ -13,7 +13,7 @@ const addProductToCart = async (id) =>{
     }
     })
     Swal.fire({
-        title:ok ? "Producto agregado al carrito" : "Ups",
+        title:ok ? "Producto agregado al carrito" : "Debe Iniciar Sesión",
         icon: ok ? "success" : "warning",
         showConfirmButton:false,
         timer:800
