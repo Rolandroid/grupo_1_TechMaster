@@ -1,12 +1,9 @@
 const $ = (el) => document.querySelector(el)
-
 const cardsContainer = $('#cards-container') 
 const clearCart = $('#clear-cart') 
 const btnBuy = $('#btn-buy') 
 const outputTotal = $('#output-total') 
 const URL_API_SERVER = "http://localhost:3000/api"
-
-
 const getOrder = () => {
     return fetch(`${URL_API_SERVER}/cart/getOrderPending`,{
         headers:{
@@ -15,13 +12,11 @@ const getOrder = () => {
     })
     .then((res)=> res.json());
 };
-
 const convertFormatPeso = (n) =>
   n.toLocaleString("es-AR", {
     style: "currency",
     currency: "ARS",
   });
-
 const paintProducts = ({products}) =>{
   if(products.length) {
       cardsContainer.innerHTML = '';
@@ -34,11 +29,10 @@ const paintProducts = ({products}) =>{
           <!-- COURSE TEMPLATE CARD -->
                 <div id="articleCarrito"class="card my-5">
                   <div  class="card-body row">
-                    <div >
+                    
                     <img style="object-fit:cover;width:150px" src="/Images/products/${
                       images[0].name || 'default-image.png'
                     }" alt="">
-                    </div>
                     <div class="col-8 position-relative" id="cart-card-article">
                       <button onclick="removeProductToCart(${id})"  class="fs-5 p-0 border-0 bg-transparent position-absolute text-danger " style="top:-3px;right:10px"><i   style="padding:4px" class="rounded-circle btn-clear far fa-times-circle"></i></button>
       
@@ -62,7 +56,6 @@ const paintProducts = ({products}) =>{
                         <button id="moreQuantity" onclick="moreProduct(${id})" class="btn btn-light">+</button>
                         <a href="/products/detalle/${id}" class="btn btn-outline-light">Ver más</a>
                       </p>
-
                     </div>
                     </div>
                  

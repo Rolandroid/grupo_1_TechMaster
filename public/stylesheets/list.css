@@ -4,15 +4,23 @@
     min-height: 100vh;
     flex-direction: column;
 } 
-
+.div-main-resultados-capa{
+    background-color: var(--escalaDeGrises);
+    
+    background-image: url('../Images/giphy8.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .mainResultados{
-    background-color: rgba(28, 28, 28, 1);
+    /* background-color: rgb(150 150 150); */
     min-height: 100vh;
+    background-color: var(--colorGranate);
 }
 .mainResultados h1{
     color: white;
-    margin: 10px  0px 10px 20px;
+    /* margin: 10px  0px 10px 20px; */
     font-size: 25px;
+    padding: 18px;
 }
 
 .mainResultados section{
@@ -32,9 +40,10 @@
     border-radius: 5px;
     align-items: flex-start;
     min-height: 190px;
-    background: linear-gradient(-229deg, #fbd52d, #ef3a7c);
+    /* background: linear-gradient(-229deg, #fbd52d, #ef3a7c); */
     align-content: center;
     justify-content: center;
+    background-color: var(--colorGrisOscuro);
 }
 .articleResultados span{
     display: contents;
@@ -42,6 +51,7 @@
 .articleResultados span img{
     width: 140px;
     margin: auto;
+    text-shadow: 0px 0px 12px white;
 }
 
 .articleResultados div{
@@ -61,10 +71,14 @@
 }
 .articleResultados div div{}
 .articleResultados div div h2{
-    
-    align-self: flex-end;
+    align-self: flex-end;
+    color: #ffffff;
+    text-shadow: 0px 1px 3px #cbe4ff;
 }
-.articleResultados div div h4{}
+.articleResultados div div h4{
+    color: #ffffff;
+    text-shadow: 0px 1px 9px #8c83ff;
+}
 
 .precioYOferta{
     justify-content: space-between
@@ -82,7 +96,7 @@
 
 .articleResultados div div button{
     cursor: pointer;
-    border: solid 3px #cfff00;
+    border: solid 3px #454545;
     background-color: #0000003b;
     padding: 3px 20px 3px 20px;
     font-family: 'lato',sans-serif;
@@ -101,7 +115,7 @@
     font-weight: 500;
     border-radius: 5px;
     border: 1PX solid  transparent; */
-    color: #cfff00;
+    color: #d3d3d3;
 }
 .articleResultados div div a button:hover{
     background-color: var(green);}

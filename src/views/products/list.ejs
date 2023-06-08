@@ -5,11 +5,12 @@
 
   <body class="boby__view__resultados" data-idUser="<%= locals.userLogin?.id %>">
     <%- include('../partials/header') %>
+    <div class="div-main-resultados-capa">
       <main class="mainResultados">
         <h1>Todos los Productos</h1>
         <%- include('../partials/pagination') %>
           <section id="container-courses-card">
-      </main>
+      </main></div>
       <%- include('../partials/footer') %>
         <script src="/javaScript/paginatorViewList.js"></script>
   </body>
