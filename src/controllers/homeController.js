@@ -11,7 +11,6 @@ module.exports = {
       const products = await db.Product.findAll({
       include: ['category','images'],
     })
-    console.log(products)
     return res.render('home', {
       products
     })}
@@ -34,7 +33,6 @@ module.exports = {
 
   search: async (req, res) => {
     const { keywords, category } = req.query;
-    console.log(req.query)
 
     try {
       if(category){const resultSearch = await db.Product.findAll({

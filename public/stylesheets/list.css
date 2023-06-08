@@ -40,10 +40,10 @@
     border-radius: 5px;
     align-items: flex-start;
     min-height: 190px;
-    /* background: linear-gradient(-229deg, #fbd52d, #ef3a7c); */
+    /* background: linear-gradient(-229deg, #2ddefb, #ff00bc); */
     align-content: center;
     justify-content: center;
-    background-color: var(--colorGrisOscuro);
+    /* background-color: var(--colorGrisOscuro); */
 }
 .articleResultados span{
     display: contents;
@@ -92,11 +92,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 9px;
+    align-items: flex-end;
 }
 
 .articleResultados div div button{
     cursor: pointer;
-    border: solid 3px #454545;
+    border: solid 3px #cfff00;
     background-color: #0000003b;
     padding: 3px 20px 3px 20px;
     font-family: 'lato',sans-serif;
@@ -115,7 +116,7 @@
     font-weight: 500;
     border-radius: 5px;
     border: 1PX solid  transparent; */
-    color: #d3d3d3;
+    color: #cfff00;
 }
 .articleResultados div div a button:hover{
     background-color: var(green);}

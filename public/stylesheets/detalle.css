@@ -221,8 +221,9 @@
 
 .container-boton div{
     display: flex;
-    justify-content: center;
     width: 66%;
+    justify-content: flex-start;
+    /* margin-left: 10px; */
 }
 
     

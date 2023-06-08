@@ -10,6 +10,16 @@ const URL_API_SERVER = "http://localhost:3000/api";
 let pageActive = 1;
 const apiGetProducts = "http://localhost:3000/api/products/paginate";
 
+const backgrounds = [
+  "linear-gradient(-229deg, #fbd52d, #ef3a7c)",
+  "linear-gradient(-229deg, #FF70AF, #5fa8f5)",
+  "linear-gradient(-229deg, #0cebeb, #29ffc6)",
+  "linear-gradient(-229deg, #88F7F9, #048FFF)",
+  "linear-gradient(-229deg, #0093E9, #80D0C7)",
+  "linear-gradient(-229deg, #cf91ff, #5782F5)",
+  "linear-gradient(-229deg, #642B73, #C6426E)"
+];
+
 const getProducts = ({ page = 1, limit = 6 } = {}) =>
   fetch(`${apiGetProducts}?page=${page}&limit=${limit}`).then((res) =>
     res.json()
@@ -27,7 +37,7 @@ const paintProducts = (products) => {
         currency: "ARS",
       });
       const template = `
-      <article class="articleResultados">
+      <article class="articleResultados" style="background:${backgrounds[Math.floor(Math.random() * 7)]}">
       <span>
         <img src="/Images/products/${
           images.length ? images[0].name : "default-image.png"

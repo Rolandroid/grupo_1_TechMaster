@@ -30,7 +30,7 @@ const paintProducts = ({products}) =>{
                 <div id="articleCarrito"class="card my-5">
                   <div  class="card-body row">
                     
-                    <img style="object-fit:cover;width:150px" src="/Images/products/${
+                    <img style="object-fit:cover;width:235px" src="/Images/products/${
                       images[0].name || 'default-image.png'
                     }" alt="">
                     <div class="col-8 position-relative" id="cart-card-article">
