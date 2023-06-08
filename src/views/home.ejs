@@ -21,7 +21,7 @@
                   <h3></h3>
                   <h2>Junio 2023</h2>
                   <h1>Nuestro Catalogo</h1>
-                  <a href="/products/list" class="button1">Ver más</a>
+                  <a href="/products/list" class="button1">Productos</a>
 
                 </div>
               </div>
@@ -31,7 +31,7 @@
                   <h3></h3>
                   <h2></h2>
                   <h1>Nuestras ofertas</h1>
-                  <a href="/products/list/discount" class="button1">Ver más</a>
+                  <a href="/products/list/discount" class="button1">Ofertas</a>
                 </div>
               </div>
               <!-- Slide 3 - Set the background image for this slide in the line below -->
@@ -39,7 +39,7 @@
                 <div class="carousel-caption d-none d-md-block">
                   <h3></h3>
                   <h2></h2>
-                  <h1>Los mejores precios</h1>
+                  <h1>Ingresá a tu cuenta y obtene los mejores precios</h1>
                 </div>
               </div>
 
@@ -62,21 +62,24 @@
           
           %>
           <div class="main__image--card">
-            <div class="image--lado card card-carrousel">
+            <div  style="position: relative;  height: 190px;" class="image--lado card card-carrousel">
               <img src="Images/products/<%=products[item1].images[0].name %>" alt="">
               <h2>
                 <%=products[item1].name %>
               </h2>
-              <span>
-                <%=products[item1].discount + "% Off" %>
-              </span>
+              <h2 style="top: 100px;">
+                <%=products[item1].discount ? products[item1].discount + "% Off" : "" %>
+              </h2>
               
               <h6 style="position: absolute;
       top: 30px;
       padding: 7px;">
               </h6>
 
-              <a id="button--carrusel" href="/products/detalle/<%= products[item1].id %>">Ver más</a>
+              <a style="
+              left: 10px;
+          " id="button--carrusel" href="/products/detalle/<%= products[item1].id %>">Ver más <i
+                    class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="direction">
               <div class="main__image--card2">
@@ -85,30 +88,36 @@
                   <h2>
                     <%=products[item2].name %>
                   </h2>
-                  <span>
-                    <%=products[item2].discount + "% Off" %>
-                  </span>
+                  <h2 style="top: 100px;">
+                    <%=products[item2].discount ? products[item2].discount + "% Off" : "" %>
+                  </h2>
                  
                   <h6 style="position: absolute;
         top: 30px;
         padding: 7px;">
                   </h6>
 
-                  <a id="button--carrusel" href="/products/detalle/<%= products[item2].id %>">Ver más</a>
+                  <a style="
+                  left: 10px;
+              " id="button--carrusel" href="/products/detalle/<%= products[item2].id %>">Ver más <i
+                    class="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
               <div class="main__image--card3">
-                <div style="overflow: hidden;" class="image--lado3 card card-carrousel">
+                <div style="overflow: hidden;    height: 190px;" class="image--lado3 card card-carrousel">
                   <img src="Images/products/<%=products[item3].images[0].name %>" alt="">
                   <h2>
                     <%=products[item3].name %>
                   </h2>
-                  <span>
-                    <%=products[item3].discount + "% Off" %>
-                  </span>
+                  <h2 style="top: 100px;">
+                    <%=products[item3].discount ? products[item3].discount + "% Off" : "" %>
+                  </h2>
               
 
-                  <a id="button--carrusel" href="/products/detalle/<%= products[item3].id %>">Ver más</a>
+                  <a style="
+                  left: 10px;
+              " id="button--carrusel" href="/products/detalle/<%= products[item3].id %>">Ver más <i
+                    class="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -122,27 +131,13 @@
 
           <div class="main__div--info">
             <ul class="main__ul--info">
-              <li><img src="/Images/fast-delivery.svg" alt=""><!-- <h4>ENVIÓ RÁPIDO</h4> --></li>
-              <li><img src="/Images/secure.svg" alt=""><!-- <h4>PLATAFORMA EN LINEA SEGURO</h4> --></li>
-              <li><img src="/Images/money-back.svg" alt=""><!-- <h4>GARANTÍA DE REEMBOLSO</h4> --></li>
-              <li><img src="/Images/avatar.svg" alt=""><!-- <h4>ATENCIÓN AL CLIENTE 24/7</h4> --></li>
+              <li><img src="/Images/fast-delivery.svg" alt=""></li>
+              <li><img src="/Images/secure.svg" alt=""></li>
+              <li><img src="/Images/money-back.svg" alt=""></li>
+              <li><img src="/Images/avatar.svg" alt=""></li>
             </ul>
           </div>
 
-
-          <!--       <article class="main--article--info">
-        <div class="main--info">
-          <ul class="main__info--icon">
-            <li><a href="#"><img src="/Images/fast-delivery.svg" alt="">
-              <span>ENVIÓ RÁPIDO</span>
-            </a></li>
-            <li><a href="#"><img src="/Images/secure.svg" alt="">
-              span>PLATAFORMA EN LINEA SEGURO</span></a></li>
-            <li><a href="#"><img src="/Images/money-back.svg" alt=""><span>GARANTÍA DE REEMBOLSO</span></a></li>
-            <li><a href="#"><img src="/Images/avatar.svg" alt=""><span>ATENCIÓN AL CLIENTE 24/7</span></a></li>
-          </ul>
-        </div>
-      </article> -->
         </section>
         <div class="conteudo">
           <div class="glider carrousel">

@@ -50,12 +50,10 @@
 }
 
 .carousel-item h1 {
-
-    display: flex;
-
-    justify-content: flex-end;
-
-    font-size: 54px;
+text-shadow: 3px 1px 3px hwb(0deg 0% 100%);
+display: flex;
+justify-content: flex-end;
+font-size: 54px;
 }
 
 .carousel-item button {
@@ -246,6 +244,7 @@
 
 .card-carrousel p {
     max-width: 200px;
+    text-shadow: 3px 1px 3px hwb(0deg 0% 100%);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -253,7 +252,7 @@
 
 #button--carrusel {
 bottom: 10px;
-left: 10px;
+/* left: 10px; */
 border: solid 3px #cfff00;
 background-color: #0000003b;
 padding: 3px 20px 3px 20px;
@@ -549,7 +548,7 @@
     }
 
     .main__image--card3 {
-        overflow: hidden;
+        /* overflow: hidden; */
         display: flex;
         gap: 12px;
         flex-direction: column;
@@ -563,6 +562,7 @@
     .image--lado h2 {
         /* position: absolute; */
         /* display: flex; */
+        text-shadow: 3px 1px 3px hwb(0deg 0% 100%);
         font-size: 21px;
         text-transform: uppercase;
         font-weight: 700;
@@ -584,6 +584,7 @@
     .image--lado3 h2 {
         position: absolute;
         display: flex;
+        text-shadow: 3px 1px 3px hwb(0deg 0% 100%);
         font-size: 21px;
         text-transform: uppercase;
         font-weight: 700;
