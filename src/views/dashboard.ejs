@@ -496,12 +496,12 @@
 
       Swal.fire({
         title: 'Esta seguro?',
-        text: "No podra devertir cambios!",
+        text: "No podra revertir cambios!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Si, eliminar!'
       }).then((result) => {
         if (result.isConfirmed) {
           document.getElementById('deleteForm').submit();
