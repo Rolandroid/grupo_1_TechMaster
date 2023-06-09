@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {all, one, create, edit, erase} = require('../../controllers/api/commentApiController');
 
-
+/* /api/comments */
 router
 .get('/',all)
 .get('/:id',one)

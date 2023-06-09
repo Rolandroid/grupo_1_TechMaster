@@ -137,7 +137,7 @@
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#products">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-shopping-cart">
@@ -149,7 +149,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#users">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-users">
@@ -162,13 +162,13 @@
               </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="#comments">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                   Comments
                 </a>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#Api">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-layers">
@@ -243,7 +243,7 @@
           </div>
         </div>
 
-        <h2>Productos</h2>
+        <h2 id="products">Productos</h2>
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>
@@ -291,7 +291,7 @@
           </table>
         </div>
 
-        <h2>Users</h2>
+        <h2 id="users">Users</h2>
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>
@@ -335,7 +335,7 @@
           </table>
         </div>
 
-        <h2>Comments</h2>
+        <h2 id="comments">Comments</h2>
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>
@@ -374,9 +374,40 @@
             </tbody>
           </table>
         </div>
-        <h2>Api documentation</h2>
+        <h2 id="Api">Api documentation</h2>
         <div class="table-responsive">
-          <p> </p>
+          <h5> Endpoints para el manejo de Productos </h5>
+            <ul>
+              <li>GET '/api/products/'          :objeto response con "meta" y "data" en "data" estan todos los productos</li>
+              <li>GET '/api/products/paginate'  :Objeto de 6 productos ordenados y paginados </li>
+              <li>GET '/api/products/:id'       :objeto con un producto especifico buscado por ID</li>
+              <li>POST '/api/products/create'   :Crea un producto en la base de datos</li>
+              <li>PUT '/api/products/update/:id':Actualiza  la informacion de un producto</li>
+              <li>DELETE '/api/products/:id'    :Elimina un producto espedifico </li>
+              <li></li>
+            </ul>
+            <h5> Endpoints para el manejo de Carrito </h5>
+            <ul>
+              <li>GET '/api/cart/getOrderPending' :Obten la order de compra del usuario logueado</li>
+              <li>POST '/api/cart/addProduct'     :Agrega un producto a la orden de compra</li>
+              <li>DELETE '/api/cart/removeProduct':Elimina un producto a la orden de compra</li>
+              <li>PUT '/api/cart/moreQuantity'    :Agrega una unidad de un producto a la orden de compra</li>
+              <li>PUT '/api/cart/lessQuantity'    :Elimina una unidad de un producto a la orden de compra</li>
+              <li>DELETE '/api/cart/clearCart'    :Elimina todos los productos de una orden de compra</li>
+              <li>PUT '/api/cart/statusOrder'     :Verifica el estado de una orden de compra</li>
+            </ul>
+            <h5> Endpoints para el manejo de Comentarios </h5>
+            <ul>
+              <li>GET '/api/comments/'   :Obten todos los comentarios</li>
+              <li>GET'/api/comments/:id'   :Obten un comentario especifico</li>
+              <li>POST '/api/comments/' :Crea un comentario </li>
+              <li>PUT'/api/comments/:id'  :Edita un comentario espedifico </li>
+              <li>Delete'/api/comments/:id'   :Elimina un comentario espedifico </li>
+            </ul>
+          
+
+
+
 
       </main>
     </div>
