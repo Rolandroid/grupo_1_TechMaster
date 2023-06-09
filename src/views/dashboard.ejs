@@ -374,36 +374,112 @@
             </tbody>
           </table>
         </div>
-        <h2 id="Api">Api documentation</h2>
-        <div class="table-responsive">
-          <h5> Endpoints para el manejo de Productos </h5>
-            <ul>
-              <li>GET '/api/products/'          :objeto response con "meta" y "data" en "data" estan todos los productos</li>
-              <li>GET '/api/products/paginate'  :Objeto de 6 productos ordenados y paginados </li>
-              <li>GET '/api/products/:id'       :objeto con un producto especifico buscado por ID</li>
-              <li>POST '/api/products/create'   :Crea un producto en la base de datos</li>
-              <li>PUT '/api/products/update/:id':Actualiza  la informacion de un producto</li>
-              <li>DELETE '/api/products/:id'    :Elimina un producto espedifico </li>
-              <li></li>
-            </ul>
-            <h5> Endpoints para el manejo de Carrito </h5>
-            <ul>
-              <li>GET '/api/cart/getOrderPending' :Obten la order de compra del usuario logueado</li>
-              <li>POST '/api/cart/addProduct'     :Agrega un producto a la orden de compra</li>
-              <li>DELETE '/api/cart/removeProduct':Elimina un producto a la orden de compra</li>
-              <li>PUT '/api/cart/moreQuantity'    :Agrega una unidad de un producto a la orden de compra</li>
-              <li>PUT '/api/cart/lessQuantity'    :Elimina una unidad de un producto a la orden de compra</li>
-              <li>DELETE '/api/cart/clearCart'    :Elimina todos los productos de una orden de compra</li>
-              <li>PUT '/api/cart/statusOrder'     :Verifica el estado de una orden de compra</li>
-            </ul>
-            <h5> Endpoints para el manejo de Comentarios </h5>
-            <ul>
-              <li>GET '/api/comments/'   :Obten todos los comentarios</li>
-              <li>GET'/api/comments/:id'   :Obten un comentario especifico</li>
-              <li>POST '/api/comments/' :Crea un comentario </li>
-              <li>PUT'/api/comments/:id'  :Edita un comentario espedifico </li>
-              <li>Delete'/api/comments/:id'   :Elimina un comentario espedifico </li>
-            </ul>
+
+<h2 id="Api">Api documentation</h2>
+<div class="table-responsive">
+  <table>
+    <thead>
+      <tr>
+        <th>HTML</th>
+        <th>Endpoint</th>
+        <th>Explicación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GET</td>
+        <td>/api/products/</td>
+        <td>Obtiene todos los productos.</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/api/products/paginate</td>
+        <td>Obtiene una lista paginada de 6 productos ordenados.</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/api/products/:id</td>
+        <td>Obtiene un producto específico buscado por ID. Retorna un objeto con la información del producto.</td>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>/api/products/create</td>
+        <td>Crea un nuevo producto en la base de datos.</td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/api/products/update/:id</td>
+        <td>Actualiza la información de un producto específico.</td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>/api/products/:id</td>
+        <td>Elimina un producto específico.</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/api/cart/getOrderPending</td>
+        <td>Obtiene la orden de compra del usuario logueado.</td>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>/api/cart/addProduct</td>
+        <td>Agrega un producto a la orden de compra.</td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>/api/cart/removeProduct</td>
+        <td>Elimina un producto de la orden de compra.</td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/api/cart/moreQuantity</td>
+        <td>Agrega una unidad de un producto a la orden de compra.</td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/api/cart/lessQuantity</td>
+        <td>Elimina una unidad de un producto de la orden de compra.</td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>/api/cart/clearCart</td>
+        <td>Elimina todos los productos de la orden de compra.</td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/api/cart/statusOrder</td>
+        <td>Verifica el estado de una orden de compra.</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/api/comments/</td>
+        <td>Obtiene todos los comentarios.</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/api/comments/:id</td>
+        <td>Obtiene un comentario específico.</td>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>/api/comments/</td>
+        <td>Crea un comentario.</td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/api/comments/:id</td>
+        <td>Edita un comentario específico.</td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>/api/comments/:id</td>
+        <td>Elimina un comentario específico.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
           
 
 
