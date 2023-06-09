@@ -281,8 +281,8 @@
                   <td><a href="/products/detalle/<%= id %>"><i class="fa-solid fa-circle-info"></i></a></td>
                   <td><a href="/products/edicion/<%= id %>"><i class="fa-solid fa-pencil"></i></a></td>
                   <td>
-                    <form style="margin:0;" action="/products/remove/<%= id %>?_method=DELETE" method="post">
-                      <button style="border: none;" type="submit"><i style="color:red" class="fa-solid fa-trash-can"></i></button>
+                    <form id="deleteForm" style="margin:0;" action="/products/remove/<%= id %>?_method=DELETE" method="post">
+                      <div onclick="showDeleteConfirmation(event)" style="border: none;" type="submit"><i style="color:red" class="fa-solid fa-trash-can"></i></div>
                     </form>
                   </td>
                 </tr>
@@ -492,50 +492,28 @@
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="../../assets/js/vendor/popper.min.js"></script>
-  <script src="../../dist/js/bootstrap.min.js"></script>
-
-  <!-- Icons -->
-  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
   <script>
-    feather.replace()
-  </script>
+    function showDeleteConfirmation(event) {
+      event.preventDefault(); // Prevent the default form submission
 
-  <!-- Graphs -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.1/dist/Chart.min.js"></script>
-  <script>
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        datasets: [{
-          data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-          lineTension: 0,
-          backgroundColor: 'transparent',
-          borderColor: '#007bff',
-          borderWidth: 4,
-          pointBackgroundColor: '#007bff'
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: false
-            }
-          }]
-        },
-        legend: {
-          display: false,
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Submit the form
+          document.getElementById('deleteForm').submit();
         }
-      }
-    });
+      });
+    }
   </script>
+</body>
+</html>
 
 
   <iframe id="nr-ext-rsicon"
