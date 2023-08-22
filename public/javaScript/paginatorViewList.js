@@ -5,10 +5,10 @@ const btnNext = $("#btn-next");
 const containerItemsPage = $("#container-items-page");
 const containerProductsCard = $("#container-courses-card");
 const idUser = document.body.getAttribute("data-idUser");
-const URL_API_SERVER = "http://localhost:3000/api";
+const URL_API_SERVER = "https://techmaster.onrender.com/api";
 
 let pageActive = 1;
-const apiGetProducts = "http://localhost:3000/api/products/paginate";
+const apiGetProducts = "https://techmaster.onrender.com/api/products/paginate";
 
 const backgrounds = [
   "linear-gradient(-229deg, #fbd52d, #ef3a7c)",

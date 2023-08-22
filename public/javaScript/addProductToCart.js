@@ -1,4 +1,4 @@
-const URL_API_SERVER = "http://localhost:3000/api"
+const URL_API_SERVER = "https://techmaster.onrender.com/api"
 
 
 const addProductToCart = async (id) =>{
