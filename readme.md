@@ -7,7 +7,7 @@ El sitio estara dirigido a un publico abierto con la posibildad de crear un usar
 ## Integrantes
     Florencia Amado - 17 Años - Lanús
         Actualmente cursando 7mo en un Secundario Tecnico. Cuando no le dedico tiempo al curso, mis tiempos libres los paso con mi familia/amigos o mirando series.
-    Carlos Guillen - 19 años - CABA 
+    Carlos Guillen - 20 años - CABA 
         Un joven, con un breve conocimiento en informática, tengo terminado la secundaria en un colegio informático y me gusta mucho el mundo de la Ciberseguridad.
     Braian Almirón - 26 años - Lanús
         Actualmente cursando Desarrollador Web Full Stack de Fundación Formar (Digital House) y Argentina Programa.
