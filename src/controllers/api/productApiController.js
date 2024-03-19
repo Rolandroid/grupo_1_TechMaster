@@ -8,6 +8,7 @@ const {
   createProduct,
   destroyProductById,
 } = require("../../services/productServices");
+const URL_API_SERVER = "https://techmaster.onrender.com/api";
 module.exports = {
   getAllProducts: async (req, res) => {
     try {
@@ -16,7 +17,7 @@ module.exports = {
       let respuesta = {
         meta: {
           status: 200,
-          url: `http://localhost:3000/api/products/`,
+          url: `${URL_API_SERVER}/products/`,
           totalProducts: products.length,
         },
         data: {
@@ -57,7 +58,7 @@ module.exports = {
         name: product.name,
         description: product.description,
         category: product.category.name,
-        detailUrl: `http://localhost:3000/api/products/${product.id}`,
+        detailUrl: `${URL_API_SERVER}/products/${product.id}`,
       }));
 
       const respuesta = {
@@ -123,7 +124,7 @@ module.exports = {
       let respuesta = {
         meta: {
           status: 200,
-          url: `http://localhost:3000/api/products/${product.id}`,
+          url: `${URL_API_SERVER}/products/${product.id}`,
           arrayImages
         },
         data: product,
@@ -156,7 +157,7 @@ module.exports = {
       });
       var finalProduct = {
         status: 201,
-        url: "http://localhost:3000/api/products/",
+        url: `${URL_API_SERVER}/products/`,
         productData: {
           id: product.id,
           name: product.dataValues.name,
@@ -236,7 +237,7 @@ module.exports = {
       }
 
       return res.status(201).json({
-        Details: "http://localhost:3000/api/products/" + id,
+        Details: `${URL_API_SERVER}/products/${id}`,
       });
     } catch (error) {
       console.log(error);

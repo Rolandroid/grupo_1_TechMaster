@@ -1,5 +1,6 @@
 const db = require('../../database/models')
 const {verifyUserByEmail} = require('../../services/userServices');
+const URL_API_SERVER = "https://techmaster.onrender.com/api";
 
 
 module.exports = {
@@ -19,7 +20,7 @@ module.exports = {
                 id: user.id,
                 name: user.name,
                 email: user.email,
-                detail: `http://localhost:3000/api/users/${user.id}`,
+                detail: `${URL_API_SERVER}/users/${user.id}`,
               };
             });
         
