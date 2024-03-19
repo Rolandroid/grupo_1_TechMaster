@@ -9,6 +9,7 @@ const {
   destroyProductById,
 } = require("../../services/productServices");
 const URL_API_SERVER = "https://techmaster.onrender.com/api";
+const URL_IMAGES_SERVER = "https://techmaster.onrender.com";
 module.exports = {
   getAllProducts: async (req, res) => {
     try {
@@ -172,7 +173,7 @@ module.exports = {
             return (images = {
               position: index,
               filename: file.filename,
-              location: `http://localhost:3000/Images/products/${file.filename}`,
+              location: `${URL_IMAGES_SERVER}/Images/products/${file.filename}`,
             });
           }),
         },

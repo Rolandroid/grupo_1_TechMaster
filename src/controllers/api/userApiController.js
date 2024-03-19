@@ -1,6 +1,7 @@
 const db = require('../../database/models')
 const {verifyUserByEmail} = require('../../services/userServices');
 const URL_API_SERVER = "https://techmaster.onrender.com/api";
+const URL_IMAGES_SERVER = "https://techmaster.onrender.com";
 
 
 module.exports = {
@@ -52,7 +53,7 @@ module.exports = {
                     name:user.name,
                     surname:user.surname,
                     email:user.email,
-                    avatar:`http://localhost:3000/Images/users/${user.avatar}`,
+                    avatar:`${URL_IMAGES_SERVER}/Images/users/${user.avatar}`,
                     createdAt:user.createdAt,
                     updatedAt:user.updatedAt
                 }
